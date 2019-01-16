@@ -1,0 +1,8 @@
+1. Spawning (DONE)
+2. Movement (DONE)
+3. Stabilisation (DONE)
+4. Water not going through the sub (Sort of done)
+5. Get that subroot attached and working (sort of done? Fully done? Just need to copy alot of the code over?)
+6. Basic building (attach to the submarine correct) (Will need to check again when it comes to saving/loading)
+7. Saving of the submarine and any buildings placed inside it 
+8. Get hatch working - Not because its hard but to see how to add content and how to layout the "Submarines" framework and the "manta" mod

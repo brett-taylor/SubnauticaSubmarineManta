@@ -1,0 +1,22 @@
+Uses gravity: false
+mass: 12000
+center of mass: (-0.1, 0.8, -1.7)
+
+World Force Above Water Drag: 0
+World Force Above Water Gravity: 9.81
+World Force Handle Drag: True
+World Force Handle Gravity: True
+World Force Underwater Drag: 0.5
+World Force Underwater Gravity: 0
+World Force Use Rigid body: Cyclops-MainPrefab(Clone) (UnityEngine.Rigidbody)
+
+isKinematic : False
+
+WaterClipProxy Shape: DistanceField
+WaterClipProxy Immovable: False
+WaterClipProxy Distance Field Text: 
+WaterClipProxy Distance Field: System.Byte[]
+WaterClipProxy Via Relfect distanceFieldMin: (-5.7, -10.4, -17.0)
+WaterClipProxy Via Relfect distanceFieldMax: (5.7, 5.5, 29.1)
+WaterClipProxy Via Relfect distanceFieldSize: (11.5, 15.9, 46.0)
+WaterClipProxy Clip Material: WaterClip (Instance) (UnityEngine.Material)
