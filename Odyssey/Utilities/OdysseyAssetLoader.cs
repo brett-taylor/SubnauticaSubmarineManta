@@ -13,32 +13,25 @@ namespace Odyssey.Utilities
 
         public static Texture DEFAULT_SPEC_MAP { get; private set; }
 
-        public static Texture BODY_ALBEDO { get; private set; }
         public static Texture BODY_NORMAL { get; private set; }
         public static Texture BODY_SPEC { get; private set; }
 
-        public static Texture BODY_EXTRA_ONE_ALBEDO { get; private set; }
         public static Texture BODY_EXTRA_ONE_NORMAL { get; private set; }
         public static Texture BODY_EXTRA_ONE_SPEC { get; private set; }
 
-        public static Texture BODY_EXTRA_TWO_ALBEDO { get; private set; }
         public static Texture BODY_EXTRA_TWO_NORMAL { get; private set; }
         public static Texture BODY_EXTRA_TWO_SPEC { get; private set; }
         public static Texture BODY_EXTRA_TWO_EMISSIVE { get; private set; }
 
-        public static Texture CAMERA_ALBEDO { get; private set; }
         public static Texture CAMERA_NORMAL { get; private set; }
         public static Texture CAMERA_SPEC { get; private set; }
 
-        public static Texture DECALS_ALBEDO { get; private set; }
         public static Texture DECALS_NORMAL { get; private set; }
         public static Texture DECALS_SPEC { get; private set; }
 
-        public static Texture HATCH_ALBEDO { get; private set; }
         public static Texture HATCH_NORMAL { get; private set; }
         public static Texture HATCH_SPEC { get; private set; }
 
-        public static Texture SENSORS_ALBEDO { get; private set; }
         public static Texture SENSORS_NORMAL { get; private set; }
         public static Texture SENSORS_SPEC { get; private set; }
 
@@ -62,11 +55,6 @@ namespace Odyssey.Utilities
                 Utilities.Log.Error("DEFAULT_SPEC_MAP not found.");
             }
 
-            BODY_ALBEDO = ASSET_BUNDLE.LoadAsset("1_LP_Body_AlbedoTransparency") as Texture;
-            if (BODY_ALBEDO == null)
-            {
-                Utilities.Log.Error("BODY_ALBEDO not found.");
-            }
             BODY_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_Body_Normal") as Texture;
             if (BODY_NORMAL == null)
             {
@@ -78,11 +66,6 @@ namespace Odyssey.Utilities
                 Utilities.Log.Error("BODY_SPEC not found.");
             }
 
-            BODY_EXTRA_ONE_ALBEDO = ASSET_BUNDLE.LoadAsset("1_LP_BodyExtra1_AlbedoTransparency") as Texture;
-            if (BODY_EXTRA_ONE_ALBEDO == null)
-            {
-                Utilities.Log.Error("BODY_EXTRA_ONE_ALBEDO not found.");
-            }
             BODY_EXTRA_ONE_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_BodyExtra1_Normal") as Texture;
             if (BODY_EXTRA_ONE_NORMAL == null)
             {
@@ -94,11 +77,6 @@ namespace Odyssey.Utilities
                 Utilities.Log.Error("BODY_EXTRA_ONE_SPEC not found.");
             }
 
-            BODY_EXTRA_TWO_ALBEDO = ASSET_BUNDLE.LoadAsset("1_LP_BodyExtra2_AlbedoTransparency") as Texture;
-            if (BODY_EXTRA_TWO_ALBEDO == null)
-            {
-                Utilities.Log.Error("BODY_EXTRA_TWO_ALBEDO not found.");
-            }
             BODY_EXTRA_TWO_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_BodyExtra2_Normal") as Texture;
             if (BODY_EXTRA_TWO_NORMAL == null)
             {
@@ -115,11 +93,6 @@ namespace Odyssey.Utilities
                 Utilities.Log.Error("BODY_EXTRA_TWO_EMISSIVE not found.");
             }
 
-            CAMERA_ALBEDO = ASSET_BUNDLE.LoadAsset("1_LP_Camera_AlbedoTransparency") as Texture;
-            if (CAMERA_ALBEDO == null)
-            {
-                Utilities.Log.Error("CAMERA_ALBEDO not found.");
-            }
             CAMERA_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_Camera_Normal") as Texture;
             if (CAMERA_NORMAL == null)
             {
@@ -131,11 +104,6 @@ namespace Odyssey.Utilities
                 Utilities.Log.Error("CAMERA_SPEC not found.");
             }
 
-            DECALS_ALBEDO = ASSET_BUNDLE.LoadAsset("1_LP_Decals_AlbedoTransparency") as Texture;
-            if (DECALS_ALBEDO == null)
-            {
-                Utilities.Log.Error("DECALS_ALBEDO not found.");
-            }
             DECALS_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_Decals_Normal") as Texture;
             if (DECALS_NORMAL == null)
             {
@@ -147,11 +115,6 @@ namespace Odyssey.Utilities
                 Utilities.Log.Error("DECALS_SPEC not found.");
             }
 
-            HATCH_ALBEDO = ASSET_BUNDLE.LoadAsset("1_LP_Hatch_AlbedoTransparency") as Texture;
-            if (HATCH_ALBEDO == null)
-            {
-                Utilities.Log.Error("HATCH_ALBEDO not found.");
-            }
             HATCH_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_Hatch_Normal") as Texture;
             if (HATCH_NORMAL == null)
             {
@@ -163,11 +126,6 @@ namespace Odyssey.Utilities
                 Utilities.Log.Error("HATCH_SPEC not found.");
             }
 
-            SENSORS_ALBEDO = ASSET_BUNDLE.LoadAsset("1_LP_Sensors_AlbedoTransparency") as Texture;
-            if (SENSORS_ALBEDO == null)
-            {
-                Utilities.Log.Error("SENSORS_ALBEDO not found.");
-            }
             SENSORS_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_Sensors_Normal") as Texture;
             if (SENSORS_NORMAL == null)
             {
