@@ -124,6 +124,7 @@ namespace Submarines.Utilities.Extensions
                 Utilities.Log.Print("Keyword: " + keyword, false);
             }
 
+            Utilities.Log.Print("Render queue: " + material.renderQueue, false);
             Utilities.Log.Print("Done print");
         }
     }

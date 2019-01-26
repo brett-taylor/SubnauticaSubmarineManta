@@ -106,3 +106,9 @@
 [SubmarinesFramework] Property _InfectionOffset (0.0, 0.0, 0.0, 0.0)
 [SubmarinesFramework] Property _InfectionNoiseTex 
 [SubmarinesFramework] Property _InfectionSpeed (1.0, 1.0, 1.0, 0.0)
+[SubmarinesFramework] Shader keywords: 4
+[SubmarinesFramework] Keyword: MARMO_SIMPLE_GLASS
+[SubmarinesFramework] Keyword: MARMO_SPECMAP
+[SubmarinesFramework] Keyword: WBOIT
+[SubmarinesFramework] Keyword: _ZWRITE_ON
+[SubmarinesFramework] Render queue: 3101

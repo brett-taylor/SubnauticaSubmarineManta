@@ -135,7 +135,11 @@ namespace Manta.Core
             hullFour.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             hullFour.SetFloat("_EnableGlow", 1.3f);
 
+            hullGlass.DisableKeyword("_ALPHAPREMULTIPLY_ON");
             hullGlass.EnableKeyword("MARMO_SIMPLE_GLASS");
+            hullGlass.EnableKeyword("MARMO_SPECMAP");
+            hullGlass.EnableKeyword("WBOIT");
+            hullGlass.EnableKeyword("_ZWRITE_ON");
             hullGlass.SetColor("_Color", new Color(0.0f, 0.2f, 0.4f, 0.6f));
             hullGlass.SetFloat("_Mode", 3);
             hullGlass.SetFloat("_DstBlend", 1);
@@ -145,10 +149,11 @@ namespace Manta.Core
             hullGlass.SetFloat("_Cutoff", 0);
             hullGlass.SetFloat("_IBLreductionAtNight", 0.92f);
             hullGlass.SetFloat("_EnableSimpleGlass", 1f);
-            hullGlass.SetFloat("_MarmoSpecEnum ", 2f);
+            hullGlass.SetFloat("_MarmoSpecEnum", 2f);
             hullGlass.SetColor("_SpecColor", new Color(1.000f, 1.000f, 1.000f, 1.000f));
             hullGlass.SetFloat("_Shininess", 6.2f);
             hullGlass.SetFloat("_Fresnel", 0.9f);
+            hullGlass.renderQueue = 3101;
 
             SkyApplier skyApplier = submarine.GetOrAddComponent<SkyApplier>();
             skyApplier.renderers = renderers;
