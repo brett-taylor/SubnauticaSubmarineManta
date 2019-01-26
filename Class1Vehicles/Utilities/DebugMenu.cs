@@ -1,9 +1,11 @@
 ﻿using Manta.Core;
+using Odyssey.Core;
 using Submarines;
 using Submarines.Movement;
+using Submarines.Utilities.Extensions;
 using UnityEngine;
 
-namespace Manta.Utilities
+namespace Class1Vehicles.Utilities
 {
     /**
      * Debug menu. Messy code be living here.
@@ -17,10 +19,9 @@ namespace Manta.Utilities
         private Submarine submarine;
         private MovementController movementController;
         private MovementStabiliser stabiliser;
-        private GameObject teleportSpot;
-        private Vector3 oldTeleportSpot;
-        private bool isInside = false;
         private bool submarineIsParent = false;
+        private string fmodAsset = "cyclops_door_close";
+        private string fmodCustomEmitterAsset = "AI_engine_up";
 
         public void Update()
         {
@@ -106,6 +107,46 @@ namespace Manta.Utilities
                     }
                 }
 
+                if (GUILayout.Button("Delete Object"))
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    if (Physics.Raycast(ray, out RaycastHit hit))
+                    {
+                        Destroy(hit.rigidbody.gameObject);
+                    }
+                }
+
+                GUILayout.BeginHorizontal();
+                fmodAsset = GUILayout.TextField(fmodAsset);
+                if (GUILayout.Button("Play Standard FMOD"))
+                {
+                    FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
+                    foreach (FMODAsset fmod in fmods)
+                    {
+                        if (fmod.name.ToLower().Equals(fmodAsset))
+                        {
+                            Log.Print("Playing FMOD: " + fmod.name);
+                            Utils.PlayFMODAsset(fmod, MainCamera.camera.transform, 20f);
+                        }
+                    }
+                }
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
+                fmodCustomEmitterAsset = GUILayout.TextField(fmodCustomEmitterAsset);
+                if (GUILayout.Button("Play Custom Emitter"))
+                {
+                    FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
+                    foreach (FMODAsset fmod in fmods)
+                    {
+                        if (fmod.name.ToLower().Equals(fmodCustomEmitterAsset))
+                        {
+                            FMODUWE.PlayOneShot(fmod, Player.main.transform.position, 5f);
+                        }
+                    }
+                }
+                GUILayout.EndHorizontal();
+
                 if (GUILayout.Button("Cyclops static mesh"))
                 {
                     Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -119,6 +160,64 @@ namespace Manta.Utilities
                             Log.Print("Size 1: " + obj.GetComponentInChildren<MeshFilter>().mesh.triangles.Length);
                             Log.Print("Size 2: " + obj.GetComponentInChildren<MeshFilter>().mesh.vertices.Length);
                             Destroy(obj);
+                        }
+                    }
+                }
+
+                if (GUILayout.Button("Cyclops render materials"))
+                {
+                    Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit raycastHit4;
+                    if (Physics.Raycast(ray4, out raycastHit4))
+                    {
+                        if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                        {
+                            //Transform gggg1 = raycastHit4.rigidbody.gameObject.transform.Find("CyclopsMeshStatic").transform.Find("undamaged").Find("cyclops_LOD0").Find("cyclops_submarine_exterior");
+                            //Transform gggg1 = raycastHit4.rigidbody.gameObject.transform.Find("CyclopsMeshStatic").transform.Find("undamaged").Find("cyclops_LOD0").Find("Cyclops_submarine_exterior_glass");
+                            Transform gggg1 = raycastHit4.rigidbody.gameObject.transform.Find("CyclopsMeshStatic").transform.Find("undamaged").Find("cyclops_LOD0").Find("cyclops_submarine_exterior_decals");
+                            //Transform gggg1 = raycastHit4.rigidbody.gameObject.transform.Find("CyclopsMeshStatic").transform.Find("undamaged").Find("cyclops_LOD0");
+
+                            /*foreach (MeshRenderer mr in gggg1.gameObject.GetComponentsInChildren<MeshRenderer>())
+                            {
+                                Utilities.Log.Print("Gameobject: " + mr.gameObject.name);
+                                foreach (Material mat2 in mr.materials)
+                                {
+                                    Utilities.Log.Print("Material: " + mat2.name);
+                                    Utilities.Log.Print("keywords: " + mat2.shaderKeywords.Length);
+                                    foreach(var s in mat2.shaderKeywords)
+                                    {
+                                        Utilities.Log.Print("Keyword: " + s);
+                                    }
+                                    Utilities.Log.Print("-");
+                                }
+                                Utilities.Log.Print("--");
+                            }*/
+
+                            Utilities.Log.Print("Materials count: " + gggg1.GetComponent<MeshRenderer>().materials.Length);
+                            Material mat = gggg1.GetComponent<MeshRenderer>().material;
+                            mat.PrintAllMarmosetUBERShaderProperties();
+                        }
+                    }
+                }
+
+                if (GUILayout.Button("Manta render materials"))
+                {
+                    Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit raycastHit4;
+                    if (Physics.Raycast(ray4, out raycastHit4))
+                    {
+                        if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("manta"))
+                        {
+                            Transform gggg1 = raycastHit4.rigidbody.gameObject.transform.Find("Model").transform.Find("Exterior");
+
+                            Utilities.Log.Print("Materials count: " + gggg1.GetComponent<MeshRenderer>().materials.Length);
+                            foreach(Material mat in gggg1.GetComponent<MeshRenderer>().materials)
+                            {
+                                if (mat.name.ToLower().Contains("glass"))
+                                {
+                                    mat.PrintAllMarmosetUBERShaderProperties();
+                                }
+                            }
                         }
                     }
                 }
@@ -160,6 +259,13 @@ namespace Manta.Utilities
                             stabiliser = hit.rigidbody.gameObject.GetComponent<MovementStabiliser>();
                         }
                     }
+                }
+
+                if (GUILayout.Button("Spawn Odyssey"))
+                {
+                    GameObject gameObject2 = OdysseyMod.CreateOdyssey();
+                    gameObject2.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 6f;
+                    gameObject2.transform.LookAt(Player.main.transform);
                 }
 
                 if (GUILayout.Button("Spawn manta"))
@@ -205,6 +311,28 @@ namespace Manta.Utilities
                     Log.Print("Buildings inside manta count: " + submarine.GetModulesRoot().transform.childCount);
                 }
 
+                GUILayout.Space(5f);
+                GUILayout.Box("Speed Settings");
+
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("ForwardAccelerationSpeed:");
+                submarine.GetComponent<MovementData>().ForwardAccelerationSpeed = float.Parse(GUILayout.TextField("" + submarine.GetComponent<MovementData>().ForwardAccelerationSpeed));
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("BackwardsAccelerationSpeed:");
+                submarine.GetComponent<MovementData>().BackwardsAccelerationSpeed = float.Parse(GUILayout.TextField("" + submarine.GetComponent<MovementData>().BackwardsAccelerationSpeed));
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("AscendDescendSpeed:");
+                submarine.GetComponent<MovementData>().AscendDescendSpeed = float.Parse(GUILayout.TextField("" + submarine.GetComponent<MovementData>().AscendDescendSpeed));
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("RotationSpeed:");
+                submarine.GetComponent<MovementData>().RotationSpeed = float.Parse(GUILayout.TextField("" + submarine.GetComponent<MovementData>().RotationSpeed));
+                GUILayout.EndHorizontal();
 
             }, "The Manta Mod Debug Menu");
         }

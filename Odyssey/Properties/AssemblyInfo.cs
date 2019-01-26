@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SavingLoadingSystem")]
+[assembly: AssemblyTitle("Odyssey")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SavingLoadingSystem")]
+[assembly: AssemblyProduct("Odyssey")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9e6f7969-5491-446b-b5b5-81d4aff6c85b")]
+[assembly: Guid("7f166250-5010-4846-a568-fed09919507d")]
 
 // Version information for an assembly consists of the following four values:
 //

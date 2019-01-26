@@ -59,13 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="Patchers\OpenCloseDebugMenuPatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\DebugMenu.cs" />
     <Compile Include="Utilities\Log.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Manta\Manta.csproj">
       <Project>{c3c8cf34-f160-46bd-8673-53f9dce49270}</Project>
       <Name>Manta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Odyssey\Odyssey.csproj">
+      <Project>{7f166250-5010-4846-a568-fed09919507d}</Project>
+      <Name>Odyssey</Name>
     </ProjectReference>
     <ProjectReference Include="..\Submarines\Submarines.csproj">
       <Project>{6bc8ce46-4d49-4d56-8d65-0337ada12a89}</Project>

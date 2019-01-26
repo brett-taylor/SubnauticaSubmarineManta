@@ -6,12 +6,23 @@
 */
 namespace Submarines.Movement
 {
-    public class MovementData : MonoBehaviour
+    public class MovementData
     {
         public static float CONTROL_DEADZONE { get; set; } = 0.05f; 
-        public float ForwardAccelerationSpeed { get; set; } = 3f;
-        public float BackwardsAccelerationSpeed { get; set; } = 1.6f;
+        public float ForwardAccelerationSpeed { get; set; } = 5f;
+        public float BackwardsAccelerationSpeed { get; set; } = 3f;
         public float AscendDescendSpeed { get; set; } = 1.4f;
-        public float RotationSpeed { get; set; } = 0.6f;
+        public float RotationSpeed { get; set; } = 0.3f;
+
+        public static MovementData Zero()
+        {
+            return new MovementData
+            {
+                ForwardAccelerationSpeed = 0f,
+                BackwardsAccelerationSpeed = 0f,
+                AscendDescendSpeed = 0f,
+                RotationSpeed = 0f
+            };
+        }
     }
 }

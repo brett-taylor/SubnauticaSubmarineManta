@@ -1,0 +1,116 @@
+[Class1Vehicles] Materials count: 1
+[SubmarinesFramework] Property _Color (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _Mode 1
+[SubmarinesFramework] Property _SrcBlend 5
+[SubmarinesFramework] Property _DstBlend 10
+[SubmarinesFramework] Property _SrcBlend2 5
+[SubmarinesFramework] Property _DstBlend2 10
+[SubmarinesFramework] Property _AddSrcBlend 5
+[SubmarinesFramework] Property _AddDstBlend 1
+[SubmarinesFramework] Property _AddSrcBlend2 1
+[SubmarinesFramework] Property _EnableMisc 1
+[SubmarinesFramework] Property _MyCullVariable 2
+[SubmarinesFramework] Property _ZWrite 1
+[SubmarinesFramework] Property _ZOffset 0
+[SubmarinesFramework] Property _EnableCutOff 1
+[SubmarinesFramework] Property _Cutoff 0.772
+[SubmarinesFramework] Property _EnableDitherAlpha 0
+[SubmarinesFramework] Property _EnableVrFadeOut 0
+[SubmarinesFramework] Property _VrFadeMask 
+[SubmarinesFramework] Property _EnableLighting 1
+[SubmarinesFramework] Property _IBLreductionAtNight 0.99
+[SubmarinesFramework] Property _EnableSimpleGlass 0
+[SubmarinesFramework] Property _EnableVertexColor 0
+[SubmarinesFramework] Property _EnableSchoolFish 0
+[SubmarinesFramework] Property _EnableMainMaps 1
+[SubmarinesFramework] Property _MainTex cyclops_submarine_exterior_decals_01
+[SubmarinesFramework] Property _BumpMap cyclops_submarine_exterior_decals_01_normal
+[SubmarinesFramework] Property _MarmoSpecEnum 2
+[SubmarinesFramework] Property _SpecTex cyclops_submarine_exterior_decals_01_spec
+[SubmarinesFramework] Property _SpecColor RGBA(0.960, 0.682, 0.163, 1.000)
+[SubmarinesFramework] Property _SpecInt 1
+[SubmarinesFramework] Property _Shininess 6.860398
+[SubmarinesFramework] Property _Fresnel 0.6964286
+[SubmarinesFramework] Property _EnableGlow 1
+[SubmarinesFramework] Property _GlowColor (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _Illum cyclops_submarine_exterior_decals_01_illum
+[SubmarinesFramework] Property _GlowUVfromVC 0
+[SubmarinesFramework] Property _GlowStrength 1
+[SubmarinesFramework] Property _GlowStrengthNight 0.2
+[SubmarinesFramework] Property _EmissionLM 0
+[SubmarinesFramework] Property _EmissionLMNight 0
+[SubmarinesFramework] Property _EnableDetailMaps 0
+[SubmarinesFramework] Property _DetailDiffuseTex 
+[SubmarinesFramework] Property _DetailBumpTex 
+[SubmarinesFramework] Property _DetailSpecTex 
+[SubmarinesFramework] Property _DetailIntensities (0.2, 0.2, 0.2, 0.0)
+[SubmarinesFramework] Property _EnableLightmap 0
+[SubmarinesFramework] Property _Lightmap 
+[SubmarinesFramework] Property _LightmapStrength 2.65
+[SubmarinesFramework] Property _Enable3Color 0
+[SubmarinesFramework] Property _MultiColorMask 
+[SubmarinesFramework] Property _Color2 (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _Color3 (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _SpecColor2 (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _SpecColor3 (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property FX 0
+[SubmarinesFramework] Property _DeformMap 
+[SubmarinesFramework] Property _DeformParams (1.0, 1.0, 0.2, 0.2)
+[SubmarinesFramework] Property _FillSack 0
+[SubmarinesFramework] Property _OverlayStrength 1
+[SubmarinesFramework] Property _GlowScrollColor (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _GlowScrollMask 
+[SubmarinesFramework] Property _Hypnotize 1
+[SubmarinesFramework] Property _ScrollColor (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _ColorStrength (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _ScrollTex 
+[SubmarinesFramework] Property _GlowMask 
+[SubmarinesFramework] Property _GlowMaskSpeed (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _ScrollTex2 
+[SubmarinesFramework] Property _ScrollSpeed (0.1, 0.1, 0.0, 0.0)
+[SubmarinesFramework] Property _NoiseTex 
+[SubmarinesFramework] Property _DetailsColor (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _SquaresColor (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _SquaresTile 30
+[SubmarinesFramework] Property _SquaresSpeed 0.5
+[SubmarinesFramework] Property _SquaresIntensityPow 2
+[SubmarinesFramework] Property _NoiseSpeed (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _FakeSSSparams (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _FakeSSSSpeed (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _BorderColor (1.0, 1.0, 1.0, 1.0)
+[SubmarinesFramework] Property _Built 0
+[SubmarinesFramework] Property _BuildParams (1.0, 1.0, 5.0, 4.0)
+[SubmarinesFramework] Property _BuildLinear 0
+[SubmarinesFramework] Property _EmissiveTex 
+[SubmarinesFramework] Property _NoiseThickness 0.05
+[SubmarinesFramework] Property _NoiseStr 0.2
+[SubmarinesFramework] Property FX_Vertex 0
+[SubmarinesFramework] Property _Scale (0.1, 0.1, 0.1, 0.1)
+[SubmarinesFramework] Property _Frequency (0.6, 0.5, 0.8, 0.8)
+[SubmarinesFramework] Property _Speed (0.6, 0.3, 0.0, 0.0)
+[SubmarinesFramework] Property _AnimMask 
+[SubmarinesFramework] Property _ObjectUp (0.0, 0.0, 1.0, 0.0)
+[SubmarinesFramework] Property _Fallof 1
+[SubmarinesFramework] Property _RopeGravity 1
+[SubmarinesFramework] Property _minYpos 0.5
+[SubmarinesFramework] Property _maxYpos 0.5
+[SubmarinesFramework] Property _EnableBurst 0
+[SubmarinesFramework] Property _DispTex 
+[SubmarinesFramework] Property _Displacement 5
+[SubmarinesFramework] Property _BurstStrength 0
+[SubmarinesFramework] Property _Range (0.0, 70.0, 0.0, 1.0)
+[SubmarinesFramework] Property _ClipRange 0.6
+[SubmarinesFramework] Property _EnableInfection 0
+[SubmarinesFramework] Property _EnablePlayerInfection 0
+[SubmarinesFramework] Property _InfectionHeightStrength 0
+[SubmarinesFramework] Property _InfectionScale (1.0, 1.0, 1.0, 0.0)
+[SubmarinesFramework] Property _InfectionOffset (0.0, 0.0, 0.0, 0.0)
+[SubmarinesFramework] Property _InfectionNoiseTex 
+[SubmarinesFramework] Property _InfectionSpeed (1.0, 1.0, 1.0, 0.0)
+[SubmarinesFramework] Shader keywords: 5
+[SubmarinesFramework] Keyword: MARMO_ALPHA
+[SubmarinesFramework] Keyword: MARMO_ALPHA_CLIP
+[SubmarinesFramework] Keyword: MARMO_EMISSION
+[SubmarinesFramework] Keyword: MARMO_SPECMAP
+[SubmarinesFramework] Keyword: _ZWRITE_ON
+[SubmarinesFramework] Done print

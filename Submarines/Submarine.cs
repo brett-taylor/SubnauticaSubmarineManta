@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-/**
- * The main submarine component.
- */
 namespace Submarines
 {
+    /**
+    * The main submarine component.
+    */
     [ProtoBuf.ProtoContract]
-    public class Submarine : SubRoot, ISerializationCallbackReceiver, IProtoEventListener
+    public class Submarine : SubRoot
     {
-        public Transform SavedModulesRoot;
+        public Transform SavedModulesRoot { get; set; }
 
         public new virtual void Awake()
         {
@@ -29,10 +29,12 @@ namespace Submarines
 
         public new virtual void OnPlayerEntered(Player player)
         {
+            BroadcastMessage("OnPlayerEnteredSubmarine", SendMessageOptions.DontRequireReceiver);
         }
 
         public new virtual void OnPlayerExited(Player player)
         {
+            BroadcastMessage("OnPlayerExitedSubmarine", SendMessageOptions.DontRequireReceiver);
         }
 
         public virtual void EnterSubmarine()
@@ -45,21 +47,14 @@ namespace Submarines
             Player.main.SetCurrentSub(null);
         }
 
-        public new virtual void OnProtoSerialize(ProtobufSerializer serializer)
+        public void OnSteeringStart()
         {
+            BroadcastMessage("OnSteeringStarted", SendMessageOptions.DontRequireReceiver);
         }
 
-        public new virtual void OnProtoDeserialize(ProtobufSerializer serializer)
+        public void OnSteeringEnd()
         {
-            
-        }
-
-        public virtual void OnBeforeSerialize()
-        {
-        }
-
-        public virtual void OnAfterDeserialize()
-        {
+            BroadcastMessage("OnSteeringEnded", SendMessageOptions.DontRequireReceiver);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Submarines
                 return;
             }
 
-            HarmonyInstance = HarmonyInstance.Create("taylor.brett.TheMantaMod.mod");
+            HarmonyInstance = HarmonyInstance.Create("taylor.brett.SubmarinesFramework.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
             Assets.SubmarineAssetLoader.LoadAssets();

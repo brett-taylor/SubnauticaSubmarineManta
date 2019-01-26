@@ -1,0 +1,1695 @@
+[Class1Vehicles] FMOD: battery_die (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/battery_die
+[Class1Vehicles] ID: {14490ac5-73e8-47ce-b7f9-26ac8cef9467}
+[Class1Vehicles] FMOD: battery_insert (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/battery_insert
+[Class1Vehicles] ID: {4ec9a6fe-0256-4f4f-8f42-6df726266063}
+[Class1Vehicles] FMOD: bot_2_hover (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/bot_2_hover
+[Class1Vehicles] ID: {865f1450-a45e-4b4f-aca4-5e91158f2bc9}
+[Class1Vehicles] FMOD: seamoth_rev_up (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seamoth_rev_up
+[Class1Vehicles] ID: {66b9bbc2-44d6-44b4-9d5c-2af7ac64e05c}
+[Class1Vehicles] FMOD: unmute_all (FMODAsset)
+[Class1Vehicles] PATH: event:/main_menu/unmute_all
+[Class1Vehicles] ID: {a6c301b7-f7a9-4ff6-9121-87cf01d22e77}
+[Class1Vehicles] FMOD: bot_4_hover (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/bot_4_hover
+[Class1Vehicles] ID: {99214427-b81d-4703-b0ac-688d31a7427a}
+[Class1Vehicles] FMOD: alert (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crabsnake/alert
+[Class1Vehicles] ID: {08782df0-aa9d-4110-a12e-a26bc57503d9}
+[Class1Vehicles] FMOD: draw (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/beacon/draw
+[Class1Vehicles] ID: {8aaea506-5a7b-495b-af9c-693e3655d38f}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/lasercutter/deploy
+[Class1Vehicles] ID: {310dc33e-207d-4d67-89cb-dda1c48224e6}
+[Class1Vehicles] FMOD: shroom_out (FMODAsset)
+[Class1Vehicles] PATH: event:/env/shroom_out
+[Class1Vehicles] ID: {4247681b-b5e1-4417-9f32-11d15e02c635}
+[Class1Vehicles] FMOD: shroom_in (FMODAsset)
+[Class1Vehicles] PATH: event:/env/shroom_in
+[Class1Vehicles] ID: {c0c9656d-7057-4ab3-9e43-e0af78ecdec4}
+[Class1Vehicles] FMOD: intro_cin (FMODAsset)
+[Class1Vehicles] PATH: event:/main_menu/intro_cin
+[Class1Vehicles] ID: {0ba1ac16-ca89-486b-934b-7501f2ef973c}
+[Class1Vehicles] FMOD: open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/medkit_locker/open
+[Class1Vehicles] ID: {312b0baa-3779-4889-bb3f-6739199c9237}
+[Class1Vehicles] FMOD: die (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crash/die
+[Class1Vehicles] ID: {d22b3e5f-b5f6-43a8-b73b-b433e021cd88}
+[Class1Vehicles] FMOD: attack_cine (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crabsnake/attack_cine
+[Class1Vehicles] ID: {330b93c6-ad04-4469-a0f2-a120c7a22267}
+[Class1Vehicles] FMOD: impact_solid_soft (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/impact_solid_soft
+[Class1Vehicles] ID: {d79245cb-6c33-4b17-b344-cea74ad7d14d}
+[Class1Vehicles] FMOD: seamoth_light_on (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seamoth_light_on
+[Class1Vehicles] ID: {ff87fd3b-ef80-40be-8eed-cf3b1da407c5}
+[Class1Vehicles] FMOD: new_encyclopediea (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/scanner/new_encyclopediea
+[Class1Vehicles] ID: {edd27e07-eae8-45ed-9115-a7ae85ff0ca1}
+[Class1Vehicles] FMOD: pickup_copper (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/pickup_copper
+[Class1Vehicles] ID: {816a0e2e-4f63-4172-be31-b3837eacc128}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravcannon/deploy
+[Class1Vehicles] ID: {3aa914c5-3ede-479a-bd6e-c7bdde130691}
+[Class1Vehicles] FMOD: seaglide_light_on (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seaglide_light_on
+[Class1Vehicles] ID: {fe76457f-0c94-4245-a080-8a5b2f8853c4}
+[Class1Vehicles] FMOD: attack (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crabsnake/attack
+[Class1Vehicles] ID: {cd98f853-6a18-45ae-a65f-59192b7560e4}
+[Class1Vehicles] FMOD: inflate (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crash/inflate
+[Class1Vehicles] ID: {267114ee-5ebc-4766-936c-9c845c827f85}
+[Class1Vehicles] FMOD: place (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/lights/place
+[Class1Vehicles] ID: {81d1f0d2-f018-4c6e-9d1a-e29887280f60}
+[Class1Vehicles] FMOD: map_room_background (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/map room/map_room_background
+[Class1Vehicles] ID: {959c461d-788c-4ea9-9c82-d58253315472}
+[Class1Vehicles] FMOD: keypad_door_open (FMODAsset)
+[Class1Vehicles] PATH: event:/env/keypad_door_open
+[Class1Vehicles] ID: {4a2f1509-2905-440d-bc35-64b890e6c03c}
+[Class1Vehicles] FMOD: fishsplat (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/common/fishsplat
+[Class1Vehicles] ID: {0e47f1c6-6178-41bd-93bf-40bfca179cb6}
+[Class1Vehicles] FMOD: idle (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/bird_small/idle
+[Class1Vehicles] ID: {f8d1ac1c-cf5d-4647-93ab-a3190d227101}
+[Class1Vehicles] FMOD: hull_restored (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/hull_restored
+[Class1Vehicles] ID: {0e516d6f-c4fc-42ca-8259-49d2401117a4}
+[Class1Vehicles] FMOD: decoy_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/decoy_loop
+[Class1Vehicles] ID: {6ac91603-321a-4991-bca9-1a9bf8e7da8f}
+[Class1Vehicles] FMOD: breadcrum (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/divereel/breadcrum
+[Class1Vehicles] ID: {3137d91a-a1bd-411c-9e5b-58ba88d2fe63}
+[Class1Vehicles] FMOD: loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/builder/loop
+[Class1Vehicles] ID: {17e5bc5a-0353-4a32-8815-99c87de7076e}
+[Class1Vehicles] FMOD: sub_splash (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/sub_splash
+[Class1Vehicles] ID: {e52176b5-3a99-4572-aeb9-6072f5d1d809}
+[Class1Vehicles] FMOD: hit_breakable (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/hit_breakable
+[Class1Vehicles] ID: {48074412-7677-478c-b90d-62879166b326}
+[Class1Vehicles] FMOD: turn_on (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flashlight/turn_on
+[Class1Vehicles] ID: {c6eebaf5-0628-49d0-8d4a-4214ba6b1283}
+[Class1Vehicles] FMOD: invalid_construction (FMODAsset)
+[Class1Vehicles] PATH: event:/player/invalid_construction
+[Class1Vehicles] ID: {eb149480-7039-43f1-b009-cc32e347b805}
+[Class1Vehicles] FMOD: scan_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/scanner/scan_loop
+[Class1Vehicles] ID: {d321180b-6948-49c3-b109-f8b7268644eb}
+[Class1Vehicles] FMOD: base_background (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/base_background
+[Class1Vehicles] ID: {0bc72015-377f-4734-8100-776ade651ba4}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/first_use
+[Class1Vehicles] ID: {a32bccb8-d4a2-4202-91a0-aafd6c9e85da}
+[Class1Vehicles] FMOD: close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/workbench/close
+[Class1Vehicles] ID: {157eabdd-74f1-48ee-b497-ea2302e9e1eb}
+[Class1Vehicles] FMOD: splash_in_and_out (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/common/splash_in_and_out
+[Class1Vehicles] ID: {eefd976d-e272-4ad7-9a60-3e0d22066b66}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flashlight/deploy
+[Class1Vehicles] ID: {6e6963e3-9abc-4c7a-978d-53991fd68963}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/builder/first_use
+[Class1Vehicles] ID: {8809513e-975a-4949-be05-1728cbe4df87}
+[Class1Vehicles] FMOD: AI_no_power (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/AI_no_power
+[Class1Vehicles] ID: {5e2bbce6-6709-4d13-bf82-be2d91a48b3a}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/scanner/first_use
+[Class1Vehicles] ID: {3aea7775-1226-40c5-8570-d14f8201c084}
+[Class1Vehicles] FMOD: sub_splash (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/common/sub_splash
+[Class1Vehicles] ID: {d3e9c386-559d-4dd4-9543-54dcefa0fe9b}
+[Class1Vehicles] FMOD: solar_panel_death (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/solar_panel_death
+[Class1Vehicles] ID: {9491da72-75fc-4cbf-9092-4e90db68f08a}
+[Class1Vehicles] FMOD: pickup_scrapmetal (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/pickup_scrapmetal
+[Class1Vehicles] ID: {5e5bc649-8887-4a07-bcce-f756942d4a17}
+[Class1Vehicles] FMOD: bots_build (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/bots_build
+[Class1Vehicles] ID: {5cd27dcf-773c-4ca5-8aa2-7e30f02d4c25}
+[Class1Vehicles] FMOD: break_breakable (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/break_breakable
+[Class1Vehicles] ID: {87952e06-23cd-4a94-baec-cee1ccb588cf}
+[Class1Vehicles] FMOD: fire (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravcannon/fire
+[Class1Vehicles] ID: {699aa9c7-0c68-4a97-88b5-d7704247fd20}
+[Class1Vehicles] FMOD: spawn (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/first_aid/spawn
+[Class1Vehicles] ID: {b6bd881c-725c-4cd3-9a79-9f7256368b58}
+[Class1Vehicles] FMOD: cut_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/lasercutter/cut_loop
+[Class1Vehicles] ID: {2247765a-d271-47d7-8a33-33ca20b219f9}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flare/first_use
+[Class1Vehicles] ID: {21b9351a-471b-4ac7-ae7e-b41bcbdad6b7}
+[Class1Vehicles] FMOD: grab_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravcannon/grab_loop
+[Class1Vehicles] ID: {cede352a-14d7-4894-9c39-ce954c1425c6}
+[Class1Vehicles] FMOD: scan_complete (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/scanner/scan_complete
+[Class1Vehicles] ID: {59d38665-7911-4f5b-9974-7f1c470eb16d}
+[Class1Vehicles] FMOD: bot_3_hover (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/bot_3_hover
+[Class1Vehicles] ID: {5ff5f6f2-6762-4446-83d8-57f4083a2ee8}
+[Class1Vehicles] FMOD: fire (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/fire
+[Class1Vehicles] ID: {8596ce7e-3c73-46bf-8be8-27b1afdd8d7a}
+[Class1Vehicles] FMOD: seaglide_light_off (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seaglide_light_off
+[Class1Vehicles] ID: {b52592a9-19f5-45d1-ad56-7d355fc3dcc3}
+[Class1Vehicles] FMOD: seaglide_loop_rpm (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seaglide_loop_rpm
+[Class1Vehicles] ID: {d227ffcc-4f35-4b17-862d-a9fe4884bc0e}
+[Class1Vehicles] FMOD: bite (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/ghostleviathan/bite
+[Class1Vehicles] ID: {d9ac9e5c-5c8c-46b3-a0f3-58b2248e2331}
+[Class1Vehicles] FMOD: crush_damage (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/crush_damage
+[Class1Vehicles] ID: {905b4b2c-e1cc-4420-8040-bf45df04ce08}
+[Class1Vehicles] FMOD: sphere_deactivate (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/sphere_deactivate
+[Class1Vehicles] ID: {cb432b7d-ecae-499c-b09f-beeca4b07359}
+[Class1Vehicles] FMOD: seaglide_equip (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seaglide_equip
+[Class1Vehicles] ID: {37a6fc6d-09aa-43fa-ac73-4b5cc54c73d3}
+[Class1Vehicles] FMOD: idle (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/garry/idle
+[Class1Vehicles] ID: {8fe12e63-374e-469a-8416-19eb187b7fe9}
+[Class1Vehicles] FMOD: change_camera (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/drone/change_camera
+[Class1Vehicles] ID: {0f0ba598-5d58-4fab-beb5-395678954586}
+[Class1Vehicles] FMOD: torpedo_disarmed (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/torpedo_disarmed
+[Class1Vehicles] ID: {fe31bf0d-3be5-4269-9743-a720e9a1d096}
+[Class1Vehicles] FMOD: storage_open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/storage_open
+[Class1Vehicles] ID: {b2821359-928c-4780-876a-0957de85f193}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/knife/first_use
+[Class1Vehicles] ID: {a62f49db-153a-45ac-8d9d-22b2e08b237a}
+[Class1Vehicles] FMOD: radio_play (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radio_play
+[Class1Vehicles] ID: {e76203aa-4e50-47fc-86d6-bbbd9f9d50e0}
+[Class1Vehicles] FMOD: attack (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/mesmer/attack
+[Class1Vehicles] ID: {85f2c444-ca02-4bf6-b202-fd6f23400508}
+[Class1Vehicles] FMOD: sphere_activate (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/sphere_activate
+[Class1Vehicles] ID: {2b79323a-6dcd-4457-81f9-f7c0694a3c3d}
+[Class1Vehicles] FMOD: bot_1_hover (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/bot_1_hover
+[Class1Vehicles] ID: {116342ab-6c9d-44ca-8efe-22b1212516d2}
+[Class1Vehicles] FMOD: hit (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/knife/hit
+[Class1Vehicles] ID: {d7e81e70-d5b7-4974-b588-c1109260cc3a}
+[Class1Vehicles] FMOD: power_down (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/power_down
+[Class1Vehicles] ID: {6efcd2b5-77ab-45b8-8407-4caba858036f}
+[Class1Vehicles] FMOD: stillsuit_equipped (FMODAsset)
+[Class1Vehicles] PATH: event:/player/stillsuit_equipped
+[Class1Vehicles] ID: {a53060bf-2cfa-49c9-a3ad-fa29e709756e}
+[Class1Vehicles] FMOD: pickup_salt (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/pickup_salt
+[Class1Vehicles] ID: {b437ff2a-db6a-4554-aed3-08a0322c720c}
+[Class1Vehicles] FMOD: seamoth_light_off (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seamoth_light_off
+[Class1Vehicles] ID: {b98a6113-583d-437d-bece-ea8e245cbe55}
+[Class1Vehicles] FMOD: depth_update (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/depth_update
+[Class1Vehicles] ID: {e51c11a0-02f4-493e-be03-3d1ab0a60de9}
+[Class1Vehicles] FMOD: seaglide_rev_up (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seaglide_rev_up
+[Class1Vehicles] ID: {2d41d6d2-f193-4599-bbd8-bd6cb7c0d3dd}
+[Class1Vehicles] FMOD: open_pod (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crash/open_pod
+[Class1Vehicles] ID: {54732a27-c1e6-47f1-8659-e38913a99ce1}
+[Class1Vehicles] FMOD: seamoth_stop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seamoth_stop
+[Class1Vehicles] ID: {578ac11c-0c77-48d0-b674-e7cfa8c215ca}
+[Class1Vehicles] FMOD: idle (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/ghostleviathan/idle
+[Class1Vehicles] ID: {e3bd09bd-647f-4a4b-9924-ad0ec88562d0}
+[Class1Vehicles] FMOD: floater_hold_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/floater/floater_hold_loop
+[Class1Vehicles] ID: {95949cb5-1819-4666-b170-19fda97416df}
+[Class1Vehicles] FMOD: pressure_damage_light (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/pressure_damage_light
+[Class1Vehicles] ID: {6fe6c956-5817-4c2a-93ff-bf36e31c48ca}
+[Class1Vehicles] FMOD: radioSunbeamEvent05 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radioSunbeamEvent05
+[Class1Vehicles] ID: {67ef4a5b-1492-4f0b-8fc8-d6dbd1120354}
+[Class1Vehicles] FMOD: weld_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/welder/weld_loop
+[Class1Vehicles] ID: {3a3a0f85-e0c2-4150-be8d-113759cabc72}
+[Class1Vehicles] FMOD: radio_power_on (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radio_power_on
+[Class1Vehicles] ID: {ef282853-15f7-4bd8-bda7-7cf4996209b6}
+[Class1Vehicles] FMOD: locker_close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/locker_close
+[Class1Vehicles] ID: {16eb5589-e341-41cb-9c88-02cb4e3da44a}
+[Class1Vehicles] FMOD: draw (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/scanner/draw
+[Class1Vehicles] ID: {6dce66c0-2bdf-4121-bf9f-0716c30e0dbf}
+[Class1Vehicles] FMOD: constructor_climb (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/constructor_climb
+[Class1Vehicles] ID: {526b6541-5a2b-428a-b84f-b59952971cf1}
+[Class1Vehicles] FMOD: storage_close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/storage_close
+[Class1Vehicles] ID: {88d7834f-d050-470b-8ee5-1db7b7defa6f}
+[Class1Vehicles] FMOD: impact_solid_medium (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/impact_solid_medium
+[Class1Vehicles] ID: {cb2927bf-3f8d-45d8-afe2-c82128f39062}
+[Class1Vehicles] FMOD: spawn (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/spawn
+[Class1Vehicles] ID: {8813c1fa-9144-49c6-8c2d-430e6a56dbea}
+[Class1Vehicles] FMOD: welcome (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/welcome
+[Class1Vehicles] ID: {aed6cd64-81d8-4191-bcf0-844f152b7da2}
+[Class1Vehicles] FMOD: pickup_quartz (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/pickup_quartz
+[Class1Vehicles] ID: {582bcfbf-d8a1-4cdf-9fa1-232f65f657d2}
+[Class1Vehicles] FMOD: menu_up (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/fabricator/menu_up
+[Class1Vehicles] ID: {baed3d34-256d-4385-8acc-12ab5efe2571}
+[Class1Vehicles] FMOD: on_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flare/on_loop
+[Class1Vehicles] ID: {82330166-2b90-4f48-95f2-f11059e806f3}
+[Class1Vehicles] FMOD: power_structure_damage (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/power_structure_damage
+[Class1Vehicles] ID: {13ede1d4-4f26-45ad-a869-e3c40deac094}
+[Class1Vehicles] FMOD: use_loot (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/use_loot
+[Class1Vehicles] ID: {23e84228-5cc7-48fe-bd99-b9c43b36e2cc}
+[Class1Vehicles] FMOD: flap (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/bird_small/flap
+[Class1Vehicles] ID: {681f45b7-48ab-479b-82b0-05a6ab2aae73}
+[Class1Vehicles] FMOD: idle (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crash/idle
+[Class1Vehicles] ID: {82917d71-20cb-484f-841b-de2724f5f467}
+[Class1Vehicles] FMOD: impact_solid_hard (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/impact_solid_hard
+[Class1Vehicles] ID: {ed65a390-2e80-4005-b31b-56380500df33}
+[Class1Vehicles] FMOD: power_up_3D (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/power_up_3D
+[Class1Vehicles] ID: {deae88eb-c11c-474d-8b5e-844ac6d1d3fb}
+[Class1Vehicles] FMOD: leak_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/leak_loop
+[Class1Vehicles] ID: {339e02ae-5693-47e3-a327-223887bfdded}
+[Class1Vehicles] FMOD: fist_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flashlight/fist_use
+[Class1Vehicles] ID: {4c983eb1-6a30-4352-9d55-5cdfbf967aa2}
+[Class1Vehicles] FMOD: place_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/teraformer/place_loop
+[Class1Vehicles] ID: {f3e40132-c6fc-4939-bbdc-239982c2e5f3}
+[Class1Vehicles] FMOD: bubble_pop (FMODAsset)
+[Class1Vehicles] PATH: event:/env/bubble_pop
+[Class1Vehicles] ID: {0289ecdf-7a10-479e-9278-81462f0a9f55}
+[Class1Vehicles] FMOD: fabricator_click (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/fabricator/fabricator_click
+[Class1Vehicles] ID: {fc930e7c-3d53-4db5-a7de-e0c11acc4a60}
+[Class1Vehicles] FMOD: negative (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/fabricator/negative
+[Class1Vehicles] ID: {9b3081c7-d59a-4755-a9c7-21e9071cfcee}
+[Class1Vehicles] FMOD: AI_nopower (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/AI_nopower
+[Class1Vehicles] ID: {ebe7022d-29c5-4f32-9092-c523c27872e7}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/deploy
+[Class1Vehicles] ID: {637be7f5-c9df-4524-9bce-24153a5e3e63}
+[Class1Vehicles] FMOD: pod_burst (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/gasopod/pod_burst
+[Class1Vehicles] ID: {314c8410-5c71-4b6c-badc-887a797fdbb4}
+[Class1Vehicles] FMOD: power_down_3D (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/power_down_3D
+[Class1Vehicles] ID: {7314a6cf-6695-4e0d-9c21-4d6ca2023b47}
+[Class1Vehicles] FMOD: loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravsphere/loop
+[Class1Vehicles] ID: {3ea4a1e5-379b-4d9c-98af-6e5022ddbe79}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flare/deploy
+[Class1Vehicles] ID: {108d3828-9d0f-4709-ab4c-a54b50a2008f}
+[Class1Vehicles] FMOD: draw (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/teraformer/draw
+[Class1Vehicles] ID: {c218a750-0436-407d-ac56-76701c21e74a}
+[Class1Vehicles] FMOD: angry_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crash/angry_loop
+[Class1Vehicles] ID: {f1ef2cca-0ffe-4597-8434-096fa82ea9ad}
+[Class1Vehicles] FMOD: pickup_gold (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/pickup_gold
+[Class1Vehicles] ID: {af8c33c9-aa77-4f96-b767-a3e667f30b47}
+[Class1Vehicles] FMOD: beacon_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/beacon/beacon_loop
+[Class1Vehicles] ID: {94524e5a-224b-443c-a097-39402dcb566c}
+[Class1Vehicles] FMOD: torpedo_fire (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/torpedo_fire
+[Class1Vehicles] ID: {63375e84-44b4-4be9-a5bd-80f3e974790d}
+[Class1Vehicles] FMOD: water_filter_spawn (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/water_filter_spawn
+[Class1Vehicles] ID: {b2e584f7-a6b0-4902-abe9-2966805a5536}
+[Class1Vehicles] FMOD: close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/medkit_locker/close
+[Class1Vehicles] ID: {dc9ccdcb-273a-4d37-89e0-95bd963927d1}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/knife/deploy
+[Class1Vehicles] ID: {8576a17e-3609-46ea-85ff-989204ba2b37}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/welder/deploy
+[Class1Vehicles] ID: {8bd2501b-2a89-4672-be22-46912be86e64}
+[Class1Vehicles] FMOD: sonar_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/sonar_loop
+[Class1Vehicles] ID: {0c03d651-e29e-43cd-82c4-9865ccddb758}
+[Class1Vehicles] FMOD: chirp (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/peeper/chirp
+[Class1Vehicles] ID: {9ece140f-1cec-483e-9e33-969a3abb6b03}
+[Class1Vehicles] FMOD: complete (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/builder/complete
+[Class1Vehicles] ID: {b05ad9e7-17b0-4d61-b541-4bbf941cd7a5}
+[Class1Vehicles] FMOD: sing (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/ray/sing
+[Class1Vehicles] ID: {a4313813-1a3e-4bd6-897d-0436efe72846}
+[Class1Vehicles] FMOD: crush_depth_update (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/crush_depth_update
+[Class1Vehicles] ID: {882d9a1f-14c3-4f75-83a3-1ab05f8dc50d}
+[Class1Vehicles] FMOD: crush_depth_warning (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/crush_depth_warning
+[Class1Vehicles] ID: {26b49966-51f1-4336-a6bf-64cc2baf13d1}
+[Class1Vehicles] FMOD: pulse_charge_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/pulse_charge_loop
+[Class1Vehicles] ID: {c53d5ccd-eca8-476a-a64e-dfc0503ce2f1}
+[Class1Vehicles] FMOD: power_up (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/power_up
+[Class1Vehicles] ID: {a8d917f7-63eb-49a1-825e-852a85f6fb08}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/deploy
+[Class1Vehicles] ID: {486e973e-ff9c-4442-b38a-14268863394c}
+[Class1Vehicles] FMOD: locker_open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/locker_open
+[Class1Vehicles] ID: {c97d1fdf-ea26-4b19-8358-7f6ea77c3763}
+[Class1Vehicles] FMOD: impact_solid_medium (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/impact_solid_medium
+[Class1Vehicles] ID: {78e75c0d-2788-4f60-a954-9c0e2c08d6fa}
+[Class1Vehicles] FMOD: select (FMODAsset)
+[Class1Vehicles] PATH: event:/interface/select
+[Class1Vehicles] ID: {cac49838-a577-490d-bf3b-1e9d9128a3ad}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/divereel/deploy
+[Class1Vehicles] ID: {040b1193-d5d5-41e3-b373-e3320891fe64}
+[Class1Vehicles] FMOD: welcome (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/welcome
+[Class1Vehicles] ID: {d1db5c9b-4953-4ee7-ae98-fcc72347bf10}
+[Class1Vehicles] FMOD: bots_out (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/bots_out
+[Class1Vehicles] ID: {3fbbaaee-e82d-49a3-9907-45cfffc8b29b}
+[Class1Vehicles] FMOD: idle_swim (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crabsnake/idle_swim
+[Class1Vehicles] ID: {7672291a-512b-480a-9f81-c9e848a3c177}
+[Class1Vehicles] FMOD: reset_path (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/divereel/reset_path
+[Class1Vehicles] ID: {743ade9e-c189-4714-8948-71dc249b222e}
+[Class1Vehicles] FMOD: hull_breach (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/hull_breach
+[Class1Vehicles] ID: {4ad3a133-e2e0-4af4-8e7b-b861af7a5c43}
+[Class1Vehicles] FMOD: ready (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravcannon/ready
+[Class1Vehicles] ID: {8263f6aa-21da-47a0-9261-c126e98e5ccb}
+[Class1Vehicles] FMOD: water_filter_spawn_bottle (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/water_filter_spawn_bottle
+[Class1Vehicles] ID: {9baca052-0c69-4d12-93d2-7ecf0b445bcc}
+[Class1Vehicles] FMOD: open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/fabricator/open
+[Class1Vehicles] ID: {a7013de5-6d4c-43f0-b0c3-487161f79972}
+[Class1Vehicles] FMOD: cut_ready (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/teraformer/cut_ready
+[Class1Vehicles] ID: {aa564a23-eec8-4961-812e-ef6e056a25e1}
+[Class1Vehicles] FMOD: charge (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/charge
+[Class1Vehicles] ID: {e5769c9d-e327-4dc2-8b49-fc40f0b2f631}
+[Class1Vehicles] FMOD: holding_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/holding_loop
+[Class1Vehicles] ID: {0bb2d617-5d35-4e08-ba63-27e0a88ee78b}
+[Class1Vehicles] FMOD: pressure_damage_medium (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/pressure_damage_medium
+[Class1Vehicles] ID: {6fcc6ace-b695-415d-9597-7f80f02bad56}
+[Class1Vehicles] FMOD: charge (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/ghostleviathan/charge
+[Class1Vehicles] ID: {b5df3cd3-32d5-4c31-8a65-e6f0682d60e3}
+[Class1Vehicles] FMOD: interior_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/interior_loop
+[Class1Vehicles] ID: {8b9dda30-dbb8-4e45-9621-fda4be4addb9}
+[Class1Vehicles] FMOD: impact_solid_soft (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/impact_solid_soft
+[Class1Vehicles] ID: {15dc7344-7b0a-4ffd-9b5c-c40f923e4f4d}
+[Class1Vehicles] FMOD: pulse (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/pulse
+[Class1Vehicles] ID: {70daa3cf-804e-459a-9513-016d9d4a7428}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/welder/first_use
+[Class1Vehicles] ID: {282b9126-d8ac-4c0e-a5d5-ee57faf6365b}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/lasercutter/first_use
+[Class1Vehicles] ID: {23162207-83c9-4deb-ae3e-c7602d5a1458}
+[Class1Vehicles] FMOD: pressure_damage_heavy (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/pressure_damage_heavy
+[Class1Vehicles] ID: {312cd2be-4f06-4a8a-b24f-3b52a64e4f55}
+[Class1Vehicles] FMOD: swing_surface (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/knife/swing_surface
+[Class1Vehicles] ID: {99040696-60b1-425d-8d31-84527426512f}
+[Class1Vehicles] FMOD: fail (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravcannon/fail
+[Class1Vehicles] ID: {d9c22f80-3ce5-4f0d-a1ad-9de40c875f51}
+[Class1Vehicles] FMOD: reload (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravcannon/reload
+[Class1Vehicles] ID: {cf72dbb4-d63b-4e5b-84d3-7fa76aa58655}
+[Class1Vehicles] FMOD: radio_new_msg_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radio_new_msg_loop
+[Class1Vehicles] ID: {2efe76e6-53fe-4cb8-b87f-18e5c812a649}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/gravcannon/first_use
+[Class1Vehicles] ID: {045b7ef7-7951-4c68-b11d-15868aa42d62}
+[Class1Vehicles] FMOD: sphere_enter (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/sphere_enter
+[Class1Vehicles] ID: {03120134-f76d-4399-afd8-ba56ca1d6128}
+[Class1Vehicles] FMOD: impact_solid_hard (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/impact_solid_hard
+[Class1Vehicles] ID: {e02a6cb1-2e87-4e1c-bf11-5d342788fb40}
+[Class1Vehicles] FMOD: bubble_pop_player (FMODAsset)
+[Class1Vehicles] PATH: event:/env/bubble_pop_player
+[Class1Vehicles] ID: {e0bbebe2-e722-4633-b679-ea4958a4e6df}
+[Class1Vehicles] FMOD: constructor_deploy_end (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/constructor/constructor_deploy_end
+[Class1Vehicles] ID: {f8346544-4582-4fcb-8c1e-bf6f2ac71ade}
+[Class1Vehicles] FMOD: swing (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/knife/swing
+[Class1Vehicles] ID: {aa518fd0-8188-409b-aa0b-6faddd19cc71}
+[Class1Vehicles] FMOD: cut_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/teraformer/cut_loop
+[Class1Vehicles] ID: {68979460-fca0-485e-bbe9-ddd34e2a4d5e}
+[Class1Vehicles] FMOD: deploy (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/builder/deploy
+[Class1Vehicles] ID: {899a76cf-8e24-4841-8286-93134a47031e}
+[Class1Vehicles] FMOD: fire (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/stasis_gun/fire
+[Class1Vehicles] ID: {4a9d4e72-4c37-4042-b889-73e9dd39def4}
+[Class1Vehicles] FMOD: water_filter_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/water_filter_loop
+[Class1Vehicles] ID: {9acfd1ce-b2cd-4f93-9ba2-1f5e95dd0355}
+[Class1Vehicles] FMOD: signal_upload (FMODAsset)
+[Class1Vehicles] PATH: event:/player/signal_upload
+[Class1Vehicles] ID: {1c59f064-3cf8-4095-9e3e-b514cd689290}
+[Class1Vehicles] FMOD: close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/fabricator/close
+[Class1Vehicles] ID: {e36da51d-b551-4282-b2c0-05c3c0e1afda}
+[Class1Vehicles] FMOD: seamoth_loop_rpm (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/seamoth_loop_rpm
+[Class1Vehicles] ID: {102faef9-1e51-45a3-9032-e9025cbeae3e}
+[Class1Vehicles] FMOD: open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/workbench/open
+[Class1Vehicles] ID: {6d4d0da2-1d63-4b08-9ade-a973cf02901b}
+[Class1Vehicles] FMOD: pickup_tank (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/pickup_tank
+[Class1Vehicles] ID: {2bed7a85-ce26-41e7-98c3-1c8f52463425}
+[Class1Vehicles] FMOD: enter_seamoth (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/enter_seamoth
+[Class1Vehicles] ID: {ea18e7a8-ac1a-49ba-ab5d-3875864a34e0}
+[Class1Vehicles] FMOD: torpedo_armed (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/torpedo_armed
+[Class1Vehicles] ID: {12c512d1-bb2b-4a88-b767-73251bfb70af}
+[Class1Vehicles] FMOD: torpedo_explode_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/torpedo_explode_loop
+[Class1Vehicles] ID: {5474039f-5b58-455f-84f1-308d2edf70a4}
+[Class1Vehicles] FMOD: attack (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/crash/attack
+[Class1Vehicles] ID: {8e9991ad-8836-4c6b-9390-baaf77dac4de}
+[Class1Vehicles] FMOD: throw (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flare/throw
+[Class1Vehicles] ID: {f293f4f1-06e6-4d94-a2bf-cbf4d9e3f0a1}
+[Class1Vehicles] FMOD: turn_off (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/flashlight/turn_off
+[Class1Vehicles] ID: {17e279c5-e2d5-4f44-ac7f-c24b6437040b}
+[Class1Vehicles] FMOD: surface_generic_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/surface_generic_background
+[Class1Vehicles] ID: {69acc473-46c0-4676-b3a0-33a8d7127b21}
+[Class1Vehicles] FMOD: menu_background (FMODAsset)
+[Class1Vehicles] PATH: event:/main_menu/menu_background
+[Class1Vehicles] ID: {e4651a27-8659-4d73-8305-0b01123f5705}
+[Class1Vehicles] FMOD: music (FMODAsset)
+[Class1Vehicles] PATH: event:/main_menu/music
+[Class1Vehicles] ID: {3fb9d290-b168-4cc0-8ca7-2562cdadee9e}
+[Class1Vehicles] FMOD: encounter_1 (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/magistrate/encounter_1
+[Class1Vehicles] ID: {4f5d5502-8210-4874-9e54-3bdda412dc63}
+[Class1Vehicles] FMOD: encounter_2 (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/magistrate/encounter_2
+[Class1Vehicles] ID: {e83167d1-a976-44b1-88ab-0f6182be91b0}
+[Class1Vehicles] FMOD: encounter_3 (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/magistrate/encounter_3
+[Class1Vehicles] ID: {a2f2e8b8-b578-4d03-911e-09c34bc806b7}
+[Class1Vehicles] FMOD: encounter_4 (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/magistrate/encounter_4
+[Class1Vehicles] ID: {1b298278-3f77-479f-ad5f-43799dbd4721}
+[Class1Vehicles] FMOD: telepathy_1 (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/magistrate/telepathy_1
+[Class1Vehicles] ID: {2a7e7f36-c7cb-4c0b-8a15-19ddefc4e1b6}
+[Class1Vehicles] FMOD: telepathy_2 (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/magistrate/telepathy_2
+[Class1Vehicles] ID: {61364ca9-7005-4c42-9c5b-51bf7c18a2d0}
+[Class1Vehicles] FMOD: telepathy_3 (FMODAsset)
+[Class1Vehicles] PATH: event:/creature/magistrate/telepathy_3
+[Class1Vehicles] ID: {1c51b8f8-d827-4732-b51d-77b6d037b594}
+[Class1Vehicles] FMOD: arctic_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/arctic_background
+[Class1Vehicles] ID: {3eb3a03c-ae87-4547-b099-5af3cbac72d4}
+[Class1Vehicles] FMOD: blood_kelp_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/blood_kelp_background
+[Class1Vehicles] ID: {37c32e44-09d3-42df-8532-24137e294d4b}
+[Class1Vehicles] FMOD: crash_zone (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/crash_zone
+[Class1Vehicles] ID: {810fd44b-d24b-40a4-9897-f03f28f4a6ad}
+[Class1Vehicles] FMOD: dunes_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/dunes_background
+[Class1Vehicles] ID: {6c47f1d2-6150-40f2-9575-56ae55320711}
+[Class1Vehicles] FMOD: floating_islands_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/floating_islands_background
+[Class1Vehicles] ID: {815564e7-bb08-49fb-ac30-4481d6856339}
+[Class1Vehicles] FMOD: generator_room (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/generator_room
+[Class1Vehicles] ID: {c90dade9-ed0a-4fe8-bec9-0fd49f924683}
+[Class1Vehicles] FMOD: grandreef_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/grandreef_background
+[Class1Vehicles] ID: {6a0e8b02-14d6-46fe-b3b3-06e2cfffffb9}
+[Class1Vehicles] FMOD: grasy_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/grasy_background
+[Class1Vehicles] ID: {b0139fcc-36c3-4964-bdea-d0501258bdd6}
+[Class1Vehicles] FMOD: jellyshroom_caves (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/jellyshroom_caves
+[Class1Vehicles] ID: {d2a8427a-1be6-4cc0-b130-93c1bd129644}
+[Class1Vehicles] FMOD: kelp_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/kelp_background
+[Class1Vehicles] ID: {5e7147e7-740c-46b3-a4f6-b128f44301ab}
+[Class1Vehicles] FMOD: koosh_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/koosh_background
+[Class1Vehicles] ID: {72d593cb-f27b-429e-ae01-fb72b73ddad4}
+[Class1Vehicles] FMOD: lava_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/lava_background
+[Class1Vehicles] ID: {7aa16848-7ec6-4a1c-b660-884b6b0fd688}
+[Class1Vehicles] FMOD: lava_river_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/lava_river_loop
+[Class1Vehicles] ID: {cfbdc4eb-643e-4aee-8c34-57831726ccfc}
+[Class1Vehicles] FMOD: lost_river_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/lost_river_background
+[Class1Vehicles] ID: {568a7731-aa39-4bd2-8c2b-6ed65d636c8b}
+[Class1Vehicles] FMOD: mountain_underwater (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/mountain_underwater
+[Class1Vehicles] ID: {0993b66c-f06e-4ae7-a754-fd4cd4125dcf}
+[Class1Vehicles] FMOD: mushroom_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/mushroom_background
+[Class1Vehicles] ID: {6fbfcbd9-931f-4563-b55b-41e946c3bb2f}
+[Class1Vehicles] FMOD: prec_aquarium (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/prec_aquarium
+[Class1Vehicles] ID: {e15d44e1-0532-417b-9284-d9f8afefe50c}
+[Class1Vehicles] FMOD: prec_base_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/prec_base_background
+[Class1Vehicles] ID: {7fc52d34-8ed9-457c-9c4a-2ccc3fae8a0b}
+[Class1Vehicles] FMOD: prec_cave_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/prec_cave_loop
+[Class1Vehicles] ID: {8eccea2a-722b-4044-81ff-776fd116e24f}
+[Class1Vehicles] FMOD: prec_generator_room_ambience (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/prec_generator_room_ambience
+[Class1Vehicles] ID: {f27135b9-ab45-478e-ada2-c2f10bbc3c51}
+[Class1Vehicles] FMOD: reef_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/reef_background
+[Class1Vehicles] ID: {02064062-4a4e-47ca-99bb-d3437f506c93}
+[Class1Vehicles] FMOD: ship_ambience (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/ship_ambience
+[Class1Vehicles] ID: {a839a74d-1ba2-444e-a0b6-5e5c79fe085c}
+[Class1Vehicles] FMOD: sparse_reef_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/sparse_reef_background
+[Class1Vehicles] ID: {f0875315-47b1-4305-9f3a-67138bc11c2d}
+[Class1Vehicles] FMOD: tredpath (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/tredpath
+[Class1Vehicles] ID: {a1a00a85-7f71-4cbb-a798-c2c9194e3721}
+[Class1Vehicles] FMOD: underislands_background (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/underislands_background
+[Class1Vehicles] ID: {cd1e1d46-7187-44f4-a36b-c043cba799a2}
+[Class1Vehicles] FMOD: wreak_ambience_big (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/wreak_ambience_big
+[Class1Vehicles] ID: {4af6cacc-e8e4-4dec-bf10-76b62061675c}
+[Class1Vehicles] FMOD: acid_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/env/damage/acid_loop
+[Class1Vehicles] ID: {724f5034-4c5f-48b7-8902-3c31ab6fac1c}
+[Class1Vehicles] FMOD: antechamber_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/antechamber_music
+[Class1Vehicles] ID: {20722604-575f-457c-9490-7ed951ec859c}
+[Class1Vehicles] FMOD: arctic_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/arctic_background_music
+[Class1Vehicles] ID: {eebb741f-2ba5-49d2-a216-71025e41149f}
+[Class1Vehicles] FMOD: blood_kelp_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/blood_kelp_background_music
+[Class1Vehicles] ID: {644c6e32-9488-46dc-b223-ae50a312432f}
+[Class1Vehicles] FMOD: crash_zone_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/crash_zone_music
+[Class1Vehicles] ID: {a92cc0c8-dca6-49cd-930a-d2df13f0dddc}
+[Class1Vehicles] FMOD: death_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/death_music
+[Class1Vehicles] ID: {69a4a12b-c776-4394-a260-570c3bfeedfa}
+[Class1Vehicles] FMOD: dunes_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/dunes_background_music
+[Class1Vehicles] ID: {568e3841-1475-4cc2-a0ac-36d6ed32f58f}
+[Class1Vehicles] FMOD: floating_islands_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/floating_islands_background_music
+[Class1Vehicles] ID: {51150e5e-1932-4253-8ca4-ef79ee86c0d3}
+[Class1Vehicles] FMOD: generator_room_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/generator_room_music
+[Class1Vehicles] ID: {cf43b519-a26a-4bf5-9d47-f1bee9e876f9}
+[Class1Vehicles] FMOD: grandreef_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/grandreef_background_music
+[Class1Vehicles] ID: {62abccff-c321-484f-920b-99d3eeae97af}
+[Class1Vehicles] FMOD: grasy_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/grasy_background_music
+[Class1Vehicles] ID: {1994c6f9-ccfe-4404-aab5-ce43e1765eb9}
+[Class1Vehicles] FMOD: jellyshroom_caves_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/jellyshroom_caves_music
+[Class1Vehicles] ID: {cf6c2b41-9800-4779-9c17-a1eea9892057}
+[Class1Vehicles] FMOD: kelp_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/kelp_background_music
+[Class1Vehicles] ID: {aaa07e54-7508-42d9-91f9-ed01fe66695b}
+[Class1Vehicles] FMOD: koosh_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/koosh_background_music
+[Class1Vehicles] ID: {39d80b69-b8dc-483f-92b7-2175541f7d41}
+[Class1Vehicles] FMOD: lava_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/lava_background_music
+[Class1Vehicles] ID: {f9ac1f27-62c8-4eb9-8cdb-f23282372756}
+[Class1Vehicles] FMOD: lost_river_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/lost_river_background_music
+[Class1Vehicles] ID: {df2ded74-ef3a-484a-9216-077fdf7256ee}
+[Class1Vehicles] FMOD: lost_river_ghost_tree (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/lost_river_ghost_tree
+[Class1Vehicles] ID: {29a9c581-2de9-40d0-882b-b68a37df2a8e}
+[Class1Vehicles] FMOD: lostriver_tree (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/lostriver_tree
+[Class1Vehicles] ID: {d9342975-c0e0-4a1f-897e-7529ea74303e}
+[Class1Vehicles] FMOD: mountain_underwater_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/mountain_underwater_music
+[Class1Vehicles] ID: {74df5981-a415-4aa2-952b-da4f44b00335}
+[Class1Vehicles] FMOD: mushroom_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/mushroom_background_music
+[Class1Vehicles] ID: {c932a98c-28d1-4fe3-9254-80dd3482b86a}
+[Class1Vehicles] FMOD: prec_aquarium_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/prec_aquarium_music
+[Class1Vehicles] ID: {0ff9bd54-9e51-479b-af99-9f516628cbf8}
+[Class1Vehicles] FMOD: prec_base_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/prec_base_background_music
+[Class1Vehicles] ID: {37123548-fbc2-4f49-9608-07cca2217c7c}
+[Class1Vehicles] FMOD: prec_cave_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/prec_cave_music
+[Class1Vehicles] ID: {1f754134-0948-4720-9472-d27fc84eaa05}
+[Class1Vehicles] FMOD: reef_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/reef_background_music
+[Class1Vehicles] ID: {5ccded51-d39d-4075-a370-96eced8a6df0}
+[Class1Vehicles] FMOD: ship_ambience_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/ship_ambience_music
+[Class1Vehicles] ID: {4dfac682-ebf3-43b4-be7f-c6202daac4ed}
+[Class1Vehicles] FMOD: sparse_reef_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/sparse_reef_background_music
+[Class1Vehicles] ID: {0ce0883a-e8d2-4956-a58d-15e4316a1759}
+[Class1Vehicles] FMOD: tredpath_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/tredpath_music
+[Class1Vehicles] ID: {f996551f-0983-4e17-a9e2-cc7372db534b}
+[Class1Vehicles] FMOD: underislands_background_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/underislands_background_music
+[Class1Vehicles] ID: {6f67ff8d-09a9-4737-817e-3f0384764d6a}
+[Class1Vehicles] FMOD: wreak_ambience_big_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/wreak_ambience_big_music
+[Class1Vehicles] ID: {433ab5c7-6190-430a-929a-9b9b39593524}
+[Class1Vehicles] FMOD: zen_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/zen_music
+[Class1Vehicles] ID: {da77e9bc-4fc0-4ee8-8472-42d31ee33bf6}
+[Class1Vehicles] FMOD: use_teleporter_use_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/env/use_teleporter_use_loop
+[Class1Vehicles] ID: {b39da9ff-1a97-48e6-a1b6-4cafcd6abadb}
+[Class1Vehicles] FMOD: weather (FMODAsset)
+[Class1Vehicles] PATH: event:/env/weather
+[Class1Vehicles] ID: {73921b14-c830-44de-bd67-afb46e4483b9}
+[Class1Vehicles] FMOD: new_PDA_data (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/new_PDA_data
+[Class1Vehicles] ID: {564ab5ec-865d-4d7e-82f0-570f9deb1d15}
+[Class1Vehicles] FMOD: pickup_glass (FMODAsset)
+[Class1Vehicles] PATH: event:/loot/pickup_glass
+[Class1Vehicles] ID: {6c66f3b8-8b90-43b4-b11b-ede5916b9acf}
+[Class1Vehicles] FMOD: Precursor_LostRiverBase_Log_1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/Precursor_LostRiverBase_Log_1
+[Class1Vehicles] ID: {491edfa3-b645-44d6-a4e7-8a1ba871e640}
+[Class1Vehicles] FMOD: Precursor_LostRiverBase_Log_2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/Precursor_LostRiverBase_Log_2
+[Class1Vehicles] ID: {e1c82993-c94c-4061-bb43-589079db8fb4}
+[Class1Vehicles] FMOD: Precursor_LostRiverBase_Log_4 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/Precursor_LostRiverBase_Log_4
+[Class1Vehicles] ID: {95bba905-b598-4e02-9181-229730d5ca1a}
+[Class1Vehicles] FMOD: Precursor_LostRiverBase_Log_5 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/Precursor_LostRiverBase_Log_5
+[Class1Vehicles] ID: {8ffefd8b-42b2-4b7d-986f-bdb4f067abe4}
+[Class1Vehicles] FMOD: Precursor_LostRiverBase_Log_6 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/Precursor_LostRiverBase_Log_6
+[Class1Vehicles] ID: {6dabeaa1-b1db-423b-a15d-b9f091d5cf30}
+[Class1Vehicles] FMOD: Precursor_LostRiverBase_Log_7 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/Precursor_LostRiverBase_Log_7
+[Class1Vehicles] ID: {6b79f246-7d46-4d2c-be52-d0aac0d2ac11}
+[Class1Vehicles] FMOD: adviseSelfScan (FMODAsset)
+[Class1Vehicles] PATH: event:/player/adviseSelfScan
+[Class1Vehicles] ID: {f796c43d-ee95-403a-8427-ef003c714372}
+[Class1Vehicles] FMOD: aurora_warning_1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/aurora_warning_1
+[Class1Vehicles] ID: {1c771392-dc6f-41bf-b607-cf316438e79e}
+[Class1Vehicles] FMOD: aurora_warning_2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/aurora_warning_2
+[Class1Vehicles] ID: {66efd8ac-f501-4ca1-98a0-00f32b07e6a8}
+[Class1Vehicles] FMOD: aurora_warning_3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/aurora_warning_3
+[Class1Vehicles] ID: {ffba379f-e7c5-4d3d-8b99-19003e26e1d9}
+[Class1Vehicles] FMOD: breathing (FMODAsset)
+[Class1Vehicles] PATH: event:/player/breathing
+[Class1Vehicles] ID: {a2e9bc49-8fff-470a-b569-ce41eb592a8a}
+[Class1Vehicles] FMOD: bubbles (FMODAsset)
+[Class1Vehicles] PATH: event:/player/bubbles
+[Class1Vehicles] ID: {4c85bd95-522f-4e27-981c-0c50fd5a38b8}
+[Class1Vehicles] FMOD: coughing (FMODAsset)
+[Class1Vehicles] PATH: event:/player/coughing
+[Class1Vehicles] ID: {1f1beddc-739d-4f39-a5b8-2fe273a25d78}
+[Class1Vehicles] FMOD: data_terminal_use (FMODAsset)
+[Class1Vehicles] PATH: event:/player/data_terminal_use
+[Class1Vehicles] ID: {7e4d2d86-17af-4188-a50b-e19a72566ec7}
+[Class1Vehicles] FMOD: depth_100 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/depth_100
+[Class1Vehicles] ID: {fa573bd7-e584-44ec-8450-f9d548a83a65}
+[Class1Vehicles] FMOD: depth_200 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/depth_200
+[Class1Vehicles] ID: {ac57118b-16f9-4672-b16e-c44747a2260f}
+[Class1Vehicles] FMOD: enzyme_cure (FMODAsset)
+[Class1Vehicles] PATH: event:/player/enzyme_cure
+[Class1Vehicles] ID: {bdae8e4b-413f-4bbc-8e85-4c030c8e5838}
+[Class1Vehicles] FMOD: food_critical (FMODAsset)
+[Class1Vehicles] PATH: event:/player/food_critical
+[Class1Vehicles] ID: {f8b92afe-a8ab-48c8-9e50-e3a6c9bae826}
+[Class1Vehicles] FMOD: food_low (FMODAsset)
+[Class1Vehicles] PATH: event:/player/food_low
+[Class1Vehicles] ID: {789f5cb9-8c6d-4c98-8efc-30e8208b16e0}
+[Class1Vehicles] FMOD: food_very_low (FMODAsset)
+[Class1Vehicles] PATH: event:/player/food_very_low
+[Class1Vehicles] ID: {0d0b3074-bbb4-4012-9643-562477eeeebf}
+[Class1Vehicles] FMOD: footstep_dirt (FMODAsset)
+[Class1Vehicles] PATH: event:/player/footstep_dirt
+[Class1Vehicles] ID: {a2661848-586b-4528-9f96-d2877a5d146f}
+[Class1Vehicles] FMOD: footstep_metal (FMODAsset)
+[Class1Vehicles] PATH: event:/player/footstep_metal
+[Class1Vehicles] ID: {1fa7cb24-0078-475d-ab11-0d965847a09f}
+[Class1Vehicles] FMOD: footstep_precursor_base (FMODAsset)
+[Class1Vehicles] PATH: event:/player/footstep_precursor_base
+[Class1Vehicles] ID: {66cd34c1-3dc4-414b-8269-63b3bc06c357}
+[Class1Vehicles] FMOD: goal_BiomeKelpForest (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_BiomeKelpForest
+[Class1Vehicles] ID: {05c3b350-f652-4b80-91fe-7c566cc27ca9}
+[Class1Vehicles] FMOD: goal_BiomePrecursorGunUpper (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_BiomePrecursorGunUpper
+[Class1Vehicles] ID: {3f8dce22-6249-4dcd-8e6b-ba6672f7413f}
+[Class1Vehicles] FMOD: goal_BiomePrecursorGunUpper2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_BiomePrecursorGunUpper2
+[Class1Vehicles] ID: {e7820673-31bc-429c-ad22-3fa3b0ee88b3}
+[Class1Vehicles] FMOD: goal_BiomePrecursorGunUpper3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_BiomePrecursorGunUpper3
+[Class1Vehicles] ID: {eca92a44-25d8-4f20-876d-fbc7676af507}
+[Class1Vehicles] FMOD: goal_BiomePrecursorGunUpper4 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_BiomePrecursorGunUpper4
+[Class1Vehicles] ID: {7c2a66df-867d-494a-8635-42310fb1cd4d}
+[Class1Vehicles] FMOD: goal_Bladderfish (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_Bladderfish
+[Class1Vehicles] ID: {9a661a30-326a-4737-8d45-3050d3713e3f}
+[Class1Vehicles] FMOD: goal_CookedPeeper (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_CookedPeeper
+[Class1Vehicles] ID: {e9022495-8594-441e-ae2a-f769ddae3474}
+[Class1Vehicles] FMOD: goal_Copper (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_Copper
+[Class1Vehicles] ID: {8f4bdc8c-aa43-492c-bf96-27d6ca8cef05}
+[Class1Vehicles] FMOD: goal_Fins (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_Fins
+[Class1Vehicles] ID: {452e133f-0b56-48dd-99ba-7bfd37021e24}
+[Class1Vehicles] FMOD: goal_Knife (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_Knife
+[Class1Vehicles] ID: {3c2c14bb-5348-4045-9fe0-36b7214f5958}
+[Class1Vehicles] FMOD: goal_PDALoading (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_PDALoading
+[Class1Vehicles] ID: {dcd9aea5-4cb5-419e-a075-0253be1f0909}
+[Class1Vehicles] FMOD: goal_Scanner (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_Scanner
+[Class1Vehicles] ID: {5273f86f-32a7-41a1-ab3a-7a35e69c13f1}
+[Class1Vehicles] FMOD: goal_airsack (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_airsack
+[Class1Vehicles] ID: {a8025b1c-53c5-455d-8a34-940ef9a9ca55}
+[Class1Vehicles] FMOD: goal_lifepod2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_lifepod2
+[Class1Vehicles] ID: {fa6ac536-e8b2-4b17-a645-7bb0e18652f6}
+[Class1Vehicles] FMOD: goal_lifepod3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/goal_lifepod3
+[Class1Vehicles] ID: {8f8e2947-6b4c-4f70-937d-19539ba8b447}
+[Class1Vehicles] FMOD: hand_infection_cin (FMODAsset)
+[Class1Vehicles] PATH: event:/player/hand_infection_cin
+[Class1Vehicles] ID: {c29a9524-7ff1-445a-b87c-21461e80d4d7}
+[Class1Vehicles] FMOD: infection_scan_advise_full (FMODAsset)
+[Class1Vehicles] PATH: event:/player/infection_scan_advise_full
+[Class1Vehicles] ID: {cf943b8f-d3ff-4f30-bcd5-a2fb0e8425ca}
+[Class1Vehicles] FMOD: inventory_secured (FMODAsset)
+[Class1Vehicles] PATH: event:/player/inventory_secured
+[Class1Vehicles] ID: {2ddeb1ba-5f88-4277-9063-dceb3c2e10a3}
+[Class1Vehicles] FMOD: jump (FMODAsset)
+[Class1Vehicles] PATH: event:/player/jump
+[Class1Vehicles] ID: {77da5a26-6178-4218-b080-8cc876687cf5}
+[Class1Vehicles] FMOD: new_creature (FMODAsset)
+[Class1Vehicles] PATH: event:/player/new_creature
+[Class1Vehicles] ID: {68298f76-f241-4f9d-a201-82bf84ab95c9}
+[Class1Vehicles] FMOD: oxygen_10_sec (FMODAsset)
+[Class1Vehicles] PATH: event:/player/oxygen_10_sec
+[Class1Vehicles] ID: {4efa66e4-5910-4d6b-b663-b361bc9be4c7}
+[Class1Vehicles] FMOD: oxygen_30_sec (FMODAsset)
+[Class1Vehicles] PATH: event:/player/oxygen_30_sec
+[Class1Vehicles] ID: {405fec31-4b4d-438f-8705-ba8b8a1d12f5}
+[Class1Vehicles] FMOD: pain (FMODAsset)
+[Class1Vehicles] PATH: event:/player/pain
+[Class1Vehicles] ID: {96247782-cc42-4b0f-aeae-5e7e4fe4032a}
+[Class1Vehicles] FMOD: pain_no_tank (FMODAsset)
+[Class1Vehicles] PATH: event:/player/pain_no_tank
+[Class1Vehicles] ID: {4c4764d5-a377-4299-9f80-3dbd343f6985}
+[Class1Vehicles] FMOD: pain_surface (FMODAsset)
+[Class1Vehicles] PATH: event:/player/pain_surface
+[Class1Vehicles] ID: {13bd42d5-23d8-4a99-90f9-ebe37bb15279}
+[Class1Vehicles] FMOD: precursor_Gun_ControlRoom (FMODAsset)
+[Class1Vehicles] PATH: event:/player/precursor_Gun_ControlRoom
+[Class1Vehicles] ID: {d13257ed-3686-4606-9474-b15606cab217}
+[Class1Vehicles] FMOD: precursor_Gun_DisableDenied (FMODAsset)
+[Class1Vehicles] PATH: event:/player/precursor_Gun_DisableDenied
+[Class1Vehicles] ID: {111fdac9-9c17-467d-9629-1f9603b2bcee}
+[Class1Vehicles] FMOD: precursor_Gun_LostRiverHint (FMODAsset)
+[Class1Vehicles] PATH: event:/player/precursor_Gun_LostRiverHint
+[Class1Vehicles] ID: {189f5ba6-039d-4a31-b3e3-15ad53348b2f}
+[Class1Vehicles] FMOD: radiation (FMODAsset)
+[Class1Vehicles] PATH: event:/player/radiation
+[Class1Vehicles] ID: {23a1d80a-cacc-4478-9d52-e76f30f615b1}
+[Class1Vehicles] FMOD: selfScan1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/selfScan1
+[Class1Vehicles] ID: {2d1cdbd6-7282-4230-9434-73090893b57a}
+[Class1Vehicles] FMOD: selfScan2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/selfScan2
+[Class1Vehicles] ID: {7f4e7613-fc74-4cbe-9b65-46fe9f9380ae}
+[Class1Vehicles] FMOD: selfScan3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/selfScan3
+[Class1Vehicles] ID: {4fe9a8b1-f837-4b03-a261-400d5d526645}
+[Class1Vehicles] FMOD: selfScan3b (FMODAsset)
+[Class1Vehicles] PATH: event:/player/selfScan3b
+[Class1Vehicles] ID: {08c21805-5150-4dbf-a9af-7373a919cc37}
+[Class1Vehicles] FMOD: selfScan4 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/selfScan4
+[Class1Vehicles] ID: {4b50fce4-9c41-4ae1-bccb-0be5cf471c32}
+[Class1Vehicles] FMOD: selfScan5 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/selfScan5
+[Class1Vehicles] ID: {166efbf3-0a1f-4967-a383-655e991e5404}
+[Class1Vehicles] FMOD: start_freedive (FMODAsset)
+[Class1Vehicles] PATH: event:/player/start_freedive
+[Class1Vehicles] ID: {3d1b0d78-c523-4956-9bc0-114e9211fb91}
+[Class1Vehicles] FMOD: start_freedive_splash (FMODAsset)
+[Class1Vehicles] PATH: event:/player/start_freedive_splash
+[Class1Vehicles] ID: {f103f1eb-d023-44a7-8052-b971ff2925ea}
+[Class1Vehicles] FMOD: Aurora_RingRoom_Terminal2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Aurora_RingRoom_Terminal2
+[Class1Vehicles] ID: {21391308-4fd5-487e-8190-d76ae44fcfa6}
+[Class1Vehicles] FMOD: Ency_Aurora_RingRoom_Terminal3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Ency_Aurora_RingRoom_Terminal3
+[Class1Vehicles] ID: {a47e1f19-0a55-44a8-9105-7904938c33e8}
+[Class1Vehicles] FMOD: Goal_BaseWindow (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BaseWindow
+[Class1Vehicles] ID: {058d0164-108a-4e8f-832a-c783487aa0eb}
+[Class1Vehicles] FMOD: Goal_Bench (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Bench
+[Class1Vehicles] ID: {10a13d13-bd7d-4f64-8b15-a9d20f329dbf}
+[Class1Vehicles] FMOD: Goal_BiomeBloodKelp (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeBloodKelp
+[Class1Vehicles] ID: {eb95b018-e80b-4711-83e2-c0353ad598ed}
+[Class1Vehicles] FMOD: Goal_BiomeBloodKelp2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeBloodKelp2
+[Class1Vehicles] ID: {1888cdfb-cd11-4918-a081-ebcfd1f6c7cf}
+[Class1Vehicles] FMOD: Goal_BiomeCrashZone (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeCrashZone
+[Class1Vehicles] ID: {ce5637dd-b835-4b4c-b1ca-e214914611e1}
+[Class1Vehicles] FMOD: Goal_BiomeCrashedShip (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeCrashedShip
+[Class1Vehicles] ID: {43162652-4567-4b09-ad53-64d7ecaee426}
+[Class1Vehicles] FMOD: Goal_BiomeDeepGrandReef (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeDeepGrandReef
+[Class1Vehicles] ID: {76db2f4f-e0c6-4c02-a801-a8f90b2d7a51}
+[Class1Vehicles] FMOD: Goal_BiomeDunes (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeDunes
+[Class1Vehicles] ID: {234c2bb5-79ab-40c0-9b50-dd8b3fd04c6e}
+[Class1Vehicles] FMOD: Goal_BiomeFloatingIsland (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeFloatingIsland
+[Class1Vehicles] ID: {08f47922-5eb6-4819-9f7b-258216282c8e}
+[Class1Vehicles] FMOD: Goal_BiomeGrassyPlateaus (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeGrassyPlateaus
+[Class1Vehicles] ID: {7ddfaa02-57fb-4a1a-9a9c-028781f5691c}
+[Class1Vehicles] FMOD: Goal_BiomeJellyCave (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeJellyCave
+[Class1Vehicles] ID: {e67a8488-3651-4d70-b675-289ee1f5ba66}
+[Class1Vehicles] FMOD: Goal_BiomeJellyCave2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeJellyCave2
+[Class1Vehicles] ID: {54e6138e-1240-4d2e-a819-800beff8d0f0}
+[Class1Vehicles] FMOD: Goal_BiomeKelpForestCave (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeKelpForestCave
+[Class1Vehicles] ID: {2d1f08ce-309f-4def-9b09-f56a52d19892}
+[Class1Vehicles] FMOD: Goal_BiomeKooshZone (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeKooshZone
+[Class1Vehicles] ID: {53a2aa08-a668-484f-9f40-be8e389c6f98}
+[Class1Vehicles] FMOD: Goal_BiomeLostRiver (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeLostRiver
+[Class1Vehicles] ID: {0e3f63cd-ea1b-4d70-bd1a-592e213b6e8c}
+[Class1Vehicles] FMOD: Goal_BiomeMountainCave (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeMountainCave
+[Class1Vehicles] ID: {87d9fb67-a0e3-4e03-8278-64d7aa782220}
+[Class1Vehicles] FMOD: Goal_BiomeMountains (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeMountains
+[Class1Vehicles] ID: {a1ef0e59-ceeb-4a2c-bfcd-cc028987ad9a}
+[Class1Vehicles] FMOD: Goal_BiomeMushroomForest (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeMushroomForest
+[Class1Vehicles] ID: {01b9a4b3-3915-46f6-b63d-0fcbaac048cf}
+[Class1Vehicles] FMOD: Goal_BiomeMushroomForestCave (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeMushroomForestCave
+[Class1Vehicles] ID: {e0afbc47-3055-4fcf-b28e-66a4ef7789e7}
+[Class1Vehicles] FMOD: Goal_BiomeSafeShallowsCave (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeSafeShallowsCave
+[Class1Vehicles] ID: {0fb0dd3d-bd8c-4b26-8a35-3d410787d83f}
+[Class1Vehicles] FMOD: Goal_BiomeSeaTreaderPath (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeSeaTreaderPath
+[Class1Vehicles] ID: {94680337-bcff-4f9e-ba27-5c1d048e9746}
+[Class1Vehicles] FMOD: Goal_BiomeSparseReef (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeSparseReef
+[Class1Vehicles] ID: {03c221ca-addc-40ab-ab76-baf913db070d}
+[Class1Vehicles] FMOD: Goal_BiomeUnderwaterIslands (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeUnderwaterIslands
+[Class1Vehicles] ID: {bfb2ddd6-b20d-49f5-a6c6-139b6ea8df29}
+[Class1Vehicles] FMOD: Goal_BiomeVoid (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_BiomeVoid
+[Class1Vehicles] ID: {65218846-134b-4afc-a816-e5afddf9051b}
+[Class1Vehicles] FMOD: Goal_Bioreactor (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Bioreactor
+[Class1Vehicles] ID: {aded37aa-d20a-49f8-afcb-1c28ff1f422e}
+[Class1Vehicles] FMOD: Goal_Bleach (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Bleach
+[Class1Vehicles] ID: {c347cfd5-4445-4825-ade1-d4088733641c}
+[Class1Vehicles] FMOD: Goal_Builder (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Builder
+[Class1Vehicles] ID: {0deae8a2-db94-4c71-829a-e4b72039b4cf}
+[Class1Vehicles] FMOD: Goal_CookedGarryfish (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_CookedGarryfish
+[Class1Vehicles] ID: {a05b7efe-7895-44a2-ae33-8eb9670236b3}
+[Class1Vehicles] FMOD: Goal_CookedHoverfish (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_CookedHoverfish
+[Class1Vehicles] ID: {aa192ba3-c4b4-4609-9e46-0ce7952058fb}
+[Class1Vehicles] FMOD: Goal_Cyclops (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Cyclops
+[Class1Vehicles] ID: {fbecf751-08e0-488f-aaab-84d1a4855cbd}
+[Class1Vehicles] FMOD: Goal_Diamond (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Diamond
+[Class1Vehicles] ID: {5a2b2f3d-f241-4330-956e-7572f4165181}
+[Class1Vehicles] FMOD: Goal_Exo (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Exo
+[Class1Vehicles] ID: {a0750114-4a2d-412f-b425-14690488aa2e}
+[Class1Vehicles] FMOD: Goal_FarmingTray (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_FarmingTray
+[Class1Vehicles] ID: {f2976602-7a8b-4e99-b3bf-e86ae9d8658d}
+[Class1Vehicles] FMOD: Goal_JellyCaveEntrance (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_JellyCaveEntrance
+[Class1Vehicles] ID: {643c5ca4-4007-4dbf-b7b0-d6ce26e9d03e}
+[Class1Vehicles] FMOD: Goal_Location AuroraDriveInterior (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Location AuroraDriveInterior
+[Class1Vehicles] ID: {cacf1ded-5765-4cf6-9b13-54142a0bb24d}
+[Class1Vehicles] FMOD: Goal_LocationAuroraDriveEntry (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_LocationAuroraDriveEntry
+[Class1Vehicles] ID: {25bdd982-a0ab-44ac-94c7-6b4f398c67f6}
+[Class1Vehicles] FMOD: Goal_LocationAuroraEntry (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_LocationAuroraEntry
+[Class1Vehicles] ID: {7e58a7cf-81a4-455a-ac1a-db5dbeb66877}
+[Class1Vehicles] FMOD: Goal_LocationAuroraExoRoom (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_LocationAuroraExoRoom
+[Class1Vehicles] ID: {73617f8a-ed34-4102-9f25-e6b1ceae7ad0}
+[Class1Vehicles] FMOD: Goal_LocationAuroraFurtherIn (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_LocationAuroraFurtherIn
+[Class1Vehicles] ID: {2f55d139-a779-463c-9af9-3a9c19bdf827}
+[Class1Vehicles] FMOD: Goal_LocationAuroraHallway (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_LocationAuroraHallway
+[Class1Vehicles] ID: {101f13c5-800f-4dfa-a462-9c4793a9b593}
+[Class1Vehicles] FMOD: Goal_LocationAuroraInterior (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_LocationAuroraInterior
+[Class1Vehicles] ID: {a3efb558-cc11-42d1-8dd6-903e7550b48d}
+[Class1Vehicles] FMOD: Goal_LostRiverEntrance (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_LostRiverEntrance
+[Class1Vehicles] ID: {7eff6849-ee75-43f9-89f0-b4cdc889aca3}
+[Class1Vehicles] FMOD: Goal_Lubricant (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Lubricant
+[Class1Vehicles] ID: {592a854e-c81f-420f-ae23-7b9c6d592940}
+[Class1Vehicles] FMOD: Goal_Moonpool (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Moonpool
+[Class1Vehicles] ID: {0de27739-cd87-4aa6-a440-6f98cae5988c}
+[Class1Vehicles] FMOD: Goal_NuclearReactor (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_NuclearReactor
+[Class1Vehicles] ID: {e489a526-962e-46b1-aaae-2d26bab85a04}
+[Class1Vehicles] FMOD: Goal_Observatory (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Observatory
+[Class1Vehicles] ID: {8ff3b006-0358-4b83-89dd-315ea44f5bc7}
+[Class1Vehicles] FMOD: Goal_PurifiedWater (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_PurifiedWater
+[Class1Vehicles] ID: {a64798ca-6759-42f1-a2f8-05736218e68f}
+[Class1Vehicles] FMOD: Goal_RadSuit (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_RadSuit
+[Class1Vehicles] ID: {7d8d8d03-661b-47c6-81d8-000d58545315}
+[Class1Vehicles] FMOD: Goal_Room (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Room
+[Class1Vehicles] ID: {e194e9b7-fcf1-4230-ba66-e123e02f07a0}
+[Class1Vehicles] FMOD: Goal_Seaglide (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Seaglide
+[Class1Vehicles] ID: {8ca073d1-6a8d-4974-8052-5520186e9ab2}
+[Class1Vehicles] FMOD: Goal_Seamoth (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Seamoth
+[Class1Vehicles] ID: {38de2ff9-2e21-41a0-acc1-5d058b7340da}
+[Class1Vehicles] FMOD: Goal_SecondarySystems (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_SecondarySystems
+[Class1Vehicles] ID: {404efa81-b931-471b-ac4a-863c727a0bec}
+[Class1Vehicles] FMOD: Goal_Silver (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_Silver
+[Class1Vehicles] ID: {4fc883b8-6dbb-479d-9835-210364f29914}
+[Class1Vehicles] FMOD: Goal_StasisRifle (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_StasisRifle
+[Class1Vehicles] ID: {a758f5bf-3625-458d-9d62-56b4bc780247}
+[Class1Vehicles] FMOD: Goal_UnlockRadSuit (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_UnlockRadSuit
+[Class1Vehicles] ID: {7fc04b45-e0f1-4496-b6d3-b0b1b01c4a27}
+[Class1Vehicles] FMOD: Goal_WaterPark (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Goal_WaterPark
+[Class1Vehicles] ID: {d3aab642-ecd8-4a16-8335-6229af98663b}
+[Class1Vehicles] FMOD: OvereatingWarning (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/OvereatingWarning
+[Class1Vehicles] ID: {be7fd5d4-580e-40cc-bd79-c96b4cde2301}
+[Class1Vehicles] FMOD: PDASunbeamDestroyEventOutOfRange (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/PDASunbeamDestroyEventOutOfRange
+[Class1Vehicles] ID: {05a083a4-8c38-469a-a36a-2d3b2ddc083b}
+[Class1Vehicles] FMOD: Precursor_Gun_Disabled (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Gun_Disabled
+[Class1Vehicles] ID: {ef1822c7-c171-4520-9d02-ea92c82a8c55}
+[Class1Vehicles] FMOD: Precursor_LavaCastle_Log1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_LavaCastle_Log1
+[Class1Vehicles] ID: {b9787d38-bec3-4aaf-a5bb-9fbe0601f284}
+[Class1Vehicles] FMOD: Precursor_LavaCastle_Log2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_LavaCastle_Log2
+[Class1Vehicles] ID: {1b20703b-3ac2-4fcf-b3c4-302cb8509279}
+[Class1Vehicles] FMOD: Precursor_LavaCastle_Log3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_LavaCastle_Log3
+[Class1Vehicles] ID: {e740d1d8-f0b9-45b7-af33-5e2810437149}
+[Class1Vehicles] FMOD: Precursor_LavaCastle_Log4 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_LavaCastle_Log4
+[Class1Vehicles] ID: {6595f4c6-c5a9-4227-94ca-82d4d2b16a75}
+[Class1Vehicles] FMOD: Precursor_Prison_Antechamber_Log1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_Antechamber_Log1
+[Class1Vehicles] ID: {9cca154c-6d1b-4936-81af-1513fd030d1c}
+[Class1Vehicles] FMOD: Precursor_Prison_Aquarium_EnvironmentLog1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_Aquarium_EnvironmentLog1
+[Class1Vehicles] ID: {05ad3f82-91cf-44d7-95f7-53955d9c5596}
+[Class1Vehicles] FMOD: Precursor_Prison_Aquarium_EnvironmentLog2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_Aquarium_EnvironmentLog2
+[Class1Vehicles] ID: {ab9574e4-cf21-46c6-954c-37c0833bc551}
+[Class1Vehicles] FMOD: Precursor_Prison_Aquarium_EnvironmentLog3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_Aquarium_EnvironmentLog3
+[Class1Vehicles] ID: {81a81159-77a7-40c0-8f9b-69011165deb4}
+[Class1Vehicles] FMOD: Precursor_Prison_Aquarium_EnvironmentLog4 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_Aquarium_EnvironmentLog4
+[Class1Vehicles] ID: {3f312d23-2b35-4368-86a9-5315fd70b1df}
+[Class1Vehicles] FMOD: Precursor_Prison_Aquarium_EnvironmentLog5 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_Aquarium_EnvironmentLog5
+[Class1Vehicles] ID: {26cbc1ad-3ee8-464c-aba3-8f4ac6f8fe2f}
+[Class1Vehicles] FMOD: Precursor_Prison_ExteriorLog1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_ExteriorLog1
+[Class1Vehicles] ID: {720aa130-00de-4c5a-9147-69de759486bc}
+[Class1Vehicles] FMOD: Precursor_Prison_MoonPool_Log1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Precursor_Prison_MoonPool_Log1
+[Class1Vehicles] ID: {7a0fbc5f-d32d-46f6-9794-9ed121347192}
+[Class1Vehicles] FMOD: RadioCaptainsQuartersCode (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioCaptainsQuartersCode
+[Class1Vehicles] ID: {1d6ba69f-8bf1-44c6-94f5-d8648b8862f9}
+[Class1Vehicles] FMOD: RadioGrassy25NoSignalAlt (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioGrassy25NoSignalAlt
+[Class1Vehicles] ID: {eacbe5a3-ba5b-4918-ab2c-cdef6ff011c7}
+[Class1Vehicles] FMOD: RadioKelp28NoSignalAlt (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioKelp28NoSignalAlt
+[Class1Vehicles] ID: {d1bfbcba-99f7-4954-a8f2-aebb1894d4b3}
+[Class1Vehicles] FMOD: RadioMushroom24NoSignalAlt (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioMushroom24NoSignalAlt
+[Class1Vehicles] ID: {5d901e0c-1146-4297-a88e-eee25fcce4c7}
+[Class1Vehicles] FMOD: RadioPrecursor1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioPrecursor1
+[Class1Vehicles] ID: {4b33846c-8236-4d5c-8172-c5d179a72416}
+[Class1Vehicles] FMOD: RadioRadiationSuitNoSignalAlt (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioRadiationSuitNoSignalAlt
+[Class1Vehicles] ID: {2b417621-75de-4686-a330-32a52cc270e5}
+[Class1Vehicles] FMOD: RadioShallows22NoSignalAlt (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioShallows22NoSignalAlt
+[Class1Vehicles] ID: {094d1568-b522-4484-b850-2956a3780924}
+[Class1Vehicles] FMOD: RadioWarper1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioWarper1
+[Class1Vehicles] ID: {f08486ff-f5cd-4a35-ba09-332a17f0ea20}
+[Class1Vehicles] FMOD: RadioWarper2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/RadioWarper2
+[Class1Vehicles] ID: {6bbc5a8d-e100-4098-836b-95bd44a8b820}
+[Class1Vehicles] FMOD: Story_AuroraConsole2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Story_AuroraConsole2
+[Class1Vehicles] ID: {52561eed-868d-4d4d-a773-ec78a039332b}
+[Class1Vehicles] FMOD: Story_AuroraConsole3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/Story_AuroraConsole3
+[Class1Vehicles] ID: {10532f2a-77e1-4472-8d5d-76d3164307cc}
+[Class1Vehicles] FMOD: Ency_Aurora_Cargo_PDA2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_Aurora_Cargo_PDA2
+[Class1Vehicles] ID: {b9195f25-76c7-4d12-8223-5812f8cd9c4e}
+[Class1Vehicles] FMOD: Ency_Aurora_Living_Area_PDA2b (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_Aurora_Living_Area_PDA2b
+[Class1Vehicles] ID: {6e858d74-7110-4943-a86d-f3b82b5207cc}
+[Class1Vehicles] FMOD: Ency_DeepPDA1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_DeepPDA1
+[Class1Vehicles] ID: {aa2638a5-a45a-4201-b4e2-599b53432cd8}
+[Class1Vehicles] FMOD: Ency_DeepPDA2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_DeepPDA2
+[Class1Vehicles] ID: {b2057c87-f3dd-485c-bea0-d4a0d6430114}
+[Class1Vehicles] FMOD: Ency_DeepPDA3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_DeepPDA3
+[Class1Vehicles] ID: {c4df3cd0-437f-4ea1-907c-54c134ad0a07}
+[Class1Vehicles] FMOD: Ency_DeepPDA4 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_DeepPDA4
+[Class1Vehicles] ID: {af58594d-248e-4a37-b489-193d1cdacbe8}
+[Class1Vehicles] FMOD: Ency_InnerBiomeWreckLore7 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_InnerBiomeWreckLore7
+[Class1Vehicles] ID: {baee899d-80bd-4319-8f76-264a8f84fc09}
+[Class1Vehicles] FMOD: Ency_IslandsPDABase1Desk (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_IslandsPDABase1Desk
+[Class1Vehicles] ID: {6c22aa51-f833-4268-9cb6-fba4ec14b68f}
+[Class1Vehicles] FMOD: Ency_IslandsPDABase1Interior (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_IslandsPDABase1Interior
+[Class1Vehicles] ID: {ff82efe7-199c-4cc5-9cfe-fadc187097f1}
+[Class1Vehicles] FMOD: Ency_IslandsPDABase1a (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_IslandsPDABase1a
+[Class1Vehicles] ID: {170543a0-7c70-4ddf-9f5f-61aae9dd77b9}
+[Class1Vehicles] FMOD: Ency_IslandsPDABase1bDesk (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_IslandsPDABase1bDesk
+[Class1Vehicles] ID: {c16a5b62-5ef5-4742-8d2b-e3a759724540}
+[Class1Vehicles] FMOD: Ency_IslandsPDAExterior (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_IslandsPDAExterior
+[Class1Vehicles] ID: {70495397-85ec-4253-9c20-d610e5ba0cb8}
+[Class1Vehicles] FMOD: Ency_JellyPDABrokenCorridor (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_JellyPDABrokenCorridor
+[Class1Vehicles] ID: {acf9f72e-5460-47bb-b741-f30e2ef58e4e}
+[Class1Vehicles] FMOD: Ency_JellyPDAExterior (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_JellyPDAExterior
+[Class1Vehicles] ID: {45ca4b14-3994-4534-8ab9-4d843679e5ab}
+[Class1Vehicles] FMOD: Ency_JellyPDAObservatory (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_JellyPDAObservatory
+[Class1Vehicles] ID: {6cd8de5e-1a3a-4342-8bed-d05ed39a07be}
+[Class1Vehicles] FMOD: Ency_JellyPDARoom1Desk (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_JellyPDARoom1Desk
+[Class1Vehicles] ID: {c791e70e-e95f-4926-8f91-b5f48c0cbc8e}
+[Class1Vehicles] FMOD: Ency_JellyPDARoom1Locker (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_JellyPDARoom1Locker
+[Class1Vehicles] ID: {533cabb1-3bb5-4709-9f41-4c9a093345c8}
+[Class1Vehicles] FMOD: Ency_JellyPDARoom2Desk (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_JellyPDARoom2Desk
+[Class1Vehicles] ID: {2fa60f9f-6619-4e15-a435-752994df6181}
+[Class1Vehicles] FMOD: Ency_JellyPDARoom2Locker (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_JellyPDARoom2Locker
+[Class1Vehicles] ID: {f9746c68-667f-4b98-9a48-9c860d413c6f}
+[Class1Vehicles] FMOD: Ency_Lifepod1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_Lifepod1
+[Class1Vehicles] ID: {5ded9917-45ce-4f9a-82d0-baedf7e837d1}
+[Class1Vehicles] FMOD: Ency_Lifepod2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_Lifepod2
+[Class1Vehicles] ID: {f548706d-fe33-4483-bd57-aff179089609}
+[Class1Vehicles] FMOD: Ency_Lifepod3 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_Lifepod3
+[Class1Vehicles] ID: {378adafb-20f1-4d7c-9277-8db369aca909}
+[Class1Vehicles] FMOD: Ency_Lifepod4 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_Lifepod4
+[Class1Vehicles] ID: {a2bef70b-93da-4135-8636-74a436133df7}
+[Class1Vehicles] FMOD: Ency_LifepodCrashZone1 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_LifepodCrashZone1
+[Class1Vehicles] ID: {067ea25d-8944-4856-b5c3-856c276d91bb}
+[Class1Vehicles] FMOD: Ency_LifepodCrashZone2 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_LifepodCrashZone2
+[Class1Vehicles] ID: {165011ce-310d-4b1e-a62f-a691bee4d67e}
+[Class1Vehicles] FMOD: Ency_LifepodDecoy (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_LifepodDecoy
+[Class1Vehicles] ID: {3ac18b9f-7d1f-417b-bd18-df2d91df5f80}
+[Class1Vehicles] FMOD: Ency_LifepodKeenDialog (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_LifepodKeenDialog
+[Class1Vehicles] ID: {1e6c5370-7123-4d61-bc65-ccde1eaa3a11}
+[Class1Vehicles] FMOD: Ency_LifepodRandom (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_LifepodRandom
+[Class1Vehicles] ID: {81077f7b-1a63-45b5-bf58-cb6b7f358f2e}
+[Class1Vehicles] FMOD: Ency_LifepodSeaglide (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_LifepodSeaglide
+[Class1Vehicles] ID: {ed791d88-0de7-46e2-8f3f-72745b9c4777}
+[Class1Vehicles] FMOD: Ency_OuterBiomeWreckLore9 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_OuterBiomeWreckLore9
+[Class1Vehicles] ID: {8686b548-e51d-4330-8ec5-5d5ed2e406ca}
+[Class1Vehicles] FMOD: Ency_RendezvousFloatingIsland (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/Ency_RendezvousFloatingIsland
+[Class1Vehicles] ID: {d82435e9-ac3f-41d1-a412-d782d9a17dab}
+[Class1Vehicles] FMOD: RadioBloodKelp29 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioBloodKelp29
+[Class1Vehicles] ID: {164bba14-ae11-4702-934b-bc76bc8919cb}
+[Class1Vehicles] FMOD: RadioGrassy21 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioGrassy21
+[Class1Vehicles] ID: {f9f15134-e94a-4f27-9f25-f9c174cc3ca1}
+[Class1Vehicles] FMOD: RadioGrassy25 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioGrassy25
+[Class1Vehicles] ID: {1df498d0-7bfd-472f-ac43-ab8b49a1a726}
+[Class1Vehicles] FMOD: RadioKelp28 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioKelp28
+[Class1Vehicles] ID: {d06300e7-fb00-4007-9ea9-7ab07516cc39}
+[Class1Vehicles] FMOD: RadioMushroom24 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioMushroom24
+[Class1Vehicles] ID: {471043c2-5bc0-4503-a4bf-55706474e51f}
+[Class1Vehicles] FMOD: RadioRadiationSuit (male) (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioRadiationSuit (male)
+[Class1Vehicles] ID: {868fddf7-3eeb-4771-b183-c9e92df2b4b6}
+[Class1Vehicles] FMOD: RadioSecondOfficer (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioSecondOfficer
+[Class1Vehicles] ID: {df8b3a26-9287-497b-aaaf-73294ef8ba2d}
+[Class1Vehicles] FMOD: RadioShallows22 (FMODAsset)
+[Class1Vehicles] PATH: event:/player/story/VO/RadioShallows22
+[Class1Vehicles] ID: {5eddf4a6-2800-459b-b91a-45cea2a9c3ce}
+[Class1Vehicles] FMOD: surface (FMODAsset)
+[Class1Vehicles] PATH: event:/player/surface
+[Class1Vehicles] ID: {2b0deb89-5c50-4f4e-97be-d00b8c2d866b}
+[Class1Vehicles] FMOD: surface_no_air (FMODAsset)
+[Class1Vehicles] PATH: event:/player/surface_no_air
+[Class1Vehicles] ID: {7487243e-932e-43b8-85d0-564af38ca548}
+[Class1Vehicles] FMOD: surface_tank (FMODAsset)
+[Class1Vehicles] PATH: event:/player/surface_tank
+[Class1Vehicles] ID: {affd0ebf-96a4-485d-802c-99016a16ac52}
+[Class1Vehicles] FMOD: swim_surface (FMODAsset)
+[Class1Vehicles] PATH: event:/player/swim_surface
+[Class1Vehicles] ID: {ebdf01e3-5d41-4c11-943f-18855edba6db}
+[Class1Vehicles] FMOD: swim_underwater (FMODAsset)
+[Class1Vehicles] PATH: event:/player/swim_underwater
+[Class1Vehicles] ID: {dde0f086-ed0a-410b-9139-373c054824f4}
+[Class1Vehicles] FMOD: vitals_ok (FMODAsset)
+[Class1Vehicles] PATH: event:/player/vitals_ok
+[Class1Vehicles] ID: {c4110b9c-1521-4db7-9bf3-cb36c30b247c}
+[Class1Vehicles] FMOD: water_critical (FMODAsset)
+[Class1Vehicles] PATH: event:/player/water_critical
+[Class1Vehicles] ID: {2976c464-3a73-4055-8305-d5456534af65}
+[Class1Vehicles] FMOD: water_low (FMODAsset)
+[Class1Vehicles] PATH: event:/player/water_low
+[Class1Vehicles] ID: {e2ba85d9-1cab-46e3-80b5-3fe5de3b29b2}
+[Class1Vehicles] FMOD: water_very_low (FMODAsset)
+[Class1Vehicles] PATH: event:/player/water_very_low
+[Class1Vehicles] ID: {7dcdd5bd-d9e0-400b-9295-2e57e69020ef}
+[Class1Vehicles] FMOD: sub_ambieance (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/sub_ambieance
+[Class1Vehicles] ID: {f7e89ddd-a547-4d92-887c-165e6e951c66}
+[Class1Vehicles] FMOD: radioKoosh26 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radioKoosh26
+[Class1Vehicles] ID: {2e5d09bd-2dbb-4361-a74d-689b53755045}
+[Class1Vehicles] FMOD: radioSunbeamEvent01 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radioSunbeamEvent01
+[Class1Vehicles] ID: {373370d6-b9dc-41f9-9869-d698d2f3f42b}
+[Class1Vehicles] FMOD: radioSunbeamEvent02 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radioSunbeamEvent02
+[Class1Vehicles] ID: {a7c970a2-0b2b-4277-b752-ffd2fbffb9a1}
+[Class1Vehicles] FMOD: radioSunbeamEvent03 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radioSunbeamEvent03
+[Class1Vehicles] ID: {f08a0bd8-db91-43c2-84cb-e5cb1a6846d0}
+[Class1Vehicles] FMOD: radioSunbeamEvent04 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radioSunbeamEvent04
+[Class1Vehicles] ID: {c40dafbf-c40b-4333-9e1e-ac59d4c82922}
+[Class1Vehicles] FMOD: radioSunbeam_not coming (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radioSunbeam_not coming
+[Class1Vehicles] ID: {36e7b9b4-f313-4329-9960-86664c006cbf}
+[Class1Vehicles] FMOD: radio_lifepod_17 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radio_lifepod_17
+[Class1Vehicles] ID: {06286fb6-7f8c-4262-a901-c972ff86f475}
+[Class1Vehicles] FMOD: radio_lifepod_bounceback (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/radio/radio_lifepod_bounceback
+[Class1Vehicles] ID: {edda7dd6-9641-44a7-b292-52c1f6570d7b}
+[Class1Vehicles] FMOD: close (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/pda/close
+[Class1Vehicles] ID: {53aefa38-0382-4bd9-8ae5-7c2e3f9e29f0}
+[Class1Vehicles] FMOD: first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/pda/first_use
+[Class1Vehicles] ID: {a24759f1-b69c-43c9-958c-e1f1dab7ce6f}
+[Class1Vehicles] FMOD: open (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/pda/open
+[Class1Vehicles] ID: {3d7e994d-db15-449e-9a9d-d49e5f49f723}
+[Class1Vehicles] FMOD: new_PDA_data (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/scanner/new_PDA_data
+[Class1Vehicles] ID: {3a5a77f0-86a5-4698-a813-4414f4f2a028}
+[Class1Vehicles] FMOD: new_blueprint (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/scanner/new_blueprint
+[Class1Vehicles] ID: {4bd155b7-9e54-4348-b439-e45ee90199f0}
+[Class1Vehicles] FMOD: swimcharge (FMODAsset)
+[Class1Vehicles] PATH: event:/tools/swimcharge
+[Class1Vehicles] ID: {7f2c2fcd-293b-433e-87a0-cf4406b2c686}
+[Class1Vehicles] FMOD: firefighting_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/firefighting_music
+[Class1Vehicles] ID: {ed49d8e0-c0af-4795-bc8c-2c47a63e94e4}
+[Class1Vehicles] FMOD: AI_abandon (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_abandon
+[Class1Vehicles] ID: {173fbf7a-0998-4c9b-936d-fa8a997c3256}
+[Class1Vehicles] FMOD: AI_ahead_flank (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_ahead_flank
+[Class1Vehicles] ID: {5434bf0d-c107-4cb8-8317-0ab5dcdedbe5}
+[Class1Vehicles] FMOD: AI_ahead_slow (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_ahead_slow
+[Class1Vehicles] ID: {dfc276a6-84dc-4eac-be66-f48672d17cf6}
+[Class1Vehicles] FMOD: AI_ahead_standard (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_ahead_standard
+[Class1Vehicles] ID: {bb16d731-c830-4080-91ce-4573ba15503f}
+[Class1Vehicles] FMOD: AI_attack (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_attack
+[Class1Vehicles] ID: {017341c1-11cc-4310-9ba6-39a8ef9e2bea}
+[Class1Vehicles] FMOD: AI_cavitate (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_cavitate
+[Class1Vehicles] ID: {40ff60ee-addb-4ca4-93f4-749d00fb3f00}
+[Class1Vehicles] FMOD: AI_decoy (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_decoy
+[Class1Vehicles] ID: {7dc58e6b-bab8-494e-9f0e-38e83c97fd21}
+[Class1Vehicles] FMOD: AI_depth_update_1 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_depth_update_1
+[Class1Vehicles] ID: {4603bb28-fde6-4e7f-97d7-aadf27445f15}
+[Class1Vehicles] FMOD: AI_depth_update_2 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_depth_update_2
+[Class1Vehicles] ID: {a4a9abaa-99cc-4798-84bb-f5da53f49b85}
+[Class1Vehicles] FMOD: AI_depth_warning_1 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_depth_warning_1
+[Class1Vehicles] ID: {d1eb6017-96d2-4b1d-a52d-65de4ff73cec}
+[Class1Vehicles] FMOD: AI_depth_warning_2 (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_depth_warning_2
+[Class1Vehicles] ID: {304462f5-6db6-47e3-bde5-e05daee86c93}
+[Class1Vehicles] FMOD: AI_drain (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_drain
+[Class1Vehicles] ID: {b478202d-56b9-4d02-8486-2fe58b9b88e0}
+[Class1Vehicles] FMOD: AI_engine_down (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_engine_down
+[Class1Vehicles] ID: {8bc901e1-b4e5-4c3f-95b7-947f8d99a1c3}
+[Class1Vehicles] FMOD: AI_engine_heat_critical (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_engine_heat_critical
+[Class1Vehicles] ID: {65963382-60e8-47d3-aaf3-06ad8c6cdb88}
+[Class1Vehicles] FMOD: AI_engine_overheat (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_engine_overheat
+[Class1Vehicles] ID: {03b3a17a-bd79-4a88-9a28-c35e9fa267b5}
+[Class1Vehicles] FMOD: AI_engine_up (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_engine_up
+[Class1Vehicles] ID: {1edbe623-223a-4730-8e5a-2fcea22f66a9}
+[Class1Vehicles] FMOD: AI_external_damage (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_external_damage
+[Class1Vehicles] ID: {257a1479-0460-48a5-b979-875b37d0c9ea}
+[Class1Vehicles] FMOD: AI_fire_detected (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_fire_detected
+[Class1Vehicles] ID: {2cfaff88-de96-4a16-a4a3-3f51bc9fb5f1}
+[Class1Vehicles] FMOD: AI_fire_extinguished (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_fire_extinguished
+[Class1Vehicles] ID: {ba853ba6-8d31-48da-a1c3-4bd58fc878de}
+[Class1Vehicles] FMOD: AI_fire_system (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_fire_system
+[Class1Vehicles] ID: {3dec4e22-3fab-4b43-9538-86c9386dd0bb}
+[Class1Vehicles] FMOD: AI_hull_crit (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_hull_crit
+[Class1Vehicles] ID: {0a6ecb47-ee7e-4424-bf8e-195b732b6e80}
+[Class1Vehicles] FMOD: AI_hull_low (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_hull_low
+[Class1Vehicles] ID: {fb501c73-29cd-48e0-9941-24e34a8b19a4}
+[Class1Vehicles] FMOD: AI_leak (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_leak
+[Class1Vehicles] ID: {0ef99c4b-dba4-4046-874b-75d0ee5b9fea}
+[Class1Vehicles] FMOD: AI_no_power (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_no_power
+[Class1Vehicles] ID: {a92535a3-c5bf-49ae-8eea-4fd82ba0dad1}
+[Class1Vehicles] FMOD: AI_silent_running (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_silent_running
+[Class1Vehicles] ID: {e82aad1e-4ede-4553-a502-590f581f5393}
+[Class1Vehicles] FMOD: AI_system_failure (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_system_failure
+[Class1Vehicles] ID: {ca03e00c-7df6-402f-8eae-8984fb7702e2}
+[Class1Vehicles] FMOD: AI_welcome (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_welcome
+[Class1Vehicles] ID: {445b93f2-95d1-41e6-b454-2be968953b9c}
+[Class1Vehicles] FMOD: AI_welcome_attention (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/AI_welcome_attention
+[Class1Vehicles] ID: {355d6773-bedf-4377-bcd5-288479651fc7}
+[Class1Vehicles] FMOD: climb_back_down (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/climb_back_down
+[Class1Vehicles] ID: {d3c76b0d-13ae-4f4a-9cf7-a3fd7414f988}
+[Class1Vehicles] FMOD: climb_back_up (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/climb_back_up
+[Class1Vehicles] ID: {e952a262-594e-4513-bbbe-1b730d4b7444}
+[Class1Vehicles] FMOD: climb_front_down (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/climb_front_down
+[Class1Vehicles] ID: {aeac0925-468f-4423-844a-e322a981afec}
+[Class1Vehicles] FMOD: climb_front_up (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/climb_front_up
+[Class1Vehicles] ID: {b2f7b796-a6ac-4d55-b1de-80dbde421b5a}
+[Class1Vehicles] FMOD: control_room_ambience (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/control_room_ambience
+[Class1Vehicles] ID: {012682fb-a7b5-4cbe-800a-d7a8421b9a81}
+[Class1Vehicles] FMOD: creature_attack_sfx (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/creature_attack_sfx
+[Class1Vehicles] ID: {449f5aaa-147e-4b7b-87c1-7c95904bedeb}
+[Class1Vehicles] FMOD: cyclops_door_close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/cyclops_door_close
+[Class1Vehicles] ID: {23838322-c1c1-4a66-87cd-cba5e03bbeed}
+[Class1Vehicles] FMOD: cyclops_door_open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/cyclops_door_open
+[Class1Vehicles] ID: {d3a8ecf6-fd3e-4c94-a074-b85cc031b8a1}
+[Class1Vehicles] FMOD: cyclops_loop_epic_fast (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/cyclops_loop_epic_fast
+[Class1Vehicles] ID: {a949e8ca-fdd7-46bb-962c-e3ba7976aabf}
+[Class1Vehicles] FMOD: cyclops_loop_fast (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/cyclops_loop_fast
+[Class1Vehicles] ID: {08b1648e-5536-4099-b430-a56d6ca5e5e7}
+[Class1Vehicles] FMOD: cyclops_loop_normal (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/cyclops_loop_normal
+[Class1Vehicles] ID: {3af04011-298d-4737-8f12-e5c675f626dc}
+[Class1Vehicles] FMOD: cyclops_loop_rpm (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/cyclops_loop_rpm
+[Class1Vehicles] ID: {465b3a4e-2cc6-4119-b2ef-b28a5dc11dc8}
+[Class1Vehicles] FMOD: cyclops_loop_slow (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/cyclops_loop_slow
+[Class1Vehicles] ID: {8391f08b-453a-4221-a886-4067eff210e7}
+[Class1Vehicles] FMOD: docking_doors_close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/docking_doors_close
+[Class1Vehicles] ID: {6abdf213-0d28-412a-b0c7-a622c0a03912}
+[Class1Vehicles] FMOD: docking_doors_open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/docking_doors_open
+[Class1Vehicles] ID: {c39c942e-793e-47c7-ab74-6175420abf25}
+[Class1Vehicles] FMOD: engine_room (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/engine_room
+[Class1Vehicles] ID: {aeefe90e-88fa-4686-82be-fb50ad55da5e}
+[Class1Vehicles] FMOD: enter_hatch (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/enter_hatch
+[Class1Vehicles] ID: {eeb52587-d018-492c-865b-6668c4668cdf}
+[Class1Vehicles] FMOD: explode (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/explode
+[Class1Vehicles] ID: {9c238510-c0f8-4637-90ba-c88bd15685f5}
+[Class1Vehicles] FMOD: floodlights_off (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/floodlights_off
+[Class1Vehicles] ID: {4b7f5aed-e972-4440-8995-ab4c0b3e2028}
+[Class1Vehicles] FMOD: floodlights_on (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/floodlights_on
+[Class1Vehicles] ID: {696b7825-5fb7-444a-8848-1f336479d6c1}
+[Class1Vehicles] FMOD: horn (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/horn
+[Class1Vehicles] ID: {592740b7-197a-4799-b6f0-d9d974dba12e}
+[Class1Vehicles] FMOD: install_mod (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/install_mod
+[Class1Vehicles] ID: {da1f52bf-7b6b-419e-a37a-83ff806e1aff}
+[Class1Vehicles] FMOD: lights_off (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/lights_off
+[Class1Vehicles] ID: {95b877e8-2ccd-451d-ab5f-fc654feab173}
+[Class1Vehicles] FMOD: lights_on (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/lights_on
+[Class1Vehicles] ID: {5384ec29-f493-4ac1-9f74-2c0b14d61440}
+[Class1Vehicles] FMOD: load_decoy (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/load_decoy
+[Class1Vehicles] ID: {53069be5-236d-4d8f-93ec-692abee2d1c8}
+[Class1Vehicles] FMOD: outer_hatch_close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/outer_hatch_close
+[Class1Vehicles] ID: {96e0fc8b-d997-4149-aa09-7ebc4bf7188c}
+[Class1Vehicles] FMOD: outer_hatch_open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/outer_hatch_open
+[Class1Vehicles] ID: {94631097-1268-47d8-bbce-b40a44221bc0}
+[Class1Vehicles] FMOD: proximity (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/proximity
+[Class1Vehicles] ID: {1d34951a-537d-494d-92f9-a1c75d5582b5}
+[Class1Vehicles] FMOD: shield_on_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/shield_on_loop
+[Class1Vehicles] ID: {2dd4ff7b-64c7-4e10-8776-50bb586e16ba}
+[Class1Vehicles] FMOD: siren (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/siren
+[Class1Vehicles] ID: {cdb87689-5582-499e-8539-8ec54dd577c0}
+[Class1Vehicles] FMOD: siren_3d (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/siren_3d
+[Class1Vehicles] ID: {a2363529-5e9d-427e-bcdb-3cf0a00c2057}
+[Class1Vehicles] FMOD: sonar (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/sonar
+[Class1Vehicles] ID: {8e64a613-52b2-4dbb-baba-6e230148448d}
+[Class1Vehicles] FMOD: start (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/start
+[Class1Vehicles] ID: {13de1734-9078-4dbf-bc1b-17312276829d}
+[Class1Vehicles] FMOD: dock_exo_cyclops (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/exo/dock_exo_cyclops
+[Class1Vehicles] ID: {ce77736b-352b-4e3a-ae35-971e92406b4e}
+[Class1Vehicles] FMOD: undock_exo_cyclops (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/exo/undock_exo_cyclops
+[Class1Vehicles] ID: {0eb80c4b-fe52-40aa-aada-a8799ce1becb}
+[Class1Vehicles] FMOD: dock (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/dock
+[Class1Vehicles] ID: {21b00ecd-b76c-4920-b8c9-a79977067943}
+[Class1Vehicles] FMOD: dock_seamoth_cyclops (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/dock_seamoth_cyclops
+[Class1Vehicles] ID: {4de57a91-5516-47ee-8a06-90f241bb6e49}
+[Class1Vehicles] FMOD: undock (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/undock
+[Class1Vehicles] ID: {4e41f994-6398-4b11-aa3c-f5001d952136}
+[Class1Vehicles] FMOD: undock_seamoth_cyclops (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/undock_seamoth_cyclops
+[Class1Vehicles] ID: {a78c6072-5fda-42da-81e4-1a04cef5069d}
+[Class1Vehicles] FMOD: intro_cin_music (FMODAsset)
+[Class1Vehicles] PATH: event:/main_menu/intro_cin_music
+[Class1Vehicles] ID: {31181619-1068-4ff3-a8ca-4801f77899c0}
+[Class1Vehicles] FMOD: climb_in_bottom (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/climb_in_bottom
+[Class1Vehicles] ID: {396e64ee-32b5-4ab0-bda2-c015f02f6ce2}
+[Class1Vehicles] FMOD: climb_in_top (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/climb_in_top
+[Class1Vehicles] ID: {2f4a17de-b7bf-4a29-8034-b9297a152394}
+[Class1Vehicles] FMOD: climb_out_bottom (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/climb_out_bottom
+[Class1Vehicles] ID: {f6b4bae6-8c37-4e1b-ad1c-2ab8f1a70a79}
+[Class1Vehicles] FMOD: climb_out_bottom_first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/climb_out_bottom_first_use
+[Class1Vehicles] ID: {4b0059d3-473c-4cf7-810d-6f39f6951018}
+[Class1Vehicles] FMOD: climb_out_top (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/climb_out_top
+[Class1Vehicles] ID: {d00e9f6a-d85d-4595-a324-93695a7bb152}
+[Class1Vehicles] FMOD: climb_out_top_first_use (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/climb_out_top_first_use
+[Class1Vehicles] ID: {ebb17666-eb7f-40e0-a7a4-7f895edba945}
+[Class1Vehicles] FMOD: fix_panel_powerup (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/fix_panel_powerup
+[Class1Vehicles] ID: {b6baaa34-5020-45de-9471-840839ef2bd5}
+[Class1Vehicles] FMOD: pod_background_damaged (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/pod_background_damaged
+[Class1Vehicles] ID: {dcb0908c-63aa-4e3c-af62-76115bb6c248}
+[Class1Vehicles] FMOD: pod_fire (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/pod_fire
+[Class1Vehicles] ID: {d5492c83-d605-4d5c-984a-55a128690355}
+[Class1Vehicles] FMOD: debris_fall_fire (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/debris_fall_fire
+[Class1Vehicles] ID: {d7491490-85b8-4f5c-9503-f25bde4b9a41}
+[Class1Vehicles] FMOD: shake (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/shake
+[Class1Vehicles] ID: {ea3b0dc5-85e0-4633-bd16-700fd41d7338}
+[Class1Vehicles] FMOD: ship_explode (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/ship_explode
+[Class1Vehicles] ID: {c03a2a6e-2357-4cd8-910b-1079d92086b5}
+[Class1Vehicles] FMOD: ship_explode_2 (FMODAsset)
+[Class1Vehicles] PATH: event:/env/background/ship_explode_2
+[Class1Vehicles] ID: {46c628d7-e3ad-4a6a-b31d-e32d51ed3205}
+[Class1Vehicles] FMOD: exo_room_music (FMODAsset)
+[Class1Vehicles] PATH: event:/env/music/exo_room_music
+[Class1Vehicles] ID: {4867d158-4521-4af2-877c-fb9ffab3c1c3}
+[Class1Vehicles] FMOD: splash (FMODAsset)
+[Class1Vehicles] PATH: event:/env/splash
+[Class1Vehicles] ID: {82bf7ca6-f0c3-4191-91d9-ec8ab4b47223}
+[Class1Vehicles] FMOD: radiation_fix (FMODAsset)
+[Class1Vehicles] PATH: event:/player/radiation_fix
+[Class1Vehicles] ID: {809be64e-91af-4e0b-9df8-e74840420e7e}
+[Class1Vehicles] FMOD: radiation_remaining (FMODAsset)
+[Class1Vehicles] PATH: event:/player/radiation_remaining
+[Class1Vehicles] ID: {481fd88b-9c77-4f62-bbce-e38b68a12860}
+[Class1Vehicles] FMOD: exit_hatch (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/exit_hatch
+[Class1Vehicles] ID: {7db5bfa0-5f6c-4b4f-ad8b-f03669e8e2ae}
+[Class1Vehicles] FMOD: enter_hatch (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/enter_hatch
+[Class1Vehicles] ID: {069a470c-5e8a-44e7-b2e7-9e5ebc40909e}
+[Class1Vehicles] FMOD: leak_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/cyclops/leak_loop
+[Class1Vehicles] ID: {339e02ae-5693-47e3-a327-223887bfdded}
+[Class1Vehicles] FMOD: nuke_gen_loop (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/nuke_gen_loop
+[Class1Vehicles] ID: {22ad1766-85c3-4c88-9427-e8af168ac761}
+[Class1Vehicles] FMOD: open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/fabricator/open
+[Class1Vehicles] ID: {a7013de5-6d4c-43f0-b0c3-487161f79972}
+[Class1Vehicles] FMOD: close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub_module/fabricator/close
+[Class1Vehicles] ID: {e36da51d-b551-4282-b2c0-05c3c0e1afda}
+[Class1Vehicles] FMOD: bioreactor_hatch_close (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/bioreactor_hatch_close
+[Class1Vehicles] ID: {b5521eb2-7a5d-4d17-9af8-bca17fa06e7e}
+[Class1Vehicles] FMOD: bioreactor_hatch_open (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/bioreactor_hatch_open
+[Class1Vehicles] ID: {89278fdb-10e0-4b8d-8335-d5a2d5b3265c}
+[Class1Vehicles] FMOD: bulkhead_close_back (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/bulkhead_close_back
+[Class1Vehicles] ID: {41ed10e7-ebab-49cb-9d49-f6ae04ecff7f}
+[Class1Vehicles] FMOD: bulkhead_open_front (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/bulkhead_open_front
+[Class1Vehicles] ID: {770a0546-2087-4f6a-adab-a075ce48ceda}
+[Class1Vehicles] FMOD: bulkhead_close_front (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/bulkhead_close_front
+[Class1Vehicles] ID: {1c39b4c0-dee3-46b3-89cb-fd628127dccb}
+[Class1Vehicles] FMOD: bulkhead_open_back (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/bulkhead_open_back
+[Class1Vehicles] ID: {1e1b5be7-d320-40ce-b2d2-16e33551216e}
+[Class1Vehicles] FMOD: undock (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/undock
+[Class1Vehicles] ID: {4e41f994-6398-4b11-aa3c-f5001d952136}
+[Class1Vehicles] FMOD: dock_exo_moonpool (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/exo/dock_exo_moonpool
+[Class1Vehicles] ID: {afc734d7-1664-421e-aeae-1d010e37139a}
+[Class1Vehicles] FMOD: seamoth_dock (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/seamoth_dock
+[Class1Vehicles] ID: {05bb5c0e-7729-45de-b2af-44db98316478}
+[Class1Vehicles] FMOD: climb_in_bottom (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/pod/climb_in_bottom
+[Class1Vehicles] ID: {396e64ee-32b5-4ab0-bda2-c015f02f6ce2}
+[Class1Vehicles] FMOD: dock (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/seamoth/dock
+[Class1Vehicles] ID: {21b00ecd-b76c-4920-b8c9-a79977067943}
+[Class1Vehicles] FMOD: enter_seamoth_left (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/enter_seamoth_left
+[Class1Vehicles] ID: {2d921995-2036-4de2-8457-3c9c50cd3b41}
+[Class1Vehicles] FMOD: undock_exo_moonpool (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/exo/undock_exo_moonpool
+[Class1Vehicles] ID: {614b4b13-1a52-4e28-8e99-f78f09b8a7c4}
+[Class1Vehicles] FMOD: enter_seamoth_right (FMODAsset)
+[Class1Vehicles] PATH: event:/sub/base/enter_seamoth_right
+[Class1Vehicles] ID: {11322dd3-5a0b-46e7-b82e-12b348bbc5b3}

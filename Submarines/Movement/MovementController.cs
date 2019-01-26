@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Submarines.Engine;
+using UnityEngine;
 
 /**
  * Handles input and submarine movement
@@ -9,15 +10,21 @@ namespace Submarines.Movement
     {
         public bool IsControllable { get; set; }
         public Vector3 LocalVelocity { get; set; }
+        public Transform ApplyForceLocation { get; set; }
+        public MovementData MovementData { get; set; }
+        public EngineManager EngineManager { get; set; }
 
-        private MovementData movementData;
         private Rigidbody rigidbody;
         private Vector3 throttle;
 
         public void Start()
         {
             rigidbody = gameObject.GetComponent<Rigidbody>();
-            movementData = gameObject.GetComponent<Movement.MovementData>();
+
+            if (MovementData == null && EngineManager == null)
+            {
+                Utilities.Log.Error("MovementController - Both MovementData and EngineManager are null. One of them has to be valid");
+            }
         }
 
         public void Update()
@@ -30,11 +37,27 @@ namespace Submarines.Movement
             throttle = GameInput.GetMoveDirection();
         }
 
+        private MovementData GetCurrentMovementData()
+        {
+            if (EngineManager != null)
+            {
+                return EngineManager.CurrentMovementData;
+            }
+
+            if (MovementData != null)
+            {
+                return MovementData;
+            }
+
+            return MovementData.Zero();
+        }
+
         public void FixedUpdate()
         {
             // Throttle: y up/down x left/right z forward/backward
             // Local Velocity: z up/down. y forward/backwrads. x left/right
             LocalVelocity = transform.InverseTransformDirection(rigidbody.velocity);
+            MovementData movementData = GetCurrentMovementData();
 
             if (IsControllable == false || rigidbody == null || rigidbody.isKinematic == true)
             {
@@ -44,21 +67,33 @@ namespace Submarines.Movement
             // Forward
             if (throttle.z > MovementData.CONTROL_DEADZONE)
             {
-                rigidbody.AddForce(throttle.z * movementData.ForwardAccelerationSpeed * transform.forward, ForceMode.Acceleration);
-
+                if (ApplyForceLocation == null)
+                {
+                    rigidbody.AddForce(throttle.z * movementData.ForwardAccelerationSpeed * transform.forward, ForceMode.Acceleration);
+                }
+                else
+                {
+                    rigidbody.AddForceAtPosition(throttle.z * movementData.ForwardAccelerationSpeed * transform.forward, ApplyForceLocation.position, ForceMode.Acceleration);
+                }
             }
 
             // Backwards
             if (throttle.z < -MovementData.CONTROL_DEADZONE)
             {
-                rigidbody.AddForce(throttle.z * movementData.BackwardsAccelerationSpeed * transform.forward, ForceMode.Acceleration);
+                if (ApplyForceLocation == null)
+                {
+                    rigidbody.AddForce(throttle.z * movementData.BackwardsAccelerationSpeed * transform.forward, ForceMode.Acceleration);
+                }
+                else
+                {
+                    rigidbody.AddForceAtPosition(throttle.z * movementData.BackwardsAccelerationSpeed * transform.forward, ApplyForceLocation.position, ForceMode.Acceleration);
+                }
             }
 
             /// Ascend Descend
             if (Mathf.Abs(throttle.y) > MovementData.CONTROL_DEADZONE)
             {
                 rigidbody.AddForce(throttle.y * movementData.AscendDescendSpeed * transform.up, ForceMode.Acceleration);
-
             }
 
             // Rotation

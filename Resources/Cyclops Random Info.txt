@@ -20,3 +20,45 @@ WaterClipProxy Via Relfect distanceFieldMin: (-5.7, -10.4, -17.0)
 WaterClipProxy Via Relfect distanceFieldMax: (5.7, 5.5, 29.1)
 WaterClipProxy Via Relfect distanceFieldSize: (11.5, 15.9, 46.0)
 WaterClipProxy Clip Material: WaterClip (Instance) (UnityEngine.Material)
+
+Model structure:
+gameObject.transform.Find("CyclopsMeshStatic").transform.Find("undamaged").Find("cyclops_LOD0").Find("cyclops_submarine_exterior");
+[Class1Vehicles] GO: cyclops_control_room with child count: 7
+[Class1Vehicles] GO: cyclops_diving_chamber with child count: 4
+[Class1Vehicles] GO: cyclops_engine_room with child count: 5
+[Class1Vehicles] GO: cyclops_ladder_hallway with child count: 7
+[Class1Vehicles] GO: cyclops_main_room with child count: 3
+[Class1Vehicles] GO: cyclops_submarine_exterior with child count: 0
+[Class1Vehicles] GO: cyclops_submarine_exterior_decals with child count: 0
+[Class1Vehicles] GO: Cyclops_submarine_exterior_glass with child count: 0
+[Class1Vehicles] GO: lower_engine_room with child count: 6
+[Class1Vehicles] GO: submarine_hatch_03_base_outer with child count: 0
+[Class1Vehicles] GO: glass with child count: 0
+[Class1Vehicles] GO: glass_waterFix with child count: 0
+
+cyclops_submarine_exterior materials:
+[Class1Vehicles] Materials count: 6
+material named submarine_wallmods_01_01 (Instance) (Instance) (UnityEngine.Material)
+material named cyclops_submarine_wallmods_01 (Instance) (Instance) (UnityEngine.Material)
+material named cyclops_submarine_exterior_decals_01 (Instance) (Instance) (UnityEngine.Material)
+material named Cyclops_exterior_submarine_engine_02 (Instance) (Instance) (UnityEngine.Material)
+material named Cyclops_exterior_submarine_engine (Instance) (Instance) (UnityEngine.Material)
+material named cyclops_cabin (Instance) (Instance) (UnityEngine.Material)
+
+Main exterior material info:
+[Class1Vehicles] Materials count: 6
+[Class1Vehicles] _Color RGBA(1.000, 1.000, 1.000, 1.000)
+[Class1Vehicles] _SpecColor RGBA(1.000, 1.000, 1.000, 1.000)
+[Class1Vehicles] _SpecInt 1
+[Class1Vehicles] _Shininess 6.5
+[Class1Vehicles] _Fresnel 0
+[Class1Vehicles] _MainTex submarine_wallmods_01_01
+[Class1Vehicles] _SpecTex submarine_wallmods_01_01_spec
+[Class1Vehicles] _SpecTex_ST (1.0, 1.0, 0.0, 0.0)
+[Class1Vehicles] _BumpMap submarine_wallmods_01_01_normal
+[Class1Vehicles] _GlowColor RGBA(1.000, 1.000, 1.000, 1.000)
+[Class1Vehicles] _GlowStrength 1
+[Class1Vehicles] _EmissionLM 0
+[Class1Vehicles] _EmissionColor (0.0, 0.0, 0.0, 0.0)
+[Class1Vehicles] _Illum 
+[Class1Vehicles] _Illum_ST (1.0, 1.0, 0.0, 0.0)

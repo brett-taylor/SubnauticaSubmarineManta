@@ -8,14 +8,13 @@ namespace Submarines.PointsOfInterest
      */
     public class HingeJointDoor : MonoBehaviour
     {
-        public static readonly string OPEN_SOUND = "event:/sub/base/door_open";
-        public static readonly string CLOSE_SOUND = "event:/sub/base/door_open";
-
         public bool TriggerToEverything = false;
         public bool TriggerToPlayer = true;
         public bool TriggerToVehicles = false;
         public float TargetVelocity { get; set; }
         public bool OverwriteTargetVelocity { get; set; } = false;
+        public FMODAsset OpenSound { get; set; } = null;
+        public FMODAsset CloseSound { get; set; } = null;
 
         private HingeJoint hingeJoint;
 
@@ -84,20 +83,43 @@ namespace Submarines.PointsOfInterest
             if (shouldExecute)
             {
                 Open();
+                if (OpenSound != null)
+                {
+                    Utils.PlayFMODAsset(OpenSound, gameObject.transform.position);
+                }
             }
         }
 
         public void OnTriggerExit(Collider c)
         {
+            bool shouldExecute = true;
+
             if (TriggerToEverything == false)
             {
                 if (IsPlayerOrVehicle(c) == false)
                 {
                     return;
                 }
+
+                if (TriggerToPlayer == false && IsPlayer(c))
+                {
+                    return;
+                }
+
+                if (TriggerToVehicles == false && IsVehicle(c))
+                {
+                    return;
+                }
             }
 
-            Close();
+            if (shouldExecute)
+            {
+                Close();
+                if (CloseSound != null)
+                {
+                    Utils.PlayFMODAsset(CloseSound, gameObject.transform.position);
+                }
+            }
         }
 
         private bool IsPlayerOrVehicle(Collider c)

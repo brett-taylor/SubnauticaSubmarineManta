@@ -1,12 +1,12 @@
 ﻿using Harmony;
-using Manta.Core;
-using Manta.Utilities;
+using Odyssey.Core;
+using Odyssey.Utilities;
 using System.Reflection;
 
-namespace Manta
+namespace Odyssey
 {
     /**
-    * Entry point into our Manta submarine
+    * Entry point into our Odyssey submarine
     */
     public class EntryPoint
     {
@@ -16,11 +16,11 @@ namespace Manta
 
         public static void Entry()
         {
-            HarmonyInstance = HarmonyInstance.Create("taylor.brett.TheMantaMod.mod");
+            HarmonyInstance = HarmonyInstance.Create("taylor.brett.Odyssey.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
-            MantaAssetLoader.LoadAssets();
-            MantaMod manta = new MantaMod();
+            OdysseyAssetLoader.LoadAssets();
+            OdysseyMod manta = new OdysseyMod();
             manta.Patch();
         }
 

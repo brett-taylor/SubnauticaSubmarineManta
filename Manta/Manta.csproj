@@ -53,14 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\MantaTemporarySteeringHUD.cs" />
     <Compile Include="Core\MantaSubmarine.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Core\MantaMod.cs" />
     <Compile Include="Components\MantaSerializationFixer.cs" />
     <Compile Include="Utilities\MantaAssetLoader.cs" />
-    <Compile Include="Patchers\OpenCloseDebugMenuPatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\DebugMenu.cs" />
     <Compile Include="Utilities\Log.cs" />
   </ItemGroup>
   <ItemGroup>

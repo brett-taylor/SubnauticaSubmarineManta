@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Harmony;
 
-namespace Manta.Patchers
+namespace Class1Vehicles.Patchers
 {
     /**
      * Patches into Player::Update() so we can track if our debug key has been pressed.

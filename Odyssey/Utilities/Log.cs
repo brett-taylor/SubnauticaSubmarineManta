@@ -1,4 +1,4 @@
-﻿namespace SubnauticaProtobufSaveLoadSystem.Utilities
+﻿namespace Odyssey.Utilities
 {
     public static class Log
     {
@@ -6,9 +6,9 @@
         {
             if (alertInGame)
             {
-                ErrorMessage.AddMessage("[SubnauticaProtobufSaveLoadSystem] " + message);
+                ErrorMessage.AddMessage("[Odyssey] " + message);
             }
-            System.Console.WriteLine("[SubnauticaProtobufSaveLoadSystem] " + message);
+            System.Console.WriteLine("[Odyssey] " + message);
         }
 
         public static void Error(string message, bool alertInGame = true)
