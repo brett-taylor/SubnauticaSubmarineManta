@@ -65,23 +65,23 @@ namespace Manta.Components
         {
             if (Input.GetKeyDown(KeyCode.Alpha6))
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.OFF);
+                GetComponent<EngineManager>().SetNewEngineState(EngineState.OFF, false, true);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha7))
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.SLOW);
+                GetComponent<EngineManager>().SetNewEngineState(EngineState.SLOW, false, true);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha8))
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.NORMAL);
+                GetComponent<EngineManager>().SetNewEngineState(EngineState.NORMAL, false, true);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha9))
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.FAST);
+                GetComponent<EngineManager>().SetNewEngineState(EngineState.FAST, false, true);
             }
             else if(Input.GetKeyDown(KeyCode.Alpha0))
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.SILENTRUNNING);
+                GetComponent<EngineManager>().SetNewEngineState(EngineState.SILENTRUNNING, false, true);
             }
         }
     }

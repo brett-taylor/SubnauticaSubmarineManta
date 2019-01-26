@@ -22,10 +22,10 @@ namespace Submarines.Engine
         
         public void Start()
         {
-            SetNewEngineState(EngineState.OFF, true, false);
+            CurrentMovementData = engineMovementData[EngineState];
         }
 
-        public void SetNewEngineState(EngineState engineState, bool skipEngineStartUpSequence = false, bool sendMessages = true)
+        public void SetNewEngineState(EngineState engineState, bool skipEngineStartUpSequence, bool sendMessages)
         {
             if (engineState == EngineState)
             {

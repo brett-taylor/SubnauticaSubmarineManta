@@ -13,6 +13,7 @@ namespace Submarines.Movement
         public float BackwardsAccelerationSpeed { get; set; } = 3f;
         public float AscendDescendSpeed { get; set; } = 1.4f;
         public float RotationSpeed { get; set; } = 0.3f;
+        public float RPMSpeedThrottleDown { get; set; } = 1f;
 
         public static MovementData Zero()
         {
@@ -21,7 +22,8 @@ namespace Submarines.Movement
                 ForwardAccelerationSpeed = 0f,
                 BackwardsAccelerationSpeed = 0f,
                 AscendDescendSpeed = 0f,
-                RotationSpeed = 0f
+                RotationSpeed = 0f,
+                RPMSpeedThrottleDown = 0f
             };
         }
     }

@@ -147,6 +147,41 @@ namespace Class1Vehicles.Utilities
                 }
                 GUILayout.EndHorizontal();
 
+                if (GUILayout.Button("Get Render Queue"))
+                {
+                    Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit raycastHit4;
+                    if (Physics.Raycast(ray4, out raycastHit4))
+                    {
+                        if (raycastHit4.rigidbody.gameObject.GetComponentInChildren<MeshRenderer>() != null)
+                        {
+                            MeshRenderer mr = raycastHit4.rigidbody.gameObject.GetComponentInChildren<MeshRenderer>();
+                            Utilities.Log.Print("GO Name: " + raycastHit4.rigidbody.gameObject.name);
+                            Utilities.Log.Print("Material Name: " + mr.material.name);
+                            Utilities.Log.Print("Material Render Queue: " + mr.material.renderQueue);
+                        }
+                    }
+                }
+
+                if (GUILayout.Button("Get Render Queue On Raycast"))
+                {
+                    Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit raycastHit4;
+                    if (Physics.Raycast(ray4, out raycastHit4))
+                    {
+                        foreach (MeshRenderer mr in raycastHit4.rigidbody.GetComponentsInChildren<MeshRenderer>())
+                        {
+                            Utilities.Log.Print("GO Name: " + mr.gameObject.name);
+                            Utilities.Log.Print("GO Material Count: " + mr.materials.Length);
+                            foreach(Material m in mr.materials)
+                            {
+                                Utilities.Log.Print("Material Name: " + m.name);
+                                Utilities.Log.Print("Material Render Queue: " + m.renderQueue);
+                            }
+                        }
+                    }
+                }
+
                 if (GUILayout.Button("Cyclops static mesh"))
                 {
                     Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -160,6 +195,30 @@ namespace Class1Vehicles.Utilities
                             Log.Print("Size 1: " + obj.GetComponentInChildren<MeshFilter>().mesh.triangles.Length);
                             Log.Print("Size 2: " + obj.GetComponentInChildren<MeshFilter>().mesh.vertices.Length);
                             Destroy(obj);
+                        }
+                    }
+                }
+
+                if (GUILayout.Button("Cyclops Engine RPM SFX Manager"))
+                {
+                    Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit raycastHit4;
+                    if (Physics.Raycast(ray4, out raycastHit4))
+                    {
+                        if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                        {
+                            EngineRpmSFXManager engine = raycastHit4.rigidbody.GetComponentInChildren<EngineRpmSFXManager>();
+                            if (engine == null)
+                            {
+                                Utilities.Log.Print("EngineRpmSFXManager not found");
+                                return;
+                            }
+
+                            Utilities.Log.Print("engineRpmSFX: " + engine.engineRpmSFX?.asset?.path);
+                            Utilities.Log.Print("stopSoundInterval: " + engine.engineRpmSFX?.stopSoundInterval);
+                            Utilities.Log.Print("engineRevUp: " + engine.engineRevUp?.asset?.path);
+                            Utilities.Log.Print("rampUpSpeed: " + engine.rampUpSpeed);
+                            Utilities.Log.Print("rampDownSpeed: " + engine.rampDownSpeed);
                         }
                     }
                 }

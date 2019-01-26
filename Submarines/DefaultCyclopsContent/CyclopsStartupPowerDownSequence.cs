@@ -42,7 +42,7 @@ namespace Submarines.DefaultCyclopsContent
         private IEnumerator SwapToCorrectEngineState()
         {
             yield return new WaitForSeconds(TotalDelayBetweenEngineTurnOnAndEngineStateSwap);
-            GetComponent<EngineManager>().SetNewEngineState(mostRecentEngineStateSwapAttempt, skipEngineStartUpSequence: true);
+            GetComponent<EngineManager>().SetNewEngineState(mostRecentEngineStateSwapAttempt, true, false);
             yield break;
         }
 

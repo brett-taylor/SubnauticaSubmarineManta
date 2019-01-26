@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SubmarineAssetLoader.cs" />
+    <Compile Include="DefaultCyclopsContent\CyclopsEngineSound.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineStateChangedCallouts.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsWelcomeCallout.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsStartupPowerDownSequence.cs" />

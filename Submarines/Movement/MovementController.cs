@@ -1,4 +1,5 @@
-﻿using Submarines.Engine;
+﻿using Submarines.DefaultCyclopsContent;
+using Submarines.Engine;
 using UnityEngine;
 
 /**
@@ -13,6 +14,7 @@ namespace Submarines.Movement
         public Transform ApplyForceLocation { get; set; }
         public MovementData MovementData { get; set; }
         public EngineManager EngineManager { get; set; }
+        public CyclopsEngineSound EngineSound { get; set; }
 
         private Rigidbody rigidbody;
         private Vector3 throttle;
@@ -99,9 +101,10 @@ namespace Submarines.Movement
             // Rotation
             rigidbody.AddTorque(transform.up * (throttle.x * movementData.RotationSpeed), ForceMode.Acceleration);
 
-            // Tilt DEBUG
-            float tilt = Input.GetKey(KeyCode.Q) ? 1f : Input.GetKey(KeyCode.E) ? -1f : 0f;
-            rigidbody.AddTorque(transform.forward * (tilt * 0.3f), ForceMode.Acceleration);
+            if (EngineSound != null)
+            {
+                EngineSound.AccelerateInput(throttle.magnitude >= 1 ? movementData.RPMSpeedThrottleDown : 0f);
+            }
         }
     }
 }
