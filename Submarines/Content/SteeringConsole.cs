@@ -2,7 +2,7 @@
 using UnityEngine;
 using UWE;
 
-namespace Submarines.PointsOfInterest
+namespace Submarines.Content
 {
     /**
      * Steering console.

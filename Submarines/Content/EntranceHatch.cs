@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Submarines.PointsOfInterest
+namespace Submarines.Content
 {
     /**
      * Teleport hatch entrance.

@@ -8,11 +8,11 @@ namespace Submarines.Serialization
      */
     public class EntranceHatch
     {
-        public static void Serialize(PointsOfInterest.EntranceHatch entranceHatch, ProtoWriter writer)
+        public static void Serialize(Content.EntranceHatch entranceHatch, ProtoWriter writer)
         {
         }
 
-        public static void Deserialize(PointsOfInterest.EntranceHatch entranceHatch, ProtoReader reader)
+        public static void Deserialize(Content.EntranceHatch entranceHatch, ProtoReader reader)
         {
             for (int i = reader.ReadFieldHeader(); i > 0; i = reader.ReadFieldHeader())
             {

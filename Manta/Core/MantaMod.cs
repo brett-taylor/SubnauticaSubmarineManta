@@ -3,7 +3,7 @@ using SMLHelper.V2.Assets;
 using Submarines;
 using Submarines.Miscellaneous;
 using Submarines.Movement;
-using Submarines.PointsOfInterest;
+using Submarines.Content;
 using Submarines.DefaultCyclopsContent;
 using Submarines.Utilities.Extension;
 using Submarines.Water;
@@ -173,6 +173,10 @@ namespace Manta.Core
             cyclopsEngineSound.RampUpSpeed = 0.2f;
             cyclopsEngineSound.RampDownSpeed = 0.2f;
             movementController.EngineSound = cyclopsEngineSound;
+
+            OxygenReplenishment oxygenReplenishment = submarine.GetOrAddComponent<OxygenReplenishment>();
+            oxygenReplenishment.OxygenPerSecond = 4f;
+            oxygenReplenishment.OxygenEnergyCost = 0.1f;
 
             FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
             foreach (FMODAsset fmod in fmods)

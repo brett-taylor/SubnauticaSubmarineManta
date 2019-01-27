@@ -16,7 +16,7 @@ namespace Submarines.Patchers
                 return false;
             }
 
-            if (key == typeof(PointsOfInterest.EntranceHatch))
+            if (key == typeof(Content.EntranceHatch))
             {
                 __result = 2364379;
                 return false;
@@ -39,9 +39,9 @@ namespace Submarines.Patchers
                 return false;
             }
 
-            if (obj is PointsOfInterest.EntranceHatch)
+            if (obj is Content.EntranceHatch)
             {
-                Serialization.EntranceHatch.Serialize(obj as PointsOfInterest.EntranceHatch, writer);
+                Serialization.EntranceHatch.Serialize(obj as Content.EntranceHatch, writer);
                 return false;
             }
 
@@ -63,9 +63,9 @@ namespace Submarines.Patchers
                 return false;
             }
 
-            if (obj is PointsOfInterest.EntranceHatch)
+            if (obj is Content.EntranceHatch)
             {
-                Serialization.EntranceHatch.Deserialize(obj as PointsOfInterest.EntranceHatch, reader);
+                Serialization.EntranceHatch.Deserialize(obj as Content.EntranceHatch, reader);
                 __result = obj;
                 return false;
             }

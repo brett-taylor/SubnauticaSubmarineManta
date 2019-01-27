@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Submarines.PointsOfInterest
+namespace Submarines.Content
 {
     /**
      * Add component to create the flap seen on the cyclops where the person or a vehicle enters.

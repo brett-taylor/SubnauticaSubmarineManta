@@ -190,9 +190,22 @@ namespace Class1Vehicles.Utilities
                             Utilities.Log.Print("--");
                         }*/
 
-                        Utilities.Log.Print("Materials count: " + gggg1.GetComponent<MeshRenderer>().materials.Length);
+                        Log.Print("Materials count: " + gggg1.GetComponent<MeshRenderer>().materials.Length);
                         Material mat = gggg1.GetComponent<MeshRenderer>().material;
                         mat.PrintAllMarmosetUBERShaderProperties();
+                    }
+                }
+            }
+
+            if (GUILayout.Button("Cyclops Oxygen Manager"))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    {
+                        OxygenManager[] oxygenManager = raycastHit4.rigidbody.GetComponentsInChildren<OxygenManager>();
+                        Log.Print("Oxygen Manager Found Count " + oxygenManager.Length);
                     }
                 }
             }
