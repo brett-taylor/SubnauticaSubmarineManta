@@ -1,6 +1,10 @@
-﻿using Odyssey.Utilities;
+﻿using Odyssey.Components;
+using Odyssey.Utilities;
 using SMLHelper.V2.Assets;
+using Submarines.Miscellaneous;
+using Submarines.Movement;
 using Submarines.Utilities.Extension;
+using Submarines.Water;
 using UnityEngine;
 
 namespace Odyssey.Core
@@ -55,7 +59,24 @@ namespace Odyssey.Core
 
             submarine.GetOrAddComponent<TechTag>().type = ODYSSEY_TECH_TYPE;
             submarine.GetOrAddComponent<PrefabIdentifier>().ClassId = "SubmarineOdyssey";
+            submarine.GetOrAddComponent<SubmarineDuplicateFixer>();
+            submarine.GetOrAddComponent<OdysseySubmarine>();
+            submarine.GetOrAddComponent<MovementStabiliser>();
+            submarine.GetOrAddComponent<WaterClipProxyModified>().Initialise();
+            submarine.GetOrAddComponent<OdysseyTemporarySteeringHUD>();
+
+            submarine.GetOrAddComponent<OdysseySerializationFixer>();
             return submarine;
+        }
+
+        /**
+         * If the component requires other custom components then do it here.
+         * Read the comment on Components.OdyseeySeializationFixer if you wish to understand why this horrible system exists.
+         */
+        public static void SetUpOdyssey(GameObject submarine)
+        {
+            OdysseySubmarine odysseySubmarine = submarine.GetComponent<OdysseySubmarine>();
+            Transform applyForceLocation = submarine.FindChild("PointsOfInterest").FindChild("ForceAppliedLocation").transform;
         }
 
         private static void ApplyMaterials(GameObject submarine)
@@ -65,7 +86,9 @@ namespace Odyssey.Core
             Material body = model.FindChild("Body_LP").GetComponent<MeshRenderer>().material;
             Material bodyExtraOne = model.FindChild("Fin1_LP").GetComponent<MeshRenderer>().material;
             Material bodyExtraTwo = model.FindChild("ConningTower1_LP").GetComponent<MeshRenderer>().material;
-            Material camera = model.FindChild("Camera_LP").GetComponent<MeshRenderer>().material;
+            Utilities.Log.Print("Good?: " + model.FindChild("Camera"));
+            Utilities.Log.Print("Good?: " + model.FindChild("Camera")?.FindChild("Camera_LP"));
+            Material camera = model.FindChild("Camera").FindChild("Camera_LP").GetComponent<MeshRenderer>().material;
             Material decals = model.FindChild("Decals_LP").GetComponent<MeshRenderer>().material;
             Material hatch = model.FindChild("DoorMainHinge_LP").GetComponent<MeshRenderer>().material;
             Material sensors = model.FindChild("SensorAntenna1_LP").GetComponent<MeshRenderer>().material;
@@ -77,7 +100,7 @@ namespace Odyssey.Core
             body.SetColor("_SpecColor", Color.white);
             body.SetFloat("_SpecInt", 1f);
             body.SetFloat("_Shininess", 6.5f);
-            body.SetTexture("_SpecTex", OdysseyAssetLoader.DEFAULT_SPEC_MAP);
+            body.SetTexture("_SpecTex", OdysseyAssetLoader.BODY_SPEC);
             body.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             body.SetTexture("_BumpMap", OdysseyAssetLoader.BODY_NORMAL);
 
@@ -88,7 +111,7 @@ namespace Odyssey.Core
             bodyExtraOne.SetColor("_SpecColor", Color.white);
             bodyExtraOne.SetFloat("_SpecInt", 1f);
             bodyExtraOne.SetFloat("_Shininess", 6.5f);
-            bodyExtraOne.SetTexture("_SpecTex", OdysseyAssetLoader.DEFAULT_SPEC_MAP);
+            bodyExtraOne.SetTexture("_SpecTex", OdysseyAssetLoader.BODY_EXTRA_ONE_SPEC);
             bodyExtraOne.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             bodyExtraOne.SetTexture("_BumpMap", OdysseyAssetLoader.BODY_EXTRA_ONE_NORMAL);
 
@@ -142,7 +165,7 @@ namespace Odyssey.Core
             hatch.SetColor("_SpecColor", Color.white);
             hatch.SetFloat("_SpecInt", 1f);
             hatch.SetFloat("_Shininess", 6.5f);
-            hatch.SetTexture("_SpecTex", OdysseyAssetLoader.DEFAULT_SPEC_MAP);
+            hatch.SetTexture("_SpecTex", OdysseyAssetLoader.HATCH_SPEC);
             hatch.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             hatch.SetTexture("_BumpMap", OdysseyAssetLoader.HATCH_NORMAL);
 
@@ -153,14 +176,14 @@ namespace Odyssey.Core
             sensors.SetColor("_SpecColor", Color.white);
             sensors.SetFloat("_SpecInt", 1f);
             sensors.SetFloat("_Shininess", 6.5f);
-            sensors.SetTexture("_SpecTex", OdysseyAssetLoader.DEFAULT_SPEC_MAP);
+            sensors.SetTexture("_SpecTex", OdysseyAssetLoader.SENSORS_SPEC);
             sensors.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             sensors.SetTexture("_BumpMap", OdysseyAssetLoader.SENSORS_NORMAL);
 
             model.FindChild("BallMount_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("Blades_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("Body_LP").GetComponent<MeshRenderer>().material = body;
-            model.FindChild("Camera_LP").GetComponent<MeshRenderer>().material = camera;
+            model.FindChild("Camera").FindChild("Camera_LP").GetComponent<MeshRenderer>().material = camera;
             model.FindChild("CameraDock_LP").GetComponent<MeshRenderer>().material = sensors;
             model.FindChild("ConningTower1_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("ConningTower2_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;

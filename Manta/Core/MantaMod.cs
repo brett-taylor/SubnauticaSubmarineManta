@@ -64,8 +64,7 @@ namespace Manta.Core
             submarine.GetOrAddComponent<TechTag>().type = MANTA_TECH_TYPE;
             submarine.GetOrAddComponent<PrefabIdentifier>().ClassId = "SubmarineManta";
             submarine.GetOrAddComponent<SubmarineDuplicateFixer>();
-            Submarine submarineScript = submarine.GetOrAddComponent<MantaSubmarine>();
-
+            submarine.GetOrAddComponent<MantaSubmarine>();
             submarine.GetOrAddComponent<MovementStabiliser>();
             submarine.GetOrAddComponent<WaterClipProxyModified>().Initialise();
             submarine.GetOrAddComponent<Components.MantaTemporarySteeringHUD>();
@@ -76,7 +75,7 @@ namespace Manta.Core
 
         /**
          * If the component requires other custom components then do it here.
-         * Read the comment on Components.MantaseializationFixer if you wish to understand why this horrible system exists.
+         * Read the comment on Components.MantaSeializationFixer if you wish to understand why this horrible system exists.
          */
         public static void SetUpManta(GameObject submarine)
         {

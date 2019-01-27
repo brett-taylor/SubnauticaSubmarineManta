@@ -263,13 +263,49 @@ namespace Class1Vehicles.Utilities
             }
         }
 
+        private OdysseySubmarine odyssey;
         private void DrawOdysseyDebugMenu()
         {
             if (GUILayout.Button("Spawn Odyssey"))
             {
                 GameObject gameObject = OdysseyMod.CreateOdyssey();
+                odyssey = gameObject.GetComponent<OdysseySubmarine>();
                 gameObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 6f;
                 gameObject.transform.LookAt(Player.main.transform);
+            }
+
+            if (GUILayout.Button("Connect to odyssey on cursor"))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    if (hit.rigidbody.gameObject.name.ToLower().Contains("odyssey"))
+                    {
+                        odyssey = hit.rigidbody.gameObject.GetComponent<OdysseySubmarine>();
+                    }
+                }
+            }
+
+            if (GUILayout.Button("Odyssey Count"))
+            {
+                OdysseySubmarine[] submarines = FindObjectsOfType<OdysseySubmarine>();
+                Log.Print("Found " + submarines.Length + " Odysseys");
+            }
+
+            if (GUILayout.Button("Delete All Odysseys"))
+            {
+                OdysseySubmarine[] submarines = FindObjectsOfType<OdysseySubmarine>();
+                Log.Print("Found " + submarines.Length + " Odysseys to delete");
+                foreach (OdysseySubmarine s in submarines)
+                {
+                    Destroy(s.gameObject);
+                }
+            }
+
+            if (odyssey == null)
+            {
+                GUILayout.Box("No Odyssey Connected");
+                return;
             }
         }
 
