@@ -35,30 +35,36 @@ namespace Manta.Components
                 return;
             }
 
-            if (isSteering == false)
-            {
-                Rect rect2 = new Rect(Screen.width - 410, 5, 400, 50);
-                Rect windowRect2 = GUILayout.Window(2353, rect2, (id) =>
-                {
-                    GUILayout.Box("In submarine BUT NOT steering.");
-                }, "Manta Temporary Steering HUD");
-
-                return;
-            }
-
             Rect rect = new Rect(Screen.width - 410, 5, 400, 50);
             Rect windowRect = GUILayout.Window(2353, rect, (id) =>
             {
-                GUILayout.Box("In submarine AND steering.");
-                GUILayout.Label("Current engine state: " + GetComponent<EngineManager>().EngineState);
-                GUILayout.Label("Press 6 to set engine state to off");
-                GUILayout.Label("Press 7 to set engine state to slow");
-                GUILayout.Label("Press 8 to set engine state to normal");
-                GUILayout.Label("Press 9 to set engine state to fast");
-                GUILayout.Label("Press 0 to set engine state to silent running");
+                GUILayout.Box(isSteering ? "In submarine and steering" : "In submarine and not steering.");
+               
+                if (isSteering)
+                {
+                    DrawDrivingHUD();
+                }
+                else
+                {
+                    DrawNotDrivingHUD();
+                }
             }, "Manta Temporary Steering HUD");
 
             return;
+        }
+
+        private void DrawNotDrivingHUD()
+        {
+        }
+
+        private void DrawDrivingHUD()
+        {
+            GUILayout.Label("Current engine state: " + GetComponent<EngineManager>().EngineState);
+            GUILayout.Label("Press 6 to set engine state to off");
+            GUILayout.Label("Press 7 to set engine state to slow");
+            GUILayout.Label("Press 8 to set engine state to normal");
+            GUILayout.Label("Press 9 to set engine state to fast");
+            GUILayout.Label("Press 0 to set engine state to silent running");
         }
 
         public void Update()

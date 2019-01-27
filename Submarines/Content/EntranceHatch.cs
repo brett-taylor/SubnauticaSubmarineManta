@@ -14,14 +14,6 @@ namespace Submarines.Content
         public bool EnteringSubmarine { get; set; }
         public Submarine Submarine { get; set; }
 
-        public void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.U))
-            {
-                Utilities.Log.Print("Submarine " + (Submarine == null ? "Null" : "Not Null"));
-            }
-        }
-
         public void OnHandClick(GUIHand hand)
         {
             if (Submarine == null)
