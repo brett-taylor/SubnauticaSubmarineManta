@@ -1,6 +1,23 @@
-1) Replenish oxygen on enterance.
-2) Depth Clearer.
-3) Deal Damage On Impact
-4) Depth
-    - Max Depth.
-    - Destroy On Depth.
+TO:DO
+OxygenReplenishment should require power.
+Sort out player deaths.
+Depth Clearer
+Deal Damage On Impact
+Health System
+Flooding
+Leak holes on exterior
+Depth limit
+Power System
+    - Plug in power cells
+Powerup system + powerups
+Manta steering console.
+    - Joystick throttle sort of system
+    - Health Bar
+    - Noise Bar
+    - Collision alerts
+Sky applier
+Spawn in a scene with a lightmap
+Beacon Icon that can been seen across the map
+Levithan attacks
+Weird electric emp octupus attack
+Creature attack alert

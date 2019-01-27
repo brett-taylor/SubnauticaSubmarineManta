@@ -8,7 +8,7 @@ namespace Submarines.Content
      */
     public class OxygenReplenishment : MonoBehaviour
     {
-        public float OxygenPerSecond { get; set; } = 4f;
+        public float OxygenPerSecond { get; set; } = 15f;
         public float OxygenEnergyCost { get; set; } = 0.1f;
         private bool shouldReplenish = false;
 
@@ -30,13 +30,7 @@ namespace Submarines.Content
             }
 
             OxygenManager oxygen = Player.main.oxygenMgr;
-            oxygen.GetTotal(out float available, out float capacity);
-
-            float amountToGive = Mathf.Min(capacity - available, OxygenPerSecond * Time.deltaTime);
-            float amountOfEnergyRequired = amountToGive * OxygenEnergyCost;
-            float energyTaken = 0.2f; // Random Value Currently.
-            float oxygenToAdd = energyTaken / OxygenEnergyCost;
-            oxygen.AddOxygen(oxygenToAdd);
+            oxygen.AddOxygen(Time.deltaTime * OxygenPerSecond);
         }
     }
 }

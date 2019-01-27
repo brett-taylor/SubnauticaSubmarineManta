@@ -175,7 +175,7 @@ namespace Manta.Core
             movementController.EngineSound = cyclopsEngineSound;
 
             OxygenReplenishment oxygenReplenishment = submarine.GetOrAddComponent<OxygenReplenishment>();
-            oxygenReplenishment.OxygenPerSecond = 4f;
+            oxygenReplenishment.OxygenPerSecond = 15f;
             oxygenReplenishment.OxygenEnergyCost = 0.1f;
 
             FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
