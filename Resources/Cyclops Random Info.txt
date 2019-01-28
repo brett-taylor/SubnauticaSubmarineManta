@@ -87,3 +87,18 @@ LiveMixin:
 [Class1Vehicles] LiveMixin onHealDamage: UWE.Event`1[System.Single]
 [Class1Vehicles] LiveMixin onHealTempDamage: UWE.Event`1[System.Single]
 [Class1Vehicles] LiveMixin shielded: False
+[Class1Vehicles] LiveMixin data broadcastKillOnDeath: False
+[Class1Vehicles] LiveMixin data canResurrect: False
+[Class1Vehicles] LiveMixin data damageEffect: 
+[Class1Vehicles] LiveMixin data deathEffect: 
+[Class1Vehicles] LiveMixin data destroyOnDeath: False
+[Class1Vehicles] LiveMixin data electricalDamageEffect: 
+[Class1Vehicles] LiveMixin data explodeOnDestroy: True
+[Class1Vehicles] LiveMixin data invincibleInCreative: True
+[Class1Vehicles] LiveMixin data knifeable: False
+[Class1Vehicles] LiveMixin data loopEffectBelowPercent: 0
+[Class1Vehicles] LiveMixin data loopingDamageEffect: 
+[Class1Vehicles] LiveMixin data maxHealth: 1500
+[Class1Vehicles] LiveMixin data minDamageForSound: 0
+[Class1Vehicles] LiveMixin data passDamageDataOnDeath: False
+[Class1Vehicles] LiveMixin data weldable: False

@@ -178,6 +178,11 @@ namespace Manta.Core
             oxygenReplenishment.OxygenPerSecond = 15f;
             oxygenReplenishment.OxygenEnergyCost = 0.1f;
 
+            LiveMixin liveMixin = submarine.GetOrAddComponent<LiveMixin>();
+            liveMixin.data = CyclopsLiveMixinData.Get();// TO:DO Create a proper health system for the manta.
+            liveMixin.data.knifeable = true; // TO:DO remove just here for testing purposes.
+            liveMixin.data.maxHealth = 200;
+
             FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
             foreach (FMODAsset fmod in fmods)
             {

@@ -60,6 +60,7 @@
     <Compile Include="Content\OxygenReplenishment.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineSound.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineStateChangedCallouts.cs" />
+    <Compile Include="DefaultCyclopsContent\CyclopsLiveMixinData.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsWelcomeCallout.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsStartupPowerDownSequence.cs" />
     <Compile Include="Engine\EngineManager.cs" />

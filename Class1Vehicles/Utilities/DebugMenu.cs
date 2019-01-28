@@ -246,38 +246,72 @@ namespace Class1Vehicles.Utilities
                 Player.main.transform.position += new Vector3(2f, 0f, 0f);
             }
 
-            if (GUILayout.Button("Cyclops LiveMixin"))
+            if (GUILayout.Button("Get LiveMixin Data"))
             {
                 Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
                 {
-                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
+                    if (lm == null)
                     {
-                        LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
-                        Utilities.Log.Print("LiveMixin broadcastKillOnDeath: " + lm.broadcastKillOnDeath);
-                        Utilities.Log.Print("LiveMixin canResurrect: " + lm.canResurrect);
-                        Utilities.Log.Print("LiveMixin damageEffect: " + lm.damageEffect);
-                        Utilities.Log.Print("LiveMixin deathEffect: " + lm.deathEffect);
-                        Utilities.Log.Print("LiveMixin destroyOnDeath: " + lm.destroyOnDeath);
-                        Utilities.Log.Print("LiveMixin electricalDamageEffect: " + lm.electricalDamageEffect);
-                        Utilities.Log.Print("LiveMixin explodeOnDestroy: " + lm.explodeOnDestroy);
-                        Utilities.Log.Print("LiveMixin invincibleInCreative: " + lm.invincibleInCreative);
-                        Utilities.Log.Print("LiveMixin knifeable: " + lm.knifeable);
-                        Utilities.Log.Print("LiveMixin loopEffectBelowPercent: " + lm.loopEffectBelowPercent);
-                        Utilities.Log.Print("LiveMixin loopingDamageEffect: " + lm.loopingDamageEffect);
-                        Utilities.Log.Print("LiveMixin maxHealth: " + lm.maxHealth);
-                        Utilities.Log.Print("LiveMixin minDamageForSound: " + lm.minDamageForSound);
-                        Utilities.Log.Print("LiveMixin passDamageDataOnDeath: " + lm.passDamageDataOnDeath);
-                        Utilities.Log.Print("LiveMixin weldable: " + lm.weldable);
-                        Utilities.Log.Print("LiveMixin damageClip: " + lm.damageClip);
-                        Utilities.Log.Print("LiveMixin data: " + lm.data);
-                        Utilities.Log.Print("LiveMixin deathClip: " + lm.deathClip);
-                        Utilities.Log.Print("LiveMixin health: " + lm.health);
-                        Utilities.Log.Print("LiveMixin invincible: " + lm.invincible);
-                        Utilities.Log.Print("LiveMixin onHealDamage: " + lm.onHealDamage);
-                        Utilities.Log.Print("LiveMixin onHealTempDamage: " + lm.onHealTempDamage);
-                        Utilities.Log.Print("LiveMixin shielded: " + lm.shielded);
+                        Log.Print("No Live Mixin Found");
+                        return;
                     }
+
+                    Log.Print("LiveMixin broadcastKillOnDeath: " + lm.broadcastKillOnDeath);
+                    Log.Print("LiveMixin canResurrect: " + lm.canResurrect);
+                    Log.Print("LiveMixin damageEffect: " + lm.damageEffect);
+                    Log.Print("LiveMixin deathEffect: " + lm.deathEffect);
+                    Log.Print("LiveMixin destroyOnDeath: " + lm.destroyOnDeath);
+                    Log.Print("LiveMixin electricalDamageEffect: " + lm.electricalDamageEffect);
+                    Log.Print("LiveMixin explodeOnDestroy: " + lm.explodeOnDestroy);
+                    Log.Print("LiveMixin invincibleInCreative: " + lm.invincibleInCreative);
+                    Log.Print("LiveMixin knifeable: " + lm.knifeable);
+                    Log.Print("LiveMixin loopEffectBelowPercent: " + lm.loopEffectBelowPercent);
+                    Log.Print("LiveMixin loopingDamageEffect: " + lm.loopingDamageEffect);
+                    Log.Print("LiveMixin maxHealth: " + lm.maxHealth);
+                    Log.Print("LiveMixin minDamageForSound: " + lm.minDamageForSound);
+                    Log.Print("LiveMixin passDamageDataOnDeath: " + lm.passDamageDataOnDeath);
+                    Log.Print("LiveMixin weldable: " + lm.weldable);
+                    Log.Print("LiveMixin damageClip: " + lm.damageClip);
+                    Log.Print("LiveMixin data: " + lm.data);
+                    Log.Print("LiveMixin deathClip: " + lm.deathClip);
+                    Log.Print("LiveMixin health: " + lm.health);
+                    Log.Print("LiveMixin invincible: " + lm.invincible);
+                    Log.Print("LiveMixin onHealDamage: " + lm.onHealDamage);
+                    Log.Print("LiveMixin onHealTempDamage: " + lm.onHealTempDamage);
+                    Log.Print("LiveMixin shielded: " + lm.shielded);
+                    Log.Print("LiveMixin data broadcastKillOnDeath: " + lm.data.broadcastKillOnDeath);
+                    Log.Print("LiveMixin data canResurrect: " + lm.data.canResurrect);
+                    Log.Print("LiveMixin data damageEffect: " + lm.data.damageEffect);
+                    Log.Print("LiveMixin data deathEffect: " + lm.data.deathEffect);
+                    Log.Print("LiveMixin data destroyOnDeath: " + lm.data.destroyOnDeath);
+                    Log.Print("LiveMixin data electricalDamageEffect: " + lm.data.electricalDamageEffect);
+                    Log.Print("LiveMixin data explodeOnDestroy: " + lm.data.explodeOnDestroy);
+                    Log.Print("LiveMixin data invincibleInCreative: " + lm.data.invincibleInCreative);
+                    Log.Print("LiveMixin data knifeable: " + lm.data.knifeable);
+                    Log.Print("LiveMixin data loopEffectBelowPercent: " + lm.data.loopEffectBelowPercent);
+                    Log.Print("LiveMixin data loopingDamageEffect: " + lm.data.loopingDamageEffect);
+                    Log.Print("LiveMixin data maxHealth: " + lm.data.maxHealth);
+                    Log.Print("LiveMixin data minDamageForSound: " + lm.data.minDamageForSound);
+                    Log.Print("LiveMixin data passDamageDataOnDeath: " + lm.data.passDamageDataOnDeath);
+                    Log.Print("LiveMixin data weldable: " + lm.data.weldable);                  
+                }
+            }
+
+            if (GUILayout.Button("Set Health to 300 and knifable"))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
+                    if (lm == null)
+                    {
+                        Log.Print("No Live Mixin Found");
+                        return;
+                    }
+                    lm.health = 300;
+                    lm.data.knifeable = true;
                 }
             }
         }
@@ -345,6 +379,8 @@ namespace Class1Vehicles.Utilities
                 GUILayout.Box("No Manta Connected");
                 return;
             }
+
+            GUILayout.Box("Current Health: " + manta.GetComponent<LiveMixin>()?.health);
         }
 
         private OdysseySubmarine odyssey;
@@ -402,6 +438,7 @@ namespace Class1Vehicles.Utilities
 
             Rect windowRect = GUILayout.Window(2352, SIZE, (id) =>
             {
+                GUILayout.Box("P to show/hide cursor");
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("General Menu"))
                     showDebugMenuNo = 0;

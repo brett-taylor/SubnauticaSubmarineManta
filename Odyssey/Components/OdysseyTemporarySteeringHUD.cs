@@ -64,6 +64,11 @@ namespace Odyssey.Components
 
         public void Update()
         {
+            if (isSteering == false || isInSubmarine == false)
+            {
+                return;
+            }
+
             if (Input.GetKeyDown(KeyCode.Alpha6))
             {
                 GetComponent<EngineManager>().SetNewEngineState(EngineState.OFF, false, true);
