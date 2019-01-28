@@ -86,12 +86,10 @@ namespace Odyssey.Core
             Material body = model.FindChild("Body_LP").GetComponent<MeshRenderer>().material;
             Material bodyExtraOne = model.FindChild("Fin1_LP").GetComponent<MeshRenderer>().material;
             Material bodyExtraTwo = model.FindChild("ConningTower1_LP").GetComponent<MeshRenderer>().material;
-            Utilities.Log.Print("Good?: " + model.FindChild("Camera"));
-            Utilities.Log.Print("Good?: " + model.FindChild("Camera")?.FindChild("Camera_LP"));
-            Material camera = model.FindChild("Camera").FindChild("Camera_LP").GetComponent<MeshRenderer>().material;
+            Material camera = model.FindChild("Camera_LP").GetComponent<MeshRenderer>().material;
             Material decals = model.FindChild("Decals_LP").GetComponent<MeshRenderer>().material;
             Material hatch = model.FindChild("DoorMainHinge_LP").GetComponent<MeshRenderer>().material;
-            Material sensors = model.FindChild("SensorAntenna1_LP").GetComponent<MeshRenderer>().material;
+            Material sensors = model.FindChild("Sensors").FindChild("RadarDish_LP").GetComponent<MeshRenderer>().material;
 
             body.shader = shader;
             body.EnableKeyword("MARMO_SPECMAP");
@@ -183,13 +181,15 @@ namespace Odyssey.Core
             model.FindChild("BallMount_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("Blades_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("Body_LP").GetComponent<MeshRenderer>().material = body;
-            model.FindChild("Camera").FindChild("Camera_LP").GetComponent<MeshRenderer>().material = camera;
+            model.FindChild("Camera_LP").GetComponent<MeshRenderer>().material = camera;
             model.FindChild("CameraDock_LP").GetComponent<MeshRenderer>().material = sensors;
             model.FindChild("ConningTower1_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("ConningTower2_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("Decals_LP").GetComponent<MeshRenderer>().material = decals;
             model.FindChild("DoorMainHinge_LP").GetComponent<MeshRenderer>().material = hatch;
             model.FindChild("DoorMainHinge_LP001").GetComponent<MeshRenderer>().material = hatch;
+            model.FindChild("DoorPlate_LP").GetComponent<MeshRenderer>().material = hatch;
+            model.FindChild("DoorSeal_LP").GetComponent<MeshRenderer>().material = hatch;
             model.FindChild("Fin1_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("Fin2_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("HeadLight_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
@@ -202,16 +202,22 @@ namespace Odyssey.Core
             model.FindChild("HeadLight_LP007").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("Motor_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("PropShaft_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
-            model.FindChild("RadarDish_LP").GetComponent<MeshRenderer>().material = sensors;
-            model.FindChild("SensorAntenna1_LP").GetComponent<MeshRenderer>().material = sensors;
-            model.FindChild("SensorAntenna2_LP").GetComponent<MeshRenderer>().material = sensors;
             model.FindChild("SensorAntenna3_LP").GetComponent<MeshRenderer>().material = sensors;
-            model.FindChild("SensorBase_LP").GetComponent<MeshRenderer>().material = sensors;
             model.FindChild("Shroud_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("ShroudSupport_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("SideFins_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("Thruster_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("ThrusterLeg_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
+            model.FindChild("Sensors").FindChild("RadarDish_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("RadarDish_T_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorAntenna1_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorAntenna1_T_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorAntenna2_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorAntenna2_T1_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorAntenna2_T2_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorAntenna2_T3_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorAntenna3_LP").GetComponent<MeshRenderer>().material = sensors;
+            model.FindChild("Sensors").FindChild("SensorBase_LP").GetComponent<MeshRenderer>().material = sensors;
         }
     }
 }

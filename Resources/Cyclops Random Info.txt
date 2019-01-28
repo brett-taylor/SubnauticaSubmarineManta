@@ -62,3 +62,28 @@ Main exterior material info:
 [Class1Vehicles] _EmissionColor (0.0, 0.0, 0.0, 0.0)
 [Class1Vehicles] _Illum 
 [Class1Vehicles] _Illum_ST (1.0, 1.0, 0.0, 0.0)
+
+LiveMixin:
+[Class1Vehicles] LiveMixin broadcastKillOnDeath: False
+[Class1Vehicles] LiveMixin canResurrect: False
+[Class1Vehicles] LiveMixin damageEffect: 
+[Class1Vehicles] LiveMixin deathEffect: 
+[Class1Vehicles] LiveMixin destroyOnDeath: False
+[Class1Vehicles] LiveMixin electricalDamageEffect: 
+[Class1Vehicles] LiveMixin explodeOnDestroy: True
+[Class1Vehicles] LiveMixin invincibleInCreative: True
+[Class1Vehicles] LiveMixin knifeable: False
+[Class1Vehicles] LiveMixin loopEffectBelowPercent: 0
+[Class1Vehicles] LiveMixin loopingDamageEffect: 
+[Class1Vehicles] LiveMixin maxHealth: 1500
+[Class1Vehicles] LiveMixin minDamageForSound: 0
+[Class1Vehicles] LiveMixin passDamageDataOnDeath: False
+[Class1Vehicles] LiveMixin weldable: False
+[Class1Vehicles] LiveMixin damageClip: 
+[Class1Vehicles] LiveMixin data: CyclopsScene_LiveMixinData (LiveMixinData)
+[Class1Vehicles] LiveMixin deathClip: 
+[Class1Vehicles] LiveMixin health: 1500
+[Class1Vehicles] LiveMixin invincible: False
+[Class1Vehicles] LiveMixin onHealDamage: UWE.Event`1[System.Single]
+[Class1Vehicles] LiveMixin onHealTempDamage: UWE.Event`1[System.Single]
+[Class1Vehicles] LiveMixin shielded: False
