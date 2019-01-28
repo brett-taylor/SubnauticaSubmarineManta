@@ -209,6 +209,77 @@ namespace Class1Vehicles.Utilities
                     }
                 }
             }
+
+            if (GUILayout.Button("Cyclops Depth Cleaer"))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    {
+                        SubRoot subRoot = raycastHit4.rigidbody.GetComponent<SubRoot>();
+                        MeshRenderer mr = subRoot.depthClearer as MeshRenderer;
+                        Log.Print("DepthClearer type: " + subRoot.depthClearer.GetType());
+                        Log.Print("DepthClearer name: " + subRoot.depthClearer.name);
+                        Log.Print("DepthClearer material: " + subRoot.depthClearer.material);
+                        Log.Print("DepthClearer mesh: " + subRoot.depthClearer.GetComponent<MeshFilter>().mesh);
+                        Log.Print("DepthClearer mesh name: " + subRoot.depthClearer.GetComponent<MeshFilter>().mesh.name);
+                        Log.Print("DepthClearer Children count: " + subRoot.depthClearer.transform.childCount);
+                        Log.Print("DepthClearer transform pos: " + subRoot.depthClearer.transform.localPosition);
+                        Log.Print("DepthClearer transform size: " + subRoot.depthClearer.transform.localScale);
+                        Log.Print("DepthClearer transform Parent: " + subRoot.depthClearer.transform.parent?.name);
+                        subRoot.depthClearer.material.color = new Color(1f, 0f, 0f, 1f);
+                        Log.Print("DepthClearer mat color: " + subRoot.depthClearer.material.color);
+                        Log.Print("DepthClearer enabled?: " + subRoot.depthClearer.enabled);
+
+                        Log.Print("DepthClearer Component cound: " + subRoot.depthClearer.GetComponents(typeof(Component)).Length);
+                        foreach (Component c in subRoot.depthClearer.GetComponents(typeof(Component)))
+                        {
+                            Utilities.Log.Print("Component: " + c);
+                        }
+                    }
+                }
+            }
+
+            if (GUILayout.Button("Teleport"))
+            {
+                Player.main.transform.position += new Vector3(2f, 0f, 0f);
+            }
+
+            if (GUILayout.Button("Cyclops LiveMixin"))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    {
+                        LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
+                        Utilities.Log.Print("LiveMixin broadcastKillOnDeath: " + lm.broadcastKillOnDeath);
+                        Utilities.Log.Print("LiveMixin canResurrect: " + lm.canResurrect);
+                        Utilities.Log.Print("LiveMixin damageEffect: " + lm.damageEffect);
+                        Utilities.Log.Print("LiveMixin deathEffect: " + lm.deathEffect);
+                        Utilities.Log.Print("LiveMixin destroyOnDeath: " + lm.destroyOnDeath);
+                        Utilities.Log.Print("LiveMixin electricalDamageEffect: " + lm.electricalDamageEffect);
+                        Utilities.Log.Print("LiveMixin explodeOnDestroy: " + lm.explodeOnDestroy);
+                        Utilities.Log.Print("LiveMixin invincibleInCreative: " + lm.invincibleInCreative);
+                        Utilities.Log.Print("LiveMixin knifeable: " + lm.knifeable);
+                        Utilities.Log.Print("LiveMixin loopEffectBelowPercent: " + lm.loopEffectBelowPercent);
+                        Utilities.Log.Print("LiveMixin loopingDamageEffect: " + lm.loopingDamageEffect);
+                        Utilities.Log.Print("LiveMixin maxHealth: " + lm.maxHealth);
+                        Utilities.Log.Print("LiveMixin minDamageForSound: " + lm.minDamageForSound);
+                        Utilities.Log.Print("LiveMixin passDamageDataOnDeath: " + lm.passDamageDataOnDeath);
+                        Utilities.Log.Print("LiveMixin weldable: " + lm.weldable);
+                        Utilities.Log.Print("LiveMixin damageClip: " + lm.damageClip);
+                        Utilities.Log.Print("LiveMixin data: " + lm.data);
+                        Utilities.Log.Print("LiveMixin deathClip: " + lm.deathClip);
+                        Utilities.Log.Print("LiveMixin health: " + lm.health);
+                        Utilities.Log.Print("LiveMixin invincible: " + lm.invincible);
+                        Utilities.Log.Print("LiveMixin onHealDamage: " + lm.onHealDamage);
+                        Utilities.Log.Print("LiveMixin onHealTempDamage: " + lm.onHealTempDamage);
+                        Utilities.Log.Print("LiveMixin shielded: " + lm.shielded);
+                    }
+                }
+            }
         }
 
         private MantaSubmarine manta;

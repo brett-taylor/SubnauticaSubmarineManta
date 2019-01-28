@@ -2,12 +2,16 @@ TO:DO
 OxygenReplenishment should require power.
 Sort out player deaths.
 Depth Clearer
+    - No idea what this does currently.
 Deal Damage On Impact
+    -   Requires Health System
 Health System
+    - LiveMixin
 Flooding
 Leak holes on exterior
 Depth limit
 Power System
+    - CrushDamage
     - Plug in power cells
 Powerup system + powerups
 Manta steering console.
