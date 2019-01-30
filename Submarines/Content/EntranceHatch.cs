@@ -5,7 +5,6 @@ namespace Submarines.Content
     /**
      * Teleport hatch entrance.
      */
-     [ProtoBuf.ProtoContract]
     public class EntranceHatch : HandTarget, IHandTarget
     {
         public string HoverText { get; set; }

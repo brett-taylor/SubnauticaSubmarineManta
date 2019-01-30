@@ -1,6 +1,9 @@
 ﻿using Odyssey.Components;
 using Odyssey.Utilities;
 using SMLHelper.V2.Assets;
+using Submarines.Content;
+using Submarines.DefaultCyclopsContent;
+using Submarines.Engine;
 using Submarines.Miscellaneous;
 using Submarines.Movement;
 using Submarines.Utilities.Extension;
@@ -77,18 +80,144 @@ namespace Odyssey.Core
         {
             OdysseySubmarine odysseySubmarine = submarine.GetComponent<OdysseySubmarine>();
             Transform applyForceLocation = submarine.FindChild("PointsOfInterest").FindChild("ForceAppliedLocation").transform;
+            MovementController movementController = submarine.GetOrAddComponent<MovementController>();
+            movementController.ApplyForceLocation = applyForceLocation;
+
+            GameObject doorLeft = submarine.FindChild("PointsOfInterest").FindChild("LeftDoorFlap");
+            doorLeft.GetComponentInChildren<HingeJoint>().connectedBody = submarine.GetComponent<Rigidbody>();
+            HingeJointDoor hingeDoorLeft = doorLeft.GetOrAddComponent<HingeJointDoor>();
+            hingeDoorLeft.OverwriteTargetVelocity = true;
+            hingeDoorLeft.TargetVelocity = 130f;
+            hingeDoorLeft.TriggerToEverything = false;
+            hingeDoorLeft.TriggerToPlayer = true;
+            hingeDoorLeft.TriggerToVehicles = false;
+
+            GameObject doorRight = submarine.FindChild("PointsOfInterest").FindChild("RightDoorFlap");
+            doorRight.GetComponentInChildren<HingeJoint>().connectedBody = submarine.GetComponent<Rigidbody>();
+            HingeJointDoor hingeDoorRight = doorRight.GetOrAddComponent<HingeJointDoor>();
+            hingeDoorRight.OverwriteTargetVelocity = true;
+            hingeDoorRight.TargetVelocity = 130f;
+            hingeDoorRight.TriggerToEverything = false;
+            hingeDoorRight.TriggerToPlayer = true;
+            hingeDoorRight.TriggerToVehicles = false;
+
+            GameObject entrancePosition = submarine.FindChild("PointsOfInterest").FindChild("EntranceTeleportSpot");
+            GameObject entranceHatch = submarine.FindChild("PointsOfInterest").FindChild("Enter");
+            EntranceHatch entranceHatchTeleport = entranceHatch.GetOrAddComponent<EntranceHatch>();
+            entranceHatchTeleport.HoverText = "Board Odyssey";
+            entranceHatchTeleport.HoverHandReticle = HandReticle.IconType.Hand;
+            entranceHatchTeleport.TeleportTarget = entrancePosition;
+            entranceHatchTeleport.Submarine = odysseySubmarine;
+            entranceHatchTeleport.EnteringSubmarine = true;
+
+            GameObject leavePosition = submarine.FindChild("PointsOfInterest").FindChild("ExitTeleportSpot");
+            GameObject leaveHatch = submarine.FindChild("PointsOfInterest").FindChild("Exit");
+            EntranceHatch leaveHatchTeleport = leaveHatch.GetOrAddComponent<EntranceHatch>();
+            leaveHatchTeleport.HoverText = "Disembark Odyssey";
+            leaveHatchTeleport.HoverHandReticle = HandReticle.IconType.Hand;
+            leaveHatchTeleport.TeleportTarget = leavePosition;
+            leaveHatchTeleport.Submarine = odysseySubmarine;
+            leaveHatchTeleport.EnteringSubmarine = false;
+
+            GameObject steeringConsolePOI = submarine.FindChild("PointsOfInterest").FindChild("SteeringConsole");
+            GameObject playerParentWhilePiloting = submarine.FindChild("PointsOfInterest").FindChild("SteeringConsole").FindChild("PlayerLockedWhileSteeringPosition");
+            SteeringConsole steeringConsole = steeringConsolePOI.GetOrAddComponent<SteeringConsole>();
+            steeringConsole.MovementController = submarine.GetComponent<MovementController>();
+            steeringConsole.ParentWhilePilotingGO = playerParentWhilePiloting;
+            steeringConsole.LeftHandIKTarget = null;
+            steeringConsole.RightHandIKTarget = null;
+            steeringConsole.Submarine = odysseySubmarine;
+
+            CyclopsCollisionSounds collisionSounds = submarine.GetOrAddComponent<CyclopsCollisionSounds>();
+
+            MovementData normalSpeedMovementData = new MovementData
+            {
+                ForwardAccelerationSpeed = 10f,
+                BackwardsAccelerationSpeed = 8f,
+                AscendDescendSpeed = 15f,
+                RotationSpeed = 0.7f
+            };
+
+            EngineManager engineManager = submarine.GetOrAddComponent<EngineManager>();
+            engineManager.SetMovementDataForEngineState(EngineState.SLOW, normalSpeedMovementData);
+            engineManager.SetMovementDataForEngineState(EngineState.NORMAL, normalSpeedMovementData);
+            engineManager.SetMovementDataForEngineState(EngineState.FAST, normalSpeedMovementData);
+            engineManager.SetMovementDataForEngineState(EngineState.SILENTRUNNING, normalSpeedMovementData);
+
+            CyclopsStartupPowerDownSequence cyclopsStartupPowerDownSequence = submarine.GetOrAddComponent<CyclopsStartupPowerDownSequence>();
+            CyclopsEngineStateChangedCallouts cyclopsEngineStateChangedCallouts = submarine.GetOrAddComponent<CyclopsEngineStateChangedCallouts>();
+            movementController.EngineManager = engineManager;
+            CyclopsWelcomeCallout cyclopsWelcomeCallout = submarine.GetOrAddComponent<CyclopsWelcomeCallout>();
+            CyclopsEngineSound cyclopsEngineSound = submarine.GetOrAddComponent<CyclopsEngineSound>();
+            cyclopsEngineSound.RampUpSpeed = 0.2f;
+            cyclopsEngineSound.RampDownSpeed = 0.2f;
+            movementController.EngineSound = cyclopsEngineSound;
+
+            OxygenReplenishment oxygenReplenishment = submarine.GetOrAddComponent<OxygenReplenishment>();
+            oxygenReplenishment.OxygenPerSecond = 15f;
+            oxygenReplenishment.OxygenEnergyCost = 0.1f;
+
+            FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
+            foreach (FMODAsset fmod in fmods)
+            {
+                switch (fmod.name.ToLower())
+                {
+                    case "outer_hatch_close":
+                        hingeDoorLeft.CloseSound = fmod;
+                        hingeDoorRight.CloseSound = fmod;
+                        break;
+                    case "outer_hatch_open":
+                        hingeDoorLeft.OpenSound = fmod;
+                        hingeDoorRight.OpenSound = fmod;
+                        break;
+                    case "impact_solid_medium":
+                        collisionSounds.ImpactHitMedium = fmod;
+                        break;
+                    case "impact_solid_soft":
+                        collisionSounds.ImpactHitSoft = fmod;
+                        break;
+                    case "impact_solid_hard":
+                        collisionSounds.ImpactHitHard = fmod;
+                        break;
+                    case "ai_silent_running":
+                        cyclopsEngineStateChangedCallouts.SilentRunningCallout = fmod;
+                        break;
+                    case "ai_ahead_standard":
+                        cyclopsEngineStateChangedCallouts.NormalCallout = fmod;
+                        break;
+                    case "ai_ahead_slow":
+                        cyclopsEngineStateChangedCallouts.SlowCallout = fmod;
+                        break;
+                    case "ai_ahead_flank":
+                        cyclopsEngineStateChangedCallouts.FastCallout = fmod;
+                        break;
+                    case "ai_engine_up":
+                        cyclopsStartupPowerDownSequence.StartupSound = fmod;
+                        break;
+                    case "ai_engine_down":
+                        cyclopsStartupPowerDownSequence.PowerDownCallout = fmod;
+                        break;
+                    case "ai_welcome":
+                        cyclopsWelcomeCallout.WelcomeAboardCallout = fmod;
+                        break;
+                    case "cyclops_loop_rpm":
+                        cyclopsEngineSound.FMODAsset = fmod;
+                        break;
+                }
+            }
         }
 
         private static void ApplyMaterials(GameObject submarine)
         {
             Shader shader = Shader.Find("MarmosetUBER");
             GameObject model = submarine.FindChild("Model");
+            GameObject pointsOfInterest = submarine.FindChild("PointsOfInterest");
             Material body = model.FindChild("Body_LP").GetComponent<MeshRenderer>().material;
             Material bodyExtraOne = model.FindChild("Fin1_LP").GetComponent<MeshRenderer>().material;
             Material bodyExtraTwo = model.FindChild("ConningTower1_LP").GetComponent<MeshRenderer>().material;
             Material camera = model.FindChild("Camera_LP").GetComponent<MeshRenderer>().material;
             Material decals = model.FindChild("Decals_LP").GetComponent<MeshRenderer>().material;
-            Material hatch = model.FindChild("DoorMainHinge_LP").GetComponent<MeshRenderer>().material;
+            Material hatch = pointsOfInterest.FindChild("LeftDoorFlap").FindChild("LeftDoorFlap").GetComponent<MeshRenderer>().material;
             Material sensors = model.FindChild("Sensors").FindChild("RadarDish_LP").GetComponent<MeshRenderer>().material;
 
             body.shader = shader;
@@ -186,8 +315,8 @@ namespace Odyssey.Core
             model.FindChild("ConningTower1_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("ConningTower2_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("Decals_LP").GetComponent<MeshRenderer>().material = decals;
-            model.FindChild("DoorMainHinge_LP").GetComponent<MeshRenderer>().material = hatch;
-            model.FindChild("DoorMainHinge_LP001").GetComponent<MeshRenderer>().material = hatch;
+            pointsOfInterest.FindChild("LeftDoorFlap").FindChild("LeftDoorFlap").GetComponent<MeshRenderer>().material = hatch;
+            pointsOfInterest.FindChild("RightDoorFlap").FindChild("RightDoorFlap").GetComponent<MeshRenderer>().material = hatch;
             model.FindChild("DoorPlate_LP").GetComponent<MeshRenderer>().material = hatch;
             model.FindChild("DoorSeal_LP").GetComponent<MeshRenderer>().material = hatch;
             model.FindChild("Fin1_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;

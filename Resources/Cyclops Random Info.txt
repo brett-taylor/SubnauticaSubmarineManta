@@ -87,6 +87,7 @@ LiveMixin:
 [Class1Vehicles] LiveMixin onHealDamage: UWE.Event`1[System.Single]
 [Class1Vehicles] LiveMixin onHealTempDamage: UWE.Event`1[System.Single]
 [Class1Vehicles] LiveMixin shielded: False
+
 [Class1Vehicles] LiveMixin data broadcastKillOnDeath: False
 [Class1Vehicles] LiveMixin data canResurrect: False
 [Class1Vehicles] LiveMixin data damageEffect: 

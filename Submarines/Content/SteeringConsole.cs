@@ -78,7 +78,10 @@ namespace Submarines.Content
             isPiloting = true;
             MovementController.IsControllable = true;
             Player.main.playerDeathEvent.AddHandler(gameObject, new Event<Player>.HandleFunction(OnPlayerDeath));
-            Player.main.armsController.SetWorldIKTarget(LeftHandIKTarget.transform, RightHandIKTarget.transform);
+            Player.main.armsController.SetWorldIKTarget(
+                LeftHandIKTarget == null ? null : LeftHandIKTarget.transform, 
+                RightHandIKTarget == null ? null : RightHandIKTarget.transform
+            );
             SetPlayerToPilotingMode();
             Submarine.OnSteeringStart();
         }
