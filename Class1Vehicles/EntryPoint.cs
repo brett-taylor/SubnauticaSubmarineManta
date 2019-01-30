@@ -16,6 +16,7 @@ namespace Class1Vehicles
             HarmonyInstance HarmonyInstance = HarmonyInstance.Create("taylor.brett.Class1Vehicles.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
+            Submarines.EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS = true;
             Submarines.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
             Submarines.EntryPoint.InitialiseFramework();
 

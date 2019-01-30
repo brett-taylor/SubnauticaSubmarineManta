@@ -57,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SubmarineAssetLoader.cs" />
+    <Compile Include="Content\Damage\ExternalDamageManager.cs" />
     <Compile Include="Content\OxygenReplenishment.cs" />
+    <Compile Include="DefaultCyclopsContent\CyclopsDefaultAssets.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineSound.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineStateChangedCallouts.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsLiveMixinData.cs" />
@@ -65,15 +67,14 @@
     <Compile Include="DefaultCyclopsContent\CyclopsStartupPowerDownSequence.cs" />
     <Compile Include="Engine\EngineManager.cs" />
     <Compile Include="Engine\EngineState.cs" />
-    <Compile Include="Patchers\PilotingChairPatcher.cs" />
     <Compile Include="Content\EntranceHatch.cs" />
     <Compile Include="Content\HingeJointDoor.cs" />
     <Compile Include="Movement\MovementData.cs" />
     <Compile Include="Movement\MovementController.cs" />
     <Compile Include="Movement\MovementStabiliser.cs" />
     <Compile Include="Patchers\ProtobufSerializerPrecompiledPatcher.cs" />
-    <Compile Include="Patchers\SubRootPatcher.cs" />
     <Compile Include="Content\SteeringConsole.cs" />
+    <Compile Include="Patchers\SubRootPatcher.cs" />
     <Compile Include="Serialization\EntranceHatch.cs" />
     <Compile Include="Serialization\Submarine.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsCollisionSounds.cs" />

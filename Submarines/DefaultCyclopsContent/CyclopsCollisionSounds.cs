@@ -19,6 +19,24 @@ namespace Submarines.DefaultCyclopsContent
 
         public void Start()
         {
+            if (EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS)
+            {
+                if (ImpactHitHard == null)
+                {
+                    ImpactHitHard = CyclopsDefaultAssets.COLLISION_IMPACT_SOLID_HARD;
+                }
+
+                if (ImpactHitMedium == null)
+                {
+                    ImpactHitMedium = CyclopsDefaultAssets.COLLISION_IMPACT_SOLID_MEDIUM;
+                }
+
+                if (ImpactHitSoft == null)
+                {
+                    ImpactHitSoft = CyclopsDefaultAssets.COLLISION_IMPACT_SOLID_SOFT;
+                }
+            }
+
             if (ImpactHitHard == null)
             {
                 Utilities.Log.Error("CollisionSounds::ImpactHitHard is not set. To set attach the FMOD asset name 'impact_solid_hard' ");

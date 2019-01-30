@@ -29,6 +29,29 @@ namespace Submarines.DefaultCyclopsContent
                 Utilities.Log.Error("CyclopsEngineStateChangedCallouts can not find EngineManager - deleting");
                 Destroy(this);
             }
+
+            if (EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS)
+            {
+                if (SilentRunningCallout == null)
+                {
+                    SilentRunningCallout = CyclopsDefaultAssets.ENGINE_STATE_SILENT_RUNNING;
+                }
+
+                if (NormalCallout == null)
+                {
+                    NormalCallout = CyclopsDefaultAssets.ENGINE_STATE_AHEAD_STANDARD;
+                }
+
+                if (SlowCallout == null)
+                {
+                    SlowCallout = CyclopsDefaultAssets.ENGINE_STATE_AHEAD_SLOW;
+                }
+
+                if (FastCallout == null)
+                {
+                    FastCallout = CyclopsDefaultAssets.ENGINE_STATE_AHEAD_FAST;
+                }
+            }
         }
 
         public void OnEngineChangeState(EngineState oldEngineState)

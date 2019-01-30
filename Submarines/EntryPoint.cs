@@ -11,6 +11,7 @@ namespace Submarines
         public static string MOD_FOLDER_LOCATION { get; private set; }
         public static string ASSET_FOLDER_LOCATION { get; private set; }
         public static HarmonyInstance HarmonyInstance { get; private set; }
+        public static bool LOAD_DEFAULT_CYCLOPS_ASSETS { get; set; } = true;
 
         public static void InitialiseFramework()
         {

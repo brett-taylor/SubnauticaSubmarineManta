@@ -36,6 +36,8 @@ namespace Manta.Core
          */
         public static GameObject CreateManta()
         {
+            CyclopsDefaultAssets.LoadDefaultCyclopsContent();
+
             GameObject submarine = Object.Instantiate(MantaAssetLoader.MANTA_EXTERIOR);
             Renderer[] renderers = submarine.GetComponentsInChildren<Renderer>();
             ApplyMaterials(submarine, renderers);
@@ -92,6 +94,8 @@ namespace Manta.Core
             hingeDoorLeft.TriggerToEverything = false;
             hingeDoorLeft.TriggerToPlayer = true;
             hingeDoorLeft.TriggerToVehicles = false;
+            hingeDoorLeft.OpenSound = CyclopsDefaultAssets.PLAYER_HATCH_OPEN;
+            hingeDoorLeft.CloseSound = CyclopsDefaultAssets.PLAYER_HATCH_CLOSE;
 
             GameObject doorRight = submarine.FindChild("PointsOfInterest").FindChild("PlayerEntranceRightFlap");
             doorRight.GetComponentInChildren<HingeJoint>().connectedBody = submarine.GetComponent<Rigidbody>();
@@ -101,6 +105,8 @@ namespace Manta.Core
             hingeDoorRight.TriggerToEverything = false;
             hingeDoorRight.TriggerToPlayer = true;
             hingeDoorRight.TriggerToVehicles = false;
+            hingeDoorRight.OpenSound = CyclopsDefaultAssets.PLAYER_HATCH_OPEN;
+            hingeDoorRight.CloseSound = CyclopsDefaultAssets.PLAYER_HATCH_CLOSE;
 
             GameObject vehicleDoorLeft = submarine.FindChild("PointsOfInterest").FindChild("VehicleEntranceLeftFlap");
             vehicleDoorLeft.GetComponentInChildren<HingeJoint>().connectedBody = submarine.GetComponent<Rigidbody>();
@@ -110,6 +116,8 @@ namespace Manta.Core
             hingeVehicleDoorLeft.TriggerToEverything = false;
             hingeVehicleDoorLeft.TriggerToPlayer = false;
             hingeVehicleDoorLeft.TriggerToVehicles = true;
+            hingeVehicleDoorLeft.OpenSound = CyclopsDefaultAssets.DOCKING_DOORS_OPEN;
+            hingeVehicleDoorLeft.CloseSound = CyclopsDefaultAssets.DOCKING_DOORS_CLOSE;
 
             GameObject vehicleDoorRight = submarine.FindChild("PointsOfInterest").FindChild("VehicleEntranceRightFlap");
             vehicleDoorRight.GetComponentInChildren<HingeJoint>().connectedBody = submarine.GetComponent<Rigidbody>();
@@ -119,6 +127,8 @@ namespace Manta.Core
             hingeVehicleDoorRight.TriggerToEverything = false;
             hingeVehicleDoorRight.TriggerToPlayer = false;
             hingeVehicleDoorRight.TriggerToVehicles = true;
+            hingeVehicleDoorRight.OpenSound = CyclopsDefaultAssets.DOCKING_DOORS_OPEN;
+            hingeVehicleDoorRight.CloseSound = CyclopsDefaultAssets.DOCKING_DOORS_CLOSE;
 
             GameObject entrancePosition = submarine.FindChild("PointsOfInterest").FindChild("EntranceTeleportSpot");
             GameObject entranceHatch = submarine.FindChild("PointsOfInterest").FindChild("PlayerEntrance").FindChild("Base");
@@ -182,63 +192,6 @@ namespace Manta.Core
             liveMixin.data = CyclopsLiveMixinData.Get();// TO:DO Create a proper health system for the manta.
             liveMixin.data.knifeable = true; // TO:DO remove just here for testing purposes.
             liveMixin.data.maxHealth = 200;
-
-            FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
-            foreach (FMODAsset fmod in fmods)
-            {
-                switch (fmod.name.ToLower())
-                {
-                    case "docking_doors_close":
-                        //hingeVehicleDoorLeft.CloseSound = fmod;
-                        //hingeVehicleDoorRight.CloseSound = fmod;
-                        break;
-                    case "docking_doors_open":
-                        //hingeVehicleDoorLeft.OpenSound = fmod;
-                        //hingeVehicleDoorRight.OpenSound = fmod;
-                        break;
-                    case "outer_hatch_close":
-                        hingeDoorLeft.CloseSound = fmod;
-                        hingeDoorRight.CloseSound = fmod;
-                        break;
-                    case "outer_hatch_open":
-                        hingeDoorLeft.OpenSound = fmod;
-                        hingeDoorRight.OpenSound = fmod;
-                        break;
-                    case "impact_solid_medium":
-                        collisionSounds.ImpactHitMedium = fmod;
-                        break;
-                    case "impact_solid_soft":
-                        collisionSounds.ImpactHitSoft = fmod;
-                        break;
-                    case "impact_solid_hard":
-                        collisionSounds.ImpactHitHard = fmod;
-                        break;
-                    case "ai_silent_running":
-                        cyclopsEngineStateChangedCallouts.SilentRunningCallout = fmod;
-                        break;
-                    case "ai_ahead_standard":
-                        cyclopsEngineStateChangedCallouts.NormalCallout = fmod;
-                        break;
-                    case "ai_ahead_slow":
-                        cyclopsEngineStateChangedCallouts.SlowCallout = fmod;
-                        break;
-                    case "ai_ahead_flank":
-                        cyclopsEngineStateChangedCallouts.FastCallout = fmod;
-                        break;
-                    case "ai_engine_up":
-                        cyclopsStartupPowerDownSequence.StartupSound = fmod;
-                        break;
-                    case "ai_engine_down":
-                        cyclopsStartupPowerDownSequence.PowerDownCallout = fmod;
-                        break;
-                    case "ai_welcome":
-                        cyclopsWelcomeCallout.WelcomeAboardCallout = fmod;
-                        break;
-                    case "cyclops_loop_rpm":
-                        cyclopsEngineSound.FMODAsset = fmod;
-                        break;
-                }
-            }
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)

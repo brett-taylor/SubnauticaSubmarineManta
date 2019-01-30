@@ -15,6 +15,14 @@ namespace Submarines.DefaultCyclopsContent
     {
         public FMODAsset WelcomeAboardCallout { get; set; } = null;
 
+        public void Start()
+        {
+            if (EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS && WelcomeAboardCallout == null)
+            {
+                WelcomeAboardCallout = CyclopsDefaultAssets.AI_WELCOME_ABOARD_GOOD;
+            }
+        }
+
         public void OnPlayerEnteredSubmarine()
         {
             if (WelcomeAboardCallout != null)

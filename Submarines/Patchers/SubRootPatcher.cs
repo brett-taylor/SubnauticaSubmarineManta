@@ -14,7 +14,7 @@ namespace Submarines.Patchers
         {
             if (__instance is Submarine)
             {
-                Submarine submarine = (Submarine) __instance;
+                Submarine submarine = (Submarine)__instance;
                 if (submarine != null)
                 {
                     submarine.OnPlayerEntered(player);

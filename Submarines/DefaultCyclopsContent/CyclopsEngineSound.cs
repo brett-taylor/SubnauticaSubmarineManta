@@ -24,6 +24,11 @@ namespace Submarines.DefaultCyclopsContent
 
         public void Start()
         {
+            if (EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS && FMODAsset == null)
+            {
+                FMODAsset = CyclopsDefaultAssets.ENGINE_LOOP;
+            }
+
             if (FMODAsset == null)
             {
                 Utilities.Log.Error("CyclopsEngineSound::FMODAsset is not set. Destroying self");

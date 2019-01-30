@@ -36,6 +36,8 @@ namespace Odyssey.Core
          */
         public static GameObject CreateOdyssey()
         {
+            CyclopsDefaultAssets.LoadDefaultCyclopsContent();
+
             GameObject submarine = Object.Instantiate(OdysseyAssetLoader.ODYSSEY_EXTERIOR);
             ApplyMaterials(submarine);
 
@@ -91,6 +93,8 @@ namespace Odyssey.Core
             hingeDoorLeft.TriggerToEverything = false;
             hingeDoorLeft.TriggerToPlayer = true;
             hingeDoorLeft.TriggerToVehicles = false;
+            hingeDoorLeft.OpenSound = CyclopsDefaultAssets.PLAYER_HATCH_OPEN;
+            hingeDoorLeft.CloseSound = CyclopsDefaultAssets.PLAYER_HATCH_CLOSE;
 
             GameObject doorRight = submarine.FindChild("PointsOfInterest").FindChild("RightDoorFlap");
             doorRight.GetComponentInChildren<HingeJoint>().connectedBody = submarine.GetComponent<Rigidbody>();
@@ -100,6 +104,8 @@ namespace Odyssey.Core
             hingeDoorRight.TriggerToEverything = false;
             hingeDoorRight.TriggerToPlayer = true;
             hingeDoorRight.TriggerToVehicles = false;
+            hingeDoorRight.OpenSound = CyclopsDefaultAssets.PLAYER_HATCH_OPEN;
+            hingeDoorRight.CloseSound = CyclopsDefaultAssets.PLAYER_HATCH_CLOSE;
 
             GameObject entrancePosition = submarine.FindChild("PointsOfInterest").FindChild("EntranceTeleportSpot");
             GameObject entranceHatch = submarine.FindChild("PointsOfInterest").FindChild("Enter");
@@ -156,55 +162,6 @@ namespace Odyssey.Core
             OxygenReplenishment oxygenReplenishment = submarine.GetOrAddComponent<OxygenReplenishment>();
             oxygenReplenishment.OxygenPerSecond = 15f;
             oxygenReplenishment.OxygenEnergyCost = 0.1f;
-
-            FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
-            foreach (FMODAsset fmod in fmods)
-            {
-                switch (fmod.name.ToLower())
-                {
-                    case "outer_hatch_close":
-                        hingeDoorLeft.CloseSound = fmod;
-                        hingeDoorRight.CloseSound = fmod;
-                        break;
-                    case "outer_hatch_open":
-                        hingeDoorLeft.OpenSound = fmod;
-                        hingeDoorRight.OpenSound = fmod;
-                        break;
-                    case "impact_solid_medium":
-                        collisionSounds.ImpactHitMedium = fmod;
-                        break;
-                    case "impact_solid_soft":
-                        collisionSounds.ImpactHitSoft = fmod;
-                        break;
-                    case "impact_solid_hard":
-                        collisionSounds.ImpactHitHard = fmod;
-                        break;
-                    case "ai_silent_running":
-                        cyclopsEngineStateChangedCallouts.SilentRunningCallout = fmod;
-                        break;
-                    case "ai_ahead_standard":
-                        cyclopsEngineStateChangedCallouts.NormalCallout = fmod;
-                        break;
-                    case "ai_ahead_slow":
-                        cyclopsEngineStateChangedCallouts.SlowCallout = fmod;
-                        break;
-                    case "ai_ahead_flank":
-                        cyclopsEngineStateChangedCallouts.FastCallout = fmod;
-                        break;
-                    case "ai_engine_up":
-                        cyclopsStartupPowerDownSequence.StartupSound = fmod;
-                        break;
-                    case "ai_engine_down":
-                        cyclopsStartupPowerDownSequence.PowerDownCallout = fmod;
-                        break;
-                    case "ai_welcome":
-                        cyclopsWelcomeCallout.WelcomeAboardCallout = fmod;
-                        break;
-                    case "cyclops_loop_rpm":
-                        cyclopsEngineSound.FMODAsset = fmod;
-                        break;
-                }
-            }
         }
 
         private static void ApplyMaterials(GameObject submarine)

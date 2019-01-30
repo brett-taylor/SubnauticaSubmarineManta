@@ -314,6 +314,11 @@ namespace Class1Vehicles.Utilities
                     lm.data.knifeable = true;
                 }
             }
+
+            /*if (GUILayout.Button("Load Default Cyclops Assets"))
+            {
+                Submarines.DefaultCyclopsContent.CyclopsDefaultAssets.LoadDefaultCyclopsContent();
+            }*/
         }
 
         private MantaSubmarine manta;

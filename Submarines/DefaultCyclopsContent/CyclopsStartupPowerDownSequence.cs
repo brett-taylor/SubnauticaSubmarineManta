@@ -19,6 +19,22 @@ namespace Submarines.DefaultCyclopsContent
         public float TotalDelayBetweenEngineTurnOnAndEngineStateSwap = 4.5f;
         private EngineState mostRecentEngineStateSwapAttempt = EngineState.NORMAL;
 
+        public void Start()
+        {
+            if (EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS)
+            {
+                if (StartupSound == null)
+                {
+                    StartupSound = CyclopsDefaultAssets.ENGINE_STATE_POWER_UP;
+                }
+
+                if (PowerDownCallout == null)
+                {
+                    PowerDownCallout = CyclopsDefaultAssets.ENGINE_STATE_POWER_DOWN;
+                }
+            }
+        }
+
         public void OnEngineStartUp(EngineState attemptedToSwapToState)
         {
             mostRecentEngineStateSwapAttempt = attemptedToSwapToState;
