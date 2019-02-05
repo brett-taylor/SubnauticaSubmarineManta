@@ -1,0 +1,8 @@
+[Class1Vehicles] Child DamagePoints (UnityEngine.GameObject)  Component: DamagePoints (UnityEngine.Transform)
+[Class1Vehicles] Child DamagePoints (UnityEngine.GameObject)  Component: DamagePoints (CyclopsExternalDamageManager)
+[Class1Vehicles] Child DamagePoint (UnityEngine.GameObject)  Component: DamagePoint (UnityEngine.Transform)
+[Class1Vehicles] Child DamagePoint (UnityEngine.GameObject)  Component: DamagePoint (UnityEngine.BoxCollider)
+[Class1Vehicles] Child DamagePoint (UnityEngine.GameObject)  Component: DamagePoint (CyclopsDamagePoint)
+[Class1Vehicles] Child DamagePoint (UnityEngine.GameObject)  Component: DamagePoint (LiveMixin)
+[Class1Vehicles] Child DamagePoint (UnityEngine.GameObject)  Component: DamagePoint (WeldablePoint)
+[Class1Vehicles] Child DamagePoint (UnityEngine.GameObject)  Component: DamagePoint (IgnoreTrigger)

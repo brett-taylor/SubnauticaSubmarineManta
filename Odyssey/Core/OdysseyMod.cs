@@ -280,12 +280,6 @@ namespace Odyssey.Core
             model.FindChild("Fin2_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("HeadLight_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("HeadLight_LP001").GetComponent<MeshRenderer>().material = bodyExtraTwo;
-            model.FindChild("HeadLight_LP002").GetComponent<MeshRenderer>().material = bodyExtraTwo;
-            model.FindChild("HeadLight_LP003").GetComponent<MeshRenderer>().material = bodyExtraTwo;
-            model.FindChild("HeadLight_LP004").GetComponent<MeshRenderer>().material = bodyExtraTwo;
-            model.FindChild("HeadLight_LP005").GetComponent<MeshRenderer>().material = bodyExtraTwo;
-            model.FindChild("HeadLight_LP006").GetComponent<MeshRenderer>().material = bodyExtraTwo;
-            model.FindChild("HeadLight_LP007").GetComponent<MeshRenderer>().material = bodyExtraTwo;
             model.FindChild("Motor_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("PropShaft_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("SensorAntenna3_LP").GetComponent<MeshRenderer>().material = sensors;

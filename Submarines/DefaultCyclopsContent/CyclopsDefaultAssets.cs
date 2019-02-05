@@ -40,7 +40,6 @@ namespace Submarines.DefaultCyclopsContent
         private static void LoadFMODAssets()
         {
             FMODAsset[] fmods = Resources.FindObjectsOfTypeAll<FMODAsset>();
-            Utilities.Log.Print("Found: " + fmods.Length);
             foreach (FMODAsset fmod in fmods)
             {
                 switch (fmod.name.ToLower())

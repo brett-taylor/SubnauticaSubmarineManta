@@ -1,6 +1,5 @@
 ﻿using Manta.Core;
 using Odyssey.Core;
-using Submarines;
 using Submarines.Movement;
 using Submarines.Utilities.Extensions;
 using UnityEngine;
@@ -68,7 +67,7 @@ namespace Class1Vehicles.Utilities
         }
 
         private string fmodAsset = "cyclops_door_open";
-
+        private ReaperLeviathan reaper;
         private void DrawMiscDebugMenu()
         {
             if (GUILayout.Button("Components"))
@@ -315,10 +314,55 @@ namespace Class1Vehicles.Utilities
                 }
             }
 
-            /*if (GUILayout.Button("Load Default Cyclops Assets"))
+            if (GUILayout.Button("Cyclops Ladder"))
             {
-                Submarines.DefaultCyclopsContent.CyclopsDefaultAssets.LoadDefaultCyclopsContent();
-            }*/
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    {
+                        Utilities.Log.Print(raycastHit4.rigidbody.gameObject.name);
+                        foreach(SkinnedMeshRenderer smr in raycastHit4.rigidbody.gameObject.GetComponentsInChildren<SkinnedMeshRenderer>())
+                        {
+                            if (smr.gameObject.name.ToLower().Equals("submarine_ladder_04") || smr.gameObject.name.ToLower().Equals("cyclops_ladder_long")
+                                || smr.gameObject.name.ToLower().Equals("cyclops_ladder_short_right") || smr.gameObject.name.ToLower().Equals("cyclops_ladder_short_left")
+                                || smr.gameObject.name.ToLower().Equals("submarine_ladder_02"))
+                            {
+                                Utilities.Log.Print("Mesh: " + smr.gameObject.GetComponent<SkinnedMeshRenderer>()?.sharedMesh?.name);
+                                Utilities.Log.Print("Bones Length: " + smr.gameObject.GetComponent<SkinnedMeshRenderer>()?.bones?.Length);
+                                smr.gameObject.GetComponent<SkinnedMeshRenderer>()?.material?.PrintAllMarmosetUBERShaderProperties();
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (GUILayout.Button("Spawn Reaper"))
+            {
+                GameObject prefabForTechType = CraftData.GetPrefabForTechType(TechType.ReaperLeviathan, true);
+                GameObject gameObject = Utils.CreatePrefab(prefabForTechType);
+                LargeWorldEntity.Register(gameObject);
+                CrafterLogic.NotifyCraftEnd(gameObject, TechType.ReaperLeviathan);
+                gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
+                reaper = gameObject.GetComponentInChildren<ReaperLeviathan>();
+                Log.Print("Repaer set: " + (reaper != null));
+            }
+
+            if (reaper != null)
+            {
+                if (GUILayout.Button("Reaper Components"))
+                {
+                    foreach(Component c in reaper.GetComponentsInChildren(typeof(Component)))
+                    {
+                        Log.Print("Component: " + c + " on go: " + c.gameObject.name);
+                    }
+                }
+
+                if (GUILayout.Button("Delete Reaper"))
+                {
+                    Destroy(reaper.gameObject);
+                }
+            }
         }
 
         private MantaSubmarine manta;

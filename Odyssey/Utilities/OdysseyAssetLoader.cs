@@ -11,8 +11,6 @@ namespace Odyssey.Utilities
         public static AssetBundle ASSET_BUNDLE { get; private set; }
         public static GameObject ODYSSEY_EXTERIOR { get; private set; }
 
-        public static Texture DEFAULT_SPEC_MAP { get; private set; }
-
         public static Texture BODY_NORMAL { get; private set; }
         public static Texture BODY_SPEC { get; private set; }
 
@@ -47,12 +45,6 @@ namespace Odyssey.Utilities
             if (ODYSSEY_EXTERIOR == null)
             {
                 Utilities.Log.Error("Odyssey exterior not found.");
-            }
-
-            DEFAULT_SPEC_MAP = ASSET_BUNDLE.LoadAsset("OdysseySpecMap") as Texture;
-            if (DEFAULT_SPEC_MAP == null)
-            {
-                Utilities.Log.Error("DEFAULT_SPEC_MAP not found.");
             }
 
             BODY_NORMAL = ASSET_BUNDLE.LoadAsset("1_LP_Body_Normal") as Texture;

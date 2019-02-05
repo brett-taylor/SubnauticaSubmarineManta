@@ -208,12 +208,13 @@ namespace Manta.Core
                 }
             }
 
-            MeshRenderer exteriorRenderer = manta.FindChild("Model")?.FindChild("Exterior")?.GetComponent<MeshRenderer>();
+            MeshRenderer exteriorRenderer = manta.FindChild("Model").FindChild("Exterior").GetComponent<MeshRenderer>();
             Material middleBody = exteriorRenderer.materials[0];
             Material tail = exteriorRenderer.materials[1];
             Material windshield = exteriorRenderer.materials[2];
             Material glass = exteriorRenderer.materials[3];
             Material wings = exteriorRenderer.materials[4];
+            Material decals = manta.FindChild("Model").FindChild("decals").GetComponent<MeshRenderer>().material;
 
             tail.shader = shader;
             tail.EnableKeyword("MARMO_SPECMAP");
@@ -223,7 +224,6 @@ namespace Manta.Core
             tail.SetFloat("_SpecInt", 1f);
             tail.SetFloat("_Shininess", 6.5f);
             tail.SetFloat("_Fresnel", 0f);
-            tail.SetTexture("_MainTex", MantaAssetLoader.HULL_ONE_MAIN_TEX);
             tail.SetTexture("_SpecTex", MantaAssetLoader.HULL_ONE_SPEC_MAP);
             tail.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             tail.SetTexture("_BumpMap", MantaAssetLoader.HULL_ONE_NORMAL_MAP);
@@ -243,7 +243,6 @@ namespace Manta.Core
             wings.SetFloat("_SpecInt", 1f);
             wings.SetFloat("_Shininess", 6.5f);
             wings.SetFloat("_Fresnel", 0f);
-            wings.SetTexture("_MainTex", MantaAssetLoader.HULL_TWO_MAIN_TEX);
             wings.SetTexture("_SpecTex", MantaAssetLoader.HULL_TWO_SPEC_MAP);
             wings.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             wings.SetTexture("_BumpMap", MantaAssetLoader.HULL_TWO_NORMAL_MAP);
@@ -263,7 +262,6 @@ namespace Manta.Core
             middleBody.SetFloat("_SpecInt", 1f);
             middleBody.SetFloat("_Shininess", 6.5f);
             middleBody.SetFloat("_Fresnel", 0f);
-            middleBody.SetTexture("_MainTex", MantaAssetLoader.HULL_THREE_MAIN_TEX);
             middleBody.SetTexture("_SpecTex", MantaAssetLoader.HULL_THREE_SPEC_MAP);
             middleBody.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             middleBody.SetTexture("_BumpMap", MantaAssetLoader.HULL_THREE_NORMAL_MAP);
@@ -283,7 +281,6 @@ namespace Manta.Core
             windshield.SetFloat("_SpecInt", 1f);
             windshield.SetFloat("_Shininess", 6.5f);
             windshield.SetFloat("_Fresnel", 0f);
-            windshield.SetTexture("_MainTex", MantaAssetLoader.HULL_FOUR_MAIN_TEX);
             windshield.SetTexture("_SpecTex", MantaAssetLoader.HULL_FOUR_SPEC_MAP);
             windshield.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             windshield.SetTexture("_BumpMap", MantaAssetLoader.HULL_FOUR_NORMAL_MAP);
@@ -315,6 +312,17 @@ namespace Manta.Core
             glass.SetFloat("_Shininess", 6.2f);
             glass.SetFloat("_Fresnel", 0.9f);
             glass.renderQueue = 3101;*/
+
+            decals.shader = shader;
+            decals.EnableKeyword("MARMO_SPECMAP");
+            decals.EnableKeyword("_ZWRITE_ON");
+            decals.EnableKeyword("MARMO_ALPHA");
+            decals.EnableKeyword("MARMO_ALPHA_CLIP");
+            decals.SetColor("_Color", Color.white);
+            decals.SetColor("_SpecColor", Color.white);
+            decals.SetFloat("_SpecInt", 1f);
+            decals.SetFloat("_Shininess", 6.5f);
+            decals.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
         }
     }
 }
