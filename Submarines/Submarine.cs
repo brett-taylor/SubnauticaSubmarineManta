@@ -56,5 +56,10 @@ namespace Submarines
         {
             BroadcastMessage("OnSteeringEnded", SendMessageOptions.DontRequireReceiver);
         }
+
+        public override void OnTakeDamage(DamageInfo info)
+        {
+
+        }
     }
 }

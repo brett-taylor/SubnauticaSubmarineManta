@@ -60,10 +60,12 @@
   <ItemGroup>
     <Compile Include="Assets\SubmarineAssetLoader.cs" />
     <Compile Include="Content\Damage\ExternalDamageManager.cs" />
+    <Compile Include="Content\Damage\ExternalDamagePoint.cs" />
     <Compile Include="Content\OxygenReplenishment.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsDefaultAssets.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineSound.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineStateChangedCallouts.cs" />
+    <Compile Include="DefaultCyclopsContent\CyclopsExternalDamagePointLiveMixinData.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsLiveMixinData.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsWelcomeCallout.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsStartupPowerDownSequence.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Submarine.cs" />
     <Compile Include="Miscellaneous\SubmarineDuplicateFixer.cs" />
     <Compile Include="Utilities\Extensions\GameObjectExtensions.cs" />
+    <Compile Include="Utilities\Extensions\LiveMixinExtensions.cs" />
     <Compile Include="Utilities\Extensions\MaterialExtensions.cs" />
     <Compile Include="Water\WaterClipProxyModified.cs" />
     <Compile Include="EntryPoint.cs" />

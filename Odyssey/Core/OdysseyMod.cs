@@ -148,7 +148,7 @@ namespace Odyssey.Core
             engineManager.SetMovementDataForEngineState(EngineState.SLOW, normalSpeedMovementData);
             engineManager.SetMovementDataForEngineState(EngineState.NORMAL, normalSpeedMovementData);
             engineManager.SetMovementDataForEngineState(EngineState.FAST, normalSpeedMovementData);
-            engineManager.SetMovementDataForEngineState(EngineState.SILENTRUNNING, normalSpeedMovementData);
+            engineManager.SetMovementDataForEngineState(EngineState.SPECIAL, normalSpeedMovementData);
 
             CyclopsStartupPowerDownSequence cyclopsStartupPowerDownSequence = submarine.GetOrAddComponent<CyclopsStartupPowerDownSequence>();
             CyclopsEngineStateChangedCallouts cyclopsEngineStateChangedCallouts = submarine.GetOrAddComponent<CyclopsEngineStateChangedCallouts>();

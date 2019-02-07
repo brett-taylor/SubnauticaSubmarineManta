@@ -25,3 +25,4 @@ Beacon Icon that can been seen across the map
 Levithan attacks
 Weird electric emp octupus attack
 Creature attack alert
+Volumetric lights

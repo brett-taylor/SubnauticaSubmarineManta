@@ -11,6 +11,6 @@
         SLOW,
         NORMAL,
         FAST,
-        SILENTRUNNING
+        SPECIAL
     }
 }

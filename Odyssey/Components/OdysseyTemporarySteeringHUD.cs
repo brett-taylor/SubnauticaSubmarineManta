@@ -87,7 +87,7 @@ namespace Odyssey.Components
             }
             else if(Input.GetKeyDown(KeyCode.Alpha0))
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.SILENTRUNNING, false, true);
+                GetComponent<EngineManager>().SetNewEngineState(EngineState.SPECIAL, false, true);
             }
         }
     }

@@ -3,9 +3,9 @@
 namespace Submarines.DefaultCyclopsContent
 {
     /**
-     * The live mixin data the default cyclops comes with.
+     * The live mixin data the default cyclop's external damage point.
      */
-    public class CyclopsLiveMixinData
+    public class CyclopsExternalDamagePointLiveMixinData
     {
         private static LiveMixinData instance;
 
@@ -17,21 +17,21 @@ namespace Submarines.DefaultCyclopsContent
             }
 
             instance = ScriptableObject.CreateInstance<LiveMixinData>();
-            instance.broadcastKillOnDeath = false;
+            instance.broadcastKillOnDeath = true;
             instance.canResurrect = false;
             instance.damageEffect = null;
             instance.deathEffect = null;
             instance.destroyOnDeath = false;
             instance.electricalDamageEffect = null;
-            instance.explodeOnDestroy = true;
-            instance.invincibleInCreative = true;
-            instance.knifeable = false;
+            instance.explodeOnDestroy = false;
+            instance.invincibleInCreative = false;
+            instance.knifeable = true;
             instance.loopEffectBelowPercent = 0;
             instance.loopingDamageEffect = null;
-            instance.maxHealth = 1500;
+            instance.maxHealth = 35;
             instance.minDamageForSound = 0;
             instance.passDamageDataOnDeath = false;
-            instance.weldable = false;
+            instance.weldable = true;
 
             return instance;
         }

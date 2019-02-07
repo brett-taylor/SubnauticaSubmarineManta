@@ -1,7 +1,10 @@
 ﻿using Manta.Core;
 using Odyssey.Core;
+using Submarines.Content.Damage;
+using Submarines.DefaultCyclopsContent;
 using Submarines.Movement;
 using Submarines.Utilities.Extensions;
+using System.Reflection;
 using UnityEngine;
 
 namespace Class1Vehicles.Utilities
@@ -14,7 +17,7 @@ namespace Class1Vehicles.Utilities
         private static Rect SIZE = new Rect(5, 5, 500, 600);
         private bool isOpen = false;
         private bool showCursor = false;
-        private int showDebugMenuNo = 0;
+        private int showDebugMenuNo = 4;
 
         public void Update()
         {
@@ -67,9 +70,31 @@ namespace Class1Vehicles.Utilities
         }
 
         private string fmodAsset = "cyclops_door_open";
-        private ReaperLeviathan reaper;
-        private void DrawMiscDebugMenu()
+        private void DrawGeneralDebugMenu()
         {
+            if (GUILayout.Button("Unlimited Oxygen"))
+            {
+                GameModeUtils.ToggleCheat(GameModeOption.NoOxygen);
+                Player.main.oxygenMgr.AddOxygen(100);
+            }
+
+            if (GUILayout.Button("Full Food"))
+            {
+                Player.main.GetComponent<Survival>().food = 100;
+            }
+
+            if (GUILayout.Button("Full Water"))
+            {
+                Player.main.GetComponent<Survival>().water = 100;
+            }
+
+            if (GUILayout.Button("Full Health"))
+            {
+                Player.main.liveMixin.health = Player.main.liveMixin.maxHealth;
+            }
+
+            GUILayout.Space(10);
+
             if (GUILayout.Button("Components"))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -123,6 +148,46 @@ namespace Class1Vehicles.Utilities
                 }
             }
 
+            if (GUILayout.Button("Teleport"))
+            {
+                Player.main.transform.position += new Vector3(2f, 0f, 0f);
+            }
+
+            if (GUILayout.Button("Get LiveMixin Data"))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
+                    if (lm == null)
+                    {
+                        Log.Print("No Live Mixin Found");
+                        return;
+                    }
+
+                    lm.PrintAllLiveMixinDetails();
+                }
+            }
+
+            if (GUILayout.Button("Set Health to 300 and knifable"))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
+                    if (lm == null)
+                    {
+                        Log.Print("No Live Mixin Found");
+                        return;
+                    }
+                    lm.health = 300;
+                    lm.data.knifeable = true;
+                }
+            }
+        }
+
+        private void DrawCyclopsDebugMenu()
+        {
             if (GUILayout.Button("Destroy Cyclops static mesh"))
             {
                 Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -240,80 +305,6 @@ namespace Class1Vehicles.Utilities
                 }
             }
 
-            if (GUILayout.Button("Teleport"))
-            {
-                Player.main.transform.position += new Vector3(2f, 0f, 0f);
-            }
-
-            if (GUILayout.Button("Get LiveMixin Data"))
-            {
-                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
-                {
-                    LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
-                    if (lm == null)
-                    {
-                        Log.Print("No Live Mixin Found");
-                        return;
-                    }
-
-                    Log.Print("LiveMixin broadcastKillOnDeath: " + lm.broadcastKillOnDeath);
-                    Log.Print("LiveMixin canResurrect: " + lm.canResurrect);
-                    Log.Print("LiveMixin damageEffect: " + lm.damageEffect);
-                    Log.Print("LiveMixin deathEffect: " + lm.deathEffect);
-                    Log.Print("LiveMixin destroyOnDeath: " + lm.destroyOnDeath);
-                    Log.Print("LiveMixin electricalDamageEffect: " + lm.electricalDamageEffect);
-                    Log.Print("LiveMixin explodeOnDestroy: " + lm.explodeOnDestroy);
-                    Log.Print("LiveMixin invincibleInCreative: " + lm.invincibleInCreative);
-                    Log.Print("LiveMixin knifeable: " + lm.knifeable);
-                    Log.Print("LiveMixin loopEffectBelowPercent: " + lm.loopEffectBelowPercent);
-                    Log.Print("LiveMixin loopingDamageEffect: " + lm.loopingDamageEffect);
-                    Log.Print("LiveMixin maxHealth: " + lm.maxHealth);
-                    Log.Print("LiveMixin minDamageForSound: " + lm.minDamageForSound);
-                    Log.Print("LiveMixin passDamageDataOnDeath: " + lm.passDamageDataOnDeath);
-                    Log.Print("LiveMixin weldable: " + lm.weldable);
-                    Log.Print("LiveMixin damageClip: " + lm.damageClip);
-                    Log.Print("LiveMixin data: " + lm.data);
-                    Log.Print("LiveMixin deathClip: " + lm.deathClip);
-                    Log.Print("LiveMixin health: " + lm.health);
-                    Log.Print("LiveMixin invincible: " + lm.invincible);
-                    Log.Print("LiveMixin onHealDamage: " + lm.onHealDamage);
-                    Log.Print("LiveMixin onHealTempDamage: " + lm.onHealTempDamage);
-                    Log.Print("LiveMixin shielded: " + lm.shielded);
-                    Log.Print("LiveMixin data broadcastKillOnDeath: " + lm.data.broadcastKillOnDeath);
-                    Log.Print("LiveMixin data canResurrect: " + lm.data.canResurrect);
-                    Log.Print("LiveMixin data damageEffect: " + lm.data.damageEffect);
-                    Log.Print("LiveMixin data deathEffect: " + lm.data.deathEffect);
-                    Log.Print("LiveMixin data destroyOnDeath: " + lm.data.destroyOnDeath);
-                    Log.Print("LiveMixin data electricalDamageEffect: " + lm.data.electricalDamageEffect);
-                    Log.Print("LiveMixin data explodeOnDestroy: " + lm.data.explodeOnDestroy);
-                    Log.Print("LiveMixin data invincibleInCreative: " + lm.data.invincibleInCreative);
-                    Log.Print("LiveMixin data knifeable: " + lm.data.knifeable);
-                    Log.Print("LiveMixin data loopEffectBelowPercent: " + lm.data.loopEffectBelowPercent);
-                    Log.Print("LiveMixin data loopingDamageEffect: " + lm.data.loopingDamageEffect);
-                    Log.Print("LiveMixin data maxHealth: " + lm.data.maxHealth);
-                    Log.Print("LiveMixin data minDamageForSound: " + lm.data.minDamageForSound);
-                    Log.Print("LiveMixin data passDamageDataOnDeath: " + lm.data.passDamageDataOnDeath);
-                    Log.Print("LiveMixin data weldable: " + lm.data.weldable);                  
-                }
-            }
-
-            if (GUILayout.Button("Set Health to 300 and knifable"))
-            {
-                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
-                {
-                    LiveMixin lm = raycastHit4.rigidbody.GetComponent<LiveMixin>();
-                    if (lm == null)
-                    {
-                        Log.Print("No Live Mixin Found");
-                        return;
-                    }
-                    lm.health = 300;
-                    lm.data.knifeable = true;
-                }
-            }
-
             if (GUILayout.Button("Cyclops Ladder"))
             {
                 Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -337,31 +328,61 @@ namespace Class1Vehicles.Utilities
                 }
             }
 
-            if (GUILayout.Button("Spawn Reaper"))
+            if (GUILayout.Button("Cyclops Force Damage Point"))
             {
-                GameObject prefabForTechType = CraftData.GetPrefabForTechType(TechType.ReaperLeviathan, true);
-                GameObject gameObject = Utils.CreatePrefab(prefabForTechType);
-                LargeWorldEntity.Register(gameObject);
-                CrafterLogic.NotifyCraftEnd(gameObject, TechType.ReaperLeviathan);
-                gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
-                reaper = gameObject.GetComponentInChildren<ReaperLeviathan>();
-                Log.Print("Repaer set: " + (reaper != null));
-            }
-
-            if (reaper != null)
-            {
-                if (GUILayout.Button("Reaper Components"))
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
                 {
-                    foreach(Component c in reaper.GetComponentsInChildren(typeof(Component)))
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
                     {
-                        Log.Print("Component: " + c + " on go: " + c.gameObject.name);
+                        CyclopsExternalDamageManager damage = raycastHit4.rigidbody.GetComponentInChildren<CyclopsExternalDamageManager>();
+                        if (damage == null)
+                        {
+                            Log.Print("CyclopsExternalDamageManager not found");
+                            return;
+                        }
+
+                        MethodInfo mi = SMLHelper.V2.Utility.ReflectionHelper.GetInstanceMethod(damage, "CreatePoint");
+                        if (mi == null)
+                        {
+                            Log.Print("CreatePoint method not found");
+                            return;
+                        }
+
+                        mi.FastInvoke(damage);
                     }
                 }
+            }
 
-                if (GUILayout.Button("Delete Reaper"))
+            if (GUILayout.Button("Cyclops Print Damage Info"))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
                 {
-                    Destroy(reaper.gameObject);
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    {
+                        CyclopsExternalDamageManager damage = raycastHit4.rigidbody.GetComponentInChildren<CyclopsExternalDamageManager>();
+                        if (damage == null)
+                        {
+                            Log.Print("CyclopsExternalDamageManager not found");
+                            return;
+                        }
+
+                        CyclopsDamagePoint[] damagePoints = raycastHit4.rigidbody.gameObject.GetComponentsInChildren<CyclopsDamagePoint>();
+                        foreach(var dp in damagePoints)
+                        {
+                            dp.gameObject.GetComponentInChildren<LiveMixin>().PrintAllLiveMixinDetails();
+                            Log.Print(" ");
+                        }
+                    }
                 }
+            }
+
+            if (GUILayout.Button("Create Cyclops Damage Point Unattached"))
+            {
+                GameObject gameobject = Instantiate(CyclopsDefaultAssets.EXTERNAL_DAMAGE_POINT);
+                gameobject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 2f;
+                gameobject.transform.LookAt(Player.main.transform);
             }
         }
 
@@ -430,6 +451,7 @@ namespace Class1Vehicles.Utilities
             }
 
             GUILayout.Box("Current Health: " + manta.GetComponent<LiveMixin>()?.health);
+            GUILayout.Box("Max Health: " + manta.GetComponent<LiveMixin>()?.maxHealth);
         }
 
         private OdysseySubmarine odyssey;
@@ -478,6 +500,179 @@ namespace Class1Vehicles.Utilities
             }
         }
 
+        private ReaperLeviathan reaper;
+        private CrabSquid crabsquid;
+        private GhostLeviathan ghostlevi;
+        private SeaDragon seaDragon;
+        private Warper warper;
+        private void DrawHostilesMenu()
+        {
+            if (reaper == null)
+            {
+                if (GUILayout.Button("Spawn Reaper"))
+                {
+                    GameObject prefabForTechType = CraftData.GetPrefabForTechType(TechType.ReaperLeviathan, true);
+                    GameObject gameObject = Utils.CreatePrefab(prefabForTechType);
+                    LargeWorldEntity.Register(gameObject);
+                    CrafterLogic.NotifyCraftEnd(gameObject, TechType.ReaperLeviathan);
+                    gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
+                    reaper = gameObject.GetComponentInChildren<ReaperLeviathan>();
+                    gameObject.transform.position += 50f * gameObject.transform.forward;
+                }
+            }
+            else
+            {
+                GUILayout.Space(10);
+
+                if (GUILayout.Button("Reaper Components"))
+                {
+                    foreach (Component c in reaper.GetComponentsInChildren(typeof(Component)))
+                    {
+                        Log.Print("Component: " + c + " on go: " + c.gameObject.name);
+                    }
+                }
+
+                if (GUILayout.Button("Delete Reaper"))
+                {
+                    Destroy(reaper.gameObject);
+                }
+
+                GUILayout.Space(10);
+            }
+
+            if (crabsquid == null)
+            {
+                if (GUILayout.Button("Spawn Crabsquid"))
+                {
+                    GameObject prefabForTechType = CraftData.GetPrefabForTechType(TechType.CrabSquid, true);
+                    GameObject gameObject = Utils.CreatePrefab(prefabForTechType);
+                    LargeWorldEntity.Register(gameObject);
+                    CrafterLogic.NotifyCraftEnd(gameObject, TechType.CrabSquid);
+                    gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
+                    crabsquid = gameObject.GetComponentInChildren<CrabSquid>();
+                    gameObject.transform.position += 50f * gameObject.transform.forward;
+                }
+            }
+            else
+            {
+                GUILayout.Space(10);
+
+                if (GUILayout.Button("Crabsquid Components"))
+                {
+                    foreach (Component c in crabsquid.GetComponentsInChildren(typeof(Component)))
+                    {
+                        Log.Print("Component: " + c + " on go: " + c.gameObject.name);
+                    }
+                }
+
+                if (GUILayout.Button("Delete Crabsquid"))
+                {
+                    Destroy(crabsquid.gameObject);
+                }
+
+                GUILayout.Space(10);
+            }
+
+            if (ghostlevi == null)
+            {
+                if (GUILayout.Button("Spawn Ghost Levi"))
+                {
+                    GameObject prefabForTechType = CraftData.GetPrefabForTechType(TechType.GhostLeviathan, true);
+                    GameObject gameObject = Utils.CreatePrefab(prefabForTechType);
+                    LargeWorldEntity.Register(gameObject);
+                    CrafterLogic.NotifyCraftEnd(gameObject, TechType.GhostLeviathan);
+                    gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
+                    ghostlevi = gameObject.GetComponentInChildren<GhostLeviathan>();
+                    gameObject.transform.position += 50f * gameObject.transform.forward;
+                }
+            }
+            else
+            {
+                GUILayout.Space(10);
+
+                if (GUILayout.Button("Ghost Levi Components"))
+                {
+                    foreach (Component c in ghostlevi.GetComponentsInChildren(typeof(Component)))
+                    {
+                        Log.Print("Component: " + c + " on go: " + c.gameObject.name);
+                    }
+                }
+
+                if (GUILayout.Button("Delete Ghost Levi"))
+                {
+                    Destroy(ghostlevi.gameObject);
+                }
+
+                GUILayout.Space(10);
+            }
+
+            if (seaDragon == null)
+            {
+                if (GUILayout.Button("Spawn Seadragon"))
+                {
+                    GameObject prefabForTechType = CraftData.GetPrefabForTechType(TechType.SeaDragon, true);
+                    GameObject gameObject = Utils.CreatePrefab(prefabForTechType);
+                    LargeWorldEntity.Register(gameObject);
+                    CrafterLogic.NotifyCraftEnd(gameObject, TechType.SeaDragon);
+                    gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
+                    seaDragon = gameObject.GetComponentInChildren<SeaDragon>();
+                    gameObject.transform.position += 50f * gameObject.transform.forward;
+                }
+            }
+            else
+            {
+                GUILayout.Space(10);
+
+                if (GUILayout.Button("Seadragon Components"))
+                {
+                    foreach (Component c in seaDragon.GetComponentsInChildren(typeof(Component)))
+                    {
+                        Log.Print("Component: " + c + " on go: " + c.gameObject.name);
+                    }
+                }
+
+                if (GUILayout.Button("Delete Seadragon"))
+                {
+                    Destroy(seaDragon.gameObject);
+                }
+
+                GUILayout.Space(10);
+            }
+
+            if (warper == null)
+            {
+                if (GUILayout.Button("Spawn warper"))
+                {
+                    GameObject prefabForTechType = CraftData.GetPrefabForTechType(TechType.Warper, true);
+                    GameObject gameObject = Utils.CreatePrefab(prefabForTechType);
+                    LargeWorldEntity.Register(gameObject);
+                    CrafterLogic.NotifyCraftEnd(gameObject, TechType.Warper);
+                    gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
+                    warper = gameObject.GetComponentInChildren<Warper>();
+                    gameObject.transform.position += 50f * gameObject.transform.forward;
+                }
+            }
+            else
+            {
+                GUILayout.Space(10);
+
+                if (GUILayout.Button("Warper Components"))
+                {
+                    foreach (Component c in warper.GetComponentsInChildren(typeof(Component)))
+                    {
+                        Log.Print("Component: " + c + " on go: " + c.gameObject.name);
+                    }
+                }
+
+                if (GUILayout.Button("Delete Warper"))
+                {
+                    Destroy(warper.gameObject);
+                }
+
+                GUILayout.Space(10);
+            }
+        }
+
         private void OnGUI()
         {
             if (isOpen == false)
@@ -490,21 +685,29 @@ namespace Class1Vehicles.Utilities
                 GUILayout.Box("P to show/hide cursor");
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("General Menu"))
+                    showDebugMenuNo = 4;
+                if (GUILayout.Button("Cyclops Menu"))
                     showDebugMenuNo = 0;
                 if (GUILayout.Button("Manta Menu"))
                     showDebugMenuNo = 1;
                 if (GUILayout.Button("Odyssey Menu"))
                     showDebugMenuNo = 2;
+                if (GUILayout.Button("Hostiles Menu"))
+                    showDebugMenuNo = 3;
                 GUILayout.EndHorizontal();
 
                 GUILayout.Space(10f);
 
                 if (showDebugMenuNo == 0)
-                    DrawMiscDebugMenu();
+                    DrawCyclopsDebugMenu();
                 else if (showDebugMenuNo == 1)
                     DrawMantaDebugMenu();
                 else if (showDebugMenuNo == 2)
                     DrawOdysseyDebugMenu();
+                else if (showDebugMenuNo == 3)
+                    DrawHostilesMenu();
+                else if (showDebugMenuNo == 4)
+                    DrawGeneralDebugMenu();
                 else
                     GUILayout.Label("No Menu Selected");
 

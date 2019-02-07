@@ -3,7 +3,7 @@
 namespace Submarines.Utilities.Extensions
 {
     /**
-    * Extension methods for the Material glass.
+    * Extension methods for the Material object.
     */
     public static class MaterialExtensions
     {

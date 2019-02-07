@@ -9,6 +9,8 @@ using Submarines.Utilities.Extension;
 using Submarines.Water;
 using UnityEngine;
 using Submarines.Engine;
+using Submarines.Content.Damage;
+using System.Collections.Generic;
 
 namespace Manta.Core
 {
@@ -173,7 +175,7 @@ namespace Manta.Core
             engineManager.SetMovementDataForEngineState(EngineState.SLOW, normalSpeedMovementData);
             engineManager.SetMovementDataForEngineState(EngineState.NORMAL, normalSpeedMovementData);
             engineManager.SetMovementDataForEngineState(EngineState.FAST, normalSpeedMovementData);
-            engineManager.SetMovementDataForEngineState(EngineState.SILENTRUNNING, normalSpeedMovementData);
+            engineManager.SetMovementDataForEngineState(EngineState.SPECIAL, normalSpeedMovementData);
 
             CyclopsStartupPowerDownSequence cyclopsStartupPowerDownSequence = submarine.GetOrAddComponent<CyclopsStartupPowerDownSequence>();
             CyclopsEngineStateChangedCallouts cyclopsEngineStateChangedCallouts = submarine.GetOrAddComponent<CyclopsEngineStateChangedCallouts>();
@@ -191,7 +193,18 @@ namespace Manta.Core
             LiveMixin liveMixin = submarine.GetOrAddComponent<LiveMixin>();
             liveMixin.data = CyclopsLiveMixinData.Get();// TO:DO Create a proper health system for the manta.
             liveMixin.data.knifeable = true; // TO:DO remove just here for testing purposes.
-            liveMixin.data.maxHealth = 200;
+            liveMixin.data.maxHealth = 500;
+
+            ExternalDamageManager damage = submarine.GetOrAddComponent<ExternalDamageManager>();
+            damage.DamagePoints = submarine.FindChild("PointsOfInterest").FindChild("DamagePoints").transform;
+            damage.DamagePointParticleEffects = new List<GameObject>()
+            {
+                CyclopsDefaultAssets.EXTERNAL_DAMAGE_POINT_PARTICLES,
+            };
+            damage.DamagePointGameObjects = new List<GameObject>()
+            {
+                CyclopsDefaultAssets.EXTERNAL_DAMAGE_POINT,
+            };
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)

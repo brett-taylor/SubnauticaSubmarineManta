@@ -26,6 +26,9 @@ namespace Submarines.DefaultCyclopsContent
         public static FMODAsset ENGINE_LOOP { get; private set; }
         public static FMODAsset AI_WELCOME_ABOARD_GOOD { get; private set; }
 
+        public static GameObject EXTERNAL_DAMAGE_POINT { get; private set; }
+        public static GameObject EXTERNAL_DAMAGE_POINT_PARTICLES { get; private set; }
+
         public static void LoadDefaultCyclopsContent()
         {
             if (EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS == false || initialised == true)
@@ -33,8 +36,26 @@ namespace Submarines.DefaultCyclopsContent
                 return;
             }
 
+            LoadPrefabs();
             LoadFMODAssets();
             initialised = true;
+        }
+
+        private static void LoadPrefabs()
+        {
+            GameObject[] prefabs = Resources.FindObjectsOfTypeAll<GameObject>();
+            foreach (GameObject prefab in prefabs)
+            {
+                switch (prefab.name.ToLower())
+                {
+                    case "xcyclops_hullcrack_a":
+                        EXTERNAL_DAMAGE_POINT_PARTICLES = prefab;
+                        break;
+                    case "x_cyclopsleakdecal_01":
+                        EXTERNAL_DAMAGE_POINT = prefab;
+                        break;
+                }
+            }
         }
 
         private static void LoadFMODAssets()
