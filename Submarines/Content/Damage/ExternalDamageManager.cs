@@ -13,13 +13,25 @@ namespace Submarines.Content.Damage
         public Transform DamagePoints { get; set; }
         public List<GameObject> DamagePointGameObjects { get; set; }
         public List<GameObject> DamagePointParticleEffects { get; set; }
+        public LiveMixin SubmarineLiveMixin { get; set; }
         public LiveMixinData LiveMixinDataForExternalDamagePoints { get; set; }
+        // The EndOfHealthBuffer is added to the MaxHealth. This makes that all damage points are shown before the sub's health hits 0.
+        public float EndOfHealthBuffer { get; set; } = 50;
+        // The StartOfHealthBuffer is added to the subs current health. This means the sub can take some damage before a hole appears.
+        public float StartOfHealthBuffer { get; set; } = 50; 
 
         private List<ExternalDamagePoint> damagePoints;
         private List<ExternalDamagePoint> freeDamagePoints;
 
         public void Start()
         {
+            if (SubmarineLiveMixin == null)
+            {
+                Utilities.Log.Error("ExternalDamageManager has not had the submarine's LiveMixin assigned. Destroying...");
+                Destroy(this);
+                return;
+            }
+
             if (DamagePoints == null || DamagePoints.childCount == 0)
             {
                 Utilities.Log.Error("ExternalDamageManager has no damage points object assigned. Destroying...");
@@ -61,21 +73,50 @@ namespace Submarines.Content.Damage
         public void DamagePointRepaired(ExternalDamagePoint damagePoint)
         {
             freeDamagePoints.Add(damagePoint);
-            ErrorMessage.AddMessage("DamagePoint Repaired");
+            SubmarineLiveMixin.AddHealth(GetUsedDamagePointsCount() == 0 ? SubmarineLiveMixin.maxHealth : GetHealthPerDamagePoint());
         }
 
         public void OnTakeDamage()
         {
-            if (freeDamagePoints.Count == 0)
-            {
-                ErrorMessage.AddMessage("No free damage points");
-                return;
-            }
+            int numberToCreate = GetNumberOfDamagePointsThatShouldBeShowing() - GetUsedDamagePointsCount();
+            EnableMultipleDamagePoints(numberToCreate);
+        }
 
-            int randomDamagePoint = Random.Range(0, freeDamagePoints.Count - 1);
-            ExternalDamagePoint damagePoint = freeDamagePoints[randomDamagePoint];
-            freeDamagePoints.Remove(damagePoint);
-            damagePoint.NeedsRepairing();
+        public void EnableMultipleDamagePoints(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                if (freeDamagePoints.Count == 0)
+                {
+                    return;
+                }
+
+                int randomDamagePoint = Random.Range(0, freeDamagePoints.Count - 1);
+                ExternalDamagePoint damagePoint = freeDamagePoints[randomDamagePoint];
+                freeDamagePoints.Remove(damagePoint);
+                damagePoint.NeedsRepairing();
+            }
+        }
+
+        public virtual float GetHealthPerDamagePoint()
+        {
+            return Mathf.Ceil((SubmarineLiveMixin.maxHealth - EndOfHealthBuffer) / damagePoints.Count);
+        }
+
+        public virtual int GetNumberOfDamagePointsThatShouldBeShowing()
+        {
+            float lostHealth = (SubmarineLiveMixin.maxHealth + EndOfHealthBuffer) - (SubmarineLiveMixin.health + StartOfHealthBuffer);
+            return Mathf.FloorToInt(lostHealth / GetHealthPerDamagePoint());
+        }
+
+        public int GetUnusedDamagePointsCount()
+        {
+            return freeDamagePoints.Count;
+        }
+
+        public int GetUsedDamagePointsCount()
+        {
+            return damagePoints.Count - freeDamagePoints.Count;
         }
     }
 }

@@ -197,6 +197,7 @@ namespace Manta.Core
 
             ExternalDamageManager damage = submarine.GetOrAddComponent<ExternalDamageManager>();
             damage.DamagePoints = submarine.FindChild("PointsOfInterest").FindChild("DamagePoints").transform;
+            damage.SubmarineLiveMixin = liveMixin;
             damage.DamagePointParticleEffects = new List<GameObject>()
             {
                 CyclopsDefaultAssets.EXTERNAL_DAMAGE_POINT_PARTICLES,

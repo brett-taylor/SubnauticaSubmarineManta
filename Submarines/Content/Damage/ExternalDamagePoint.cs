@@ -42,11 +42,6 @@ namespace Submarines.Content.Damage
             Repaired();
         }
 
-        public void Update()
-        {
-            Utilities.Log.Print("maxHealth: " + liveMixin.maxHealth);
-        }
-
         public void NeedsRepairing()
         {
             Utilities.Log.Print("Callleddd NeedsRepairing");
