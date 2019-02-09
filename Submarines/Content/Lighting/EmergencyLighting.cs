@@ -9,13 +9,13 @@ namespace Submarines.Content.Lighting
     public class EmergencyLighting : MonoBehaviour
     {
         public List<Light> LightsAffected { get; set; }
-        public Color StartEndColor { get; set; }
         public Color FlickerColor { get; set; }
         public float FlickerTime { get; set; } = 2f;
         public float FlickerIntensity { get; set; } = 2f;
         public bool IsRunning { get; private set; } = false;
         public float LerpColorTime { get; set; } = 0.25f;
 
+        private Color startEndColor;
         private float originalIntensity = 1f;
         private bool isStarting = false;
         private bool isWantingToEnd = false;
@@ -32,13 +32,6 @@ namespace Submarines.Content.Lighting
                 return;
             }
 
-            if (StartEndColor == null)
-            {
-                Utilities.Log.Print("EmergencyLighting doesn't have StartEndColor assigned. Destroying.");
-                Destroy(this);
-                return;
-            }
-
             if (FlickerColor == null)
             {
                 Utilities.Log.Print("EmergencyLighting doesn't have LerpOneColor assigned. Destroying.");
@@ -47,6 +40,7 @@ namespace Submarines.Content.Lighting
             }
 
             originalIntensity = LightsAffected[0].intensity;
+            startEndColor = LightsAffected[0].color;
         }
 
         public virtual void Update()
@@ -59,7 +53,7 @@ namespace Submarines.Content.Lighting
             if (isStarting)
             {
                 currentTimer += Time.deltaTime;
-                Color newColor = UWE.Utils.LerpColor(StartEndColor, FlickerColor, currentTimer / LerpColorTime);
+                Color newColor = UWE.Utils.LerpColor(startEndColor, FlickerColor, currentTimer / LerpColorTime);
                 float newIntensity = Mathf.SmoothStep(originalIntensity, FlickerIntensity, currentTimer / LerpColorTime);
                 AssignColorToLights(newColor);
                 AssignIntensityToLights(newIntensity);
@@ -72,7 +66,7 @@ namespace Submarines.Content.Lighting
             else if (isEnding)
             {
                 currentTimer += Time.deltaTime;
-                Color newColor = UWE.Utils.LerpColor(FlickerColor, StartEndColor, currentTimer / LerpColorTime);
+                Color newColor = UWE.Utils.LerpColor(FlickerColor, startEndColor, currentTimer / LerpColorTime);
                 float newIntensity = Mathf.SmoothStep(FlickerIntensity, originalIntensity, currentTimer / LerpColorTime);
                 AssignColorToLights(newColor);
                 AssignIntensityToLights(newIntensity);

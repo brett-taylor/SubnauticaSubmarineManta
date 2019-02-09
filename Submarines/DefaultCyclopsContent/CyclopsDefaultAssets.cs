@@ -25,6 +25,7 @@ namespace Submarines.DefaultCyclopsContent
         public static FMODAsset ENGINE_STATE_POWER_DOWN { get; private set; }
         public static FMODAsset ENGINE_LOOP { get; private set; }
         public static FMODAsset AI_WELCOME_ABOARD_GOOD { get; private set; }
+        public static FMODAsset AI_CREATURE_ATTACK { get; private set; }
 
         public static GameObject EXTERNAL_DAMAGE_POINT { get; private set; }
         public static GameObject EXTERNAL_DAMAGE_POINT_PARTICLES { get; private set; }
@@ -114,6 +115,9 @@ namespace Submarines.DefaultCyclopsContent
                         break;
                     case "cyclops_loop_rpm":
                         ENGINE_LOOP = fmod;
+                        break;
+                    case "ai_attack":
+                        AI_CREATURE_ATTACK = fmod;
                         break;
                 }
             }

@@ -70,6 +70,8 @@
     <Compile Include="DefaultCyclopsContent\CyclopsEngineStateChangedCallouts.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsExternalDamagePointLiveMixinData.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsLiveMixinData.cs" />
+    <Compile Include="DefaultCyclopsContent\CyclopsUnderAttackEmergencyLighting.cs" />
+    <Compile Include="DefaultCyclopsContent\CyclopsUnderAttackCallout.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsWelcomeCallout.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsStartupPowerDownSequence.cs" />
     <Compile Include="Engine\EngineManager.cs" />

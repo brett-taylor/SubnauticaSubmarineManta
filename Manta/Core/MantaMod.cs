@@ -219,13 +219,10 @@ namespace Manta.Core
             lightsManager.EnableInternalLightsOnStart = true;
             lightsManager.EnableExternalLightsOnStart = true;
 
-            EmergencyLighting emergencyLighting = submarine.GetOrAddComponent<EmergencyLighting>();
+            CyclopsUnderAttackEmergencyLighting emergencyLighting = submarine.GetOrAddComponent<CyclopsUnderAttackEmergencyLighting>();
             emergencyLighting.LightsAffected = internalLightsList;
-            emergencyLighting.StartEndColor = internalLightsList[0].color;
-            emergencyLighting.FlickerColor = Color.red;
-            emergencyLighting.FlickerTime = 0.5f;
-            emergencyLighting.FlickerIntensity = 3f;
-            emergencyLighting.LerpColorTime = 0.5f;
+
+            submarine.GetOrAddComponent<CyclopsUnderAttackCallout>();
 
             ExternalDamageManager externalDamageManager = submarine.GetOrAddComponent<ExternalDamageManager>();
             externalDamageManager.DamagePoints = submarine.FindChild("PointsOfInterest").FindChild("DamagePoints").transform;
