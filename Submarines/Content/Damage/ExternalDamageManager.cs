@@ -74,6 +74,7 @@ namespace Submarines.Content.Damage
         {
             freeDamagePoints.Add(damagePoint);
             SubmarineLiveMixin.AddHealth(GetUsedDamagePointsCount() == 0 ? SubmarineLiveMixin.maxHealth : GetHealthPerDamagePoint());
+            SendMessage("ExternalDamagePointRepaired", damagePoint, SendMessageOptions.DontRequireReceiver);
         }
 
         public void OnTakeDamage()
@@ -95,6 +96,7 @@ namespace Submarines.Content.Damage
                 ExternalDamagePoint damagePoint = freeDamagePoints[randomDamagePoint];
                 freeDamagePoints.Remove(damagePoint);
                 damagePoint.NeedsRepairing();
+                SendMessage("ExternalDamagePointCreated", damagePoint, SendMessageOptions.DontRequireReceiver);
             }
         }
 

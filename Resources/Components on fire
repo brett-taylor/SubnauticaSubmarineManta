@@ -1,0 +1,13 @@
+"CyclopsFire"
+[Class1Vehicles] Component:CyclopsFire (UnityEngine.Transform)
+[Class1Vehicles] Component:CyclopsFire (PrefabIdentifier)
+[Class1Vehicles] Component:CyclopsFire (LargeWorldEntity)
+[Class1Vehicles] Component:CyclopsFire (LiveMixin)
+[Class1Vehicles] Component:CyclopsFire (IgnoreTrigger)
+[Class1Vehicles] Component:Light (UnityEngine.Transform)
+[Class1Vehicles] Component:Light (UnityEngine.Light)
+[Class1Vehicles] Component:Fire (UnityEngine.Transform)
+[Class1Vehicles] Component:Fire (Fire)
+[Class1Vehicles] Component:Fire (FMOD_CustomEmitter)
+[Class1Vehicles] Component:Fire (UnityEngine.CapsuleCollider)
+

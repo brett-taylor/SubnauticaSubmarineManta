@@ -59,8 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SubmarineAssetLoader.cs" />
+    <Compile Include="Content\Lighting\EmergencyLighting.cs" />
     <Compile Include="Content\Damage\ExternalDamageManager.cs" />
     <Compile Include="Content\Damage\ExternalDamagePoint.cs" />
+    <Compile Include="Content\Damage\InternalFireManager.cs" />
+    <Compile Include="Content\Lighting\LightsManager.cs" />
     <Compile Include="Content\OxygenReplenishment.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsDefaultAssets.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsEngineSound.cs" />

@@ -11,6 +11,7 @@ using UnityEngine;
 using Submarines.Engine;
 using Submarines.Content.Damage;
 using System.Collections.Generic;
+using Submarines.Content.Lighting;
 
 namespace Manta.Core
 {
@@ -195,17 +196,51 @@ namespace Manta.Core
             liveMixin.data.knifeable = true; // TO:DO remove just here for testing purposes.
             liveMixin.data.maxHealth = 500;
 
-            ExternalDamageManager damage = submarine.GetOrAddComponent<ExternalDamageManager>();
-            damage.DamagePoints = submarine.FindChild("PointsOfInterest").FindChild("DamagePoints").transform;
-            damage.SubmarineLiveMixin = liveMixin;
-            damage.DamagePointParticleEffects = new List<GameObject>()
+            GameObject externalLights = submarine.FindChild("Lights").FindChild("Exterior");
+            GameObject internalLights = submarine.FindChild("Lights").FindChild("Interior");
+
+            LightsManager lightsManager = submarine.GetOrAddComponent<LightsManager>();
+            List<Light> internalLightsList = new List<Light>();
+            List<Light> externalLightsList = new List<Light>();
+            foreach(Light light in externalLights.GetComponentsInChildren<Light>())
+            {
+                externalLightsList.Add(light);
+            }
+            foreach (Light light in internalLights.GetComponentsInChildren<Light>())
+            {
+                internalLightsList.Add(light);
+            }
+            lightsManager.ExternalLights = externalLightsList;
+            lightsManager.InternalLights = internalLightsList;
+            lightsManager.ExternalLightsOnIntensity = 1f;
+            lightsManager.ExternalLightsOffIntensity = 0f;
+            lightsManager.InternalLightsOnIntensity = 1f;
+            lightsManager.InternalLightsOffIntensity = 0f;
+            lightsManager.EnableInternalLightsOnStart = true;
+            lightsManager.EnableExternalLightsOnStart = true;
+
+            EmergencyLighting emergencyLighting = submarine.GetOrAddComponent<EmergencyLighting>();
+            emergencyLighting.LightsAffected = internalLightsList;
+            emergencyLighting.StartEndColor = internalLightsList[0].color;
+            emergencyLighting.LerpOneColor = Color.red;
+            emergencyLighting.LerpTwoColor = Color.black;
+            emergencyLighting.LerpTime = 2f;
+
+            ExternalDamageManager externalDamageManager = submarine.GetOrAddComponent<ExternalDamageManager>();
+            externalDamageManager.DamagePoints = submarine.FindChild("PointsOfInterest").FindChild("DamagePoints").transform;
+            externalDamageManager.SubmarineLiveMixin = liveMixin;
+            externalDamageManager.LiveMixinDataForExternalDamagePoints = CyclopsExternalDamagePointLiveMixinData.Get();
+            externalDamageManager.DamagePointParticleEffects = new List<GameObject>()
             {
                 CyclopsDefaultAssets.EXTERNAL_DAMAGE_POINT_PARTICLES,
             };
-            damage.DamagePointGameObjects = new List<GameObject>()
+            externalDamageManager.DamagePointGameObjects = new List<GameObject>()
             {
                 CyclopsDefaultAssets.EXTERNAL_DAMAGE_POINT,
             };
+
+            InternalFireManager internalFireManager = submarine.GetOrAddComponent<InternalFireManager>();
+            internalFireManager.SubmarineLiveMixin = liveMixin;
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)

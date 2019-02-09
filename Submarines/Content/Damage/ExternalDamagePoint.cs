@@ -44,7 +44,6 @@ namespace Submarines.Content.Damage
 
         public void NeedsRepairing()
         {
-            Utilities.Log.Print("Callleddd NeedsRepairing");
             liveMixin.health = 1;
             ps?.Play();
             gameObject.SetActive(true);
@@ -52,7 +51,6 @@ namespace Submarines.Content.Damage
 
         public void Repaired()
         {
-            Utilities.Log.Print("Callleddd Repaired");
             liveMixin.health = 1;
             ps?.Stop();
             ExternalDamageManager?.DamagePointRepaired(this);

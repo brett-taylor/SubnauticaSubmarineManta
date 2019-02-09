@@ -70,6 +70,7 @@ namespace Class1Vehicles.Utilities
         }
 
         private string fmodAsset = "cyclops_door_open";
+        private string prefabAsset = "cyclopsfire";
         private void DrawGeneralDebugMenu()
         {
             if (GUILayout.Button("Unlimited Oxygen"))
@@ -184,6 +185,27 @@ namespace Class1Vehicles.Utilities
                     lm.data.knifeable = true;
                 }
             }
+
+            GUILayout.BeginHorizontal();
+            prefabAsset = GUILayout.TextField(prefabAsset);
+            if (GUILayout.Button("Spawn prefab"))
+            {
+                GameObject[] prefabs = Resources.FindObjectsOfTypeAll<GameObject>();
+                foreach (GameObject prefab in prefabs)
+                {
+                    if (prefab.name.ToLower().Equals(prefabAsset))
+                    {
+                        GameObject newPrefab = Instantiate(prefab);
+                        newPrefab.transform.position = Player.main.transform.position;
+                        newPrefab.transform.position += 5f * gameObject.transform.forward;
+                        foreach(Component c in prefab.GetComponentsInChildren(typeof(Component)))
+                        {
+                            Log.Print("Component:" + c);
+                        }
+                    }
+                }
+            }
+            GUILayout.EndHorizontal();
         }
 
         private void DrawCyclopsDebugMenu()
@@ -378,11 +400,23 @@ namespace Class1Vehicles.Utilities
                 }
             }
 
-            if (GUILayout.Button("Create Cyclops Damage Point Unattached"))
+            if (GUILayout.Button("Subfire information."))
             {
-                GameObject gameobject = Instantiate(CyclopsDefaultAssets.EXTERNAL_DAMAGE_POINT);
-                gameobject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 2f;
-                gameobject.transform.LookAt(Player.main.transform);
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    {
+                        SubFire subFire = raycastHit4.rigidbody.GetComponentInChildren<SubFire>();
+                        if (subFire == null)
+                        {
+                            Log.Print("Cyclop's subfire not found.");
+                            return;
+                        }
+
+                        Utilities.Log.Print("Fire prefab: " + subFire.firePrefab);
+                    }
+                }
             }
         }
 
