@@ -14,6 +14,7 @@ namespace Submarines.DefaultCyclopsContent
     public class CyclopsUnderAttackCallout : MonoBehaviour
     {
         public FMODAsset UnderAttackCallout { get; set; } = null;
+        private bool isInside = false;
 
         public void Start()
         {
@@ -28,9 +29,19 @@ namespace Submarines.DefaultCyclopsContent
             }
         }
 
+        public void OnPlayerEnteredSubmarine()
+        {
+            isInside = true;
+        }
+
+        public void OnPlayerExitedSubmarine()
+        {
+            isInside = false;
+        }
+
         public void OnTakeDamage(DamageInfo damageInfo)
         {
-            if (damageInfo.damage > 0 && damageInfo.type == DamageType.Normal || damageInfo.type == DamageType.Electrical)
+            if (isInside && damageInfo.damage > 0 && (damageInfo.type == DamageType.Normal || damageInfo.type == DamageType.Electrical))
             {
                 Utils.PlayFMODAsset(UnderAttackCallout, MainCamera.camera.transform, 20f);
             }
