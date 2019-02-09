@@ -212,9 +212,9 @@ namespace Manta.Core
             }
             lightsManager.ExternalLights = externalLightsList;
             lightsManager.InternalLights = internalLightsList;
-            lightsManager.ExternalLightsOnIntensity = 1f;
+            lightsManager.ExternalLightsOnIntensity = 1.5f;
             lightsManager.ExternalLightsOffIntensity = 0f;
-            lightsManager.InternalLightsOnIntensity = 1f;
+            lightsManager.InternalLightsOnIntensity = 1.5f;
             lightsManager.InternalLightsOffIntensity = 0f;
             lightsManager.EnableInternalLightsOnStart = true;
             lightsManager.EnableExternalLightsOnStart = true;
@@ -222,9 +222,10 @@ namespace Manta.Core
             EmergencyLighting emergencyLighting = submarine.GetOrAddComponent<EmergencyLighting>();
             emergencyLighting.LightsAffected = internalLightsList;
             emergencyLighting.StartEndColor = internalLightsList[0].color;
-            emergencyLighting.LerpOneColor = Color.red;
-            emergencyLighting.LerpTwoColor = Color.black;
-            emergencyLighting.LerpTime = 2f;
+            emergencyLighting.FlickerColor = Color.red;
+            emergencyLighting.FlickerTime = 0.5f;
+            emergencyLighting.FlickerIntensity = 3f;
+            emergencyLighting.LerpColorTime = 0.5f;
 
             ExternalDamageManager externalDamageManager = submarine.GetOrAddComponent<ExternalDamageManager>();
             externalDamageManager.DamagePoints = submarine.FindChild("PointsOfInterest").FindChild("DamagePoints").transform;

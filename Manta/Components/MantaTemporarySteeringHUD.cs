@@ -1,4 +1,5 @@
-﻿using Submarines.Engine;
+﻿using Submarines.Content.Lighting;
+using Submarines.Engine;
 using UnityEngine;
 
 namespace Manta.Components
@@ -65,6 +66,13 @@ namespace Manta.Components
             GUILayout.Label("Press 8 to set engine state to normal");
             GUILayout.Label("Press 9 to set engine state to fast");
             GUILayout.Label("Press 0 to set engine state to silent running");
+            GUILayout.Label("Internal Lights On: " + GetComponent<LightsManager>().InternalLightsOn);
+            GUILayout.Label("External Lights On: " + GetComponent<LightsManager>().ExternalLightsOn);
+            GUILayout.Label("Press LShift and 6 to toggle internal lights");
+            GUILayout.Label("Press LShift and 7 to toggle external lights");
+            GUILayout.Label("Emergency Lights On: " + GetComponent<EmergencyLighting>().IsRunning);
+            GUILayout.Label("Press LShift and 8 to enable emergency lighting");
+            GUILayout.Label("Press LShift and 9 to disable emergency lighting");
         }
 
         public void Update()
@@ -74,25 +82,43 @@ namespace Manta.Components
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha6))
+            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))
             {
                 GetComponent<EngineManager>().SetNewEngineState(EngineState.OFF, false, true);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha7))
+            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha7))
             {
                 GetComponent<EngineManager>().SetNewEngineState(EngineState.SLOW, false, true);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha8))
+            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha8))
             {
                 GetComponent<EngineManager>().SetNewEngineState(EngineState.NORMAL, false, true);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha9))
+            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha9))
             {
                 GetComponent<EngineManager>().SetNewEngineState(EngineState.FAST, false, true);
             }
-            else if(Input.GetKeyDown(KeyCode.Alpha0))
+            if(!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha0))
             {
                 GetComponent<EngineManager>().SetNewEngineState(EngineState.SPECIAL, false, true);
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))
+            {
+                GetComponent<LightsManager>().ToggleInternalLights();
+            }
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha7))
+            {
+                GetComponent<LightsManager>().ToggleExternalLights();
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                GetComponent<EmergencyLighting>().EnableEmergencyLighting();
+            }
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                GetComponent<EmergencyLighting>().DisableEmergencyLighting();
             }
         }
     }

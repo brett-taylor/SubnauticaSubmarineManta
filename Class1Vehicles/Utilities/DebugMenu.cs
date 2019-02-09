@@ -1,6 +1,7 @@
 ﻿using Manta.Core;
 using Odyssey.Core;
 using Submarines.Content.Damage;
+using Submarines.Content.Lighting;
 using Submarines.DefaultCyclopsContent;
 using Submarines.Movement;
 using Submarines.Utilities.Extensions;
@@ -490,6 +491,18 @@ namespace Class1Vehicles.Utilities
             GUILayout.Box("Unused Damage Point: " + manta.GetComponent<ExternalDamageManager>().GetUnusedDamagePointsCount());
             GUILayout.Box("Used Damage Point: " + manta.GetComponent<ExternalDamageManager>().GetUsedDamagePointsCount());
             GUILayout.Box("Amount of Damage Points that *should* be showing: " + manta.GetComponent<ExternalDamageManager>().GetNumberOfDamagePointsThatShouldBeShowing());
+
+            if (GUILayout.Button("Toggle Emergency Lighting"))
+            {
+                if (manta.GetComponent<EmergencyLighting>().IsRunning)
+                {
+                    manta.GetComponent<EmergencyLighting>().DisableEmergencyLighting();
+                }
+                else
+                {
+                    manta.GetComponent<EmergencyLighting>().EnableEmergencyLighting();
+                }
+            }
         }
 
         private OdysseySubmarine odyssey;

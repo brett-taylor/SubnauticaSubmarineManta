@@ -4,20 +4,24 @@ using UnityEngine;
 namespace Submarines.Content.Lighting
 {
     /**
-     * Allows the lighting to toggle between two colours and a start and ending color.
+     * Allows the lighting to swap to a colour then flicker between that colour and black.
      */
     public class EmergencyLighting : MonoBehaviour
     {
         public List<Light> LightsAffected { get; set; }
         public Color StartEndColor { get; set; }
-        public Color LerpOneColor { get; set; }
-        public Color LerpTwoColor { get; set; }
-        public float LerpTime { get; set; } = 1f;
+        public Color FlickerColor { get; set; }
+        public float FlickerTime { get; set; } = 2f;
+        public float FlickerIntensity { get; set; } = 2f;
+        public bool IsRunning { get; private set; } = false;
+        public float LerpColorTime { get; set; } = 0.25f;
 
-        private bool isRunning = false;
+        private float originalIntensity = 1f;
         private bool isStarting = false;
+        private bool isWantingToEnd = false;
         private bool isEnding = false;
-        private Color nextColor;
+        private float currentTimer = 0f;
+        private bool isAdding = true;
 
         public virtual void Start()
         {
@@ -35,46 +39,125 @@ namespace Submarines.Content.Lighting
                 return;
             }
 
-            if (LerpOneColor == null)
+            if (FlickerColor == null)
             {
                 Utilities.Log.Print("EmergencyLighting doesn't have LerpOneColor assigned. Destroying.");
                 Destroy(this);
                 return;
             }
 
-            if (LerpTwoColor == null)
-            {
-                Utilities.Log.Print("EmergencyLighting doesn't have LerpTwoColor assigned. Destroying.");
-                Destroy(this);
-                return;
-            }
+            originalIntensity = LightsAffected[0].intensity;
         }
 
         public virtual void Update()
         {
-            if (isRunning == false)
+            if (IsRunning == false)
             {
                 return;
             }
 
-            if (nextColor == null)
+            if (isStarting)
             {
+                currentTimer += Time.deltaTime;
+                Color newColor = UWE.Utils.LerpColor(StartEndColor, FlickerColor, currentTimer / LerpColorTime);
+                float newIntensity = Mathf.SmoothStep(originalIntensity, FlickerIntensity, currentTimer / LerpColorTime);
+                AssignColorToLights(newColor);
+                AssignIntensityToLights(newIntensity);
+                if (currentTimer > LerpColorTime)
+                {
+                    isStarting = false;
+                    currentTimer = FlickerTime + 1f;
+                }
+            }
+            else if (isEnding)
+            {
+                currentTimer += Time.deltaTime;
+                Color newColor = UWE.Utils.LerpColor(FlickerColor, StartEndColor, currentTimer / LerpColorTime);
+                float newIntensity = Mathf.SmoothStep(FlickerIntensity, originalIntensity, currentTimer / LerpColorTime);
+                AssignColorToLights(newColor);
+                AssignIntensityToLights(newIntensity);
+                if (currentTimer > LerpColorTime)
+                {
+                    isEnding = false;
+                    IsRunning = false;
+                    currentTimer = 0f;
+                }
+            }
+            else
+            {
+                if (isAdding)
+                {
+                    currentTimer += Time.deltaTime;
+                }
+                else
+                {
+                    currentTimer -= Time.deltaTime;
+                }
 
+                if (currentTimer > FlickerTime)
+                {
+                    isAdding = false;
+                    if (isWantingToEnd == true)
+                    {
+                        currentTimer = 0f;
+                        isEnding = true;
+                        isWantingToEnd = false;
+                        return;
+                    }
+                }
+                else if (currentTimer < 0)
+                {
+                    isAdding = true;
+                }
+
+                float newIntensity = Mathf.SmoothStep(0f, FlickerIntensity, currentTimer / FlickerTime);
+                Utilities.Log.Print(newIntensity + "", false);
+                AssignIntensityToLights(newIntensity);
+            }
+        }
+
+        private void AssignColorToLights(Color color)
+        {
+            foreach(Light light in LightsAffected)
+            {
+                light.color = color;
+            }
+        }
+
+        private void AssignIntensityToLights(float intensity)
+        {
+            foreach (Light light in LightsAffected)
+            {
+                light.intensity = intensity;
             }
         }
 
         public virtual void EnableEmergencyLighting()
         {
+            if (IsRunning)
+            {
+                return;
+            }
+
+            IsRunning = true;
             isStarting = true;
+            isAdding = true;
+            isWantingToEnd = false;
             isEnding = false;
-            isRunning = true;
+            currentTimer = 0f;
         }
 
         public virtual void DisableEmergencyLighting()
         {
+            if (IsRunning == false)
+            {
+                return;
+            }
+
+            IsRunning = true;
             isStarting = false;
-            isEnding = true;
-            isRunning = true;
+            isEnding = false;
+            isWantingToEnd = true;
         }
     }
 }
