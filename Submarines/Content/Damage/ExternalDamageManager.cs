@@ -77,10 +77,13 @@ namespace Submarines.Content.Damage
             SendMessage("ExternalDamagePointRepaired", damagePoint, SendMessageOptions.DontRequireReceiver);
         }
 
-        public void OnTakeDamage()
+        public void OnTakeDamage(DamageInfo damageInfo)
         {
-            int numberToCreate = GetNumberOfDamagePointsThatShouldBeShowing() - GetUsedDamagePointsCount();
-            EnableMultipleDamagePoints(numberToCreate);
+            if (damageInfo.damage > 0)
+            {
+                int numberToCreate = GetNumberOfDamagePointsThatShouldBeShowing() - GetUsedDamagePointsCount();
+                EnableMultipleDamagePoints(numberToCreate);
+            }
         }
 
         public void EnableMultipleDamagePoints(int amount)

@@ -239,6 +239,11 @@ namespace Manta.Core
 
             InternalFireManager internalFireManager = submarine.GetOrAddComponent<InternalFireManager>();
             internalFireManager.SubmarineLiveMixin = liveMixin;
+            internalFireManager.FirePoints = submarine.FindChild("PointsOfInterest").FindChild("FirePoints").transform;
+            internalFireManager.FirePrefabs = new List<GameObject>()
+            {
+                CyclopsDefaultAssets.CYCLOPS_FIRE,
+            };
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
@@ -261,7 +266,7 @@ namespace Manta.Core
             Material windshield = exteriorRenderer.materials[2];
             Material glass = exteriorRenderer.materials[3];
             Material wings = exteriorRenderer.materials[4];
-            Material decals = manta.FindChild("Model").FindChild("decals").GetComponent<MeshRenderer>().material;
+            Material[] decals = manta.FindChild("Model").FindChild("Decals").GetComponent<MeshRenderer>().materials;
 
             tail.shader = shader;
             tail.EnableKeyword("MARMO_SPECMAP");
@@ -360,16 +365,19 @@ namespace Manta.Core
             glass.SetFloat("_Fresnel", 0.9f);
             glass.renderQueue = 3101;*/
 
-            decals.shader = shader;
-            decals.EnableKeyword("MARMO_SPECMAP");
-            decals.EnableKeyword("_ZWRITE_ON");
-            decals.EnableKeyword("MARMO_ALPHA");
-            decals.EnableKeyword("MARMO_ALPHA_CLIP");
-            decals.SetColor("_Color", Color.white);
-            decals.SetColor("_SpecColor", Color.white);
-            decals.SetFloat("_SpecInt", 1f);
-            decals.SetFloat("_Shininess", 6.5f);
-            decals.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
+            foreach (Material decalMaterial in decals)
+            {
+                decalMaterial.shader = shader;
+                decalMaterial.EnableKeyword("MARMO_SPECMAP");
+                decalMaterial.EnableKeyword("_ZWRITE_ON");
+                decalMaterial.EnableKeyword("MARMO_ALPHA");
+                decalMaterial.EnableKeyword("MARMO_ALPHA_CLIP");
+                decalMaterial.SetColor("_Color", Color.white);
+                decalMaterial.SetColor("_SpecColor", Color.white);
+                decalMaterial.SetFloat("_SpecInt", 1f);
+                decalMaterial.SetFloat("_Shininess", 6.5f);
+                decalMaterial.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
+            }
         }
     }
 }
