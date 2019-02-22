@@ -25,6 +25,9 @@ namespace Class1Vehicles
 
             Odyssey.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
             Odyssey.EntryPoint.Entry();
+
+            MiniMantaVehicle.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
+            MiniMantaVehicle.EntryPoint.Entry();
         }
     }
 }
