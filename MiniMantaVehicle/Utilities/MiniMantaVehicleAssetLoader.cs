@@ -22,7 +22,7 @@ namespace MiniMantaVehicle.Utilities
             MINI_MANTA_VEHICLE_EXTERIOR = ASSET_BUNDLE.LoadAsset("MiniMantaVehicle") as GameObject;
             if (MINI_MANTA_VEHICLE_EXTERIOR == null)
             {
-                Log.Error("Odyssey exterior not found.");
+                Log.Error("MiniMantaVehicle exterior not found.");
             }
         }
     }

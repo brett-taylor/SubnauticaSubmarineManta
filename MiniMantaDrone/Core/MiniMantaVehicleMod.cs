@@ -1,20 +1,20 @@
-﻿using MiniMantaVehicle.Utilities;
+﻿using MiniMantaDrone.Utilities;
 using SMLHelper.V2.Assets;
 using Submarines.Utilities.Extension;
 using UnityEngine;
 
-namespace MiniMantaVehicle.Core
+namespace MiniMantaDrone.Core
 {
     /**
-    * The Mini Manta Vehicle
+    * The Mini Manta Drone
     */
-    public class MiniMantaVehicleMod : Spawnable
+    public class MiniMantaDroneMod : Spawnable
     {
-        public static TechType MINI_MANTA_VEHICLE_TECH_TYPE = new MiniMantaVehicleMod().TechType;
+        public static TechType MINI_MANTA_DRONE_TECH_TYPE = new MiniMantaDroneMod().TechType;
         public override string AssetsFolder => EntryPoint.ASSET_FOLDER_LOCATION;
         public override string IconFileName => "MantaIcon.png";
 
-        public MiniMantaVehicleMod() : base("SubmarineMiniMantaVehicle", "Mini Manta Vehicle", "A driviable vehicle named the Mini Manta")
+        public MiniMantaDroneMod() : base("SubmarineMiniMantaDrone", "Mini Manta Drone", "A drone built for the Manta submarine.")
         {
         }
 
@@ -24,12 +24,12 @@ namespace MiniMantaVehicle.Core
         }
 
         /*
-        * The first part of setting up the mini manta vehicle. If the components are self contained and do not rely on other components
+        * The first part of setting up the mini manta drone. If the components are self contained and do not rely on other components
         * adding it here works fine.
         */
         public static GameObject CreateMiniMantaVehicle()
         {
-            GameObject vehicle = Object.Instantiate(MiniMantaVehicleAssetLoader.MINI_MANTA_VEHICLE_EXTERIOR);
+            GameObject vehicle = Object.Instantiate(MiniMantaDroneAssetLoader.MINI_MANTA_DRONE_EXTERIOR);
             ApplyMaterials(vehicle);
 
             SkyApplier skyApplier = vehicle.GetOrAddComponent<SkyApplier>();
@@ -53,8 +53,8 @@ namespace MiniMantaVehicle.Core
             forces.underwaterDrag = 0.5f;
             forces.underwaterGravity = 0;
 
-            vehicle.GetOrAddComponent<TechTag>().type = MINI_MANTA_VEHICLE_TECH_TYPE;
-            vehicle.GetOrAddComponent<PrefabIdentifier>().ClassId = "SubmarineMiniMantaVehicle";
+            vehicle.GetOrAddComponent<TechTag>().type = MINI_MANTA_DRONE_TECH_TYPE;
+            vehicle.GetOrAddComponent<PrefabIdentifier>().ClassId = "SubmarineMiniMantaDrone";
             return vehicle;
         }
 

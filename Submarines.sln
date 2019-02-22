@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odyssey", "Odyssey\Odyssey.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMantaVehicle", "MiniMantaVehicle\MiniMantaVehicle.csproj", "{A31E560F-8D9B-4D16-BAD0-ECDB78CD4497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMantaDrone", "MiniMantaDrone\MiniMantaDrone.csproj", "{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A31E560F-8D9B-4D16-BAD0-ECDB78CD4497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A31E560F-8D9B-4D16-BAD0-ECDB78CD4497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A31E560F-8D9B-4D16-BAD0-ECDB78CD4497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
