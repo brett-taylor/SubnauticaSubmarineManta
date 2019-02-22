@@ -368,15 +368,10 @@ namespace Manta.Core
             foreach (Material decalMaterial in decals)
             {
                 decalMaterial.shader = shader;
-                decalMaterial.EnableKeyword("MARMO_SPECMAP");
                 decalMaterial.EnableKeyword("_ZWRITE_ON");
                 decalMaterial.EnableKeyword("MARMO_ALPHA");
                 decalMaterial.EnableKeyword("MARMO_ALPHA_CLIP");
                 decalMaterial.SetColor("_Color", Color.white);
-                decalMaterial.SetColor("_SpecColor", Color.white);
-                decalMaterial.SetFloat("_SpecInt", 1f);
-                decalMaterial.SetFloat("_Shininess", 6.5f);
-                decalMaterial.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             }
         }
     }

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SubmarineAssetLoader.cs" />
+    <Compile Include="Content\Damage\InternalFirePoint.cs" />
     <Compile Include="Content\Lighting\EmergencyLighting.cs" />
     <Compile Include="Content\Damage\ExternalDamageManager.cs" />
     <Compile Include="Content\Damage\ExternalDamagePoint.cs" />

@@ -10,12 +10,7 @@ namespace Submarines.Content.Damage
     {
         public LiveMixin SubmarineLiveMixin { get; set; }
         public Transform FirePoints { get; set; }
-        public List<GameObject> FirePrefabs { get; set; }
-        public List<Fire> ActiveFires { get; private set; }
-
-        private SubRoot submarine;
-        private List<Transform> firePoints;
-        private List<Transform> freeFirePoints;
+        public List<GameObject> FirePrefabs { get; set; } // All children in this object will be turned into a potential fire point
 
         public void Start()
         {
@@ -39,40 +34,6 @@ namespace Submarines.Content.Damage
                 Destroy(this);
                 return;
             }
-
-            submarine = gameObject.GetComponent<SubRoot>();
-            ActiveFires = new List<Fire>();
-            firePoints = new List<Transform>();
-            freeFirePoints = new List<Transform>();
-            foreach (Transform potentialFirePoint in FirePoints)
-            {
-                firePoints.Add(potentialFirePoint);
-                freeFirePoints.Add(potentialFirePoint);
-            }
-        }
-
-        public void OnTakeDamage(DamageInfo damageInfo)
-        {
-            CreateFirePoint();
-        }
-
-        public void CreateFirePoint()
-        {
-            if (freeFirePoints.Count == 0)
-            {
-                return;
-            }
-
-            int randomPosition = Random.Range(0, freeFirePoints.Count - 1);
-            int randomFirePrefab = Random.Range(0, FirePrefabs.Count - 1);
-            GameObject fireGO = Utils.SpawnZeroedAt(FirePrefabs[randomFirePrefab], freeFirePoints[randomPosition], false);
-            Fire fire = fireGO.GetComponentInChildren<Fire>();
-            fire.fireSubRoot = submarine;
-        }
-
-        public void FirePointExtinguished(Fire fire)
-        {
-
         }
     }
 }
