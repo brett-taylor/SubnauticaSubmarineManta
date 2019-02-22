@@ -1,8 +1,9 @@
 ﻿using Manta.Core;
+using MiniMantaDrone.Core;
+using MiniMantaVehicle.Core;
 using Odyssey.Core;
 using Submarines.Content.Damage;
 using Submarines.Content.Lighting;
-using Submarines.DefaultCyclopsContent;
 using Submarines.Movement;
 using Submarines.Utilities.Extensions;
 using System.Reflection;
@@ -724,6 +725,26 @@ namespace Class1Vehicles.Utilities
             }
         }
 
+        private void DrawMiniMantaVehicleMenu()
+        {
+            if (GUILayout.Button("Spawn Mini Manta Vehicle"))
+            {
+                GameObject gameObject = MiniMantaVehicleMod.CreateMiniMantaVehicle();
+                gameObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 4f;
+                gameObject.transform.LookAt(Player.main.transform);
+            }
+        }
+
+        private void DrawMiniMantaDroneMenu()
+        {
+            if (GUILayout.Button("Spawn Mini Manta Drone"))
+            {
+                GameObject gameObject = MiniMantaDroneMod.CreateMiniMantaDrone();
+                gameObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 3f;
+                gameObject.transform.LookAt(Player.main.transform);
+            }
+        }
+
         private void OnGUI()
         {
             if (isOpen == false)
@@ -747,6 +768,13 @@ namespace Class1Vehicles.Utilities
                     showDebugMenuNo = 3;
                 GUILayout.EndHorizontal();
 
+                GUILayout.BeginHorizontal();
+                if (GUILayout.Button("Mini Manta Vehicle"))
+                    showDebugMenuNo = 5;
+                if (GUILayout.Button("Mini Manta Drone"))
+                    showDebugMenuNo = 6;
+                GUILayout.EndHorizontal();
+
                 GUILayout.Space(10f);
 
                 if (showDebugMenuNo == 0)
@@ -759,6 +787,10 @@ namespace Class1Vehicles.Utilities
                     DrawHostilesMenu();
                 else if (showDebugMenuNo == 4)
                     DrawGeneralDebugMenu();
+                else if (showDebugMenuNo == 5)
+                    DrawMiniMantaVehicleMenu();
+                else if (showDebugMenuNo == 6)
+                    DrawMiniMantaDroneMenu();
                 else
                     GUILayout.Label("No Menu Selected");
 

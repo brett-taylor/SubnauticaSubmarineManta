@@ -20,14 +20,14 @@ namespace MiniMantaDrone.Core
 
         public override GameObject GetGameObject()
         {
-            return CreateMiniMantaVehicle();
+            return CreateMiniMantaDrone();
         }
 
         /*
         * The first part of setting up the mini manta drone. If the components are self contained and do not rely on other components
         * adding it here works fine.
         */
-        public static GameObject CreateMiniMantaVehicle()
+        public static GameObject CreateMiniMantaDrone()
         {
             GameObject vehicle = Object.Instantiate(MiniMantaDroneAssetLoader.MINI_MANTA_DRONE_EXTERIOR);
             ApplyMaterials(vehicle);
