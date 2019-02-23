@@ -35,5 +35,13 @@ namespace Submarines.Content.Damage
                 return;
             }
         }
+
+        public void OnTakeDamage(DamageInfo damageInfo)
+        {
+            if (damageInfo.damage > 0)
+            {
+
+            }
+        }
     }
 }

@@ -8,6 +8,6 @@ namespace Submarines.Content.Damage
      */
     public class InternalFirePoint
     {
-
+        
     }
 } 

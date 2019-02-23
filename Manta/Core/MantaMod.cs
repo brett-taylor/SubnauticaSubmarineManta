@@ -169,7 +169,8 @@ namespace Manta.Core
                 ForwardAccelerationSpeed = 5f,
                 BackwardsAccelerationSpeed = 3f,
                 AscendDescendSpeed = 3f,
-                RotationSpeed = 0.3f
+                RotationSpeed = 0.3f,
+                StrafeSpeed = 2f
             };
 
             EngineManager engineManager = submarine.GetOrAddComponent<EngineManager>();

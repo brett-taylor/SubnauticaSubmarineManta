@@ -9,6 +9,7 @@ namespace Submarines.Movement
 {
     public class MovementController : MonoBehaviour
     {
+        private static readonly KeyCode MODIFIER_KEY_CODE = KeyCode.LeftShift;
         public bool IsControllable { get; set; }
         public Vector3 LocalVelocity { get; set; }
         public Transform ApplyForceLocation { get; set; }
@@ -18,6 +19,7 @@ namespace Submarines.Movement
 
         private Rigidbody rigidbody;
         private Vector3 throttle;
+        private bool isModifierDown = false;
 
         public void Start()
         {
@@ -37,6 +39,7 @@ namespace Submarines.Movement
             }
 
             throttle = GameInput.GetMoveDirection();
+            isModifierDown = Input.GetKey(MODIFIER_KEY_CODE);
         }
 
         private MovementData GetCurrentMovementData()
@@ -99,7 +102,16 @@ namespace Submarines.Movement
             }
 
             // Rotation
-            rigidbody.AddTorque(transform.up * (throttle.x * movementData.RotationSpeed), ForceMode.Acceleration);
+            if (!isModifierDown)
+            {
+                rigidbody.AddTorque(transform.up * (throttle.x * movementData.RotationSpeed), ForceMode.Acceleration);
+            }
+
+            // Strafe
+            if (isModifierDown)
+            {
+                rigidbody.AddForce(throttle.x * movementData.StrafeSpeed * transform.right, ForceMode.Acceleration);
+            }
 
             if (EngineSound != null)
             {
