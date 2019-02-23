@@ -13,7 +13,7 @@ namespace Class1Vehicles.Patchers
         [HarmonyPostfix]
         public static void Postfix()
         {
-            if (Input.GetKeyDown(KeyCode.O))
+            if (Input.GetKey(KeyCode.CapsLock) && Input.GetKeyDown(KeyCode.W))
             {
                 Utilities.DebugMenu.main.Toggle();
             }

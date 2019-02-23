@@ -28,7 +28,7 @@ namespace Class1Vehicles.Utilities
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKey(KeyCode.CapsLock) && Input.GetKeyDown(KeyCode.Q))
             {
                 showCursor = !showCursor;
             }
@@ -754,7 +754,7 @@ namespace Class1Vehicles.Utilities
 
             Rect windowRect = GUILayout.Window(2352, SIZE, (id) =>
             {
-                GUILayout.Box("P to show/hide cursor");
+                GUILayout.Box("'Capslock and Q' to show/hide cursor");
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("General Menu"))
                     showDebugMenuNo = 4;
