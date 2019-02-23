@@ -248,6 +248,12 @@ namespace Manta.Core
             internalFireManager.DamageDonePerFirePerSecond = 5f;
             internalFireManager.Submarine = mantaSubmarine;
             internalFireManager.ChancePerDamageTakenToSpawnFire = 5;
+
+            AutoRegenConditional autoRegen = submarine.GetOrAddComponent<AutoRegenConditional>();
+            autoRegen.InternalFireManager = internalFireManager;
+            autoRegen.ExternalDamageManager = externalDamageManager;
+            autoRegen.LiveMixin = liveMixin;
+            autoRegen.RegenPerSecond = 2f;
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)

@@ -15,10 +15,9 @@ namespace Submarines.Content.Damage
         public List<GameObject> FirePrefabs { get; set; } // All children in this object will be turned into a potential fire point
         public float DamageDonePerFirePerSecond { get; set; } = 5;
         public int ChancePerDamageTakenToSpawnFire { get; set; } = 5; // 1 in X chance of spawning a fire.
+        public int CurrentFireCount { get; private set; } = 0;
 
         private List<Vector3> freeFirePoints;
-        private int maxFireCounts = 0;
-        private int currentFireCount = 0;
 
         public void Start()
         {
@@ -55,7 +54,6 @@ namespace Submarines.Content.Damage
             {
                 freeFirePoints.Add(potentialFirePoint.position);
             }
-            maxFireCounts = freeFirePoints.Count;
         }
 
         public void OnTakeDamage(DamageInfo damageInfo)
@@ -91,22 +89,23 @@ namespace Submarines.Content.Damage
             firePoint.Fire = fire;
             firePoint.FireManager = this;
             freeFirePoints.RemoveAt(randomPosition);
+
+            int oldFireCount = CurrentFireCount;
+            CurrentFireCount += 1;
             SendMessage("InternalFirePointCreated", firePoint, SendMessageOptions.DontRequireReceiver);
-            
-            if (currentFireCount == 0)
+            if (oldFireCount == 0)
             {
                 InvokeRepeating("DamageSubmarinePerSecond", 1f, 1f);
             }
-            currentFireCount += 1;
         }
 
         public void FireExtinguished(Vector3 position)
         {
             freeFirePoints.Add(position);
+            CurrentFireCount -= 1;
             SendMessage("InternalFirePointExtinguished", null, SendMessageOptions.DontRequireReceiver);
-            currentFireCount -= 1;
 
-            if (currentFireCount == 0)
+            if (CurrentFireCount == 0)
             {
                 CancelInvoke("DamageSubmarinePerSecond");
             }
@@ -114,7 +113,7 @@ namespace Submarines.Content.Damage
 
         private void DamageSubmarinePerSecond()
         {
-            SubmarineLiveMixin.TakeDamage(currentFireCount * DamageDonePerFirePerSecond, type: DamageType.Fire);
+            SubmarineLiveMixin.TakeDamage(CurrentFireCount * DamageDonePerFirePerSecond, type: DamageType.Fire);
         }
     }
 }

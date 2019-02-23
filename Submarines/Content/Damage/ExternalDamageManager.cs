@@ -15,10 +15,8 @@ namespace Submarines.Content.Damage
         public List<GameObject> DamagePointParticleEffects { get; set; }
         public LiveMixin SubmarineLiveMixin { get; set; }
         public LiveMixinData LiveMixinDataForExternalDamagePoints { get; set; }
-        // The EndOfHealthBuffer is added to the MaxHealth. This makes that all damage points are shown before the sub's health hits 0.
-        public float EndOfHealthBuffer { get; set; } = 50;
-        // The StartOfHealthBuffer is added to the subs current health. This means the sub can take some damage before a hole appears.
-        public float StartOfHealthBuffer { get; set; } = 50; 
+        public float EndOfHealthBuffer { get; set; } = 50; // The EndOfHealthBuffer is added to the MaxHealth. This makes that all damage points are shown before the sub's health hits 0.
+        public float StartOfHealthBuffer { get; set; } = 50; // The StartOfHealthBuffer is added to the subs current health. This means the sub can take some damage before a hole appears.
 
         private List<ExternalDamagePoint> damagePoints;
         private List<ExternalDamagePoint> freeDamagePoints;
@@ -79,7 +77,8 @@ namespace Submarines.Content.Damage
 
         public void OnTakeDamage(DamageInfo damageInfo)
         {
-            if (damageInfo.damage > 0)
+            Utilities.Log.Print("DamageType: " + damageInfo.type);
+            if (damageInfo.damage > 0 && damageInfo.type == DamageType.Normal)
             {
                 int numberToCreate = GetNumberOfDamagePointsThatShouldBeShowing() - GetUsedDamagePointsCount();
                 EnableMultipleDamagePoints(numberToCreate);

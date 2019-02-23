@@ -105,7 +105,6 @@ namespace Submarines.Content.Lighting
                 }
 
                 float newIntensity = Mathf.SmoothStep(0f, FlickerIntensity, currentTimer / FlickerTime);
-                Utilities.Log.Print(newIntensity + "", false);
                 AssignIntensityToLights(newIntensity);
             }
         }
