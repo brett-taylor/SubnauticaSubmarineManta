@@ -245,6 +245,9 @@ namespace Manta.Core
             {
                 CyclopsDefaultAssets.CYCLOPS_FIRE,
             };
+            internalFireManager.DamageDonePerFirePerSecond = 5f;
+            internalFireManager.Submarine = mantaSubmarine;
+            internalFireManager.ChancePerDamageTakenToSpawnFire = 5;
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
