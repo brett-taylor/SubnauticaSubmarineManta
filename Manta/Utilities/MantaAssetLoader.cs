@@ -25,6 +25,10 @@ namespace Manta.Utilities
         public static Texture HULL_FOUR_EMISSIVE_MAP { get; private set; }
         public static Texture HULL_FOUR_SPEC_MAP { get; private set; }
 
+        public static Texture FLOOR_NORMAL_MAP { get; private set; }
+
+        public static Texture LIGHT_EMISSIVE_MAP{ get; private set; }
+
         public static void LoadAssets()
         {
             ASSET_BUNDLE = AssetBundle.LoadFromFile(ASSET_BUNDLE_LOCATION);
@@ -91,6 +95,18 @@ namespace Manta.Utilities
             if (HULL_FOUR_SPEC_MAP == null)
             {
                 Log.Error("Manta HULL_FOUR_SPEC_MAP not found.");
+            }
+
+            FLOOR_NORMAL_MAP = ASSET_BUNDLE.LoadAsset("HexNormal") as Texture;
+            if (FLOOR_NORMAL_MAP == null)
+            {
+                Log.Error("Manta FLOOR_NORMAL_MAP not found.");
+            }
+
+            LIGHT_EMISSIVE_MAP = ASSET_BUNDLE.LoadAsset("LightDecal") as Texture;
+            if (LIGHT_EMISSIVE_MAP == null)
+            {
+                Log.Error("Manta LIGHT_EMISSIVE_MAP not found.");
             }
         }
     }
