@@ -277,7 +277,7 @@ namespace Manta.Core
             Material windshield = exteriorRenderer.materials[2];
             Material glass = exteriorRenderer.materials[3];
             Material wings = exteriorRenderer.materials[4];
-            Material[] decals = manta.FindChild("Model").FindChild("Decals").GetComponent<MeshRenderer>().materials;
+            Material[] decals = manta.FindChild("Model").FindChild("ExteriorDecals").GetComponent<MeshRenderer>().materials;
             Material floor = model.FindChild("Floor").GetComponent<MeshRenderer>().material;
             Material floorDecals = model.FindChild("LightsAndFloorDecals").FindChild("FloorDecals").GetComponent<MeshRenderer>().material;
             Material lightDecals = model.FindChild("LightsAndFloorDecals").FindChild("LightDeclas").GetComponent<MeshRenderer>().material;
@@ -397,8 +397,8 @@ namespace Manta.Core
             floor.shader = shader;
             floor.EnableKeyword("MARMO_SPECMAP");
             floor.EnableKeyword("_ZWRITE_ON");
-            floor.SetColor("_Color", new Color(0.2f, 0.2f, 0.2f));
-            floor.SetColor("_SpecColor", new Color(0.2f, 0.2f, 0.2f));
+            floor.SetColor("_Color", Color.white);
+            floor.SetColor("_SpecColor", Color.white);
             floor.SetFloat("_SpecInt", 1f);
             floor.SetFloat("_Shininess", 6.5f);
             floor.SetFloat("_Fresnel", 0f);
@@ -434,8 +434,8 @@ namespace Manta.Core
             propeller.EnableKeyword("MARMO_SPECMAP");
             propeller.EnableKeyword("_ZWRITE_ON");
             propeller.SetColor("_Color", Color.white);
-            propeller.SetColor("_SpecColor", new Color(0.25f, 0.25f, 0.25f));
-            propeller.SetFloat("_SpecInt", 1f);
+            propeller.SetColor("_SpecColor", Color.white);
+            propeller.SetFloat("_SpecInt", 5f);
             propeller.SetFloat("_Shininess", 10f);
             propeller.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
             propeller.SetFloat("_Fresnel", 5f);
