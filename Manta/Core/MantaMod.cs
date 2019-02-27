@@ -254,6 +254,12 @@ namespace Manta.Core
             autoRegen.ExternalDamageManager = externalDamageManager;
             autoRegen.LiveMixin = liveMixin;
             autoRegen.RegenPerSecond = 2f;
+
+            InternalLeakManage internalLeakManage = submarine.GetOrAddComponent<InternalLeakManage>();
+            internalLeakManage.LeakPrefabs = new List<GameObject>()
+            {
+                CyclopsDefaultAssets.WATER_LEAK
+            };
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
@@ -285,8 +291,8 @@ namespace Manta.Core
             Material walls = model.FindChild("Walls").GetComponent<MeshRenderer>().material;
             Material doorWays = model.FindChild("Doorways").GetComponent<MeshRenderer>().material;
             Material propeller = model.FindChild("Propeller").GetComponent<MeshRenderer>().material;
-
-            model.FindChild("BackDoor").GetComponent<MeshRenderer>().material = walls;
+            Material[] moreInteriorDecals = model.FindChild("MoreInteriorDecals").GetComponent<MeshRenderer>().materials;
+            Material backDoor = model.FindChild("BackDoor").GetComponent<MeshRenderer>().material;
 
             tail.shader = shader;
             tail.EnableKeyword("MARMO_SPECMAP");
@@ -393,6 +399,7 @@ namespace Manta.Core
                 decalMaterial.EnableKeyword("MARMO_ALPHA_CLIP");
                 decalMaterial.SetColor("_Color", Color.white);
             }
+            decals[1].SetTexture("_BumpMap", MantaAssetLoader.EXTERIOR_DECALS_NORMAL_MAP);
 
             floor.shader = shader;
             floor.EnableKeyword("MARMO_SPECMAP");
@@ -407,12 +414,18 @@ namespace Manta.Core
             wallDoorDecals.shader = shader;
             wallDoorDecals.EnableKeyword("MARMO_SPECMAP");
             wallDoorDecals.EnableKeyword("_ZWRITE_ON");
-            wallDoorDecals.SetColor("_Color", new Color(0.2f, 0.2f, 0.2f));
-            wallDoorDecals.SetColor("_SpecColor", new Color(0.2f, 0.2f, 0.2f));
             wallDoorDecals.SetFloat("_SpecInt", 1f);
             wallDoorDecals.SetFloat("_Shininess", 6.5f);
             wallDoorDecals.SetFloat("_Fresnel", 0f);
             wallDoorDecals.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
+
+            backDoor.shader = shader;
+            backDoor.EnableKeyword("MARMO_SPECMAP");
+            backDoor.EnableKeyword("_ZWRITE_ON");
+            backDoor.SetFloat("_SpecInt", 1f);
+            backDoor.SetFloat("_Shininess", 6.5f);
+            backDoor.SetFloat("_Fresnel", 0f);
+            backDoor.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
 
             walls.shader = shader;
             walls.EnableKeyword("MARMO_SPECMAP");
@@ -471,6 +484,40 @@ namespace Manta.Core
             lightDecals.SetTexture("_Illum", MantaAssetLoader.LIGHT_EMISSIVE_MAP);
             lightDecals.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             lightDecals.SetFloat("_EnableGlow", 1.3f);
+
+            moreInteriorDecals[0].shader = shader;
+            moreInteriorDecals[0].EnableKeyword("_ZWRITE_ON");
+            moreInteriorDecals[0].EnableKeyword("MARMO_ALPHA");
+            moreInteriorDecals[0].EnableKeyword("MARMO_ALPHA_CLIP");
+            moreInteriorDecals[0].EnableKeyword("MARMO_EMISSION");
+            moreInteriorDecals[0].SetTexture("_BumpMap", MantaAssetLoader.WALL_DECALS_ONE_NORMAL_MAP);
+            moreInteriorDecals[0].SetColor("_GlowColor", Color.white);
+            moreInteriorDecals[0].SetFloat("_GlowStrength", 1f);
+            moreInteriorDecals[0].SetFloat("_EmissionLM", 0f);
+            moreInteriorDecals[0].SetVector("_EmissionColor", Vector4.zero);
+            moreInteriorDecals[0].SetTexture("_Illum", MantaAssetLoader.WALL_DECALS_ONE_EMISSIVE_MAP);
+            moreInteriorDecals[0].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
+            moreInteriorDecals[0].SetFloat("_EnableGlow", 1.3f);
+
+            moreInteriorDecals[1].shader = shader;
+            moreInteriorDecals[1].EnableKeyword("_ZWRITE_ON");
+            moreInteriorDecals[1].EnableKeyword("MARMO_ALPHA");
+            moreInteriorDecals[1].EnableKeyword("MARMO_ALPHA_CLIP");
+            moreInteriorDecals[1].EnableKeyword("MARMO_EMISSION");
+            moreInteriorDecals[1].SetTexture("_BumpMap", MantaAssetLoader.WALL_DECALS_TWO_NORMAL_MAP);
+            moreInteriorDecals[1].SetColor("_GlowColor", Color.white);
+            moreInteriorDecals[1].SetFloat("_GlowStrength", 1f);
+            moreInteriorDecals[1].SetFloat("_EmissionLM", 0f);
+            moreInteriorDecals[1].SetVector("_EmissionColor", Vector4.zero);
+            moreInteriorDecals[1].SetTexture("_Illum", MantaAssetLoader.WALL_DECALS_TWO_EMISSIVE_MAP);
+            moreInteriorDecals[1].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
+            moreInteriorDecals[1].SetFloat("_EnableGlow", 1.3f);
+
+            moreInteriorDecals[2].shader = shader;
+            moreInteriorDecals[2].EnableKeyword("_ZWRITE_ON");
+            moreInteriorDecals[2].EnableKeyword("MARMO_ALPHA");
+            moreInteriorDecals[2].EnableKeyword("MARMO_ALPHA_CLIP");
+            moreInteriorDecals[2].SetTexture("_BumpMap", MantaAssetLoader.WALL_DECALS_THREE_NORMAL_MAP);
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Submarines.DefaultCyclopsContent
         public static GameObject EXTERNAL_DAMAGE_POINT { get; private set; }
         public static GameObject EXTERNAL_DAMAGE_POINT_PARTICLES { get; private set; }
         public static GameObject CYCLOPS_FIRE { get; private set; }
+        public static GameObject WATER_LEAK { get; private set; }
 
         public static void LoadDefaultCyclopsContent()
         {
@@ -58,6 +59,9 @@ namespace Submarines.DefaultCyclopsContent
                         break;
                     case "cyclopsfire":
                         CYCLOPS_FIRE = prefab;
+                        break;
+                    case "x_waterleakspray_01":
+                        WATER_LEAK = prefab;
                         break;
                 }
             }

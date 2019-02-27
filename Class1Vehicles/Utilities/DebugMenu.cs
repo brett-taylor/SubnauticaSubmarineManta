@@ -198,8 +198,8 @@ namespace Class1Vehicles.Utilities
                     if (prefab.name.ToLower().Equals(prefabAsset))
                     {
                         GameObject newPrefab = Instantiate(prefab);
-                        newPrefab.transform.position = Player.main.transform.position;
-                        newPrefab.transform.position += 5f * gameObject.transform.forward;
+                        newPrefab.transform.position = Camera.main.transform.position;
+                        newPrefab.transform.position += Camera.main.transform.forward * 3f;
                         foreach(Component c in prefab.GetComponentsInChildren(typeof(Component)))
                         {
                             Log.Print("Component:" + c);
@@ -402,21 +402,34 @@ namespace Class1Vehicles.Utilities
                 }
             }
 
-            if (GUILayout.Button("Subfire information."))
+            if (GUILayout.Button("CyclopsExternalDamage information."))
             {
                 Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
                 {
                     if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
                     {
-                        SubFire subFire = raycastHit4.rigidbody.GetComponentInChildren<SubFire>();
-                        if (subFire == null)
+                        CyclopsExternalDamageManager dm = raycastHit4.rigidbody.GetComponentInChildren<CyclopsExternalDamageManager>();
+                        if (dm == null)
                         {
-                            Log.Print("Cyclop's subfire not found.");
+                            Log.Print("Cyclop's CyclopsExternalDamage not found.");
                             return;
                         }
 
-                        Utilities.Log.Print("Fire prefab: " + subFire.firePrefab);
+
+                        Utilities.Log.Print("Subleaks count: " + dm.subLeaks.Length);
+                        foreach(GameObject go in dm.subLeaks) 
+                        {
+                            if (go.name.ToLower().Equals("helm"))
+                            {
+                                Utilities.Log.Print("Helm child count: " + go.transform.childCount);
+                                foreach (Transform child in go.transform)
+                                {
+
+                                    Utilities.Log.Print("Helm child: " + child.name);
+                                }
+                            }
+                        }
                     }
                 }
             }

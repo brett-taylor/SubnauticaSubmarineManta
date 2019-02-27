@@ -62,6 +62,7 @@
     <Compile Include="Content\Damage\AutoRegen.cs" />
     <Compile Include="Content\Damage\AutoRegenConditional.cs" />
     <Compile Include="Content\Damage\InternalFirePoint.cs" />
+    <Compile Include="Content\Damage\InternalLeakManage.cs" />
     <Compile Include="Content\Lighting\EmergencyLighting.cs" />
     <Compile Include="Content\Damage\ExternalDamageManager.cs" />
     <Compile Include="Content\Damage\ExternalDamagePoint.cs" />

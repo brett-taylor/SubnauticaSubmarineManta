@@ -29,6 +29,16 @@ namespace Manta.Utilities
 
         public static Texture LIGHT_EMISSIVE_MAP{ get; private set; }
 
+        public static Texture WALL_DECALS_ONE_NORMAL_MAP { get; private set; }
+        public static Texture WALL_DECALS_ONE_EMISSIVE_MAP { get; private set; }
+
+        public static Texture WALL_DECALS_TWO_NORMAL_MAP { get; private set; }
+        public static Texture WALL_DECALS_TWO_EMISSIVE_MAP { get; private set; }
+
+        public static Texture WALL_DECALS_THREE_NORMAL_MAP { get; private set; }
+
+        public static Texture EXTERIOR_DECALS_NORMAL_MAP { get; private set; }
+
         public static void LoadAssets()
         {
             ASSET_BUNDLE = AssetBundle.LoadFromFile(ASSET_BUNDLE_LOCATION);
@@ -107,6 +117,40 @@ namespace Manta.Utilities
             if (LIGHT_EMISSIVE_MAP == null)
             {
                 Log.Error("Manta LIGHT_EMISSIVE_MAP not found.");
+            }
+
+            WALL_DECALS_ONE_NORMAL_MAP = ASSET_BUNDLE.LoadAsset("wall_decals_one_normals") as Texture;
+            if (WALL_DECALS_ONE_NORMAL_MAP == null)
+            {
+                Log.Error("Manta WALL_DECALS_ONE_NORMAL_MAP not found.");
+            }
+            WALL_DECALS_ONE_EMISSIVE_MAP = ASSET_BUNDLE.LoadAsset("wall_decal_one_emissive") as Texture;
+            if (WALL_DECALS_ONE_EMISSIVE_MAP == null)
+            {
+                Log.Error("Manta WALL_DECALS_ONE_EMISSIVE_MAP not found.");
+            }
+
+            WALL_DECALS_TWO_NORMAL_MAP = ASSET_BUNDLE.LoadAsset("wall_deacls_two_normals") as Texture;
+            if (WALL_DECALS_TWO_NORMAL_MAP == null)
+            {
+                Log.Error("Manta WALL_DECALS_TWO_NORMAL_MAP not found.");
+            }
+            WALL_DECALS_TWO_EMISSIVE_MAP = ASSET_BUNDLE.LoadAsset("wall_decal_two_emissive") as Texture;
+            if (WALL_DECALS_TWO_EMISSIVE_MAP == null)
+            {
+                Log.Error("Manta WALL_DECALS_TWO_EMISSIVE_MAP not found.");
+            }
+
+            WALL_DECALS_THREE_NORMAL_MAP = ASSET_BUNDLE.LoadAsset("wall_decal_three_normals") as Texture;
+            if (WALL_DECALS_THREE_NORMAL_MAP == null)
+            {
+                Log.Error("Manta WALL_DECALS_THREE_NORMAL_MAP not found.");
+            }
+
+            EXTERIOR_DECALS_NORMAL_MAP = ASSET_BUNDLE.LoadAsset("exter_decals_normals") as Texture;
+            if (EXTERIOR_DECALS_NORMAL_MAP == null)
+            {
+                Log.Error("Manta EXTERIOR_DECALS_NORMAL_MAP not found.");
             }
         }
     }

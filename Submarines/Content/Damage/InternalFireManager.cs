@@ -11,8 +11,8 @@ namespace Submarines.Content.Damage
     {
         public SubRoot Submarine { get; set; }
         public LiveMixin SubmarineLiveMixin { get; set; }
-        public Transform FirePoints { get; set; }
-        public List<GameObject> FirePrefabs { get; set; } // All children in this object will be turned into a potential fire point
+        public Transform FirePoints { get; set; } // All children in this object will be turned into a potential fire point
+        public List<GameObject> FirePrefabs { get; set; }
         public float DamageDonePerFirePerSecond { get; set; } = 5;
         public int ChancePerDamageTakenToSpawnFire { get; set; } = 5; // 1 in X chance of spawning a fire.
         public int CurrentFireCount { get; private set; } = 0;
