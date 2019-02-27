@@ -758,6 +758,14 @@ namespace Class1Vehicles.Utilities
             }
         }
 
+        private void DrawPlayerAnimationsMenu()
+        {
+            if (GUILayout.Button("Toggle Third Person"))
+            {
+                PlayerAnimations.ThirdPersonController.Toggle();
+            }
+        }
+
         private void OnGUI()
         {
             if (isOpen == false)
@@ -786,6 +794,8 @@ namespace Class1Vehicles.Utilities
                     showDebugMenuNo = 5;
                 if (GUILayout.Button("Mini Manta Drone"))
                     showDebugMenuNo = 6;
+                if (GUILayout.Button("Player Animations"))
+                    showDebugMenuNo = 7;
                 GUILayout.EndHorizontal();
 
                 GUILayout.Space(10f);
@@ -804,6 +814,8 @@ namespace Class1Vehicles.Utilities
                     DrawMiniMantaVehicleMenu();
                 else if (showDebugMenuNo == 6)
                     DrawMiniMantaDroneMenu();
+                else if (showDebugMenuNo == 7)
+                    DrawPlayerAnimationsMenu();
                 else
                     GUILayout.Label("No Menu Selected");
 
