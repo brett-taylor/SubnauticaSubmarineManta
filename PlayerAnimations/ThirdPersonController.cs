@@ -9,7 +9,7 @@ namespace PlayerAnimations
     {
         private static ThirdPersonCameraController thirdPersonCameraController;
 
-        private static void Initialise()
+        public static void Initialise()
         {
             if (thirdPersonCameraController == null)
             {
@@ -20,7 +20,6 @@ namespace PlayerAnimations
 
         public static void Toggle()
         {
-            Initialise();
             if (IsInThirdPerson())
             {
                 EnableFirstPerson();
@@ -33,19 +32,16 @@ namespace PlayerAnimations
 
         public static void EnableThirdPerson()
         {
-            Initialise();
             thirdPersonCameraController.enabled = true;
         }
 
         public static void EnableFirstPerson()
         {
-            Initialise();
             thirdPersonCameraController.enabled = false;
         }
 
         public static bool IsInThirdPerson()
         {
-            Initialise();
             return thirdPersonCameraController.enabled;
         }
     }
