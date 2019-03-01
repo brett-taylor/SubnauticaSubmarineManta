@@ -1,4 +1,5 @@
 ﻿using Submarines.Movement;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,45 +20,62 @@ namespace Submarines.Engine
         {
             { EngineState.OFF, MovementData.Zero() }
         };
-        
+
+        private bool isPoweringUp = false;
+        private bool isPoweringDown = false;
+
         public void Start()
         {
             CurrentMovementData = engineMovementData[EngineState];
         }
 
-        public void SetNewEngineState(EngineState engineState, bool skipEngineStartUpSequence, bool sendMessages)
+        public void SetNewEngineState(EngineState engineState, bool sendMessages = true)
         {
             if (engineState == EngineState)
             {
-                SetNewEngineState(engineState, true, false);
                 return;
             }
 
             EngineState oldState = EngineState;
-            if (oldState == EngineState.OFF && skipEngineStartUpSequence == false) // Do startup
+            EngineState = engineState;
+            CurrentMovementData = GetCorrectMovementDataForEnginestate(EngineState);
+            if (sendMessages == true && engineState != EngineState.OFF && oldState != EngineState.OFF)
             {
-                if (sendMessages == true)
-                {
-                    SendMessage("OnEngineStartUp", engineState, SendMessageOptions.DontRequireReceiver);
-                }
+                SendMessage("OnEngineChangeState", oldState, SendMessageOptions.DontRequireReceiver);
             }
-            else
-            {
-                if (engineState == EngineState.OFF)
-                {
-                    if (sendMessages == true)
-                    {
-                        SendMessage("OnEnginePowerDown", oldState, SendMessageOptions.DontRequireReceiver);
-                    }
-                }
+        }
 
-                EngineState = engineState;
-                CurrentMovementData = GetCorrectMovementDataForEnginestate(EngineState);
-                if (sendMessages == true && engineState != EngineState.OFF && oldState != EngineState.OFF)
-                {
-                    SendMessage("OnEngineChangeState", oldState, SendMessageOptions.DontRequireReceiver);
-                }
+        public IEnumerator PowerUp(EngineState engineStateToGoTo, float time)
+        {
+            if (isPoweringUp)
+            {
+                yield break;
             }
+
+            isPoweringUp = true;
+            SendMessage("OnEngineStartUp", engineStateToGoTo, SendMessageOptions.DontRequireReceiver);
+            yield return new WaitForSeconds(time);
+            SetNewEngineState(engineStateToGoTo, false);
+            isPoweringUp = false;
+        }
+
+        public IEnumerator PowerDown(float time)
+        {
+            if (isPoweringDown)
+            {
+                yield break;
+            }
+
+            isPoweringDown = true;
+            SendMessage("OnEnginePowerDown", null, SendMessageOptions.DontRequireReceiver);
+            yield return new WaitForSeconds(time);
+            SetNewEngineState(EngineState.OFF, false);
+            isPoweringDown = false;
+        }
+
+        public bool IsPoweredUp()
+        {
+            return EngineState != EngineState.OFF;
         }
 
         public void SetMovementDataForEngineState(EngineState engineState, MovementData movementData)

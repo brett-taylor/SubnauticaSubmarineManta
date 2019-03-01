@@ -1,5 +1,7 @@
 ﻿using Submarines.Content.Lighting;
+using Submarines.DefaultCyclopsContent;
 using Submarines.Engine;
+using System.Collections;
 using UnityEngine;
 
 namespace Manta.Components
@@ -60,12 +62,16 @@ namespace Manta.Components
 
         private void DrawDrivingHUD()
         {
-            GUILayout.Label("Current engine state: " + GetComponent<EngineManager>().EngineState);
-            GUILayout.Label("Press 6 to set engine state to off");
-            GUILayout.Label("Press 7 to set engine state to slow");
-            GUILayout.Label("Press 8 to set engine state to normal");
-            GUILayout.Label("Press 9 to set engine state to fast");
-            GUILayout.Label("Press 0 to set engine state to silent running");
+            if (GetComponent<EngineManager>().IsPoweredUp())
+            {
+                GUILayout.Label("Current engine state: " + GetComponent<EngineManager>().EngineState);
+                GUILayout.Label("Press 6 to turn engine off. 7-0 for other engine states.");
+            }
+            else
+            {
+                GUILayout.Label("Press 6 to turn engine on.");
+            }
+
             GUILayout.Label("Internal Lights On: " + GetComponent<LightsManager>().InternalLightsOn);
             GUILayout.Label("External Lights On: " + GetComponent<LightsManager>().ExternalLightsOn);
             GUILayout.Label("Press LShift and 6 to toggle internal lights");
@@ -82,25 +88,37 @@ namespace Manta.Components
                 return;
             }
 
-            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))
+            if (GetComponent<EngineManager>().IsPoweredUp())
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.OFF, false, true);
+                if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))
+                {
+                    IEnumerator coroutine = GetComponent<EngineManager>().PowerDown(0f);
+                    GetComponent<EngineManager>().StartCoroutine(coroutine);
+                }
+                if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha7))
+                {
+                    GetComponent<EngineManager>().SetNewEngineState(EngineState.SLOW);
+                }
+                if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha8))
+                {
+                    GetComponent<EngineManager>().SetNewEngineState(EngineState.NORMAL);
+                }
+                if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha9))
+                {
+                    GetComponent<EngineManager>().SetNewEngineState(EngineState.FAST);
+                }
+                if(!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha0))
+                {
+                    GetComponent<EngineManager>().SetNewEngineState(EngineState.SPECIAL);
+                }
             }
-            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha7))
+            else
             {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.SLOW, false, true);
-            }
-            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha8))
-            {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.NORMAL, false, true);
-            }
-            if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha9))
-            {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.FAST, false, true);
-            }
-            if(!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha0))
-            {
-                GetComponent<EngineManager>().SetNewEngineState(EngineState.SPECIAL, false, true);
+                if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))
+                {
+                    IEnumerator coroutine = GetComponent<EngineManager>().PowerUp(EngineState.NORMAL, CyclopsStartupPowerDownSequence.TOTAL_START_UP_DELAY);
+                    GetComponent<EngineManager>().StartCoroutine(coroutine);
+                }
             }
 
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))

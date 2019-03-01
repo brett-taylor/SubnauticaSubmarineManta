@@ -72,14 +72,6 @@ namespace Submarines.DefaultCyclopsContent
             {
                 Utils.PlayFMODAsset(SilentRunningCallout, MainCamera.camera.transform, 20f);
             }
-            else if (engineManager.EngineState == EngineState.SPECIAL && SilentRunningCallout != null)
-            {
-                Utils.PlayFMODAsset(SilentRunningCallout, MainCamera.camera.transform, 20f);
-            }
-            else if (engineManager.EngineState == EngineState.SPECIAL && SilentRunningCallout != null)
-            {
-                Utils.PlayFMODAsset(SilentRunningCallout, MainCamera.camera.transform, 20f);
-            }
         }
     }
 }

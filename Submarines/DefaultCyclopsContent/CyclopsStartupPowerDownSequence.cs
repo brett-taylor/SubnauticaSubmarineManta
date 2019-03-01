@@ -16,8 +16,7 @@ namespace Submarines.DefaultCyclopsContent
     {
         public FMODAsset StartupSound { get; set; } = null;
         public FMODAsset PowerDownCallout { get; set; } = null;
-        public float TotalDelayBetweenEngineTurnOnAndEngineStateSwap = 4.5f;
-        private EngineState mostRecentEngineStateSwapAttempt = EngineState.NORMAL;
+        public static readonly float TOTAL_START_UP_DELAY = 4.5f;
 
         public void Start()
         {
@@ -35,31 +34,23 @@ namespace Submarines.DefaultCyclopsContent
             }
         }
 
-        public void OnEngineStartUp(EngineState attemptedToSwapToState)
+        public void OnEngineStartUp()
         {
-            mostRecentEngineStateSwapAttempt = attemptedToSwapToState;
             if (StartupSound != null)
             {
                 Utils.PlayFMODAsset(StartupSound, MainCamera.camera.transform, 20f);
             }
+
             StartCoroutine(EngineStartCameraShake(0.15f, 4.5f, 0f));
             StartCoroutine(EngineStartCameraShake(1f, -1f, 4.6f));
-            StartCoroutine(SwapToCorrectEngineState());
         }
 
-        public void OnEnginePowerDown(EngineState oldEngineState)
+        public void OnEnginePowerDown()
         {
             if (PowerDownCallout != null)
             {
                 Utils.PlayFMODAsset(PowerDownCallout, MainCamera.camera.transform, 20f);
             }
-        }
-
-        private IEnumerator SwapToCorrectEngineState()
-        {
-            yield return new WaitForSeconds(TotalDelayBetweenEngineTurnOnAndEngineStateSwap);
-            GetComponent<EngineManager>().SetNewEngineState(mostRecentEngineStateSwapAttempt, true, false);
-            yield break;
         }
 
         private IEnumerator EngineStartCameraShake(float intensity, float duration, float delay)
