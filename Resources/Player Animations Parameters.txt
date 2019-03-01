@@ -1,0 +1,1589 @@
+[PlayerAnimations] Parameter counter: 199
+[PlayerAnimations] name :move_speed
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :move_speed_x
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :move_speed_y
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :move_speed_z
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :using_pda
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :vr_active
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :pda_distance
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :using_tool
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :using_tool_first
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :using_tool_alt
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :suit_first_use
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :in_exosuit
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :in_seamoth
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :can_exit
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :swimming_fast
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :is_underwater
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :on_surface
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_tool
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_bailer
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_constructor
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_flashlight
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_knife
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_welder
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_seaglide
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_transfuser
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_stasisrifle
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_propulsioncannon
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_flare
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_floater
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_hoopfish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_spinefish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_loot
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_holefish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_peeper
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_garryfish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_eyeye
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_lavaeyeye
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_boomerang
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_lavaboomerang
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_reginald
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_spadefish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_bladderfish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_hoverfish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_loot_big
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_gravsphere
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_airbladder
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_builder
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_divereel
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_ledlight
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_repulsioncannon
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_beacon
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_diamondblade
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_heatblade
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_lasercutter
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_scanner
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_fireextinguisher
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_terraformer
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_powerglide
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_oculus
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holster_extinguisher_first
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_precursorkey
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_smallstorage
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_maproomcamera
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :is_punching
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :grab
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :grab_fish
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :using_builder
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :view_pitch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :view_turn
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :diving
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :jump
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :diving_land
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bash
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :chestAim_lean
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :chestAim_twist
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :reloading_tool
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :charged_stasisrifle
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bleeder
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :constructor_climb
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :constructor_engage
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :constructor_disengage
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :reaper_attack
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :seadragon_attack
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_topin
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_topout
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_topout_first
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_botin
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_botout_first
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_botout
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_intro
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :escapepod_side
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cangrab_propulsioncannon
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :hatch_frontopen
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :hatch_frontclose
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :hatch_backopen
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :hatch_backclose
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_launchright
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_launchleft
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_dock
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_exolaunchleft
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_exolaunchright
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_exodock
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_ladder_in
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :moonpool_ladder_out
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exosuit_dock
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exosuit_launch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bench_sit
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bench_stand_up
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :chair_sit
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :chair_stand_up
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :crab_snake_release
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :crab_snake_kill
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_launch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_dock
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_steering
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_steering_grab
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_steering_release
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_ladder_long_up
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_ladder_long_down
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_ladder_short_up
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_ladder_short_down
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_outerhatch_in
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_outerhatch_out
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :starship_door_backclose
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :starship_door_frontclose
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :starship_door_backopen
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :starship_door_frontopen
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bed_down_left
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bed_up_left
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bed_down_right
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :bed_up_right
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exosuit_use_left
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exosuit_use_right
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cinematics_enabled
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :player_death
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :player_death_fire
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :player_death_choke
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :player_death_explosion
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :player_death_drown
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :player_infected
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :player_cure
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cured
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :keypad_cin
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_precursorioncrystal
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_spin
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_tickled
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_loop
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_feed
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_lowfive
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_magictrick
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_tease_v1
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_tease_v2
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_follow
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_stay
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cutefish_goodbye
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_pipesurfacefloater
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_pipe
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :precursor_elevator_ascend
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :precursor_elevator_decend
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :precursor_deactivate_gun
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :precursor_crystalterminal
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :precursor_teleporter_in
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :precursor_teleporter_out
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_ending_cin
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_lever_cin
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_OutsideDoor
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_InsideDoor
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_outLadder
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_inLadder
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rockethsip_cockpitLadderUp
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rockethsip_cockpitLadderDown
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_time_capsule_in
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_time_capsule_out
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_time_capsule_first
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_cpu_cinematic
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :rocketship_terminal_cinematic
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :databox_lookat
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :timecapsule_lookat
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_yaw
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :cyclops_pitch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_cyclopsdecoy
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :base_ladder_short_up
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :base_ladder_short_down
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :base_ladder_long_up
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :base_ladder_long_down
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :enter_side_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exit_side_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :enter_top_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exit_top_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :enter_bottom_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exit_bottom_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :enter_end_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exit_end_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :enter_alien_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :exit_alien_hatch
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :holding_scrapmetal
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :divereel_reset
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :divereel_outofammo
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0
+ 
+ 
+(Filename: C:/Subnautica/plastic_workspace_unity/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[PlayerAnimations] name :verticalOffset
+[PlayerAnimations] defaultBool :False
+[PlayerAnimations] defaultFloat :0
+[PlayerAnimations] defaultInt :0

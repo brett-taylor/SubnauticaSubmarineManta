@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMantaVehicle", "MiniMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMantaDrone", "MiniMantaDrone\MiniMantaDrone.csproj", "{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerAnimations", "PlayerAnimations\PlayerAnimations.csproj", "{450FEFA4-11D0-4E87-8915-64D454010A1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BA5A2AC-046A-4F24-8B4F-C9CB6013FD54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450FEFA4-11D0-4E87-8915-64D454010A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450FEFA4-11D0-4E87-8915-64D454010A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450FEFA4-11D0-4E87-8915-64D454010A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450FEFA4-11D0-4E87-8915-64D454010A1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
