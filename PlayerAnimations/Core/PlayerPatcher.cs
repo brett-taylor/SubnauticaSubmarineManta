@@ -6,10 +6,10 @@ namespace PlayerAnimations.Core
     [HarmonyPatch("Awake")]
     public class PlayerAwakePatcher
     {
-        public static void Postfix()
+        public static void Postfix(Player __instance)
         {
             ThirdPersonController.Initialise();
-            PlayerAnimations.Initialise();
+            PlayerAnimations.Initialise(__instance);
         }
     }
 }

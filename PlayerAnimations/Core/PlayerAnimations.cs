@@ -2,20 +2,31 @@
 
 namespace PlayerAnimations.Core
 {
-    public static class PlayerAnimations
+    public class PlayerAnimations
     {
         private static Animator playerAnimator;
         private static RuntimeAnimatorController originalAnimationController;
 
-        public static void Initialise()
+        public static void Initialise(Player player)
         {
-            playerAnimator = Player.main.GetComponent<Animator>();
+            playerAnimator = player.gameObject.GetComponentInChildren<Animator>();
             originalAnimationController = playerAnimator.runtimeAnimatorController;
+            player.gameObject.AddComponent<AnimatorDebugger>();
+        }
+
+        public static void PlayAnimation(string animationclipName, int layer)
+        {
+            playerAnimator.Play(animationclipName, layer);
         }
 
         public static void PlayAnimation(RuntimeAnimatorController runtimeAnimatorController)
         {
-            Utilities.Log.Print("Is human: " + Player.main.GetComponentInChildren<Animator>().isHuman);
+            AnimationClip animationClip = runtimeAnimatorController.animationClips[0];
+            Utilities.Log.Print("Found animation clip: " + animationClip);
+            playerAnimator.runtimeAnimatorController = runtimeAnimatorController;
+            Utilities.Log.Print("Currently on: " + playerAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+            Utilities.Log.Print("length: " + playerAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
+            playerAnimator.Play(playerAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.name, 0, 1f);
         }
     }
 }

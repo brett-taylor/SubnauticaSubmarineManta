@@ -1,0 +1,10 @@
+[PlayerAnimations] Layer count: 9
+[PlayerAnimations] Layer 0 : Base Modes
+[PlayerAnimations] Layer 1 : right arm
+[PlayerAnimations] Layer 2 : left
+[PlayerAnimations] Layer 3 : both
+[PlayerAnimations] Layer 4 : upperbody
+[PlayerAnimations] Layer 5 : Cinematics
+[PlayerAnimations] Layer 6 : Cinematics2
+[PlayerAnimations] Layer 7 : Cinematics3
+[PlayerAnimations] Layer 8 : Death

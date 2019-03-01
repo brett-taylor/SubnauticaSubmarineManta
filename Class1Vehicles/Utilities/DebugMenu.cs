@@ -758,14 +758,6 @@ namespace Class1Vehicles.Utilities
             }
         }
 
-        private void DrawPlayerAnimationsMenu()
-        {
-            if (GUILayout.Button("Toggle Third Person"))
-            {
-                PlayerAnimations.ThirdPersonController.Toggle();
-            }
-        }
-
         private void OnGUI()
         {
             if (isOpen == false)
@@ -815,7 +807,7 @@ namespace Class1Vehicles.Utilities
                 else if (showDebugMenuNo == 6)
                     DrawMiniMantaDroneMenu();
                 else if (showDebugMenuNo == 7)
-                    DrawPlayerAnimationsMenu();
+                    PlayerAnimations.Test.DebugMenu.DrawPlayerAnimationsMenu();
                 else
                     GUILayout.Label("No Menu Selected");
 

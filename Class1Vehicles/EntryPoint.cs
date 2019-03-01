@@ -31,6 +31,8 @@ namespace Class1Vehicles
 
             MiniMantaDrone.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
             MiniMantaDrone.EntryPoint.Entry();
+
+            PlayerAnimations.EntryPoint.Entry();
         }
     }
 }

@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\AnimatorDebugger.cs" />
     <Compile Include="Core\PlayerAnimations.cs" />
     <Compile Include="Core\PlayerPatcher.cs" />
     <Compile Include="Core\ThirdPersonCameraController.cs" />
