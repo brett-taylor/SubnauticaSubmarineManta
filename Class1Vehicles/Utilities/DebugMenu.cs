@@ -769,23 +769,23 @@ namespace Class1Vehicles.Utilities
             {
                 GUILayout.Box("'Capslock and Q' to show/hide cursor");
                 GUILayout.BeginHorizontal();
-                if (GUILayout.Button("General Menu"))
-                    showDebugMenuNo = 4;
-                if (GUILayout.Button("Cyclops Menu"))
-                    showDebugMenuNo = 0;
                 if (GUILayout.Button("Manta Menu"))
                     showDebugMenuNo = 1;
                 if (GUILayout.Button("Odyssey Menu"))
                     showDebugMenuNo = 2;
-                if (GUILayout.Button("Hostiles Menu"))
-                    showDebugMenuNo = 3;
-                GUILayout.EndHorizontal();
-
-                GUILayout.BeginHorizontal();
                 if (GUILayout.Button("Mini Manta Vehicle"))
                     showDebugMenuNo = 5;
                 if (GUILayout.Button("Mini Manta Drone"))
                     showDebugMenuNo = 6;
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
+                if (GUILayout.Button("General Menu"))
+                    showDebugMenuNo = 4;
+                if (GUILayout.Button("Cyclops Menu"))
+                    showDebugMenuNo = 0;
+                if (GUILayout.Button("Hostiles Menu"))
+                    showDebugMenuNo = 3;
                 if (GUILayout.Button("Player Animations"))
                     showDebugMenuNo = 7;
                 GUILayout.EndHorizontal();
