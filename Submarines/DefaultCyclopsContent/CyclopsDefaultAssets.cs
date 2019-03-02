@@ -26,11 +26,15 @@ namespace Submarines.DefaultCyclopsContent
         public static FMODAsset ENGINE_LOOP { get; private set; }
         public static FMODAsset AI_WELCOME_ABOARD_GOOD { get; private set; }
         public static FMODAsset AI_CREATURE_ATTACK { get; private set; }
+        public static FMODAsset CYCLOPS_EXPLOSION_FMOD { get; private set; }
+        public static FMODAsset AI_ABANDON { get; private set; }
 
         public static GameObject EXTERNAL_DAMAGE_POINT { get; private set; }
         public static GameObject EXTERNAL_DAMAGE_POINT_PARTICLES { get; private set; }
         public static GameObject CYCLOPS_FIRE { get; private set; }
         public static GameObject WATER_LEAK { get; private set; }
+
+        public static VFXController CYCLOPS_EXPLOSION_VFX { get; private set; }
 
         public static void LoadDefaultCyclopsContent()
         {
@@ -41,6 +45,7 @@ namespace Submarines.DefaultCyclopsContent
 
             LoadPrefabs();
             LoadFMODAssets();
+            LoadVFXEffects();
             initialised = true;
         }
 
@@ -62,6 +67,20 @@ namespace Submarines.DefaultCyclopsContent
                         break;
                     case "x_waterleakspray_01":
                         WATER_LEAK = prefab;
+                        break;
+                }
+            }
+        }
+
+        private static void LoadVFXEffects()
+        {
+            VFXController[] vFXControllers = Resources.FindObjectsOfTypeAll<VFXController>();
+            foreach (VFXController vfxController in vFXControllers)
+            {
+                switch (vfxController.name.ToLower())
+                {
+                    case "cyclopsexplosionfx":
+                        CYCLOPS_EXPLOSION_VFX = vfxController;
                         break;
                 }
             }
@@ -122,6 +141,12 @@ namespace Submarines.DefaultCyclopsContent
                         break;
                     case "ai_attack":
                         AI_CREATURE_ATTACK = fmod;
+                        break;
+                    case "explode":
+                        CYCLOPS_EXPLOSION_FMOD = fmod;
+                        break;
+                    case "ai_abandon":
+                        AI_ABANDON = fmod;
                         break;
                 }
             }

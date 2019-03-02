@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Submarines.Content.Damage
+namespace Submarines.Content.Death
 {
     /**
      * Handles dispatching the events that alot of our components that do stuff with the death of the submarine require.

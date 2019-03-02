@@ -8,7 +8,6 @@ namespace Submarines.Movement
     public class MovementStabiliser : MonoBehaviour
     {
         public bool IsStabilising { get; set; } = true;
-
         private Rigidbody rigidbody;
         private MovementData movementData;
 

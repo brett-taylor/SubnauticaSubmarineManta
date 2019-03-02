@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Submarines.Content.Damage
+namespace Submarines.Content.Death
 {
     /**
      * A basic death.

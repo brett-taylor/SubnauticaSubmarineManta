@@ -45,25 +45,21 @@ namespace Submarines.Content.Damage
         public void InternalFirePointCreated()
         {
             noFires = (InternalFireManager.CurrentFireCount == 0);
-            Utilities.Log.Print("Test 1: " + noFires);
         }
 
         public void InternalFirePointExtinguished()
         {
             noFires = (InternalFireManager.CurrentFireCount == 0);
-            Utilities.Log.Print("Test 2: " + noFires);
         }
 
         public void ExternalDamagePointCreated()
         {
             noExternalDamagePoints = (ExternalDamageManager.GetUsedDamagePointsCount() == 0);
-            Utilities.Log.Print("Test 3: " + noExternalDamagePoints);
         }
 
         public void ExternalDamagePointRepaired()
         {
             noExternalDamagePoints = (ExternalDamageManager.GetUsedDamagePointsCount() == 0);
-            Utilities.Log.Print("Test 4: " + noExternalDamagePoints);
         }
     }
 }

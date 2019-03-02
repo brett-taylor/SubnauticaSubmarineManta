@@ -402,34 +402,22 @@ namespace Class1Vehicles.Utilities
                 }
             }
 
-            if (GUILayout.Button("CyclopsExternalDamage information."))
+            if (GUILayout.Button("CyclopsDestructionevent information."))
             {
                 Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
                 {
                     if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
                     {
-                        CyclopsExternalDamageManager dm = raycastHit4.rigidbody.GetComponentInChildren<CyclopsExternalDamageManager>();
+                        CyclopsDestructionEvent dm = raycastHit4.rigidbody.GetComponentInChildren<CyclopsDestructionEvent>();
                         if (dm == null)
                         {
-                            Log.Print("Cyclop's CyclopsExternalDamage not found.");
+                            Log.Print("Cyclop's CyclopsDestructionEvent not found.");
                             return;
                         }
 
 
-                        Utilities.Log.Print("Subleaks count: " + dm.subLeaks.Length);
-                        foreach(GameObject go in dm.subLeaks) 
-                        {
-                            if (go.name.ToLower().Equals("helm"))
-                            {
-                                Utilities.Log.Print("Helm child count: " + go.transform.childCount);
-                                foreach (Transform child in go.transform)
-                                {
-
-                                    Utilities.Log.Print("Helm child: " + child.name);
-                                }
-                            }
-                        }
+                        Utilities.Log.Print("explodeSFX: " + dm.fxControl);
                     }
                 }
             }

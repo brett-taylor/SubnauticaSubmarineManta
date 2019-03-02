@@ -12,6 +12,7 @@ using Submarines.Engine;
 using Submarines.Content.Damage;
 using System.Collections.Generic;
 using Submarines.Content.Lighting;
+using Submarines.Content.Death;
 
 namespace Manta.Core
 {
@@ -255,18 +256,29 @@ namespace Manta.Core
             autoRegen.LiveMixin = liveMixin;
             autoRegen.RegenPerSecond = 2f;
 
-            InternalLeakManage internalLeakManage = submarine.GetOrAddComponent<InternalLeakManage>();
+            InternalLeakManager internalLeakManage = submarine.GetOrAddComponent<InternalLeakManager>();
             internalLeakManage.LeakPrefabs = new List<GameObject>()
             {
                 CyclopsDefaultAssets.WATER_LEAK
             };
 
             DeathManager deathManager = submarine.GetOrAddComponent<DeathManager>();
-            deathManager.DeathPreparationTime = 10f;
+            deathManager.DeathPreparationTime = 22f;
 
             BasicDeath basicDeath = submarine.GetOrAddComponent<BasicDeath>();
-            basicDeath.TimeTillDeletionOfSub = 30f;
+            basicDeath.TimeTillDeletionOfSub = 60f;
             basicDeath.FallSpeed = 2f;
+
+            CyclopsDeathExplosion cyclopsDeathExplosion = submarine.GetOrAddComponent<CyclopsDeathExplosion>();
+            cyclopsDeathExplosion.TimeToExplosionAfterDeath = 18f;
+            cyclopsDeathExplosion.FMODAsset = CyclopsDefaultAssets.CYCLOPS_EXPLOSION_FMOD;
+
+            CyclopsAbandonShip cyclopsAbandonShip = submarine.GetOrAddComponent<CyclopsAbandonShip>();
+            cyclopsAbandonShip.TimeToCalloutAfterDeath = 0f;
+            cyclopsAbandonShip.FMODAsset = CyclopsDefaultAssets.AI_ABANDON;
+
+            DestabiliseOnSubDeath destabiliseOnSubDeath = submarine.GetOrAddComponent<DestabiliseOnSubDeath>();
+            KillPlayerInsideOnSubDeath killPlayerInsideOnSubDeath = submarine.GetOrAddComponent<KillPlayerInsideOnSubDeath>();
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
