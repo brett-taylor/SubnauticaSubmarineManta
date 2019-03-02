@@ -5,7 +5,6 @@ namespace PlayerAnimations.Test
     public static class DebugMenu
     {
         private static string animationClip = "Laser_cutter_first_use";
-        private static int animationClipLayer = 0;
 
         public static void DrawPlayerAnimationsMenu()
         {
@@ -25,18 +24,30 @@ namespace PlayerAnimations.Test
 
             foreach(RuntimeAnimatorController controller in AssetLoader.AnimationControllers)
             {
-                if (GUILayout.Button("Play: " + controller.name))
+                foreach(AnimationClip ac in controller.animationClips)
                 {
-                    Core.PlayerAnimations.PlayAnimation(controller);
+                    if (GUILayout.Button("Play: " + ac.name))
+                    {
+                        Animator animator = Player.main.gameObject.GetComponentInChildren<Animator>();
+                        animator.runtimeAnimatorController = controller;
+                        //animator.Play("test_animation", 0);
+                        Utilities.Log.Print("Length GetCurrentAnimatorClipInfo: " + animator.GetCurrentAnimatorClipInfo(0).Length);
+                        Utilities.Log.Print("Length GetNextAnimatorClipInfo: " + animator.GetNextAnimatorClipInfo(0).Length);
+
+                        foreach (var ac2 in animator.GetCurrentAnimatorClipInfo(0))
+                        {
+                            Utilities.Log.Print("1: " + ac2.clip.name);
+                            Utilities.Log.Print("2: " + ac2.clip.length);
+                        }
+                    }
                 }
             }
 
             GUILayout.BeginHorizontal();
             animationClip = GUILayout.TextField(animationClip);
-            animationClipLayer = int.Parse(GUILayout.TextField(animationClipLayer + ""));
             if (GUILayout.Button("Play Animation Clip"))
             {
-                Core.PlayerAnimations.PlayAnimation(animationClip, animationClipLayer);
+                Core.PlayerAnimations.PlayAnimation(animationClip);
             }
             GUILayout.EndHorizontal();
         }
