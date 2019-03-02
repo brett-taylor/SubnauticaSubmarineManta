@@ -92,8 +92,7 @@ namespace Manta.Components
             {
                 if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))
                 {
-                    IEnumerator coroutine = GetComponent<EngineManager>().PowerDown(0f);
-                    GetComponent<EngineManager>().StartCoroutine(coroutine);
+                    GetComponent<EngineManager>().StartCoroutine(GetComponent<EngineManager>().PowerDown(0f));
                 }
                 if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha7))
                 {
@@ -116,8 +115,7 @@ namespace Manta.Components
             {
                 if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha6))
                 {
-                    IEnumerator coroutine = GetComponent<EngineManager>().PowerUp(EngineState.NORMAL, CyclopsStartupPowerDownSequence.TOTAL_START_UP_DELAY);
-                    GetComponent<EngineManager>().StartCoroutine(coroutine);
+                    GetComponent<EngineManager>().StartCoroutine(GetComponent<EngineManager>().PowerUp(EngineState.NORMAL, CyclopsStartupPowerDownSequence.TOTAL_START_UP_DELAY));
                 }
             }
 

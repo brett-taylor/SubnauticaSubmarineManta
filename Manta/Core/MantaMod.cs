@@ -195,7 +195,7 @@ namespace Manta.Core
             LiveMixin liveMixin = submarine.GetOrAddComponent<LiveMixin>();
             liveMixin.data = CyclopsLiveMixinData.Get();// TO:DO Create a proper health system for the manta.
             liveMixin.data.knifeable = true; // TO:DO remove just here for testing purposes.
-            liveMixin.data.maxHealth = 500;
+            liveMixin.data.maxHealth = 100;
 
             GameObject externalLights = submarine.FindChild("Lights").FindChild("Exterior");
             GameObject internalLights = submarine.FindChild("Lights").FindChild("Interior");
@@ -260,6 +260,9 @@ namespace Manta.Core
             {
                 CyclopsDefaultAssets.WATER_LEAK
             };
+
+            DeathManager deathManager = submarine.GetOrAddComponent<DeathManager>();
+            deathManager.DeathPreparationTime = 10f;
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)

@@ -77,7 +77,6 @@ namespace Submarines.Content.Damage
 
         public void OnTakeDamage(DamageInfo damageInfo)
         {
-            Utilities.Log.Print("DamageType: " + damageInfo.type);
             if (damageInfo.damage > 0 && damageInfo.type == DamageType.Normal)
             {
                 int numberToCreate = GetNumberOfDamagePointsThatShouldBeShowing() - GetUsedDamagePointsCount();

@@ -17,7 +17,7 @@ namespace Submarines.DefaultCyclopsContent
             }
 
             instance = ScriptableObject.CreateInstance<LiveMixinData>();
-            instance.broadcastKillOnDeath = false;
+            instance.broadcastKillOnDeath = true;
             instance.canResurrect = false;
             instance.damageEffect = null;
             instance.deathEffect = null;
