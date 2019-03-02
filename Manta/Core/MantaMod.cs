@@ -263,6 +263,10 @@ namespace Manta.Core
 
             DeathManager deathManager = submarine.GetOrAddComponent<DeathManager>();
             deathManager.DeathPreparationTime = 10f;
+
+            BasicDeath basicDeath = submarine.GetOrAddComponent<BasicDeath>();
+            basicDeath.TimeTillDeletionOfSub = 30f;
+            basicDeath.FallSpeed = 2f;
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
