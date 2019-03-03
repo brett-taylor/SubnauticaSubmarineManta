@@ -39,5 +39,11 @@ namespace Submarines.DefaultCyclopsContent
             yield return new WaitForSeconds(ToggleForSeconds);
             DisableEmergencyLighting();
         }
+
+        public void OnDeathPrepare()
+        {
+            Utilities.Log.Print("OnDeathPrepare LockEmergencyLightingOn");
+            LockEmergencyLightingOn();
+        }
     }
 }

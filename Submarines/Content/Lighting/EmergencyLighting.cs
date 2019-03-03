@@ -22,6 +22,7 @@ namespace Submarines.Content.Lighting
         private bool isEnding = false;
         private float currentTimer = 0f;
         private bool isAdding = true;
+        private bool lockedOn = false;
 
         public virtual void Start()
         {
@@ -142,7 +143,7 @@ namespace Submarines.Content.Lighting
 
         public virtual void DisableEmergencyLighting()
         {
-            if (IsRunning == false)
+            if (IsRunning == false || lockedOn == true)
             {
                 return;
             }
@@ -151,6 +152,13 @@ namespace Submarines.Content.Lighting
             isStarting = false;
             isEnding = false;
             isWantingToEnd = true;
+        }
+
+        public virtual void LockEmergencyLightingOn()
+        {
+            lockedOn = true;
+            IsRunning = false;
+            EnableEmergencyLighting();
         }
     }
 }
