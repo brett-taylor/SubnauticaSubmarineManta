@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SubmarineAssetLoader.cs" />
+    <Compile Include="Creatures\AttackSubmarineAdvanced.cs" />
     <Compile Include="Content\Damage\AutoRegen.cs" />
     <Compile Include="Content\Damage\AutoRegenConditional.cs" />
     <Compile Include="Content\Death\BasicDeath.cs" />
@@ -84,20 +85,18 @@
     <Compile Include="DefaultCyclopsContent\CyclopsUnderAttackCallout.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsWelcomeCallout.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsStartupPowerDownSequence.cs" />
-    <Compile Include="Engine\EngineManager.cs" />
-    <Compile Include="Engine\EngineState.cs" />
+    <Compile Include="Content\Engine\EngineManager.cs" />
+    <Compile Include="Content\Engine\EngineState.cs" />
     <Compile Include="Content\EntranceHatch.cs" />
     <Compile Include="Content\HingeJointDoor.cs" />
-    <Compile Include="Movement\MovementData.cs" />
-    <Compile Include="Movement\MovementController.cs" />
-    <Compile Include="Movement\MovementStabiliser.cs" />
-    <Compile Include="Patchers\ProtobufSerializerPrecompiledPatcher.cs" />
+    <Compile Include="Content\Movement\MovementData.cs" />
+    <Compile Include="Content\Movement\MovementController.cs" />
+    <Compile Include="Content\Movement\MovementStabiliser.cs" />
     <Compile Include="Content\SteeringConsole.cs" />
+    <Compile Include="Patchers\MeleeAttackPatcher.cs" />
     <Compile Include="Patchers\SubRootPatcher.cs" />
-    <Compile Include="Serialization\EntranceHatch.cs" />
-    <Compile Include="Serialization\Submarine.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsCollisionSounds.cs" />
-    <Compile Include="Submarine.cs" />
+    <Compile Include="Content\Submarine.cs" />
     <Compile Include="Miscellaneous\SubmarineDuplicateFixer.cs" />
     <Compile Include="Utilities\Extensions\GameObjectExtensions.cs" />
     <Compile Include="Utilities\Extensions\LiveMixinExtensions.cs" />
@@ -107,6 +106,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Log.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Serialization\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

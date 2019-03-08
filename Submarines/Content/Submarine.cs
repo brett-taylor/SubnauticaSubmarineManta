@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Submarines
+namespace Submarines.Content
 {
     /**
     * The main submarine component.

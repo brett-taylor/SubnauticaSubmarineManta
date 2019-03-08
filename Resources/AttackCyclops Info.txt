@@ -1,0 +1,9 @@
+[Class1Vehicles] LastTarget: ReaperLeviathan(Clone) (LastTarget)
+[Class1Vehicles] aggressPerSecond: 0.4
+[Class1Vehicles] attackAggressionThreshold: 0.75
+[Class1Vehicles] attackPause: 3
+[Class1Vehicles] maxDistToLeash: 160
+[Class1Vehicles] swimVelocity: 25
+[Class1Vehicles] swimInterval: 0.8
+[Class1Vehicles] aggressiveToNoise Falloff: 0.01
+[Class1Vehicles] aggressiveToNoise Value: 0

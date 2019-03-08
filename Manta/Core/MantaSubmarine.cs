@@ -1,4 +1,4 @@
-﻿using Submarines;
+﻿using Submarines.Content;
 
 namespace Manta.Core
 {

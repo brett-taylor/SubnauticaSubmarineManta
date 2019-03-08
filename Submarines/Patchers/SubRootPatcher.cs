@@ -1,4 +1,5 @@
 ﻿using Harmony;
+using Submarines.Content;
 
 namespace Submarines.Patchers
 {
@@ -12,9 +13,8 @@ namespace Submarines.Patchers
     {
         public static bool Prefix(SubRoot __instance, Player player)
         {
-            if (__instance is Submarine)
+            if (__instance is Submarine submarine)
             {
-                Submarine submarine = (Submarine)__instance;
                 if (submarine != null)
                 {
                     submarine.OnPlayerEntered(player);
@@ -36,9 +36,8 @@ namespace Submarines.Patchers
     {
         public static bool Prefix(SubRoot __instance, Player player)
         {
-            if (__instance is Submarine)
+            if (__instance is Submarine submarine)
             {
-                Submarine submarine = (Submarine)__instance;
                 if (submarine != null)
                 {
                     submarine.OnPlayerExited(player);

@@ -4,6 +4,7 @@ using MiniMantaVehicle.Core;
 using Odyssey.Core;
 using Submarines.Content.Damage;
 using Submarines.Content.Lighting;
+using Submarines.Creatures;
 using Submarines.Movement;
 using Submarines.Utilities.Extensions;
 using System.Reflection;
@@ -571,6 +572,9 @@ namespace Class1Vehicles.Utilities
                     gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
                     reaper = gameObject.GetComponentInChildren<ReaperLeviathan>();
                     gameObject.transform.position += 50f * gameObject.transform.forward;
+
+                    gameObject.AddComponent<AttackSubmarineAdvanced>();
+                    reaper.ScanCreatureActions();
                 }
             }
             else
@@ -588,6 +592,20 @@ namespace Class1Vehicles.Utilities
                 if (GUILayout.Button("Delete Reaper"))
                 {
                     Destroy(reaper.gameObject);
+                }
+
+                if (GUILayout.Button("AttackCyclops information"))
+                {
+                    AttackCyclops ac = reaper.GetComponent<AttackCyclops>();
+                    Log.Print("LastTarget: " + ac.lastTarget);
+                    Log.Print("aggressPerSecond: " + ac.aggressPerSecond);
+                    Log.Print("attackAggressionThreshold: " + ac.attackAggressionThreshold);
+                    Log.Print("attackPause: " + ac.attackPause);
+                    Log.Print("maxDistToLeash: " + ac.maxDistToLeash);
+                    Log.Print("swimVelocity: " + ac.swimVelocity);
+                    Log.Print("swimInterval: " + ac.swimInterval);
+                    Log.Print("aggressiveToNoise Falloff: " + ac.aggressiveToNoise.Falloff);
+                    Log.Print("aggressiveToNoise Value: " + ac.aggressiveToNoise.Value);
                 }
 
                 GUILayout.Space(10);
