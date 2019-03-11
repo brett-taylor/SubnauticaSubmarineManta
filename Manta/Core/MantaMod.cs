@@ -196,7 +196,7 @@ namespace Manta.Core
             LiveMixin liveMixin = submarine.GetOrAddComponent<LiveMixin>();
             liveMixin.data = CyclopsLiveMixinData.Get();// TO:DO Create a proper health system for the manta.
             liveMixin.data.knifeable = true; // TO:DO remove just here for testing purposes.
-            liveMixin.data.maxHealth = 100;
+            liveMixin.data.maxHealth = 500;
 
             GameObject externalLights = submarine.FindChild("Lights").FindChild("Exterior");
             GameObject internalLights = submarine.FindChild("Lights").FindChild("Interior");

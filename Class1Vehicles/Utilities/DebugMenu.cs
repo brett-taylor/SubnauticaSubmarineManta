@@ -573,7 +573,8 @@ namespace Class1Vehicles.Utilities
                     reaper = gameObject.GetComponentInChildren<ReaperLeviathan>();
                     gameObject.transform.position += 50f * gameObject.transform.forward;
 
-                    gameObject.AddComponent<AttackSubmarineAdvanced>();
+                    gameObject.AddComponent<AttackSubmarineBasic>();
+                    //gameObject.AddComponent<AttackSubmarineAdvanced>();
                     reaper.ScanCreatureActions();
                 }
             }

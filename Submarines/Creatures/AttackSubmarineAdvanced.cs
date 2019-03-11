@@ -3,6 +3,8 @@
 namespace Submarines.Creatures
 {
     /**
+     * Currently broken:
+     * 
      * Added to creatures to allow them to attack Submarines.
      * This is based on how creatures normally attack submarines.
      * TO:DO a noise system.
@@ -89,7 +91,7 @@ namespace Submarines.Creatures
         {
             if (currentTarget != null && aggression.Value > AGGRESSION_ATTACK_THRESHOLD && Time.time > lastAttackTime + ATTACK_REFRACTORY_PERIOD)
             {
-                return GetEvaluatePriority();
+                return 1f;
             }
 
             return 0f;
