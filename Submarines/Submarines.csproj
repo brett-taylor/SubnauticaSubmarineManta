@@ -74,7 +74,7 @@
     <Compile Include="Content\Damage\InternalFireManager.cs" />
     <Compile Include="Content\Lighting\LightsManager.cs" />
     <Compile Include="Content\OxygenReplenishment.cs" />
-    <Compile Include="Creatures\AttackSubmarineBasic.cs" />
+    <Compile Include="Creatures\AttackMannedSubmarineWithinDistance.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsAbandonShip.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsDeathExplosion.cs" />
     <Compile Include="DefaultCyclopsContent\CyclopsDefaultAssets.cs" />

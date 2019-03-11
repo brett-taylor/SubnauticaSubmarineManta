@@ -572,10 +572,6 @@ namespace Class1Vehicles.Utilities
                     gameObject.SendMessage("StartConstruction", SendMessageOptions.DontRequireReceiver);
                     reaper = gameObject.GetComponentInChildren<ReaperLeviathan>();
                     gameObject.transform.position += 50f * gameObject.transform.forward;
-
-                    gameObject.AddComponent<AttackSubmarineBasic>();
-                    //gameObject.AddComponent<AttackSubmarineAdvanced>();
-                    reaper.ScanCreatureActions();
                 }
             }
             else

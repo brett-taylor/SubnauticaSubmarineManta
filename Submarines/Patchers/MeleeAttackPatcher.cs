@@ -14,7 +14,6 @@ namespace Submarines.Patchers
         {
             if (target.GetComponent<Content.Submarine>() != null)
             {
-                Utilities.Log.Print("ReaperMeleeAttack Submarine attack: " + target.name + " from: " + __instance.gameObject.name);
                 __result = true;
                 return false;
             }
