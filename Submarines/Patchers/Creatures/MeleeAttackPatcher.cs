@@ -1,7 +1,7 @@
 ﻿using Harmony;
 using UnityEngine;
 
-namespace Submarines.Patchers
+namespace Submarines.Patchers.Creatures
 {
     /**
      * Patch into MeleeAttack::CanBite to add our custom submarines into what can be biten.

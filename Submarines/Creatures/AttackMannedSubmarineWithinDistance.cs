@@ -21,6 +21,7 @@ namespace Submarines.Creatures
         private void Start()
         {
             lastTarget = GetComponent<LastTarget>();
+            Utilities.Log.Print("Added onto creature: " + gameObject.name);
         }
 
         public override void OnEnable()

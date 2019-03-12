@@ -209,6 +209,16 @@ namespace Class1Vehicles.Utilities
                 }
             }
             GUILayout.EndHorizontal();
+
+            if (GUILayout.Button("MeleeAttack Count"))
+            {
+                MeleeAttack[] reaperMeleeAttacks = FindObjectsOfType<MeleeAttack>();
+                Log.Print("Found " + reaperMeleeAttacks.Length + " MeleeAttack");
+                foreach(MeleeAttack ma in reaperMeleeAttacks)
+                {
+                    Log.Print("Found One on " + ma.name);
+                }
+            }
         }
 
         private void DrawCyclopsDebugMenu()

@@ -45,7 +45,6 @@ namespace Submarines.DefaultCyclopsContent
             yield return new WaitForSeconds(TimeToExplosionAfterDeath);
             Utils.PlayFMODAsset(FMODAsset, MainCamera.camera.transform, 20f);
             // Spawn explosion
-            // Do sound effects.
         }
     }
 }
