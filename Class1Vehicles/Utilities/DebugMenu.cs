@@ -2,9 +2,9 @@
 using MiniMantaDrone.Core;
 using MiniMantaVehicle.Core;
 using Odyssey.Core;
+using SMLHelper.V2.Handlers;
 using Submarines.Content.Damage;
 using Submarines.Content.Lighting;
-using Submarines.Creatures;
 using Submarines.Movement;
 using Submarines.Utilities.Extensions;
 using System.Reflection;
@@ -219,6 +219,42 @@ namespace Class1Vehicles.Utilities
                     Log.Print("Found One on " + ma.name);
                 }
             }
+
+            if (GUILayout.Button("Spawn Singla")) {
+                GameObject go = Instantiate(Resources.Load<GameObject>("VFX/xSignal"), Player.main.transform);
+                Log.Print("Component Count: " + go.GetComponentsInChildren<Component>().Length);
+                foreach (Component c in go.GetComponentsInChildren<Component>())
+                {
+                    Log.Print("Component " + c + " is on gameobject: " + c.gameObject);
+                }
+            }
+
+            if (GUILayout.Button("Register Manta Ping"))
+            {
+                //SMLHelper.V2.Handlers.SpriteHandler.RegisterSprite(SpriteManager.Group.Pings, "Manta", $"./QMods/TheMantaMod/Assets/MantaPingIcon.png");
+                //SMLHelper.V2.Handlers.SpriteHandler.RegisterSprite(MantaMod.MANTA_TECH_TYPE, $"./QMods/TheMantaMod/Assets/MantaPingIcon.png");
+                //SMLHelper.V2.Handlers.SpriteHandler.RegisterSprite(SpriteManager.Group.Pings, "MantaPingggggg", Manta.Utilities.MantaAssetLoader.MANTA_PING_ICON);
+                SpriteHandler.RegisterSprite(SpriteManager.Group.Pings, MantaMod.NAME, $"./QMods/TheMantaMod/Assets/MantaPingIcon.png");
+                Log.Print($"Registered {MantaMod.NAME}");
+                Log.Print($"File Exists {System.IO.File.Exists("./QMods/TheMantaMod/Assets/MantaPingIcon.png")}");
+            }
+
+            if (GUILayout.Button("Manta Ping"))
+            {
+                //Atlas.Sprite sprite = SpriteManager.GetWithNoDefault(SpriteManager.Group.Pings, "Manta");
+                //Atlas.Sprite sprite = SpriteManager.GetWithNoDefault(MantaMod.MANTA_TECH_TYPE);
+                Atlas.Sprite sprite = SpriteManager.GetWithNoDefault(SpriteManager.Group.Pings, MantaMod.NAME);
+                System.Collections.Generic.Dictionary<string, Atlas.Sprite> t = SpriteManager.groups[SpriteManager.Group.Pings];
+
+                Log.Print($"Dict Count: {t.Count}");
+                foreach (string name in t.Keys)
+                    Log.Print($"Contains Key: {name}");
+
+                if (sprite == null)
+                    Log.Print($"{MantaMod.NAME} sprite null.");
+                else
+                    Log.Print($"Not Null Texture {sprite.texture.name}.");
+            }
         }
 
         private void DrawCyclopsDebugMenu()
@@ -427,8 +463,33 @@ namespace Class1Vehicles.Utilities
                             return;
                         }
 
-
                         Utilities.Log.Print("explodeSFX: " + dm.fxControl);
+                    }
+                }
+            }
+
+            if (GUILayout.Button("Cyclops PingInstance information."))
+            {
+                Ray ray4 = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray4, out RaycastHit raycastHit4))
+                {
+                    if (raycastHit4.rigidbody.gameObject.name.ToLower().Contains("cyclops"))
+                    {
+                        PingInstance pi = raycastHit4.rigidbody.GetComponentInChildren<PingInstance>();
+                        if (pi == null)
+                        {
+                            Log.Print("Cyclop's PingInstance not found.");
+                            return;
+                        }
+
+                        Log.Print("colorIndex: " + pi.colorIndex);
+                        Log.Print("currentVersion: " + pi.currentVersion);
+                        Log.Print("displayPingInManager: " + pi.displayPingInManager);
+                        Log.Print("maxDist: " + pi.maxDist);
+                        Log.Print("minDist: " + pi.minDist);
+                        Log.Print("origin: " + pi.origin);
+                        Log.Print("pingType: " + pi.pingType);
+                        Log.Print("visible: " + pi.visible);
                     }
                 }
             }

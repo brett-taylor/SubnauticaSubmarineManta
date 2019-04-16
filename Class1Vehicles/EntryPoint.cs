@@ -8,8 +8,8 @@ namespace Class1Vehicles
     */
     public class EntryPoint
     {
-        public static readonly string MOD_FOLDER_LOCATION = "./QMods/TheMantaMod/";
-        public static readonly string ASSET_FOLDER_LOCATION = MOD_FOLDER_LOCATION + "Assets/";
+        public static readonly string QMODS_FOLDER_LOCATION = "./QMods/";
+        public static readonly string MOD_FOLDER_NAME = "TheMantaMod/";
 
         public static void Entry()
         {
@@ -17,19 +17,19 @@ namespace Class1Vehicles
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
             Submarines.EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS = true;
-            Submarines.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
+            Submarines.EntryPoint.SetModFolderDirectory(QMODS_FOLDER_LOCATION, MOD_FOLDER_NAME);
             Submarines.EntryPoint.InitialiseFramework();
 
-            Manta.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
+            Manta.EntryPoint.SetModFolderDirectory(QMODS_FOLDER_LOCATION, MOD_FOLDER_NAME);
             Manta.EntryPoint.Entry();
 
-            Odyssey.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
+            Odyssey.EntryPoint.SetModFolderDirectory(QMODS_FOLDER_LOCATION, MOD_FOLDER_NAME);
             Odyssey.EntryPoint.Entry();
 
-            MiniMantaVehicle.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
+            MiniMantaVehicle.EntryPoint.SetModFolderDirectory(QMODS_FOLDER_LOCATION, MOD_FOLDER_NAME);
             MiniMantaVehicle.EntryPoint.Entry();
 
-            MiniMantaDrone.EntryPoint.SetModFolderDirectory(MOD_FOLDER_LOCATION);
+            MiniMantaDrone.EntryPoint.SetModFolderDirectory(QMODS_FOLDER_LOCATION, MOD_FOLDER_NAME);
             MiniMantaDrone.EntryPoint.Entry();
 
             PlayerAnimations.EntryPoint.Entry();

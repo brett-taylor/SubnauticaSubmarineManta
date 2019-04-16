@@ -11,7 +11,7 @@ namespace MiniMantaVehicle.Core
     public class MiniMantaVehicleMod : Spawnable
     {
         public static TechType MINI_MANTA_VEHICLE_TECH_TYPE = new MiniMantaVehicleMod().TechType;
-        public override string AssetsFolder => EntryPoint.ASSET_FOLDER_LOCATION;
+        public override string AssetsFolder => EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME;
         public override string IconFileName => "MantaIcon.png";
 
         public MiniMantaVehicleMod() : base("SubmarineMiniMantaVehicle", "Mini Manta Vehicle", "A driviable vehicle named the Mini Manta")

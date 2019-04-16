@@ -7,7 +7,12 @@ namespace Manta.Utilities
      */
     public static class MantaAssetLoader
     {
-        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.ASSET_FOLDER_LOCATION + "manta";
+        public static readonly string MANTAOS_ASSET_BUNDLE_LOCATION = EntryPoint.QMODS_FOLDER_LOCATION + EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME + "mantaos";
+        public static AssetBundle MANTAOS_ASSET_BUNDLE { get; private set; }
+        public static GameObject MANTAOS_OFFLINE_PAGE { get; private set; }
+        public static GameObject MANTA_OS_MAIN_LAYOUT_PAGE { get; private set; }
+
+        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.QMODS_FOLDER_LOCATION + EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME + "manta";
         public static AssetBundle ASSET_BUNDLE { get; private set; }
         public static GameObject MANTA_EXTERIOR { get; private set; }
 
@@ -39,8 +44,33 @@ namespace Manta.Utilities
 
         public static Texture EXTERIOR_DECALS_NORMAL_MAP { get; private set; }
 
+        public static Sprite MANTA_PING_ICON { get; private set; }
+
+        public static void LoadOSAssets()
+        {
+            MANTAOS_ASSET_BUNDLE = AssetBundle.LoadFromFile(MANTAOS_ASSET_BUNDLE_LOCATION);
+            if (MANTAOS_ASSET_BUNDLE == null)
+            {
+                Log.Error("MANTAOS_ASSET_BUNDLE not found.");
+            }
+
+            MANTAOS_OFFLINE_PAGE = MANTAOS_ASSET_BUNDLE.LoadAsset("Offline") as GameObject;
+            if (MANTAOS_OFFLINE_PAGE == null)
+            {
+                Log.Error("MANTAOS_OFFLINE_PAGE not found.");
+            }
+
+            MANTA_OS_MAIN_LAYOUT_PAGE = MANTAOS_ASSET_BUNDLE.LoadAsset("MainLayout") as GameObject;
+            if (MANTA_OS_MAIN_LAYOUT_PAGE == null)
+            {
+                Log.Error("MANTA_OS_MAIN_LAYOUT_PAGE not found.");
+            }
+        }
+
         public static void LoadAssets()
         {
+            LoadOSAssets();
+
             ASSET_BUNDLE = AssetBundle.LoadFromFile(ASSET_BUNDLE_LOCATION);
             if (ASSET_BUNDLE == null)
             {
@@ -151,6 +181,17 @@ namespace Manta.Utilities
             if (EXTERIOR_DECALS_NORMAL_MAP == null)
             {
                 Log.Error("Manta EXTERIOR_DECALS_NORMAL_MAP not found.");
+            }
+
+            Texture2D mantaPingIcon = ASSET_BUNDLE.LoadAsset("MantaPingIcon") as Texture2D;
+            if (mantaPingIcon == null)
+            {
+                Log.Error("Manta MANTA_PING_ICON texture2d not found.");
+            }
+            MANTA_PING_ICON = Sprite.Create(mantaPingIcon, new Rect(0f, 0f, mantaPingIcon.width, mantaPingIcon.height), new Vector2(0.5f, 0.5f));
+            if (MANTA_PING_ICON == null)
+            {
+                Log.Error("Manta MANTA_PING_ICON not found.");
             }
         }
     }

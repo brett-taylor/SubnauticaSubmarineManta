@@ -11,7 +11,7 @@ namespace MiniMantaDrone.Core
     public class MiniMantaDroneMod : Spawnable
     {
         public static TechType MINI_MANTA_DRONE_TECH_TYPE = new MiniMantaDroneMod().TechType;
-        public override string AssetsFolder => EntryPoint.ASSET_FOLDER_LOCATION;
+        public override string AssetsFolder => EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME;
         public override string IconFileName => "MantaIcon.png";
 
         public MiniMantaDroneMod() : base("SubmarineMiniMantaDrone", "Mini Manta Drone", "A drone built for the Manta submarine.")

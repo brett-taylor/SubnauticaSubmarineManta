@@ -7,7 +7,7 @@ namespace Odyssey.Utilities
      */
     public static class OdysseyAssetLoader
     {
-        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.ASSET_FOLDER_LOCATION + "odyssey";
+        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.QMODS_FOLDER_LOCATION + EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME + "odyssey";
         public static AssetBundle ASSET_BUNDLE { get; private set; }
         public static GameObject ODYSSEY_EXTERIOR { get; private set; }
 

@@ -17,24 +17,17 @@ namespace Submarines.Content.Damage
 
         public override void Start()
         {
-            if (InternalFireManager == null)
-            {
-                Utilities.Log.Error("AutoRegenConditional has no reference to a InternalFireManager. Destroying...");
-                Destroy(this);
-                return;
-            }
-
-            if (ExternalDamageManager == null)
-            {
-                Utilities.Log.Error("AutoRegenConditional has no reference to a ExternalDamageManager. Destroying...");
-                Destroy(this);
-                return;
-            }
-
             base.Start();
 
-            noFires = (InternalFireManager.CurrentFireCount == 0);
-            noExternalDamagePoints = (ExternalDamageManager.GetUsedDamagePointsCount() == 0);
+            if (InternalFireManager != null)
+                noFires = (InternalFireManager.CurrentFireCount == 0);
+            else
+                noFires = true;
+
+            if (ExternalDamageManager != null)
+                noExternalDamagePoints = (ExternalDamageManager.GetUsedDamagePointsCount() == 0);
+            else
+                noExternalDamagePoints = true;
         }
 
         public override bool ShouldRegen()

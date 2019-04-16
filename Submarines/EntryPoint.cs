@@ -8,14 +8,15 @@ namespace Submarines
      */
     public class EntryPoint
     {
-        public static string MOD_FOLDER_LOCATION { get; private set; }
-        public static string ASSET_FOLDER_LOCATION { get; private set; }
+        public static string QMODS_FOLDER_LOCATION { get; private set; }
+        public static string MOD_FOLDER_NAME { get; private set; }
+        public static readonly string ASSET_FOLDER_NAME = "Assets/";
         public static HarmonyInstance HarmonyInstance { get; private set; }
         public static bool LOAD_DEFAULT_CYCLOPS_ASSETS { get; set; } = true;
 
         public static void InitialiseFramework()
         {
-            if (MOD_FOLDER_LOCATION == null || ASSET_FOLDER_LOCATION == null)
+            if (QMODS_FOLDER_LOCATION == null || MOD_FOLDER_NAME == null)
             {
                 ErrorMessage.AddError("Submarines.EntryPoint.Entry::SetModFolderDirectory() must be set first.");
                 return;
@@ -23,14 +24,14 @@ namespace Submarines
 
             HarmonyInstance = HarmonyInstance.Create("taylor.brett.SubmarinesFramework.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
-
             Assets.SubmarineAssetLoader.LoadAssets();
+            Content.Beacon.CustomBeaconManager.Initialize();
         }
 
-        public static void SetModFolderDirectory(string directory)
+        public static void SetModFolderDirectory(string qmodsFolderLocation, string modFolderName)
         {
-            MOD_FOLDER_LOCATION = directory;
-            ASSET_FOLDER_LOCATION = MOD_FOLDER_LOCATION + "Assets/";
+            QMODS_FOLDER_LOCATION = qmodsFolderLocation;
+            MOD_FOLDER_NAME = modFolderName;
         }
     }
 }

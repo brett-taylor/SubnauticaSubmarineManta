@@ -1,6 +1,5 @@
 ﻿using Manta.Utilities;
 using SMLHelper.V2.Assets;
-using Submarines;
 using Submarines.Miscellaneous;
 using Submarines.Movement;
 using Submarines.Content;
@@ -13,6 +12,8 @@ using Submarines.Content.Damage;
 using System.Collections.Generic;
 using Submarines.Content.Lighting;
 using Submarines.Content.Death;
+using System.Collections;
+using Submarines.Content.Beacon;
 
 namespace Manta.Core
 {
@@ -21,11 +22,15 @@ namespace Manta.Core
      */
     public class MantaMod : Spawnable
     {
+        public static readonly string UNIQUE_ID = "SubmarineManta";
+        public static readonly string NAME = "Manta";
+        public static readonly string DESCRIPTION = "A high-speed, average-armour industrial resource collecting submarine.";
+
         public static TechType MANTA_TECH_TYPE = new MantaMod().TechType;
-        public override string AssetsFolder => EntryPoint.ASSET_FOLDER_LOCATION;
+        public override string AssetsFolder => EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME;
         public override string IconFileName => "MantaIcon.png";
 
-        public MantaMod() : base("SubmarineManta", "Manta", "A high-speed submarine")
+        public MantaMod() : base(UNIQUE_ID, NAME, DESCRIPTION)
         {
         }
 
@@ -68,7 +73,7 @@ namespace Manta.Core
             forces.underwaterGravity = 0;
 
             submarine.GetOrAddComponent<TechTag>().type = MANTA_TECH_TYPE;
-            submarine.GetOrAddComponent<PrefabIdentifier>().ClassId = "SubmarineManta";
+            submarine.GetOrAddComponent<PrefabIdentifier>().ClassId = UNIQUE_ID;
             submarine.GetOrAddComponent<SubmarineDuplicateFixer>();
             submarine.GetOrAddComponent<MantaSubmarine>();
             submarine.GetOrAddComponent<MovementStabiliser>();
@@ -279,6 +284,18 @@ namespace Manta.Core
 
             DestabiliseOnSubDeath destabiliseOnSubDeath = submarine.GetOrAddComponent<DestabiliseOnSubDeath>();
             KillPlayerInsideOnSubDeath killPlayerInsideOnSubDeath = submarine.GetOrAddComponent<KillPlayerInsideOnSubDeath>();
+
+            // Temp screens
+            GameObject helmMantaOSScreen = submarine.FindChild("PointsOfInterest").FindChild("UpgradesAndBatteries").FindChild("HelmScreen").FindChild("Canvas");
+            GameObject rearMantaOSScreen = submarine.FindChild("PointsOfInterest").FindChild("UpgradesAndBatteries").FindChild("UpgradeScreen").FindChild("Canvas");
+            GameObject steeringConsoleMantaOSScreen = submarine.FindChild("PointsOfInterest").FindChild("SteeringConsole").FindChild("Canvas");
+            Object.Instantiate(MantaAssetLoader.MANTA_OS_MAIN_LAYOUT_PAGE).transform.SetParent(helmMantaOSScreen.transform, false);
+            Object.Instantiate(MantaAssetLoader.MANTAOS_OFFLINE_PAGE).transform.SetParent(rearMantaOSScreen.transform, false);
+            Object.Instantiate(MantaAssetLoader.MANTAOS_OFFLINE_PAGE).transform.SetParent(steeringConsoleMantaOSScreen.transform, false);
+
+            SMLHelper.V2.Handlers.TechTypeHandler.TryGetModdedTechType(UNIQUE_ID, out TechType mantaTechType);
+            PingType mantaPingType = CustomBeaconManager.RegisterNewPingType(mantaTechType, NAME, MantaAssetLoader.MANTA_PING_ICON);
+            PingInstance pingInstance = CustomBeaconManager.AddNewBeacon(submarine, mantaPingType, "HMS Unknown Manta");
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)

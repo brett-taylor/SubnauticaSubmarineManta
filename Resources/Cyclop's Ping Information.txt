@@ -1,0 +1,19 @@
+// Cyclops's
+[Class1Vehicles] colorIndex: 2
+[Class1Vehicles] currentVersion: 1
+[Class1Vehicles] displayPingInManager: True
+[Class1Vehicles] maxDist: 50
+[Class1Vehicles] minDist: 60
+[Class1Vehicles] origin: Cyclops-MainPrefab(Clone) (UnityEngine.Transform)
+[Class1Vehicles] pingType: Cyclops
+[Class1Vehicles] visible: True
+
+// Manta's
+[TheMantaMod] colorIndex: 0
+[TheMantaMod] currentVersion: 1
+[TheMantaMod] displayPingInManager: True
+[TheMantaMod] maxDist: 10
+[TheMantaMod] minDist: 15
+[TheMantaMod] origin: 
+[TheMantaMod] pingType: Cyclops
+[TheMantaMod] visible: True

@@ -18,7 +18,7 @@ namespace Odyssey.Core
     public class OdysseyMod : Spawnable
     {
         public static TechType ODYSSEY_TECH_TYPE = new OdysseyMod().TechType;
-        public override string AssetsFolder => EntryPoint.ASSET_FOLDER_LOCATION;
+        public override string AssetsFolder => EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME;
         public override string IconFileName => "MantaIcon.png";
 
         public OdysseyMod() : base("SubmarineOdyssey", "Odyssey", "A smaller version of the Cyclops")

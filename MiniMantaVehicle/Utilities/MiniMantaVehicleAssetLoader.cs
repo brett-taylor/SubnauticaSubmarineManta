@@ -7,7 +7,7 @@ namespace MiniMantaVehicle.Utilities
      */
     public class MiniMantaVehicleAssetLoader
     {
-        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.ASSET_FOLDER_LOCATION + "minimantavehicle";
+        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.QMODS_FOLDER_LOCATION + EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME + "minimantavehicle";
         public static AssetBundle ASSET_BUNDLE { get; private set; }
         public static GameObject MINI_MANTA_VEHICLE_EXTERIOR { get; private set; }
 

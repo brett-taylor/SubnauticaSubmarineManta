@@ -7,7 +7,7 @@ namespace Submarines.Assets
      */
     public static class SubmarineAssetLoader
     {
-        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.ASSET_FOLDER_LOCATION + "submarine";
+        public static readonly string ASSET_BUNDLE_LOCATION = EntryPoint.QMODS_FOLDER_LOCATION + EntryPoint.MOD_FOLDER_NAME + EntryPoint.ASSET_FOLDER_NAME + "submarine";
         public static AssetBundle ASSET_BUNDLE { get; private set; }
 
         public static void LoadAssets()

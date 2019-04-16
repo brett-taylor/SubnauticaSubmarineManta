@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,13 +35,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
     <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp_publicized">
+      <HintPath>..\..\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
     <Reference Include="SMLHelper, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SubmarineAssetLoader.cs" />
+    <Compile Include="Content\Beacon\CustomBeaconManager.cs" />
     <Compile Include="Creatures\AttackSubmarineAdvanced.cs" />
     <Compile Include="Content\Damage\AutoRegen.cs" />
     <Compile Include="Content\Damage\AutoRegenConditional.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="DefaultCyclopsContent\CyclopsCollisionSounds.cs" />
     <Compile Include="Content\Submarine.cs" />
     <Compile Include="Miscellaneous\SubmarineDuplicateFixer.cs" />
+    <Compile Include="Content\Beacon\CustomBeaconSpritePatcher.cs" />
     <Compile Include="Utilities\Extensions\GameObjectExtensions.cs" />
     <Compile Include="Utilities\Extensions\LiveMixinExtensions.cs" />
     <Compile Include="Utilities\Extensions\MaterialExtensions.cs" />
