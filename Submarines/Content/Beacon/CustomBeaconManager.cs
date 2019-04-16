@@ -10,8 +10,8 @@ namespace Submarines.Content.Beacon
      */
     public static class CustomBeaconManager
     {
-        private static readonly int CUSTOM_BEACON_MIN_DIST = 10;
-        private static readonly int CUSTOM_BEACON_MAX_DIST = 20;
+        private static readonly int CUSTOM_BEACON_MIN_DIST = 60; // Yes these are correct.
+        private static readonly int CUSTOM_BEACON_MAX_DIST = 50;
         private static readonly Dictionary<PingType, Atlas.Sprite> cachedSprites = new Dictionary<PingType, Atlas.Sprite>();
         private static readonly Dictionary<string, PingType> nameToType = new Dictionary<string, PingType>();
         private static uGUI_Pings pingUI = null;
