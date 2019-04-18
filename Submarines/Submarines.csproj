@@ -111,6 +111,7 @@
     <Compile Include="Utilities\Log.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\Energy\" />
     <Folder Include="Serialization\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
