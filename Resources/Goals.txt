@@ -1,4 +1,9 @@
 TO:DO
+Apply new manta changes around hatch.
+Apply textures to hatch.
+Correct new collision.
+Get hatch working and animated.
+
 OxygenReplenishment should require power.
 Sort out player deaths.
 Depth Clearer

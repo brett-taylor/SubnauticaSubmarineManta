@@ -31,7 +31,7 @@ namespace Submarines.Water
             waterClipProxy = gameObject.AddComponent<WaterClipProxy>();
             waterClipProxy.shape = Shape;
             waterClipProxy.immovable = Immovable;
-            waterClipProxy.distanceField = textAsset;
+            //waterClipProxy.distanceField = textAsset; // TODO fix
 
             if (ClipMaterialCache == null)
             {

@@ -1,4 +1,5 @@
 ﻿using PlayerAnimations.Core;
+using UnityEngine;
 
 namespace PlayerAnimations
 {
@@ -13,7 +14,7 @@ namespace PlayerAnimations
         {
             if (thirdPersonCameraController == null)
             {
-                thirdPersonCameraController = MainCamera.camera.gameObject.AddComponent<ThirdPersonCameraController>();
+                thirdPersonCameraController = Camera.main.gameObject.AddComponent<ThirdPersonCameraController>();
                 EnableFirstPerson();
             }
         }

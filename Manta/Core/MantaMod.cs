@@ -300,6 +300,7 @@ namespace Manta.Core
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
         {
+            Log.Print("ApplyMaterials Stage One");
             Shader shader = Shader.Find("MarmosetUBER");
             foreach (Renderer renderer in renderers)
             {
@@ -312,6 +313,7 @@ namespace Manta.Core
                 }
             }
 
+            Log.Print("ApplyMaterials Stage Two");
             GameObject model = manta.FindChild("Model");
             MeshRenderer exteriorRenderer = model.FindChild("Exterior").GetComponent<MeshRenderer>();
             Material middleBody = exteriorRenderer.materials[0];
@@ -320,8 +322,8 @@ namespace Manta.Core
             Material glass = exteriorRenderer.materials[3];
             Material wings = exteriorRenderer.materials[4];
             Material[] decals = manta.FindChild("Model").FindChild("ExteriorDecals").GetComponent<MeshRenderer>().materials;
-            Material floor = model.FindChild("Floor").GetComponent<MeshRenderer>().material;
-            Material floorDecals = model.FindChild("LightsAndFloorDecals").FindChild("FloorDecals").GetComponent<MeshRenderer>().material;
+            //Material floor = model.FindChild("Floor").GetComponent<MeshRenderer>().material;
+            //Material floorDecals = model.FindChild("LightsAndFloorDecals").FindChild("FloorDecals").GetComponent<MeshRenderer>().material;
             Material lightDecals = model.FindChild("LightsAndFloorDecals").FindChild("LightDeclas").GetComponent<MeshRenderer>().material;
             Material wallDoorDecals = model.FindChild("WallDoorDecals").GetComponent<MeshRenderer>().material;
             Material walls = model.FindChild("Walls").GetComponent<MeshRenderer>().material;
@@ -330,6 +332,7 @@ namespace Manta.Core
             Material[] moreInteriorDecals = model.FindChild("MoreInteriorDecals").GetComponent<MeshRenderer>().materials;
             Material backDoor = model.FindChild("BackDoor").GetComponent<MeshRenderer>().material;
 
+            Log.Print("ApplyMaterials Stage Three");
             tail.shader = shader;
             tail.EnableKeyword("MARMO_SPECMAP");
             tail.EnableKeyword("_ZWRITE_ON");
@@ -347,6 +350,7 @@ namespace Manta.Core
             tail.SetVector("_EmissionColor", Vector4.zero);
             tail.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
 
+            Log.Print("ApplyMaterials Stage Four");
             wings.shader = shader;
             wings.DisableKeyword("_EMISSION");
             wings.EnableKeyword("MARMO_SPECMAP");
@@ -368,6 +372,7 @@ namespace Manta.Core
             wings.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             wings.SetFloat("_EnableGlow", 1.3f);
 
+            Log.Print("ApplyMaterials Stage Five");
             middleBody.shader = shader;
             middleBody.EnableKeyword("MARMO_SPECMAP");
             middleBody.EnableKeyword("_ZWRITE_ON");
@@ -385,6 +390,7 @@ namespace Manta.Core
             middleBody.SetVector("_EmissionColor", Vector4.zero);
             middleBody.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
 
+            Log.Print("ApplyMaterials Stage Six");
             windshield.shader = shader;
             windshield.DisableKeyword("_EMISSION");
             windshield.EnableKeyword("MARMO_SPECMAP");
@@ -427,6 +433,7 @@ namespace Manta.Core
             glass.SetFloat("_Fresnel", 0.9f);
             glass.renderQueue = 3101;*/
 
+            Log.Print("ApplyMaterials Stage Sevne");
             foreach (Material decalMaterial in decals)
             {
                 decalMaterial.shader = shader;
@@ -437,7 +444,7 @@ namespace Manta.Core
             }
             decals[1].SetTexture("_BumpMap", MantaAssetLoader.EXTERIOR_DECALS_NORMAL_MAP);
 
-            floor.shader = shader;
+            /*floor.shader = shader;
             floor.EnableKeyword("MARMO_SPECMAP");
             floor.EnableKeyword("_ZWRITE_ON");
             floor.SetColor("_Color", Color.white);
@@ -445,8 +452,9 @@ namespace Manta.Core
             floor.SetFloat("_SpecInt", 1f);
             floor.SetFloat("_Shininess", 6.5f);
             floor.SetFloat("_Fresnel", 0f);
-            floor.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
+            floor.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));*/
 
+            Log.Print("ApplyMaterials Stage Eight");
             wallDoorDecals.shader = shader;
             wallDoorDecals.EnableKeyword("MARMO_SPECMAP");
             wallDoorDecals.EnableKeyword("_ZWRITE_ON");
@@ -455,6 +463,7 @@ namespace Manta.Core
             wallDoorDecals.SetFloat("_Fresnel", 0f);
             wallDoorDecals.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
 
+            Log.Print("ApplyMaterials Stage Nine");
             backDoor.shader = shader;
             backDoor.EnableKeyword("MARMO_SPECMAP");
             backDoor.EnableKeyword("_ZWRITE_ON");
@@ -463,6 +472,7 @@ namespace Manta.Core
             backDoor.SetFloat("_Fresnel", 0f);
             backDoor.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
 
+            Log.Print("ApplyMaterials Stage Ten");
             walls.shader = shader;
             walls.EnableKeyword("MARMO_SPECMAP");
             walls.EnableKeyword("_ZWRITE_ON");
@@ -471,6 +481,7 @@ namespace Manta.Core
             walls.SetFloat("_SpecInt", 1f);
             walls.SetFloat("_Shininess", 6.5f);
 
+            Log.Print("ApplyMaterials Stage Eleven");
             doorWays.shader = shader;
             doorWays.EnableKeyword("MARMO_SPECMAP");
             doorWays.EnableKeyword("_ZWRITE_ON");
@@ -479,6 +490,7 @@ namespace Manta.Core
             doorWays.SetFloat("_SpecInt", 1f);
             doorWays.SetFloat("_Shininess", 6.5f);
 
+            Log.Print("ApplyMaterials Stage Twelve");
             propeller.shader = shader;
             propeller.EnableKeyword("MARMO_SPECMAP");
             propeller.EnableKeyword("_ZWRITE_ON");
@@ -489,7 +501,7 @@ namespace Manta.Core
             propeller.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
             propeller.SetFloat("_Fresnel", 5f);
 
-            floorDecals.shader = shader;
+            /*floorDecals.shader = shader;
             floorDecals.EnableKeyword("MARMO_SPECMAP");
             floorDecals.EnableKeyword("_ZWRITE_ON");
             floorDecals.SetColor("_Color", Color.white);
@@ -498,8 +510,9 @@ namespace Manta.Core
             floorDecals.SetFloat("_Shininess", 6.5f);
             floorDecals.SetFloat("_Fresnel", 0f);
             floorDecals.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            floorDecals.SetTexture("_BumpMap", MantaAssetLoader.FLOOR_NORMAL_MAP);
+            floorDecals.SetTexture("_BumpMap", MantaAssetLoader.FLOOR_NORMAL_MAP);*/
 
+            Log.Print("ApplyMaterials Stage Thirteen");
             lightDecals.shader = shader;
             lightDecals.DisableKeyword("_EMISSION");
             lightDecals.EnableKeyword("MARMO_ALPHA");
@@ -521,6 +534,7 @@ namespace Manta.Core
             lightDecals.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             lightDecals.SetFloat("_EnableGlow", 1.3f);
 
+            Log.Print("ApplyMaterials Stage Fourteen");
             moreInteriorDecals[0].shader = shader;
             moreInteriorDecals[0].EnableKeyword("_ZWRITE_ON");
             moreInteriorDecals[0].EnableKeyword("MARMO_ALPHA");
@@ -535,6 +549,7 @@ namespace Manta.Core
             moreInteriorDecals[0].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             moreInteriorDecals[0].SetFloat("_EnableGlow", 1.3f);
 
+            Log.Print("ApplyMaterials Stage Fifteen");
             moreInteriorDecals[1].shader = shader;
             moreInteriorDecals[1].EnableKeyword("_ZWRITE_ON");
             moreInteriorDecals[1].EnableKeyword("MARMO_ALPHA");
@@ -549,6 +564,7 @@ namespace Manta.Core
             moreInteriorDecals[1].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             moreInteriorDecals[1].SetFloat("_EnableGlow", 1.3f);
 
+            Log.Print("ApplyMaterials Stage Sixteen");
             moreInteriorDecals[2].shader = shader;
             moreInteriorDecals[2].EnableKeyword("_ZWRITE_ON");
             moreInteriorDecals[2].EnableKeyword("MARMO_ALPHA");
