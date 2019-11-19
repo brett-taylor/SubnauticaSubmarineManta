@@ -246,11 +246,17 @@
     <Compile Include="Core\PlayerPatcher.cs" />
     <Compile Include="Core\ThirdPersonCameraController.cs" />
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="Test\AssetLoader.cs" />
+    <Compile Include="Test\Assets.cs" />
     <Compile Include="Test\DebugMenu.cs" />
     <Compile Include="ThirdPersonController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Log.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Submarines\Submarines.csproj">
+      <Project>{6bc8ce46-4d49-4d56-8d65-0337ada12a89}</Project>
+      <Name>Submarines</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

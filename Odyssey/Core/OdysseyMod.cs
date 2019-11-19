@@ -38,7 +38,7 @@ namespace Odyssey.Core
         {
             CyclopsDefaultAssets.LoadDefaultCyclopsContent();
 
-            GameObject submarine = Object.Instantiate(OdysseyAssetLoader.ODYSSEY_EXTERIOR);
+            GameObject submarine = Object.Instantiate(Assets.ODYSSEY_EXTERIOR);
             ApplyMaterials(submarine);
 
             SkyApplier skyApplier = submarine.GetOrAddComponent<SkyApplier>();
@@ -184,9 +184,9 @@ namespace Odyssey.Core
             body.SetColor("_SpecColor", Color.white);
             body.SetFloat("_SpecInt", 1f);
             body.SetFloat("_Shininess", 6.5f);
-            body.SetTexture("_SpecTex", OdysseyAssetLoader.BODY_SPEC);
+            body.SetTexture("_SpecTex", Assets.BODY_SPEC);
             body.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            body.SetTexture("_BumpMap", OdysseyAssetLoader.BODY_NORMAL);
+            body.SetTexture("_BumpMap", Assets.BODY_NORMAL);
 
             bodyExtraOne.shader = shader;
             bodyExtraOne.EnableKeyword("MARMO_SPECMAP");
@@ -195,9 +195,9 @@ namespace Odyssey.Core
             bodyExtraOne.SetColor("_SpecColor", Color.white);
             bodyExtraOne.SetFloat("_SpecInt", 1f);
             bodyExtraOne.SetFloat("_Shininess", 6.5f);
-            bodyExtraOne.SetTexture("_SpecTex", OdysseyAssetLoader.BODY_EXTRA_ONE_SPEC);
+            bodyExtraOne.SetTexture("_SpecTex", Assets.BODY_EXTRA_ONE_SPEC);
             bodyExtraOne.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            bodyExtraOne.SetTexture("_BumpMap", OdysseyAssetLoader.BODY_EXTRA_ONE_NORMAL);
+            bodyExtraOne.SetTexture("_BumpMap", Assets.BODY_EXTRA_ONE_NORMAL);
 
             bodyExtraTwo.shader = shader;
             bodyExtraTwo.EnableKeyword("MARMO_SPECMAP");
@@ -207,14 +207,14 @@ namespace Odyssey.Core
             bodyExtraTwo.SetColor("_SpecColor", Color.white);
             bodyExtraTwo.SetFloat("_SpecInt", 1f);
             bodyExtraTwo.SetFloat("_Shininess", 6.5f);
-            bodyExtraTwo.SetTexture("_SpecTex", OdysseyAssetLoader.BODY_EXTRA_TWO_SPEC);
+            bodyExtraTwo.SetTexture("_SpecTex", Assets.BODY_EXTRA_TWO_SPEC);
             bodyExtraTwo.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            bodyExtraTwo.SetTexture("_BumpMap", OdysseyAssetLoader.BODY_EXTRA_TWO_NORMAL);
+            bodyExtraTwo.SetTexture("_BumpMap", Assets.BODY_EXTRA_TWO_NORMAL);
             bodyExtraTwo.SetColor("_GlowColor", Color.white);
             bodyExtraTwo.SetFloat("_GlowStrength", 1f);
             bodyExtraTwo.SetFloat("_EmissionLM", 0f);
             bodyExtraTwo.SetVector("_EmissionColor", Vector4.zero);
-            bodyExtraTwo.SetTexture("_Illum", OdysseyAssetLoader.BODY_EXTRA_TWO_EMISSIVE);
+            bodyExtraTwo.SetTexture("_Illum", Assets.BODY_EXTRA_TWO_EMISSIVE);
             bodyExtraTwo.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             bodyExtraTwo.SetFloat("_EnableGlow", 1.3f);
 
@@ -225,9 +225,9 @@ namespace Odyssey.Core
             camera.SetColor("_SpecColor", Color.white);
             camera.SetFloat("_SpecInt", 1f);
             camera.SetFloat("_Shininess", 6.5f);
-            camera.SetTexture("_SpecTex", OdysseyAssetLoader.CAMERA_SPEC);
+            camera.SetTexture("_SpecTex", Assets.CAMERA_SPEC);
             camera.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            camera.SetTexture("_BumpMap", OdysseyAssetLoader.CAMERA_NORMAL);
+            camera.SetTexture("_BumpMap", Assets.CAMERA_NORMAL);
 
             decals.shader = shader;
             decals.EnableKeyword("MARMO_SPECMAP");
@@ -238,9 +238,9 @@ namespace Odyssey.Core
             decals.SetColor("_SpecColor", Color.white);
             decals.SetFloat("_SpecInt", 1f);
             decals.SetFloat("_Shininess", 6.5f);
-            decals.SetTexture("_SpecTex", OdysseyAssetLoader.DECALS_SPEC);
+            decals.SetTexture("_SpecTex", Assets.DECALS_SPEC);
             decals.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            decals.SetTexture("_BumpMap", OdysseyAssetLoader.DECALS_NORMAL);
+            decals.SetTexture("_BumpMap", Assets.DECALS_NORMAL);
 
             hatch.shader = shader;
             hatch.EnableKeyword("MARMO_SPECMAP");
@@ -249,9 +249,9 @@ namespace Odyssey.Core
             hatch.SetColor("_SpecColor", Color.white);
             hatch.SetFloat("_SpecInt", 1f);
             hatch.SetFloat("_Shininess", 6.5f);
-            hatch.SetTexture("_SpecTex", OdysseyAssetLoader.HATCH_SPEC);
+            hatch.SetTexture("_SpecTex", Assets.HATCH_SPEC);
             hatch.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            hatch.SetTexture("_BumpMap", OdysseyAssetLoader.HATCH_NORMAL);
+            hatch.SetTexture("_BumpMap", Assets.HATCH_NORMAL);
 
             sensors.shader = shader;
             sensors.EnableKeyword("MARMO_SPECMAP");
@@ -260,9 +260,9 @@ namespace Odyssey.Core
             sensors.SetColor("_SpecColor", Color.white);
             sensors.SetFloat("_SpecInt", 1f);
             sensors.SetFloat("_Shininess", 6.5f);
-            sensors.SetTexture("_SpecTex", OdysseyAssetLoader.SENSORS_SPEC);
+            sensors.SetTexture("_SpecTex", Assets.SENSORS_SPEC);
             sensors.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            sensors.SetTexture("_BumpMap", OdysseyAssetLoader.SENSORS_NORMAL);
+            sensors.SetTexture("_BumpMap", Assets.SENSORS_NORMAL);
 
             model.FindChild("BallMount_LP").GetComponent<MeshRenderer>().material = bodyExtraOne;
             model.FindChild("Blades_LP").GetComponent<MeshRenderer>().material = bodyExtraTwo;

@@ -20,7 +20,8 @@ namespace MiniMantaDrone
             HarmonyInstance = HarmonyInstance.Create("taylor.brett.MiniMantaDrone.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
-            MiniMantaDroneAssetLoader.LoadAssets();
+            Assets.Instance = new Assets();
+
             MiniMantaDroneMod miniMantaDrone = new MiniMantaDroneMod();
             miniMantaDrone.Patch();
         }

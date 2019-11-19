@@ -13,16 +13,15 @@ namespace PlayerAnimations.Test
                 ThirdPersonController.Toggle();
             }
 
-            if (AssetLoader.AnimationControllers == null)
+            if (Assets.AnimationControllers == null)
             {
-                Utilities.Log.Print("Called 2");
                 GUILayout.Label("Animations not loaded");
                 return;
             }
 
-            GUILayout.Label("Found " + AssetLoader.AnimationControllers.Count + " RuntimeAnimatorController");
+            GUILayout.Label("Found " + Assets.AnimationControllers.Count + " RuntimeAnimatorController");
 
-            foreach(RuntimeAnimatorController controller in AssetLoader.AnimationControllers)
+            foreach(RuntimeAnimatorController controller in Assets.AnimationControllers)
             {
                 foreach(AnimationClip ac in controller.animationClips)
                 {

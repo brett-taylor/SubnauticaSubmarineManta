@@ -72,7 +72,7 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Core\MantaMod.cs" />
     <Compile Include="Components\MantaSerializationFixer.cs" />
-    <Compile Include="Utilities\MantaAssetLoader.cs" />
+    <Compile Include="Utilities\Assets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Log.cs" />
   </ItemGroup>

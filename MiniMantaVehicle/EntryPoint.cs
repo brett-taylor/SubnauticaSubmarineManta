@@ -20,7 +20,8 @@ namespace MiniMantaVehicle
             HarmonyInstance = HarmonyInstance.Create("taylor.brett.MiniMantaVehicle.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
-            MiniMantaVehicleAssetLoader.LoadAssets();
+            Assets.Instance = new Assets();
+
             MiniMantaVehicleMod miniMantaVehicle = new MiniMantaVehicleMod();
             miniMantaVehicle.Patch();
         }

@@ -15,18 +15,13 @@ namespace Submarines.Water
         public WaterClipProxy.Shape Shape { get; set; } = WaterClipProxy.Shape.DistanceField;
         public bool Immovable { get; set; } = false;
 
-        private WaterClipProxy waterClipProxy;
+        //private WaterClipProxy waterClipProxy;
 
         public void Initialise()
         {
-            gameObject.layer += LayerMask.NameToLayer("BaseClipProxy");
+            /*gameObject.layer += LayerMask.NameToLayer("BaseClipProxy");
 
-            TextAsset textAsset = Assets.SubmarineAssetLoader.ASSET_BUNDLE.LoadAsset<TextAsset>(DISTANCE_FIELD_TEMPLATE_FILE_NAME);
-            if (textAsset == null)
-            {
-                Utilities.Log.Print("DistanceField text file not found in the submarine asset bundle: ");
-                return;
-            }
+            //TextAsset textAsset = Assets.Assets.Instance.GetAsset<TextAsset>(DISTANCE_FIELD_TEMPLATE_FILE_NAME); // TODO fix
             
             waterClipProxy = gameObject.AddComponent<WaterClipProxy>();
             waterClipProxy.shape = Shape;
@@ -44,7 +39,7 @@ namespace Submarines.Water
                     }
                 }
             }
-            waterClipProxy.clipMaterial = ClipMaterialCache;
+            waterClipProxy.clipMaterial = ClipMaterialCache;*/
         }
     }
 }

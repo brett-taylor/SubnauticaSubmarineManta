@@ -47,7 +47,7 @@ namespace Manta.Core
         {
             CyclopsDefaultAssets.LoadDefaultCyclopsContent();
 
-            GameObject submarine = Object.Instantiate(MantaAssetLoader.MANTA_EXTERIOR);
+            GameObject submarine = Object.Instantiate(Assets.MANTA_EXTERIOR);
             Renderer[] renderers = submarine.GetComponentsInChildren<Renderer>();
             ApplyMaterials(submarine, renderers);
 
@@ -285,22 +285,13 @@ namespace Manta.Core
             DestabiliseOnSubDeath destabiliseOnSubDeath = submarine.GetOrAddComponent<DestabiliseOnSubDeath>();
             KillPlayerInsideOnSubDeath killPlayerInsideOnSubDeath = submarine.GetOrAddComponent<KillPlayerInsideOnSubDeath>();
 
-            // Temp screens
-            GameObject helmMantaOSScreen = submarine.FindChild("PointsOfInterest").FindChild("UpgradesAndBatteries").FindChild("HelmScreen").FindChild("Canvas");
-            GameObject rearMantaOSScreen = submarine.FindChild("PointsOfInterest").FindChild("UpgradesAndBatteries").FindChild("UpgradeScreen").FindChild("Canvas");
-            GameObject steeringConsoleMantaOSScreen = submarine.FindChild("PointsOfInterest").FindChild("SteeringConsole").FindChild("Canvas");
-            Object.Instantiate(MantaAssetLoader.MANTA_OS_MAIN_LAYOUT_PAGE).transform.SetParent(helmMantaOSScreen.transform, false);
-            Object.Instantiate(MantaAssetLoader.MANTAOS_OFFLINE_PAGE).transform.SetParent(rearMantaOSScreen.transform, false);
-            Object.Instantiate(MantaAssetLoader.MANTAOS_OFFLINE_PAGE).transform.SetParent(steeringConsoleMantaOSScreen.transform, false);
-
             SMLHelper.V2.Handlers.TechTypeHandler.TryGetModdedTechType(UNIQUE_ID, out TechType mantaTechType);
-            PingType mantaPingType = CustomBeaconManager.RegisterNewPingType(mantaTechType, NAME, MantaAssetLoader.MANTA_PING_ICON);
+            PingType mantaPingType = CustomBeaconManager.RegisterNewPingType(mantaTechType, NAME, Assets.PING_ICON);
             PingInstance pingInstance = CustomBeaconManager.AddNewBeacon(submarine, mantaPingType, "HMS Unknown Manta");
         }
 
         private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
         {
-            Log.Print("ApplyMaterials Stage One");
             Shader shader = Shader.Find("MarmosetUBER");
             foreach (Renderer renderer in renderers)
             {
@@ -313,7 +304,6 @@ namespace Manta.Core
                 }
             }
 
-            Log.Print("ApplyMaterials Stage Two");
             GameObject model = manta.FindChild("Model");
             MeshRenderer exteriorRenderer = model.FindChild("Exterior").GetComponent<MeshRenderer>();
             Material middleBody = exteriorRenderer.materials[0];
@@ -322,7 +312,7 @@ namespace Manta.Core
             Material glass = exteriorRenderer.materials[3];
             Material wings = exteriorRenderer.materials[4];
             Material[] decals = manta.FindChild("Model").FindChild("ExteriorDecals").GetComponent<MeshRenderer>().materials;
-            //Material floor = model.FindChild("Floor").GetComponent<MeshRenderer>().material;
+            //Material floor = model.FindChild("Floor").GetComponentds<MeshRenderer>().material;
             //Material floorDecals = model.FindChild("LightsAndFloorDecals").FindChild("FloorDecals").GetComponent<MeshRenderer>().material;
             Material lightDecals = model.FindChild("LightsAndFloorDecals").FindChild("LightDeclas").GetComponent<MeshRenderer>().material;
             Material wallDoorDecals = model.FindChild("WallDoorDecals").GetComponent<MeshRenderer>().material;
@@ -332,7 +322,6 @@ namespace Manta.Core
             Material[] moreInteriorDecals = model.FindChild("MoreInteriorDecals").GetComponent<MeshRenderer>().materials;
             Material backDoor = model.FindChild("BackDoor").GetComponent<MeshRenderer>().material;
 
-            Log.Print("ApplyMaterials Stage Three");
             tail.shader = shader;
             tail.EnableKeyword("MARMO_SPECMAP");
             tail.EnableKeyword("_ZWRITE_ON");
@@ -341,16 +330,15 @@ namespace Manta.Core
             tail.SetFloat("_SpecInt", 1f);
             tail.SetFloat("_Shininess", 6.5f);
             tail.SetFloat("_Fresnel", 0f);
-            tail.SetTexture("_SpecTex", MantaAssetLoader.HULL_ONE_SPEC_MAP);
+            tail.SetTexture("_SpecTex", Assets.HULL_ONE_SPEC_MAP);
             tail.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            tail.SetTexture("_BumpMap", MantaAssetLoader.HULL_ONE_NORMAL_MAP);
+            tail.SetTexture("_BumpMap", Assets.HULL_ONE_NORMAL_MAP);
             tail.SetColor("_GlowColor", Color.white);
             tail.SetFloat("_GlowStrength", 1f);
             tail.SetFloat("_EmissionLM", 0f);
             tail.SetVector("_EmissionColor", Vector4.zero);
             tail.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
 
-            Log.Print("ApplyMaterials Stage Four");
             wings.shader = shader;
             wings.DisableKeyword("_EMISSION");
             wings.EnableKeyword("MARMO_SPECMAP");
@@ -361,18 +349,17 @@ namespace Manta.Core
             wings.SetFloat("_SpecInt", 1f);
             wings.SetFloat("_Shininess", 6.5f);
             wings.SetFloat("_Fresnel", 0f);
-            wings.SetTexture("_SpecTex", MantaAssetLoader.HULL_TWO_SPEC_MAP);
+            wings.SetTexture("_SpecTex", Assets.HULL_TWO_SPEC_MAP);
             wings.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            wings.SetTexture("_BumpMap", MantaAssetLoader.HULL_TWO_NORMAL_MAP);
+            wings.SetTexture("_BumpMap", Assets.HULL_TWO_NORMAL_MAP);
             wings.SetColor("_GlowColor", Color.white);
             wings.SetFloat("_GlowStrength", 1f);
             wings.SetFloat("_EmissionLM", 0f);
             wings.SetVector("_EmissionColor", Vector4.zero);
-            wings.SetTexture("_Illum", MantaAssetLoader.HULL_TWO_EMISSIVE_MAP);
+            wings.SetTexture("_Illum", Assets.HULL_TWO_EMISSIVE_MAP);
             wings.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             wings.SetFloat("_EnableGlow", 1.3f);
 
-            Log.Print("ApplyMaterials Stage Five");
             middleBody.shader = shader;
             middleBody.EnableKeyword("MARMO_SPECMAP");
             middleBody.EnableKeyword("_ZWRITE_ON");
@@ -381,16 +368,15 @@ namespace Manta.Core
             middleBody.SetFloat("_SpecInt", 1f);
             middleBody.SetFloat("_Shininess", 6.5f);
             middleBody.SetFloat("_Fresnel", 0f);
-            middleBody.SetTexture("_SpecTex", MantaAssetLoader.HULL_THREE_SPEC_MAP);
+            middleBody.SetTexture("_SpecTex", Assets.HULL_THREE_SPEC_MAP);
             middleBody.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            middleBody.SetTexture("_BumpMap", MantaAssetLoader.HULL_THREE_NORMAL_MAP);
+            middleBody.SetTexture("_BumpMap", Assets.HULL_THREE_NORMAL_MAP);
             middleBody.SetColor("_GlowColor", Color.white);
             middleBody.SetFloat("_GlowStrength", 1f);
             middleBody.SetFloat("_EmissionLM", 0f);
             middleBody.SetVector("_EmissionColor", Vector4.zero);
             middleBody.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
 
-            Log.Print("ApplyMaterials Stage Six");
             windshield.shader = shader;
             windshield.DisableKeyword("_EMISSION");
             windshield.EnableKeyword("MARMO_SPECMAP");
@@ -401,14 +387,14 @@ namespace Manta.Core
             windshield.SetFloat("_SpecInt", 1f);
             windshield.SetFloat("_Shininess", 6.5f);
             windshield.SetFloat("_Fresnel", 0f);
-            windshield.SetTexture("_SpecTex", MantaAssetLoader.HULL_FOUR_SPEC_MAP);
+            windshield.SetTexture("_SpecTex", Assets.HULL_FOUR_SPEC_MAP);
             windshield.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            windshield.SetTexture("_BumpMap", MantaAssetLoader.HULL_FOUR_NORMAL_MAP);
+            windshield.SetTexture("_BumpMap", Assets.HULL_FOUR_NORMAL_MAP);
             windshield.SetColor("_GlowColor", Color.white);
             windshield.SetFloat("_GlowStrength", 1f);
             windshield.SetFloat("_EmissionLM", 0f);
             windshield.SetVector("_EmissionColor", Vector4.zero);
-            windshield.SetTexture("_Illum", MantaAssetLoader.HULL_FOUR_EMISSIVE_MAP);
+            windshield.SetTexture("_Illum", Assets.HULL_FOUR_EMISSIVE_MAP);
             windshield.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             windshield.SetFloat("_EnableGlow", 1.3f);
 
@@ -433,7 +419,6 @@ namespace Manta.Core
             glass.SetFloat("_Fresnel", 0.9f);
             glass.renderQueue = 3101;*/
 
-            Log.Print("ApplyMaterials Stage Sevne");
             foreach (Material decalMaterial in decals)
             {
                 decalMaterial.shader = shader;
@@ -442,7 +427,7 @@ namespace Manta.Core
                 decalMaterial.EnableKeyword("MARMO_ALPHA_CLIP");
                 decalMaterial.SetColor("_Color", Color.white);
             }
-            decals[1].SetTexture("_BumpMap", MantaAssetLoader.EXTERIOR_DECALS_NORMAL_MAP);
+            decals[1].SetTexture("_BumpMap", Assets.EXTERIOR_DECALS_NORMAL_MAP);
 
             /*floor.shader = shader;
             floor.EnableKeyword("MARMO_SPECMAP");
@@ -454,7 +439,6 @@ namespace Manta.Core
             floor.SetFloat("_Fresnel", 0f);
             floor.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));*/
 
-            Log.Print("ApplyMaterials Stage Eight");
             wallDoorDecals.shader = shader;
             wallDoorDecals.EnableKeyword("MARMO_SPECMAP");
             wallDoorDecals.EnableKeyword("_ZWRITE_ON");
@@ -463,7 +447,6 @@ namespace Manta.Core
             wallDoorDecals.SetFloat("_Fresnel", 0f);
             wallDoorDecals.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
 
-            Log.Print("ApplyMaterials Stage Nine");
             backDoor.shader = shader;
             backDoor.EnableKeyword("MARMO_SPECMAP");
             backDoor.EnableKeyword("_ZWRITE_ON");
@@ -472,7 +455,6 @@ namespace Manta.Core
             backDoor.SetFloat("_Fresnel", 0f);
             backDoor.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
 
-            Log.Print("ApplyMaterials Stage Ten");
             walls.shader = shader;
             walls.EnableKeyword("MARMO_SPECMAP");
             walls.EnableKeyword("_ZWRITE_ON");
@@ -481,7 +463,6 @@ namespace Manta.Core
             walls.SetFloat("_SpecInt", 1f);
             walls.SetFloat("_Shininess", 6.5f);
 
-            Log.Print("ApplyMaterials Stage Eleven");
             doorWays.shader = shader;
             doorWays.EnableKeyword("MARMO_SPECMAP");
             doorWays.EnableKeyword("_ZWRITE_ON");
@@ -490,7 +471,6 @@ namespace Manta.Core
             doorWays.SetFloat("_SpecInt", 1f);
             doorWays.SetFloat("_Shininess", 6.5f);
 
-            Log.Print("ApplyMaterials Stage Twelve");
             propeller.shader = shader;
             propeller.EnableKeyword("MARMO_SPECMAP");
             propeller.EnableKeyword("_ZWRITE_ON");
@@ -512,7 +492,6 @@ namespace Manta.Core
             floorDecals.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             floorDecals.SetTexture("_BumpMap", MantaAssetLoader.FLOOR_NORMAL_MAP);*/
 
-            Log.Print("ApplyMaterials Stage Thirteen");
             lightDecals.shader = shader;
             lightDecals.DisableKeyword("_EMISSION");
             lightDecals.EnableKeyword("MARMO_ALPHA");
@@ -530,46 +509,43 @@ namespace Manta.Core
             lightDecals.SetFloat("_GlowStrength", 1f);
             lightDecals.SetFloat("_EmissionLM", 0f);
             lightDecals.SetVector("_EmissionColor", Vector4.zero);
-            lightDecals.SetTexture("_Illum", MantaAssetLoader.LIGHT_EMISSIVE_MAP);
+            lightDecals.SetTexture("_Illum", Assets.LIGHT_EMISSIVE_MAP);
             lightDecals.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             lightDecals.SetFloat("_EnableGlow", 1.3f);
 
-            Log.Print("ApplyMaterials Stage Fourteen");
             moreInteriorDecals[0].shader = shader;
             moreInteriorDecals[0].EnableKeyword("_ZWRITE_ON");
             moreInteriorDecals[0].EnableKeyword("MARMO_ALPHA");
             moreInteriorDecals[0].EnableKeyword("MARMO_ALPHA_CLIP");
             moreInteriorDecals[0].EnableKeyword("MARMO_EMISSION");
-            moreInteriorDecals[0].SetTexture("_BumpMap", MantaAssetLoader.WALL_DECALS_ONE_NORMAL_MAP);
+            moreInteriorDecals[0].SetTexture("_BumpMap", Assets.WALL_DECALS_ONE_NORMAL_MAP);
             moreInteriorDecals[0].SetColor("_GlowColor", Color.white);
             moreInteriorDecals[0].SetFloat("_GlowStrength", 1f);
             moreInteriorDecals[0].SetFloat("_EmissionLM", 0f);
             moreInteriorDecals[0].SetVector("_EmissionColor", Vector4.zero);
-            moreInteriorDecals[0].SetTexture("_Illum", MantaAssetLoader.WALL_DECALS_ONE_EMISSIVE_MAP);
+            moreInteriorDecals[0].SetTexture("_Illum", Assets.WALL_DECALS_ONE_EMISSIVE_MAP);
             moreInteriorDecals[0].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             moreInteriorDecals[0].SetFloat("_EnableGlow", 1.3f);
 
-            Log.Print("ApplyMaterials Stage Fifteen");
             moreInteriorDecals[1].shader = shader;
             moreInteriorDecals[1].EnableKeyword("_ZWRITE_ON");
             moreInteriorDecals[1].EnableKeyword("MARMO_ALPHA");
             moreInteriorDecals[1].EnableKeyword("MARMO_ALPHA_CLIP");
             moreInteriorDecals[1].EnableKeyword("MARMO_EMISSION");
-            moreInteriorDecals[1].SetTexture("_BumpMap", MantaAssetLoader.WALL_DECALS_TWO_NORMAL_MAP);
+            moreInteriorDecals[1].SetTexture("_BumpMap", Assets.WALL_DECALS_TWO_NORMAL_MAP);
             moreInteriorDecals[1].SetColor("_GlowColor", Color.white);
             moreInteriorDecals[1].SetFloat("_GlowStrength", 1f);
             moreInteriorDecals[1].SetFloat("_EmissionLM", 0f);
             moreInteriorDecals[1].SetVector("_EmissionColor", Vector4.zero);
-            moreInteriorDecals[1].SetTexture("_Illum", MantaAssetLoader.WALL_DECALS_TWO_EMISSIVE_MAP);
+            moreInteriorDecals[1].SetTexture("_Illum", Assets.WALL_DECALS_TWO_EMISSIVE_MAP);
             moreInteriorDecals[1].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
             moreInteriorDecals[1].SetFloat("_EnableGlow", 1.3f);
 
-            Log.Print("ApplyMaterials Stage Sixteen");
             moreInteriorDecals[2].shader = shader;
             moreInteriorDecals[2].EnableKeyword("_ZWRITE_ON");
             moreInteriorDecals[2].EnableKeyword("MARMO_ALPHA");
             moreInteriorDecals[2].EnableKeyword("MARMO_ALPHA_CLIP");
-            moreInteriorDecals[2].SetTexture("_BumpMap", MantaAssetLoader.WALL_DECALS_THREE_NORMAL_MAP);
+            moreInteriorDecals[2].SetTexture("_BumpMap", Assets.WALL_DECALS_THREE_NORMAL_MAP);
         }
     }
 }

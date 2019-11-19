@@ -29,7 +29,7 @@ namespace MiniMantaVehicle.Core
         */
         public static GameObject CreateMiniMantaVehicle()
         {
-            GameObject vehicle = Object.Instantiate(MiniMantaVehicleAssetLoader.MINI_MANTA_VEHICLE_EXTERIOR);
+            GameObject vehicle = Object.Instantiate(Assets.MINI_MANTA_VEHICLE_EXTERIOR);
             ApplyMaterials(vehicle);
 
             SkyApplier skyApplier = vehicle.GetOrAddComponent<SkyApplier>();

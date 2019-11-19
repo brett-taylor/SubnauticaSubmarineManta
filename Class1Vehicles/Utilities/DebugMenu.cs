@@ -561,10 +561,10 @@ namespace Class1Vehicles.Utilities
 
             GUILayout.Box("Current Health: " + manta.GetComponent<LiveMixin>()?.health);
             GUILayout.Box("Max Health: " + manta.GetComponent<LiveMixin>()?.maxHealth);
-            GUILayout.Box("Health Per Damage Point: " + manta.GetComponent<ExternalDamageManager>().GetHealthPerDamagePoint());
-            GUILayout.Box("Unused Damage Point: " + manta.GetComponent<ExternalDamageManager>().GetUnusedDamagePointsCount());
-            GUILayout.Box("Used Damage Point: " + manta.GetComponent<ExternalDamageManager>().GetUsedDamagePointsCount());
-            GUILayout.Box("Amount of Damage Points that *should* be showing: " + manta.GetComponent<ExternalDamageManager>().GetNumberOfDamagePointsThatShouldBeShowing());
+            GUILayout.Box("Health Per Damage Point: " + manta.GetComponent<ExternalDamageManager>()?.GetHealthPerDamagePoint());
+            GUILayout.Box("Unused Damage Point: " + manta.GetComponent<ExternalDamageManager>()?.GetUnusedDamagePointsCount());
+            GUILayout.Box("Used Damage Point: " + manta.GetComponent<ExternalDamageManager>()?.GetUsedDamagePointsCount());
+            GUILayout.Box("Amount of Damage Points that *should* be showing: " + manta.GetComponent<ExternalDamageManager>()?.GetNumberOfDamagePointsThatShouldBeShowing());
 
             if (GUILayout.Button("Toggle Emergency Lighting"))
             {

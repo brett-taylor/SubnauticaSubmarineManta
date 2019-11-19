@@ -65,7 +65,7 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Log.cs" />
-    <Compile Include="Utilities\MiniMantaDroneAssetLoader.cs" />
+    <Compile Include="Utilities\Assets.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Submarines\Submarines.csproj">

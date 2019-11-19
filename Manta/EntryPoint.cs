@@ -19,7 +19,9 @@ namespace Manta
         {
             HarmonyInstance = HarmonyInstance.Create("taylor.brett.TheMantaMod.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
-            MantaAssetLoader.LoadAssets();
+
+            Assets.Instance = new Assets();
+
             MantaMod manta = new MantaMod();
             manta.Patch();
         }

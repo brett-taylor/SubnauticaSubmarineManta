@@ -10,8 +10,7 @@ namespace PlayerAnimations
         {
             HarmonyInstance harmony = HarmonyInstance.Create("taylor.brett.PlayerAnimations.mod");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-
-            AssetLoader.LoadAnimations();
+            Assets.Instance = new Assets();
         }
     }
 }

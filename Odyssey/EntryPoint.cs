@@ -20,9 +20,10 @@ namespace Odyssey
             HarmonyInstance = HarmonyInstance.Create("taylor.brett.Odyssey.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
-            OdysseyAssetLoader.LoadAssets();
-            OdysseyMod manta = new OdysseyMod();
-            manta.Patch();
+            Assets.Instance = new Assets();
+
+            OdysseyMod odyssey = new OdysseyMod();
+            odyssey.Patch();
         }
 
         public static void SetModFolderDirectory(string qmodsFolderLocation, string modFolderName)

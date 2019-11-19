@@ -22,9 +22,10 @@ namespace Submarines
                 return;
             }
 
+            Assets.Assets.Instance = new Assets.Assets();
+
             HarmonyInstance = HarmonyInstance.Create("taylor.brett.SubmarinesFramework.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
-            Assets.SubmarineAssetLoader.LoadAssets();
             Content.Beacon.CustomBeaconManager.Initialize();
         }
 
