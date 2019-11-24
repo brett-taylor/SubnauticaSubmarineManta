@@ -326,7 +326,8 @@ namespace Manta.Core
             MaterialHelper.ApplyAlphaShader(exteriorDecals, "ExteriorDecalsThree");
 
             // Propeller
-            MaterialHelper.ApplySpecShader(exterior.FindChild("Propeller"), "Propeller", null, 3f, 20f);
+            MaterialHelper.ApplySpecShader(exterior.FindChild("Propeller"), "Propeller", null, 3f, 20f);
+
             // Windshield
             GameObject windshieldGlass = exterior.FindChild("WindshieldGlass");
             MaterialHelper.ChangeMaterialColor(windshieldGlass, "Glass", new Color(0f, 0.2f, 0.4f, 0.4f));
@@ -400,6 +401,17 @@ namespace Manta.Core
 
             // Moonpool walls
             MaterialHelper.ApplySpecShader(moonpool.FindChild("MoonPoolWalls"), "Moonpool-walls", null, 0.6f, 20f);
+
+            // Moonpool Walkway
+            MaterialHelper.ApplySpecShader(moonpool.FindChild("MoonPoolWalkWay"), "Floor", null, 1f, 6.5f);
+            MaterialHelper.ApplySpecShader(moonpool.FindChild("MoonPoolGlassProtection"), "Floor", null, 1f, 6.5f);
+
+            // Console
+            GameObject steeringConsole = poi.FindChild("SteeringConsole");
+            MaterialHelper.ApplySpecShader(steeringConsole, "Console-body", null, 1f, 6.5f);
+            MaterialHelper.SetMarmosetShader(steeringConsole, "Console-screen");
+            MaterialHelper.SetMarmosetShader(steeringConsole, "Console-screen-bevel");
+            MaterialHelper.ApplyEmissionShader(steeringConsole, "Console-emission", Assets.CONSOLE_SCREEN_EMISSION, Color.white);
         }
     }
 }

@@ -35,6 +35,7 @@ namespace Manta.Utilities
         public static Texture WALL_DECALS_TWO_EMISSIVE_MAP => Instance.GetAsset<Texture>("wall_decal_two_emissive");
         public static Texture WALL_DECALS_THREE_NORMAL_MAP => Instance.GetAsset<Texture>("wall_decal_three_normals");
         public static Texture EXTERIOR_DECALS_NORMAL_MAP => Instance.GetAsset<Texture>("exter_decals_normals");
+        public static Texture CONSOLE_SCREEN_EMISSION => Instance.GetAsset<Texture>("MantaFinv2interiorrevision2only_ScreenLED.001_Emissive");
         public static Sprite PING_ICON { get; private set; }
 
         internal Assets() : base()
