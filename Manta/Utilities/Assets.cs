@@ -27,6 +27,8 @@ namespace Manta.Utilities
         public static Texture HULL_FOUR_EMISSIVE_MAP => Instance.GetAsset<Texture>("Hull4_Emit");
         public static Texture FLOOR_NORMAL_MAP => Instance.GetAsset<Texture>("HexNormal");
         public static Texture LIGHT_EMISSIVE_MAP => Instance.GetAsset<Texture>("LightDecal");
+        public static Texture WALLS_NORMAL_MAP => Instance.GetAsset<Texture>("MantaFinv2interiorrevision2only_Walls_Normal");
+        public static Texture WALLS_SPEC_MAP => Instance.GetAsset<Texture>("MantaFinv2interiorrevision2only_Walls_Metallic");
         public static Texture WALL_DECALS_ONE_NORMAL_MAP => Instance.GetAsset<Texture>("wall_decals_one_normals");
         public static Texture WALL_DECALS_ONE_EMISSIVE_MAP => Instance.GetAsset<Texture>("wall_decal_one_emissive");
         public static Texture WALL_DECALS_TWO_NORMAL_MAP => Instance.GetAsset<Texture>("wall_deacls_two_normals");

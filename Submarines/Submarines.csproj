@@ -108,6 +108,7 @@
     <Compile Include="Content\Movement\MovementController.cs" />
     <Compile Include="Content\Movement\MovementStabiliser.cs" />
     <Compile Include="Content\SteeringConsole.cs" />
+    <Compile Include="Utilities\Helpers\MaterialHelper.cs" />
     <Compile Include="Patchers\Creatures\MakeAggressiveToSubmarinesPatcher.cs" />
     <Compile Include="Patchers\Creatures\MeleeAttackPatcher.cs" />
     <Compile Include="Patchers\SubRootPatcher.cs" />

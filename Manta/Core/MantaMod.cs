@@ -14,6 +14,7 @@ using Submarines.Content.Lighting;
 using Submarines.Content.Death;
 using System.Collections;
 using Submarines.Content.Beacon;
+using Submarines.Utilities.Helpers;
 
 namespace Manta.Core
 {
@@ -49,7 +50,7 @@ namespace Manta.Core
 
             GameObject submarine = Object.Instantiate(Assets.MANTA_EXTERIOR);
             Renderer[] renderers = submarine.GetComponentsInChildren<Renderer>();
-            ApplyMaterials(submarine, renderers);
+            ApplyMaterials(submarine);
 
             SkyApplier skyApplier = submarine.GetOrAddComponent<SkyApplier>();
             skyApplier.renderers = renderers;
@@ -290,262 +291,115 @@ namespace Manta.Core
             PingInstance pingInstance = CustomBeaconManager.AddNewBeacon(submarine, mantaPingType, "HMS Unknown Manta");
         }
 
-        private static void ApplyMaterials(GameObject manta, Renderer[] renderers)
+        private static void ApplyMaterials(GameObject manta)
         {
-            Shader shader = Shader.Find("MarmosetUBER");
-            foreach (Renderer renderer in renderers)
-            {
-                foreach (Material mat in renderer.materials)
-                {
-                    if (mat.name.ToLower().Contains("glass") == false)
-                    {
-                        mat.shader = shader;
-                    }
-                }
-            }
-
             GameObject model = manta.FindChild("Model");
-            MeshRenderer exteriorRenderer = model.FindChild("Exterior").GetComponent<MeshRenderer>();
-            Material middleBody = exteriorRenderer.materials[0];
-            Material tail = exteriorRenderer.materials[1];
-            Material windshield = exteriorRenderer.materials[2];
-            Material glass = exteriorRenderer.materials[3];
-            Material wings = exteriorRenderer.materials[4];
-            Material[] decals = manta.FindChild("Model").FindChild("ExteriorDecals").GetComponent<MeshRenderer>().materials;
-            //Material floor = model.FindChild("Floor").GetComponentds<MeshRenderer>().material;
-            //Material floorDecals = model.FindChild("LightsAndFloorDecals").FindChild("FloorDecals").GetComponent<MeshRenderer>().material;
-            Material lightDecals = model.FindChild("LightsAndFloorDecals").FindChild("LightDeclas").GetComponent<MeshRenderer>().material;
-            Material wallDoorDecals = model.FindChild("WallDoorDecals").GetComponent<MeshRenderer>().material;
-            Material walls = model.FindChild("Walls").GetComponent<MeshRenderer>().material;
-            Material doorWays = model.FindChild("Doorways").GetComponent<MeshRenderer>().material;
-            Material propeller = model.FindChild("Propeller").GetComponent<MeshRenderer>().material;
-            Material[] moreInteriorDecals = model.FindChild("MoreInteriorDecals").GetComponent<MeshRenderer>().materials;
-            Material backDoor = model.FindChild("BackDoor").GetComponent<MeshRenderer>().material;
+            GameObject exterior = model.FindChild("Exterior");
+            GameObject exteriorModel = exterior.FindChild("ExteriorModel");
+            GameObject interior = model.FindChild("Interior");
+            GameObject poi = manta.FindChild("PointsOfInterest");
+            GameObject moonpool = interior.FindChild("MoonPool");
 
-            tail.shader = shader;
-            tail.EnableKeyword("MARMO_SPECMAP");
-            tail.EnableKeyword("_ZWRITE_ON");
-            tail.SetColor("_Color", Color.white);
-            tail.SetColor("_SpecColor", Color.white);
-            tail.SetFloat("_SpecInt", 1f);
-            tail.SetFloat("_Shininess", 6.5f);
-            tail.SetFloat("_Fresnel", 0f);
-            tail.SetTexture("_SpecTex", Assets.HULL_ONE_SPEC_MAP);
-            tail.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            tail.SetTexture("_BumpMap", Assets.HULL_ONE_NORMAL_MAP);
-            tail.SetColor("_GlowColor", Color.white);
-            tail.SetFloat("_GlowStrength", 1f);
-            tail.SetFloat("_EmissionLM", 0f);
-            tail.SetVector("_EmissionColor", Vector4.zero);
-            tail.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
+            // Tail
+            MaterialHelper.ApplyNormalShader(exteriorModel, "Exterior-tail", Assets.HULL_ONE_NORMAL_MAP);
+            MaterialHelper.ApplySpecShader(exteriorModel, "Exterior-tail", Assets.HULL_ONE_SPEC_MAP, 1f, 6.5f);
 
-            wings.shader = shader;
-            wings.DisableKeyword("_EMISSION");
-            wings.EnableKeyword("MARMO_SPECMAP");
-            wings.EnableKeyword("_ZWRITE_ON");
-            wings.EnableKeyword("MARMO_EMISSION");
-            wings.SetColor("_Color", Color.white);
-            wings.SetColor("_SpecColor", Color.white);
-            wings.SetFloat("_SpecInt", 1f);
-            wings.SetFloat("_Shininess", 6.5f);
-            wings.SetFloat("_Fresnel", 0f);
-            wings.SetTexture("_SpecTex", Assets.HULL_TWO_SPEC_MAP);
-            wings.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            wings.SetTexture("_BumpMap", Assets.HULL_TWO_NORMAL_MAP);
-            wings.SetColor("_GlowColor", Color.white);
-            wings.SetFloat("_GlowStrength", 1f);
-            wings.SetFloat("_EmissionLM", 0f);
-            wings.SetVector("_EmissionColor", Vector4.zero);
-            wings.SetTexture("_Illum", Assets.HULL_TWO_EMISSIVE_MAP);
-            wings.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            wings.SetFloat("_EnableGlow", 1.3f);
+            // Wings
+            MaterialHelper.ApplyNormalShader(exteriorModel, "Exterior-wings", Assets.HULL_TWO_NORMAL_MAP);
+            MaterialHelper.ApplySpecShader(exteriorModel, "Exterior-wings", Assets.HULL_TWO_SPEC_MAP, 1f, 6.5f);
+            MaterialHelper.ApplyEmissionShader(exteriorModel, "Exterior-wings", Assets.HULL_TWO_EMISSIVE_MAP, Color.white);
 
-            middleBody.shader = shader;
-            middleBody.EnableKeyword("MARMO_SPECMAP");
-            middleBody.EnableKeyword("_ZWRITE_ON");
-            middleBody.SetColor("_Color", Color.white);
-            middleBody.SetColor("_SpecColor", Color.white);
-            middleBody.SetFloat("_SpecInt", 1f);
-            middleBody.SetFloat("_Shininess", 6.5f);
-            middleBody.SetFloat("_Fresnel", 0f);
-            middleBody.SetTexture("_SpecTex", Assets.HULL_THREE_SPEC_MAP);
-            middleBody.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            middleBody.SetTexture("_BumpMap", Assets.HULL_THREE_NORMAL_MAP);
-            middleBody.SetColor("_GlowColor", Color.white);
-            middleBody.SetFloat("_GlowStrength", 1f);
-            middleBody.SetFloat("_EmissionLM", 0f);
-            middleBody.SetVector("_EmissionColor", Vector4.zero);
-            middleBody.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
+            // Middle Body
+            MaterialHelper.ApplyNormalShader(exteriorModel, "Exterior-middleBody", Assets.HULL_THREE_NORMAL_MAP);
+            MaterialHelper.ApplySpecShader(exteriorModel, "Exterior-middleBody", Assets.HULL_THREE_SPEC_MAP, 1f, 6.5f);
 
-            windshield.shader = shader;
-            windshield.DisableKeyword("_EMISSION");
-            windshield.EnableKeyword("MARMO_SPECMAP");
-            windshield.EnableKeyword("_ZWRITE_ON");
-            windshield.EnableKeyword("MARMO_EMISSION");
-            windshield.SetColor("_Color", Color.white);
-            windshield.SetColor("_SpecColor", Color.white);
-            windshield.SetFloat("_SpecInt", 1f);
-            windshield.SetFloat("_Shininess", 6.5f);
-            windshield.SetFloat("_Fresnel", 0f);
-            windshield.SetTexture("_SpecTex", Assets.HULL_FOUR_SPEC_MAP);
-            windshield.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            windshield.SetTexture("_BumpMap", Assets.HULL_FOUR_NORMAL_MAP);
-            windshield.SetColor("_GlowColor", Color.white);
-            windshield.SetFloat("_GlowStrength", 1f);
-            windshield.SetFloat("_EmissionLM", 0f);
-            windshield.SetVector("_EmissionColor", Vector4.zero);
-            windshield.SetTexture("_Illum", Assets.HULL_FOUR_EMISSIVE_MAP);
-            windshield.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            windshield.SetFloat("_EnableGlow", 1.3f);
+            // Windshield
+            MaterialHelper.ApplyNormalShader(exteriorModel, "Exterior-windshield", Assets.HULL_FOUR_NORMAL_MAP);
+            MaterialHelper.ApplySpecShader(exteriorModel, "Exterior-windshield", Assets.HULL_FOUR_SPEC_MAP, 1f, 6.5f);
+            MaterialHelper.ApplyEmissionShader(exteriorModel, "Exterior-windshield", Assets.HULL_FOUR_EMISSIVE_MAP, Color.white);
 
-            /*glass.shader = shader;
-            glass.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-            glass.EnableKeyword("MARMO_SIMPLE_GLASS");
-            glass.EnableKeyword("MARMO_SPECMAP");
-            glass.EnableKeyword("WBOIT");
-            glass.EnableKeyword("_ZWRITE_ON");
-            glass.SetColor("_Color", new Color(0.0f, 0.2f, 0.4f, 0.6f));
-            glass.SetFloat("_Mode", 3);
-            glass.SetFloat("_DstBlend", 1);
-            glass.SetFloat("_SrcBlend2", 0);
-            glass.SetFloat("_AddDstBlend", 1f);
-            glass.SetFloat("_ZWrite", 0);
-            glass.SetFloat("_Cutoff", 0);
-            glass.SetFloat("_IBLreductionAtNight", 0.92f);
-            glass.SetFloat("_EnableSimpleGlass", 1f);
-            glass.SetFloat("_MarmoSpecEnum", 2f);
-            glass.SetColor("_SpecColor", new Color(1.000f, 1.000f, 1.000f, 1.000f));
-            glass.SetFloat("_Shininess", 6.2f);
-            glass.SetFloat("_Fresnel", 0.9f);
-            glass.renderQueue = 3101;*/
+            // Exterior Decals
+            GameObject exteriorDecals = exterior.FindChild("ExteriorDecals");
+            MaterialHelper.ApplyNormalShader(exteriorDecals, "ExteriorDecalsOne", Assets.EXTERIOR_DECALS_NORMAL_MAP);
+            MaterialHelper.ApplyAlphaShader(exteriorDecals, "ExteriorDecalsOne");
+            MaterialHelper.ApplyAlphaShader(exteriorDecals, "ExteriorDecalsTwo");
+            MaterialHelper.ApplyAlphaShader(exteriorDecals, "ExteriorDecalsThree");
 
-            foreach (Material decalMaterial in decals)
-            {
-                decalMaterial.shader = shader;
-                decalMaterial.EnableKeyword("_ZWRITE_ON");
-                decalMaterial.EnableKeyword("MARMO_ALPHA");
-                decalMaterial.EnableKeyword("MARMO_ALPHA_CLIP");
-                decalMaterial.SetColor("_Color", Color.white);
-            }
-            decals[1].SetTexture("_BumpMap", Assets.EXTERIOR_DECALS_NORMAL_MAP);
+            // Propeller
+            MaterialHelper.ApplySpecShader(exterior.FindChild("Propeller"), "Propeller", null, 3f, 20f);
+            // Windshield
+            GameObject windshieldGlass = exterior.FindChild("WindshieldGlass");
+            MaterialHelper.ChangeMaterialColor(windshieldGlass, "Glass", new Color(0f, 0.2f, 0.4f, 0.4f));
+            MaterialHelper.ApplyGlassShader(windshieldGlass, "Glass");
 
-            /*floor.shader = shader;
-            floor.EnableKeyword("MARMO_SPECMAP");
-            floor.EnableKeyword("_ZWRITE_ON");
-            floor.SetColor("_Color", Color.white);
-            floor.SetColor("_SpecColor", Color.white);
-            floor.SetFloat("_SpecInt", 1f);
-            floor.SetFloat("_Shininess", 6.5f);
-            floor.SetFloat("_Fresnel", 0f);
-            floor.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));*/
+            // Exterior Doors
+            MaterialHelper.ApplySpecShader(poi.FindChild("PlayerEntranceLeftFlap"), "Exterior-doors", null, 1f, 6.5f);
+            MaterialHelper.ApplySpecShader(poi.FindChild("PlayerEntranceRightFlap"), "Exterior-doors", null, 1f, 6.5f);
+            MaterialHelper.ApplySpecShader(poi.FindChild("VehicleEntranceLeftFlap"), "Exterior-doors", null, 1f, 6.5f);
+            MaterialHelper.ApplySpecShader(poi.FindChild("VehicleEntranceRightFlap"), "Exterior-doors", null, 1f, 6.5f);
 
-            wallDoorDecals.shader = shader;
-            wallDoorDecals.EnableKeyword("MARMO_SPECMAP");
-            wallDoorDecals.EnableKeyword("_ZWRITE_ON");
-            wallDoorDecals.SetFloat("_SpecInt", 1f);
-            wallDoorDecals.SetFloat("_Shininess", 6.5f);
-            wallDoorDecals.SetFloat("_Fresnel", 0f);
-            wallDoorDecals.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
+            // Internal Walls
+            GameObject walls = interior.FindChild("InternalWalls");
+            MaterialHelper.ApplyNormalShader(walls, "Interior-Walls", Assets.WALLS_NORMAL_MAP);
+            MaterialHelper.ApplySpecShader(walls, "Interior-Walls", Assets.WALLS_SPEC_MAP, 1f, 6.5f);
 
-            backDoor.shader = shader;
-            backDoor.EnableKeyword("MARMO_SPECMAP");
-            backDoor.EnableKeyword("_ZWRITE_ON");
-            backDoor.SetFloat("_SpecInt", 1f);
-            backDoor.SetFloat("_Shininess", 6.5f);
-            backDoor.SetFloat("_Fresnel", 0f);
-            backDoor.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
+            // Player Hatch
+            GameObject playerHatch = interior.FindChild("PlayerHatch");
+            MaterialHelper.ApplySpecShader(playerHatch, "Hatch", null, 0.6f, 20f);
+            MaterialHelper.ApplySpecShader(playerHatch, "Hatch Base", null, 0.6f, 20f);
 
-            walls.shader = shader;
-            walls.EnableKeyword("MARMO_SPECMAP");
-            walls.EnableKeyword("_ZWRITE_ON");
-            walls.SetColor("_Color", Color.white);
-            walls.SetColor("_SpecColor", Color.white);
-            walls.SetFloat("_SpecInt", 1f);
-            walls.SetFloat("_Shininess", 6.5f);
+            // Floors
+            MaterialHelper.ApplySpecShader(interior.FindChild("BaseFloor"), "Floor", null, 1f, 6.5f);
+            MaterialHelper.ApplySpecShader(interior.FindChild("FloorOverlay"), "Floor-Overlay", null, 1f, 6.5f);
 
-            doorWays.shader = shader;
-            doorWays.EnableKeyword("MARMO_SPECMAP");
-            doorWays.EnableKeyword("_ZWRITE_ON");
-            doorWays.SetColor("_Color", Color.white);
-            doorWays.SetColor("_SpecColor", Color.white);
-            doorWays.SetFloat("_SpecInt", 1f);
-            doorWays.SetFloat("_Shininess", 6.5f);
+            // Lockers
+            MaterialHelper.ApplySpecShader(interior.FindChild("Lockers"), "Lockers", null, 1f, 6.5f);
 
-            propeller.shader = shader;
-            propeller.EnableKeyword("MARMO_SPECMAP");
-            propeller.EnableKeyword("_ZWRITE_ON");
-            propeller.SetColor("_Color", Color.white);
-            propeller.SetColor("_SpecColor", Color.white);
-            propeller.SetFloat("_SpecInt", 5f);
-            propeller.SetFloat("_Shininess", 10f);
-            propeller.SetVector("_SpecTex_ST", new Vector4(1f, 1.0f, 0.0f, 0.0f));
-            propeller.SetFloat("_Fresnel", 5f);
+            // Doorways
+            MaterialHelper.ApplySpecShader(interior.FindChild("Doorways"), "Dividers", null, 1f, 6.5f);
+            MaterialHelper.SetMarmosetShader(interior.FindChild("WallDoorDecals"), "WallDecals");
 
-            /*floorDecals.shader = shader;
-            floorDecals.EnableKeyword("MARMO_SPECMAP");
-            floorDecals.EnableKeyword("_ZWRITE_ON");
-            floorDecals.SetColor("_Color", Color.white);
-            floorDecals.SetColor("_SpecColor", Color.white);
-            floorDecals.SetFloat("_SpecInt", 1f);
-            floorDecals.SetFloat("_Shininess", 6.5f);
-            floorDecals.SetFloat("_Fresnel", 0f);
-            floorDecals.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            floorDecals.SetTexture("_BumpMap", MantaAssetLoader.FLOOR_NORMAL_MAP);*/
+            // Back door
+            MaterialHelper.ApplySpecShader(interior.FindChild("BackDoor"), "Door", null, 1f, 6.5f);
 
-            lightDecals.shader = shader;
-            lightDecals.DisableKeyword("_EMISSION");
-            lightDecals.EnableKeyword("MARMO_ALPHA");
-            lightDecals.EnableKeyword("MARMO_ALPHA_CLIP");
-            lightDecals.EnableKeyword("MARMO_SPECMAP");
-            lightDecals.EnableKeyword("_ZWRITE_ON");
-            lightDecals.EnableKeyword("MARMO_EMISSION");
-            lightDecals.SetColor("_Color", Color.white);
-            lightDecals.SetColor("_SpecColor", Color.white);
-            lightDecals.SetFloat("_SpecInt", 1f);
-            lightDecals.SetFloat("_Shininess", 6.5f);
-            lightDecals.SetFloat("_Fresnel", 0f);
-            lightDecals.SetVector("_SpecTex_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            lightDecals.SetColor("_GlowColor", Color.white);
-            lightDecals.SetFloat("_GlowStrength", 1f);
-            lightDecals.SetFloat("_EmissionLM", 0f);
-            lightDecals.SetVector("_EmissionColor", Vector4.zero);
-            lightDecals.SetTexture("_Illum", Assets.LIGHT_EMISSIVE_MAP);
-            lightDecals.SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            lightDecals.SetFloat("_EnableGlow", 1.3f);
+            // Pillars
+            MaterialHelper.ApplySpecShader(interior.FindChild("Pillars"), "Pillars", null, 1f, 6.5f);
 
-            moreInteriorDecals[0].shader = shader;
-            moreInteriorDecals[0].EnableKeyword("_ZWRITE_ON");
-            moreInteriorDecals[0].EnableKeyword("MARMO_ALPHA");
-            moreInteriorDecals[0].EnableKeyword("MARMO_ALPHA_CLIP");
-            moreInteriorDecals[0].EnableKeyword("MARMO_EMISSION");
-            moreInteriorDecals[0].SetTexture("_BumpMap", Assets.WALL_DECALS_ONE_NORMAL_MAP);
-            moreInteriorDecals[0].SetColor("_GlowColor", Color.white);
-            moreInteriorDecals[0].SetFloat("_GlowStrength", 1f);
-            moreInteriorDecals[0].SetFloat("_EmissionLM", 0f);
-            moreInteriorDecals[0].SetVector("_EmissionColor", Vector4.zero);
-            moreInteriorDecals[0].SetTexture("_Illum", Assets.WALL_DECALS_ONE_EMISSIVE_MAP);
-            moreInteriorDecals[0].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            moreInteriorDecals[0].SetFloat("_EnableGlow", 1.3f);
+            // Light Decals
+            GameObject lights = interior.FindChild("LightDecals");
+            MaterialHelper.ApplyAlphaShader(lights, "Light");
+            MaterialHelper.ApplyEmissionShader(lights, "Light", Assets.LIGHT_EMISSIVE_MAP, Color.white);
 
-            moreInteriorDecals[1].shader = shader;
-            moreInteriorDecals[1].EnableKeyword("_ZWRITE_ON");
-            moreInteriorDecals[1].EnableKeyword("MARMO_ALPHA");
-            moreInteriorDecals[1].EnableKeyword("MARMO_ALPHA_CLIP");
-            moreInteriorDecals[1].EnableKeyword("MARMO_EMISSION");
-            moreInteriorDecals[1].SetTexture("_BumpMap", Assets.WALL_DECALS_TWO_NORMAL_MAP);
-            moreInteriorDecals[1].SetColor("_GlowColor", Color.white);
-            moreInteriorDecals[1].SetFloat("_GlowStrength", 1f);
-            moreInteriorDecals[1].SetFloat("_EmissionLM", 0f);
-            moreInteriorDecals[1].SetVector("_EmissionColor", Vector4.zero);
-            moreInteriorDecals[1].SetTexture("_Illum", Assets.WALL_DECALS_TWO_EMISSIVE_MAP);
-            moreInteriorDecals[1].SetVector("_Illum_ST", new Vector4(1.0f, 1.0f, 0.0f, 0.0f));
-            moreInteriorDecals[1].SetFloat("_EnableGlow", 1.3f);
+            // Interior Decals
+            GameObject interiorDecals = interior.FindChild("InteriorDecals");
+            MaterialHelper.ApplyNormalShader(interior, "WallDecalsOne", Assets.WALL_DECALS_ONE_NORMAL_MAP);
+            MaterialHelper.ApplyEmissionShader(interior, "WallDecalsOne", Assets.WALL_DECALS_ONE_EMISSIVE_MAP, Color.white);
+            MaterialHelper.ApplyAlphaShader(interior, "WallDecalsOne");
+            MaterialHelper.ApplyNormalShader(interior, "WallDecalsTwo", Assets.WALL_DECALS_TWO_NORMAL_MAP);
+            MaterialHelper.ApplyEmissionShader(interior, "WallDecalsTwo", Assets.WALL_DECALS_TWO_EMISSIVE_MAP, Color.white);
+            MaterialHelper.ApplyAlphaShader(interior, "WallDecalsTwo");
+            MaterialHelper.ApplyNormalShader(interior, "WallDecalsThree", Assets.WALL_DECALS_THREE_NORMAL_MAP);
+            MaterialHelper.ApplyAlphaShader(interior, "WallDecalsThree");
 
-            moreInteriorDecals[2].shader = shader;
-            moreInteriorDecals[2].EnableKeyword("_ZWRITE_ON");
-            moreInteriorDecals[2].EnableKeyword("MARMO_ALPHA");
-            moreInteriorDecals[2].EnableKeyword("MARMO_ALPHA_CLIP");
-            moreInteriorDecals[2].SetTexture("_BumpMap", Assets.WALL_DECALS_THREE_NORMAL_MAP);
+            // Moonpool Glass
+            GameObject moonpoolGlass = moonpool.FindChild("MoonPoolGlass");
+            MaterialHelper.ChangeMaterialColor(moonpoolGlass, "Moonpool-glass", new Color(0f, 0.2f, 0.4f, 0.4f));
+            MaterialHelper.ApplyGlassShader(moonpoolGlass, "Moonpool-glass");
+
+            // MoonPool Hatch 
+            MaterialHelper.ApplySpecShader(moonpool.FindChild("MoonPoolHatch"), "Moonpool-hatch", null, 0.6f, 20f);
+
+            // Moonpool hatch decal
+            MaterialHelper.SetMarmosetShader(moonpool.FindChild("MoonPoolHatchDecal"), "Moonpool-hatch-decal");
+
+            // Moonpool pipes
+            MaterialHelper.ApplySpecShader(moonpool.FindChild("MoonPoolInsideFrontDecal"), "Moonpool-pipes", null, 0.6f, 20f);
+
+            // Moonpool Arms
+            MaterialHelper.ApplySpecShader(moonpool.FindChild("MoonPoolArms"), "Moonpool-arms", null, 0.6f, 20f);
+
+            // Moonpool walls
+            MaterialHelper.ApplySpecShader(moonpool.FindChild("MoonPoolWalls"), "Moonpool-walls", null, 0.6f, 20f);
         }
     }
 }
