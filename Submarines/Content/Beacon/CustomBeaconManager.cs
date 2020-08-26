@@ -1,5 +1,4 @@
 ﻿using Submarines.Utilities;
-using Submarines.Utilities.Extension;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,7 +37,7 @@ namespace Submarines.Content.Beacon
                 return null;
             }
 
-            PingInstance pingInstance = gameObject.GetOrAddComponent<PingInstance>();
+            var pingInstance = gameObject.EnsureComponent<PingInstance>();
             pingInstance.pingType = pingType;
             pingInstance.minDist = minDist;
             pingInstance.maxDist = maxDist;
@@ -56,7 +55,7 @@ namespace Submarines.Content.Beacon
          */
         public static PingType RegisterNewPingType(TechType type, string pingName, Sprite sprite)
         {
-            PingType pingType = GetPingType(type);
+            var pingType = GetPingType(type);
             if (cachedSprites.ContainsKey(pingType) == false)
             {
                 if (nameToType.ContainsKey(pingName))
@@ -83,8 +82,8 @@ namespace Submarines.Content.Beacon
          */
         public static PingType GetPingType(TechType type)
         {
-            int number = (int) type;
-            PingType result = (PingType) number;
+            var number = (int) type;
+            var result = (PingType) number;
 
             Log.Print($"CustomBeaconManager::GetPingType turned {type} -> ({number}, {result})", false);
             return result;

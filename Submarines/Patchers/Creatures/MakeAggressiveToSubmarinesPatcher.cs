@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Submarines.Creatures;
 
 namespace Submarines.Patchers.Creatures

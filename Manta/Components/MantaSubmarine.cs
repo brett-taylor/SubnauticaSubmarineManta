@@ -1,6 +1,6 @@
 ﻿using Submarines.Content;
 
-namespace Manta.Core
+namespace Manta.Components
 {
     /**
      * The main manta submarine class.

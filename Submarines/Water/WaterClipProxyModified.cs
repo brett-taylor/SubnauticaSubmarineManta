@@ -8,7 +8,7 @@ namespace Submarines.Water
     public class WaterClipProxyModified : MonoBehaviour
     {
         public static readonly string DISTANCE_FIELD_TEMPLATE_FILE_NAME = "WaterClipProxy.txt";
-        private static Material ClipMaterialCache;
+        //private static Material ClipMaterialCache;
 
         public Vector3 DistanceFieldMin { get; set; } = new Vector3(-5.7f, -10.4f, -17.0f);
         public Vector3 DistanceFieldMax { get; set; } = new Vector3(5.7f, 5.5f, 29.1f);

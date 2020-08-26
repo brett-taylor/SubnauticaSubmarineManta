@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Manta.Core.Factory;
+using UnityEngine;
 
 namespace Manta.Components
 {
@@ -17,7 +18,7 @@ namespace Manta.Components
     {
         public void Start()
         {
-            Core.MantaMod.SetUpManta(gameObject);
+            MantaFactory.Setup(gameObject);
             Destroy(this);
         }
     }
