@@ -1,6 +1,7 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Manta.Core;
 using Manta.Utilities;
+using QModManager.API.ModLoading;
 using System.Reflection;
 
 namespace Manta
@@ -13,12 +14,12 @@ namespace Manta
         public static string QMODS_FOLDER_LOCATION { get; private set; }
         public static string MOD_FOLDER_NAME { get; private set; }
         public static readonly string ASSET_FOLDER_NAME = "Assets/";
-        public static HarmonyInstance HarmonyInstance { get; private set; }
+        public static Harmony harmony { get; private set; }
 
         public static void Entry()
         {
-            HarmonyInstance = HarmonyInstance.Create("taylor.brett.TheMantaMod.mod");
-            HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+            harmony = new Harmony("taylor.brett.TheMantaMod.mod");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
             MantaAssetLoader.LoadAssets();
             MantaMod manta = new MantaMod();
             manta.Patch();

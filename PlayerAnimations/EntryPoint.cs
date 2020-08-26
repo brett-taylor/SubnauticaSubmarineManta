@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using PlayerAnimations.Test;
 using System.Reflection;
 
@@ -8,7 +8,7 @@ namespace PlayerAnimations
     {
         public static void Entry()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create("taylor.brett.PlayerAnimations.mod");
+            Harmony harmony = new Harmony("taylor.brett.PlayerAnimations.mod");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
             AssetLoader.LoadAnimations();

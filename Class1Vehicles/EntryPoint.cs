@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using System.Reflection;
 
 namespace Class1Vehicles
@@ -13,7 +13,7 @@ namespace Class1Vehicles
 
         public static void Entry()
         {
-            HarmonyInstance HarmonyInstance = HarmonyInstance.Create("taylor.brett.Class1Vehicles.mod");
+            Harmony HarmonyInstance = new Harmony("taylor.brett.Class1Vehicles.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
             Submarines.EntryPoint.LOAD_DEFAULT_CYCLOPS_ASSETS = true;

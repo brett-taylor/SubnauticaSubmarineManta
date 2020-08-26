@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Class1Vehicles</RootNamespace>
     <AssemblyName>Class1Vehicles</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -34,19 +34,27 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp_publicized, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="QModInstaller">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\QModManager\QModInstaller.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SMLHelper, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\QMods\Modding Helper\SMLHelper.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,12 +64,19 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

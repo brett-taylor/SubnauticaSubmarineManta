@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using System.Reflection;
 
 namespace Submarines
@@ -11,7 +11,7 @@ namespace Submarines
         public static string QMODS_FOLDER_LOCATION { get; private set; }
         public static string MOD_FOLDER_NAME { get; private set; }
         public static readonly string ASSET_FOLDER_NAME = "Assets/";
-        public static HarmonyInstance HarmonyInstance { get; private set; }
+        public static Harmony harmony { get; private set; }
         public static bool LOAD_DEFAULT_CYCLOPS_ASSETS { get; set; } = true;
 
         public static void InitialiseFramework()
@@ -22,8 +22,8 @@ namespace Submarines
                 return;
             }
 
-            HarmonyInstance = HarmonyInstance.Create("taylor.brett.SubmarinesFramework.mod");
-            HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+            harmony = new Harmony("taylor.brett.SubmarinesFramework.mod");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
             Assets.SubmarineAssetLoader.LoadAssets();
             Content.Beacon.CustomBeaconManager.Initialize();
         }

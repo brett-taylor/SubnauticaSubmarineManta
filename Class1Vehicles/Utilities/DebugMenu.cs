@@ -420,7 +420,7 @@ namespace Class1Vehicles.Utilities
                             return;
                         }
 
-                        mi.FastInvoke(damage);
+                        mi.Invoke(damage, null);
                     }
                 }
             }
