@@ -1,5 +1,5 @@
 ﻿using System;
-using Harmony;
+using HarmonyLib;
 using Manta.Core;
 using Manta.Utilities;
 using System.Reflection;
@@ -31,7 +31,7 @@ namespace Manta
 
         private static void LoadMantaFramework()
         {
-            var harmonyInstance = HarmonyInstance.Create("taylor.brett.TheMantaMod.mod");
+            var harmonyInstance = new Harmony("taylor.brett.TheMantaMod.mod");
             harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
             Assets.Instance = new Assets();

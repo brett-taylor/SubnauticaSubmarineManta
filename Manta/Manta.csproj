@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="..\Dependencies.targets" />
+  <Import Project="$(SolutionDir)\Dependencies.targets" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -21,24 +21,25 @@
     <GameDir>$(SubnauticaDir)</GameDir>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(Dependencies)\0Harmony-1.2.0.1.dll</HintPath>
+    <Reference Include="0Harmony">
+      <HintPath>$(GameDir)\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>$(Dependencies)\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp_publicized, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Assembly-CSharp_publicized">
       <HintPath>$(Dependencies)\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="QModInstaller, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>$(Dependencies)\QModInstaller.dll</HintPath>
+    <Reference Include="QModInstaller">
+      <HintPath>$(GameDir)\BepInEx\plugins\QModManager\QModInstaller.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="SMLHelper, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SMLHelper">
       <HintPath>$(GameDir)\QMods\Modding Helper\SMLHelper.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,18 +49,23 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>$(Dependencies)\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(Dependencies)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>$(Dependencies)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>$(Dependencies)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>$(Dependencies)\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -81,14 +87,15 @@
     <ProjectReference Include="..\Submarines\Submarines.csproj">
       <Project>{6bc8ce46-4d49-4d56-8d65-0337ada12a89}</Project>
       <Name>Submarines</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-xcopy /Y /R /F "$(SolutionDir)mod/mod.json" "$(GameDir)\QMods\TheManta"
-xcopy /Y /I /R /F "$(ProjectDir)$(OutDir)Submarines.dll" "$(GameDir)\QMods\TheManta"
-xcopy /Y /I /R /F "$(ProjectDir)$(OutDir)Manta.dll" "$(GameDir)\QMods\TheManta"
-    </PostBuildEvent>
+xcopy /Y /R /F "$(SolutionDir)mod/mod.json" "$(GameDir)\QMods\TheManta\"
+xcopy /Y /I /R /F "$(ProjectDir)$(OutDir)Submarines.dll" "$(GameDir)\QMods\TheManta\"
+xcopy /Y /I /R /F "$(ProjectDir)$(OutDir)Manta.dll" "$(GameDir)\QMods\TheManta\"
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
