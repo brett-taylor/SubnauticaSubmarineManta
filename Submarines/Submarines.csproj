@@ -71,7 +71,6 @@
   <ItemGroup>
     <Compile Include="Assets\AssetFile.cs" />
     <Compile Include="Assets\SubmarineAssets.cs" />
-    <Compile Include="Content\Beacon\CustomBeaconManager.cs" />
     <Compile Include="Creatures\AttackSubmarineAdvanced.cs" />
     <Compile Include="Content\Damage\AutoRegen.cs" />
     <Compile Include="Content\Damage\AutoRegenConditional.cs" />
@@ -113,7 +112,6 @@
     <Compile Include="DefaultCyclopsContent\CyclopsCollisionSounds.cs" />
     <Compile Include="Content\Submarine.cs" />
     <Compile Include="Miscellaneous\SubmarineDuplicateFixer.cs" />
-    <Compile Include="Content\Beacon\CustomBeaconSpritePatcher.cs" />
     <Compile Include="Water\WaterClipProxyModified.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

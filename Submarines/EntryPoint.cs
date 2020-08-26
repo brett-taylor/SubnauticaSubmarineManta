@@ -18,7 +18,6 @@ namespace Submarines
 
             HarmonyInstance = new Harmony("taylor.brett.SubmarinesFramework.mod");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
-            Content.Beacon.CustomBeaconManager.Initialize();
         }
     }
 }

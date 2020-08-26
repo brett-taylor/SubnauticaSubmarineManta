@@ -1,13 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using Manta.Components;
 using Manta.Core.Factory.Materials;
 using Manta.Core.Factory.Materials.Impl;
 using Manta.Utilities;
 using Submarines.Content;
-using Submarines.Content.Beacon;
 using Submarines.Content.Damage;
 using Submarines.Content.Death;
 using Submarines.Content.Lighting;
@@ -254,9 +251,13 @@ namespace Manta.Core.Factory
             manta.EnsureComponent<DestabiliseOnSubDeath>();
             manta.EnsureComponent<KillPlayerInsideOnSubDeath>();
 
-            SMLHelper.V2.Handlers.TechTypeHandler.TryGetModdedTechType(MantaMod.UNIQUE_ID, out TechType mantaTechType);
-            var mantaPingType = CustomBeaconManager.RegisterNewPingType(mantaTechType, MantaMod.NAME, Assets.PING_ICON);
-            CustomBeaconManager.AddNewBeacon(manta, mantaPingType, "HMS Unknown Manta");
+            var pingType = SMLHelper.V2.Handlers.PingHandler.Main.RegisterNewPingType("SubmarineManta", new Atlas.Sprite(Assets.PING_ICON));
+            var pingInstance = manta.EnsureComponent<PingInstance>();
+            pingInstance.pingType = pingType;
+            pingInstance.maxDist = 15;
+            pingInstance.minDist = 20;
+            pingInstance.origin = manta.transform;
+            pingInstance.SetLabel("HMS Unknown Manta");
         }
 
         private static IEnumerable<ApplyMaterial> applyMaterials = new List<ApplyMaterial>()
