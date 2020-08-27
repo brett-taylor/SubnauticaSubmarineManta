@@ -14,7 +14,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SN|AnyCPU' ">
-    <OutputPath>bin\SN\</OutputPath>
+    <OutputPath>$(SolutionDir)\Mod\$(Configuration)\TheManta\</OutputPath>
     <DefineConstants>TRACE;SUBNAUTICA</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Dependencies>$(SubnauticaDir)\Subnautica_Data\Managed</Dependencies>
@@ -90,12 +90,19 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="mod.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-xcopy /Y /R /F "$(SolutionDir)mod/mod.json" "$(GameDir)\QMods\TheManta\"
-xcopy /Y /I /R /F "$(ProjectDir)$(OutDir)Submarines.dll" "$(GameDir)\QMods\TheManta\"
-xcopy /Y /I /R /F "$(ProjectDir)$(OutDir)Manta.dll" "$(GameDir)\QMods\TheManta\"
+xcopy /Y /R /F "$(TargetDir)" "$(GameDir)\QMods\TheManta"
 </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>
