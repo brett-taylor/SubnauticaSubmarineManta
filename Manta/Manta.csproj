@@ -76,7 +76,10 @@
     <Compile Include="Core\Factory\Materials\ApplyMaterial.cs" />
     <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorBodyMaterial.cs" />
     <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorTailMaterial.cs" />
+    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorWindshieldFrame.cs" />
+    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorWindshieldGlass.cs" />
     <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorWingsMaterial.cs" />
+    <Compile Include="Core\Factory\Materials\MaterialProperty.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Core\MantaMod.cs" />
     <Compile Include="Components\MantaSerializationFixer.cs" />

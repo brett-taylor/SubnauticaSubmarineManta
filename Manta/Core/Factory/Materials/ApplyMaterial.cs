@@ -11,7 +11,7 @@ namespace Manta.Core.Factory.Materials
         private static readonly string INSTANCE_POSTFIX = " (Instance)";
         protected abstract string TargetPath { get; }
         protected abstract string MaterialTarget { get; }
-        
+        protected virtual bool ApplyMarmosetShader { get; } = true;
         
         public void Apply(GameObject gameObject)
         {
@@ -20,7 +20,9 @@ namespace Manta.Core.Factory.Materials
                 var target = gameObject.transform.Find(TargetPath).GetComponent<Renderer>().materials.ToList()
                     .Find(m => m.name.Replace(INSTANCE_POSTFIX, "") == MaterialTarget);
 
-                target.shader = MARMOSET_SHADER; 
+                if (ApplyMarmosetShader)
+                    target.shader = MARMOSET_SHADER;
+                
                 ApplyMaterialProperties(target);
             }
             catch (Exception)

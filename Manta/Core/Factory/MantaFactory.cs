@@ -264,7 +264,9 @@ namespace Manta.Core.Factory
         {
             new ApplyExteriorTailMaterial(),
             new ApplyExteriorBodyMaterial(),
-            new ApplyExteriorWingsMaterial()
+            new ApplyExteriorWingsMaterial(),
+            new ApplyExteriorWindshieldFrame(),
+            new ApplyExteriorWindshieldGlass()
         };
         
         private static void SetupMaterials(GameObject manta)
