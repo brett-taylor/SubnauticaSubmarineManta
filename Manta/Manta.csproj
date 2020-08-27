@@ -12,6 +12,7 @@
     <AssemblyName>Manta</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <LangVersion>7</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SN|AnyCPU' ">
     <OutputPath>$(SolutionDir)\Mod\$(Configuration)\TheManta\</OutputPath>
@@ -91,42 +92,25 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\customplayeranimations">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Assets\manta">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Assets\mantaos">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Assets\minimantadrone">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Assets\minimantavehicle">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Assets\odyssey">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Assets\submarine">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\MantaIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="mod.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\MantaIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-	xcopy /Y /R /I "$(SolutionDir)Mod\$(Configuration)\TheManta" "$(GameDir)\QMods\TheManta"
-	xcopy /Y /R /I  "$(TargetDir)Assets" "$(GameDir)\QMods\TheManta\Assets"
-</PostBuildEvent>
+	  xcopy /Y /R /I "$(SolutionDir)Mod\$(Configuration)\TheManta" "$(GameDir)\QMods\TheManta"
+	  xcopy /Y /R /I  "$(TargetDir)Assets" "$(GameDir)\QMods\TheManta\Assets"
+  </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
