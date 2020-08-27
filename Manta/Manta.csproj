@@ -123,8 +123,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-xcopy /Y /R /F "$(TargetDir)" "$(GameDir)\QMods\TheManta"
+    <PostBuildEvent>xcopy /Y /R /I "$(TargetDir)" "$(GameDir)\QMods\TheManta"
+xcopy /Y /R /I  "$(TargetDir)Assets\" "$(GameDir)\QMods\TheManta\Assets"
 </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
