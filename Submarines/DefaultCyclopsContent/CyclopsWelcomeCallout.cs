@@ -1,6 +1,4 @@
-﻿using Submarines.Engine;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Submarines.DefaultCyclopsContent
 {

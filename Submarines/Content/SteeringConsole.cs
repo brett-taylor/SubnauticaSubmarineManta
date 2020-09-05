@@ -29,7 +29,7 @@ namespace Submarines.Content
             }
         }
 
-        public void Update()
+        public new void Update()
         {
             if (isPiloting == false)
             {
@@ -68,7 +68,7 @@ namespace Submarines.Content
             }
         }
 
-        private bool IsValidHandTarget(GUIHand hand)
+        private new bool IsValidHandTarget(GUIHand hand)
         {
             return hand.IsFreeToInteract() && hand.player && hand.player.GetCurrentSub() == Submarine && hand.player.GetMode() == Player.Mode.Normal;
         }
@@ -118,12 +118,12 @@ namespace Submarines.Content
             Player.main.playerModeChanged.Trigger(Player.Mode.Normal);
         }
 
-        private void OnPlayerDeath(Player player)
+        private new void OnPlayerDeath(Player player)
         {
             Utilities.Log.Print("SteeringConsole::OnPlayerDeath");
         }
 
-        private void CyclopsDeathEvent()
+        private new void CyclopsDeathEvent()
         {
             Utilities.Log.Print("SteeringConsole::CyclopsDeathEvent");
         }

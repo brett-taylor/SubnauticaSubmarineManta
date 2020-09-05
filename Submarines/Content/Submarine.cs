@@ -19,11 +19,11 @@ namespace Submarines.Content
         {
         }
 
-        public virtual void FixedUpdate()
+        public new virtual void FixedUpdate()
         {
         }
 
-        public virtual void Update()
+        public new virtual void Update()
         {
         }
 
