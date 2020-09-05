@@ -260,13 +260,36 @@ namespace Manta.Core.Factory
             pingInstance.SetLabel("HMS Unknown Manta");
         }
 
-        private static IEnumerable<ApplyMaterial> applyMaterials = new List<ApplyMaterial>()
+        private static readonly IEnumerable<ApplyMaterial> applyMaterials = new List<ApplyMaterial>()
         {
             new ApplyExteriorTailMaterial(),
             new ApplyExteriorBodyMaterial(),
             new ApplyExteriorWingsMaterial(),
             new ApplyExteriorWindshieldFrame(),
-            new ApplyExteriorWindshieldGlass()
+            new ApplyExteriorWindshieldGlass(),
+            new ApplyExteriorPropellerMaterial(),
+            new ApplyPointOfInterestDoorsMaterial(),
+            new ApplyExteriorDecalsMaterial(),
+            new ApplyInteriorWallDoorDecalsMaterial(),
+            new ApplyInteriorBackDoorMaterial(),
+            new ApplyInteriorWallsMaterial(),
+            new ApplyInteriorDoorWaysMaterial(),
+            new ApplyInteriorLightDecalsMaterial(),
+            new ApplyInteriorWallDecalsOneMaterial(),
+            new ApplyInteriorWallDecalsTwoMaterial(),
+            new ApplyInteriorWallDecalsThreeMaterial(),
+            new ApplyInteriorFloorMaterial(),
+            new ApplyInteriorFloorOverlayMaterial(),
+            new ApplyInteriorPillarMaterial(),
+            new ApplyInteriorLockersMaterial(),
+            new ApplyInteriorPlayerHatchMaterial(),
+            new ApplyInteriorPlayerHatchBaseMaterial(),
+            new ApplyPointsOfInterestMonitorScreenMaterial(),
+            new ApplyInteriorMoonpoolHatchDecalMaterial(),
+            new ApplyPointsOfInterestPowerCellsMaterial(),
+            new ApplyPointsOfInterestUpgradeConsoleMaterial(),
+            new ApplyPointOfInterestSteeringConsoleMaterial(),
+            new ApplyPointOfInterestSteeringConsoleEmissionMaterial()
         };
         
         private static void SetupMaterials(GameObject manta)

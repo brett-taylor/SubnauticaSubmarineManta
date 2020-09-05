@@ -1,11 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Manta.Core.Factory.Materials.Impl
 {
     public class ApplyExteriorWindshieldGlass : ApplyMaterial
     {
-        protected override string TargetPath => "Model/Exterior/WindshieldGlass";
-        protected override string MaterialTarget => "Glass";
+        protected override IEnumerable<string> TargetPaths => new[] {"Model/Exterior/WindshieldGlass"};
+        protected override IEnumerable<string> MaterialTargets => new[] {"Glass"};
         protected override bool ApplyMarmosetShader { get; } = false;
         
         protected override void ApplyMaterialProperties(Material material)

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Manta.Utilities;
 using UnityEngine;
 
@@ -5,8 +6,8 @@ namespace Manta.Core.Factory.Materials.Impl
 {
     public class ApplyExteriorTailMaterial : ApplyMaterial
     {
-        protected override string TargetPath => "Model/Exterior/ExteriorModel";
-        protected override string MaterialTarget => "Exterior-tail";
+        protected override IEnumerable<string> TargetPaths => new[] {"Model/Exterior/ExteriorModel"};
+        protected override IEnumerable<string> MaterialTargets => new[] {"Exterior-tail"};
         
         protected override void ApplyMaterialProperties(Material material)
         {
