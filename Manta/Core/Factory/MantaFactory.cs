@@ -58,6 +58,7 @@ namespace Manta.Core.Factory
             manta.EnsureComponent<MantaTemporarySteeringHUD>();
 
             manta.EnsureComponent<MantaSerializationFixer>();
+            Setup(manta);
             return manta;
         }
 

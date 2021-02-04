@@ -1,7 +1,6 @@
 ﻿using Submarines.Content.Lighting;
 using Submarines.DefaultCyclopsContent;
 using Submarines.Engine;
-using System.Collections;
 using UnityEngine;
 
 namespace Manta.Components
