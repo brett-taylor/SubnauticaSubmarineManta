@@ -1,23 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="$(SolutionDir)\Dependencies.targets" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3C8CF34-F160-46BD-8673-53F9DCE49270}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFramework>net472</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <LangVersion>latest</LangVersion>
+    <ProductName>Manta</ProductName>
+    <Copyright>Copyright ©  2019</Copyright>
     <RootNamespace>Manta</RootNamespace>
     <AssemblyName>Manta</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <LangVersion>7</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SN|AnyCPU' ">
     <OutputPath>$(SolutionDir)\Mod\$(Configuration)\TheManta\</OutputPath>
-    <DefineConstants>TRACE;SUBNAUTICA</DefineConstants>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>SUBNAUTICA</DefineConstants>
     <Dependencies>$(SubnauticaDir)\Subnautica_Data\Managed</Dependencies>
     <GameDir>$(SubnauticaDir)</GameDir>
   </PropertyGroup>
@@ -42,12 +40,6 @@
       <HintPath>$(GameDir)\QMods\Modding Helper\SMLHelper.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>$(Dependencies)\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>False</Private>
@@ -70,47 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\MantaSubmarine.cs" />
-    <Compile Include="Components\MantaTemporarySteeringHUD.cs" />
-    <Compile Include="Core\Factory\MantaFactory.cs" />
-    <Compile Include="Core\Factory\Materials\ApplyMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorBodyMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorDecalsMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorPropellerMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorTailMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorWindshieldFrame.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorWindshieldGlass.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyExteriorWingsMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorBackDoorMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorDoorWaysMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorFloorMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorFloorOverlayMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorLightDecalsMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorLockersMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorMoonpoolHatchDecalMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyPointOfInterestSteeringConsoleEmissionMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyPointOfInterestSteeringConsoleMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyPointsOfInterestMonitorScreenMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorPillarMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorPlayerHatchBaseMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorWallDecalsOneMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorWallDecalsThreeMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorWallDecalsTwoMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorWallDoorDecalsMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorWallsMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyInteriorPlayerHatchMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyPointOfInterestDoorsMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyPointsOfInterestPowerCellsMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\Impl\ApplyPointsOfInterestUpgradeConsoleMaterial.cs" />
-    <Compile Include="Core\Factory\Materials\MaterialProperty.cs" />
-    <Compile Include="EntryPoint.cs" />
-    <Compile Include="Core\MantaMod.cs" />
-    <Compile Include="Components\MantaSerializationFixer.cs" />
-    <Compile Include="Utilities\Assets.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\Log.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Submarines\Submarines.csproj">
       <Project>{6bc8ce46-4d49-4d56-8d65-0337ada12a89}</Project>
       <Name>Submarines</Name>
@@ -131,15 +82,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>
-	  xcopy /Y /R /I "$(SolutionDir)Mod\$(Configuration)\TheManta" "$(GameDir)\QMods\TheManta"
-	  xcopy /Y /R /I  "$(TargetDir)Assets" "$(GameDir)\QMods\TheManta\Assets"
-  </PostBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
+  <Import Project="..\PostBuild.targets" />
 </Project>

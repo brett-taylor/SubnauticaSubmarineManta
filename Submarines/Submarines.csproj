@@ -1,23 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="$(SolutionDir)\Dependencies.targets" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6BC8CE46-4D49-4D56-8D65-0337ADA12A89}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFramework>net472</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <LangVersion>latest</LangVersion>
+    <ProductName>Manta Mod</ProductName>
+    <Copyright>Copyright ©  2019</Copyright>
     <RootNamespace>Submarines</RootNamespace>
     <AssemblyName>Submarines</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <LangVersion>7</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SN|AnyCPU' ">
     <OutputPath>$(SolutionDir)\Mod\$(Configuration)\TheManta\</OutputPath>
-    <DefineConstants>TRACE;SUBNAUTICA</DefineConstants>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>SUBNAUTICA</DefineConstants>
     <Dependencies>$(SubnauticaDir)\Subnautica_Data\Managed</Dependencies>
     <GameDir>$(SubnauticaDir)</GameDir>
   </PropertyGroup>
@@ -38,12 +36,6 @@
       <HintPath>$(GameDir)\QMods\Modding Helper\SMLHelper.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>$(Dependencies)\UnityEngine.AnimationModule.dll</HintPath>
       <Private>False</Private>
@@ -69,58 +61,4 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\AssetFile.cs" />
-    <Compile Include="Assets\SubmarineAssets.cs" />
-    <Compile Include="Creatures\AttackSubmarineAdvanced.cs" />
-    <Compile Include="Content\Damage\AutoRegen.cs" />
-    <Compile Include="Content\Damage\AutoRegenConditional.cs" />
-    <Compile Include="Content\Death\BasicDeath.cs" />
-    <Compile Include="Content\Death\DeathManager.cs" />
-    <Compile Include="Content\Damage\InternalFirePoint.cs" />
-    <Compile Include="Content\Damage\InternalLeakManager.cs" />
-    <Compile Include="Content\Death\DestabiliseOnSubDeath.cs" />
-    <Compile Include="Content\Death\KillPlayerInsideOnSubDeath.cs" />
-    <Compile Include="Content\Lighting\EmergencyLighting.cs" />
-    <Compile Include="Content\Damage\ExternalDamageManager.cs" />
-    <Compile Include="Content\Damage\ExternalDamagePoint.cs" />
-    <Compile Include="Content\Damage\InternalFireManager.cs" />
-    <Compile Include="Content\Lighting\LightsManager.cs" />
-    <Compile Include="Content\OxygenReplenishment.cs" />
-    <Compile Include="Creatures\AttackMannedSubmarineWithinDistance.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsAbandonShip.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsDeathExplosion.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsDefaultAssets.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsEngineSound.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsEngineStateChangedCallouts.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsExternalDamagePointLiveMixinData.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsLiveMixinData.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsUnderAttackEmergencyLighting.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsUnderAttackCallout.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsWelcomeCallout.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsStartupPowerDownSequence.cs" />
-    <Compile Include="Content\Engine\EngineManager.cs" />
-    <Compile Include="Content\Engine\EngineState.cs" />
-    <Compile Include="Content\EntranceHatch.cs" />
-    <Compile Include="Content\HingeJointDoor.cs" />
-    <Compile Include="Content\Movement\MovementData.cs" />
-    <Compile Include="Content\Movement\MovementController.cs" />
-    <Compile Include="Content\Movement\MovementStabiliser.cs" />
-    <Compile Include="Content\SteeringConsole.cs" />
-    <Compile Include="Patchers\Creatures\MakeAggressiveToSubmarinesPatcher.cs" />
-    <Compile Include="Patchers\Creatures\MeleeAttackPatcher.cs" />
-    <Compile Include="Patchers\SubRootPatcher.cs" />
-    <Compile Include="DefaultCyclopsContent\CyclopsCollisionSounds.cs" />
-    <Compile Include="Content\Submarine.cs" />
-    <Compile Include="Miscellaneous\SubmarineDuplicateFixer.cs" />
-    <Compile Include="Water\WaterClipProxyModified.cs" />
-    <Compile Include="EntryPoint.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\Log.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\Energy\" />
-    <Folder Include="Serialization\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

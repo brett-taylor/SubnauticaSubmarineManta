@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!--xcopy /Y /R /I "$(SolutionDir)Mod\$(Configuration)\TheManta" "$(GameDir)\QMods\TheManta"
+	  xcopy /Y /R /I  "$(TargetDir)Assets" "$(GameDir)\QMods\TheManta\Assets"1-->
+    <ItemGroup>
+        <OutDirFiles Include="$(SolutionDir)Mod\$(Configuration)\TheManta\*.*" />
+        <AssetsFiles Include="$(TargetDir)Assets\*.*" />
+    </ItemGroup>
+    <Target Name="CopyToOutputPath" AfterTargets="Build">
+        <Copy
+                SourceFiles="@(OutDirFiles)"
+                DestinationFolder="$(GameDir)\QMods\TheManta"
+                SkipUnchangedFiles="false" />
+        <Copy
+                SourceFiles="@(AssetsFiles)"
+                DestinationFolder="$(GameDir)\QMods\TheManta\Assets"
+                SkipUnchangedFiles="false" />
+    </Target>
+</Project>
