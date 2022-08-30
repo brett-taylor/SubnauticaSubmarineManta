@@ -5,6 +5,8 @@
     <TargetFramework>net472</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
     <ProductName>Manta Mod</ProductName>
     <Copyright>Copyright ©  2019</Copyright>
