@@ -4,7 +4,7 @@
 	  xcopy /Y /R /I  "$(TargetDir)Assets" "$(GameDir)\QMods\TheManta\Assets"1-->
     <ItemGroup>
         <OutDirFiles Include="$(SolutionDir)Mod\$(Configuration)\TheManta\*.*" />
-        <AssetsFiles Include="$(TargetDir)Assets\*.*" />
+        <AssetsFiles Include="$(OutDir)Assets\*.*" />
     </ItemGroup>
     <Target Name="CopyToOutputPath" AfterTargets="Build">
         <Copy

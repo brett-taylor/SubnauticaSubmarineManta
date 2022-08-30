@@ -14,6 +14,7 @@
     <AssemblyName>Submarines</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ImplicitUsings>disable</ImplicitUsings>
+    <Optimize>true</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SN|AnyCPU' ">
     <OutputPath>$(SolutionDir)\Mod\$(Configuration)\TheManta\</OutputPath>
